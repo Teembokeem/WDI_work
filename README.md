@@ -95,7 +95,6 @@ To be announced soon!
 
 | Date             | Day of Week | Event |
 |:----------------:|:-----------:|:------|
-
 | **January 15**   | Friday      | **Orientation & Installfest** |
 | **January 19**   | Tuesday     | **First day of WDI!** |
 | **February 15**  | Monday      | **President's Day (NO CLASS/CAMPUS CLOSED)** |
@@ -113,7 +112,6 @@ Keep in mind, this is tentative. **We may (and shall) change topics and dates as
 
 | Week(s)     | Dates         | Module                       |
 |:-----------:|:-------------:|:-----------------------------|
-
 | **Week 1**  | 1/19 - 1/22 | Front-end Fundamentals         |
 | **Week 2**  | 1/25 - 1/29 | Intermediate Front-end         |
 | **Week 3**  | 2/1 - 2/5   | *Project Sprint*               |

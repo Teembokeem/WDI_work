@@ -5,7 +5,7 @@
 ## Intro to HTML
 
 | Lesson Objectives - SWBAT (Students Will Be Able To) |
-| ---------------------------------------- |
+| :--------------------------------------------------: |
 | Structure a basic HTML page using a "doctype" and the `<html>`,`<head>`, and `<body>` elements. |
 | List and explain the role of HTML `<head>` elements, including `<title>`, `<link>`, `<script>`, and `<meta>`. |
 | List and give use cases for common HTML elements: `<img>`, `<h1>`...`<h6>`, `<p>`, `<span>`, `<a>`, `<ul>` & `<ol>`, `<li>`, `<!--…-->`, and `<div>`. |

@@ -105,15 +105,15 @@ We see that each tag is built from a tag, an attribute, and content. Let's look 
 
 Lets take a tour of content tags:
 
-<u>`<h1>...<h6>`</u>
+#####`<h1>...<h6>`
 
 Headers, going from biggest(`<h1>`) to smallest (`<h6>`).
 
-<u>`<p>`</u>
+#####`<p>`
 
 Paragraph tag. Put your prose in the `<p>` tag!
 
-<u>`<span>`</u>
+#####`<span>`
 
 The span tag is unique in that it's generally used to highlight a small section of writing (a generic inline conatiner). This is most commonly used in regards to CSS, which we'll cover later, but to see what I mean:
 
@@ -121,11 +121,11 @@ The span tag is unique in that it's generally used to highlight a small section 
 <p>Why isn't this <span>interesting?</span></p>
 ```
 
-<u>`<div>`</u>
+#####`<div>`
 
 div tags are probably the most commonly seen tags. It's a generic container for content. It's often used to group things together for styling purposes.
 
-<u>`<ul>`, `<ol>`, & `<li>`</u>
+#####`<ul>`, `<ol>`, & `<li>`
 
 Unordered and Ordered Lists. Unordered come with bullets, ordered come with numbers. The lists within them must be made of `<li>`, or list item, tags. For example:
 
@@ -136,7 +136,7 @@ Unordered and Ordered Lists. Unordered come with bullets, ordered come with numb
 </ul>
 ```
 
-<u>`<!--…-->`</u>
+#####`<!--…-->`
 
 HTML comment tag. Anything between these double hyphens will be ignored by the browser.
 
@@ -152,7 +152,7 @@ Again, an important rule in programming is clarity! These assist in that. Exampl
 
 Some tags are very specific in nature.  They contain attributes, or additional metadata, in order to work. Let's look at some and see how to use them in our HTML documents.
 
-<u>`<a>`</u>
+#####`<a>`
 
 Anchor tag. I'm sure you've used these before - they link us to other pages. Within them are the special attribute `href` (hypertext reference). You set the `href` to a url using an `=`, then surround a word in the `<a>`. For example:
 
@@ -160,7 +160,7 @@ Anchor tag. I'm sure you've used these before - they link us to other pages. Wit
 <a href="http://www.google.com">Google</a>
 ```
 
-<u>`<img>`</u>
+#####`<img>`
 
 The image tag is a *self-closing tag*. That means you do not need a closing tag! It uses `src`, or source, to find the required image. The url can be local (on your computer) or online. `<img>` also uses `alt` which can be filled by text if the image is not found. For instance:
 
@@ -170,13 +170,13 @@ The image tag is a *self-closing tag*. That means you do not need a closing tag!
 
 If the image is not found, the text "Tim wants a hug" will appear in the site instead.
 
-<u>`<form>` & `<input>`</u>
+#####`<form>` & `<input>`
 
 We'll be using these a ton in the future when we have data we want to persist, but for now, just understand that they have their own attributes, such as `for`, `value`, and `type`.
 
 Additionally, `<input>` is also a self-closing tag.
 
-<u>`id`</u>
+#####`id`
 
 `id` is an attribute that can be used in a number of ways (with any html tag with content, aka non-`<head>` elements). While it's often used as a very specific selector for CSS, it can also be used as a place to point to for site navigation and as a great locator for JavaScript.
 

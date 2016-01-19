@@ -73,7 +73,6 @@ To be announced soon!
 | Tony Estese          | tonyestese@hotmail.com         | @newbie-wankenobi | [newbie-wankenobi](https://github.com/newbie-wankenobi) |
 | Jasmine Guzman       | jasmineguzmanescobar@yahoo.com | @jas_guz_esco     | [jgescobar](https://github.com/jgescobar) |
 | Demetra Haloutsos    | demetra2h@gmail.com            | @demetra2h        | [demetra2h](https://github.com/demetra2h) |
-| Ryan Heeber          |                                | @spector911       | [N/A]() |
 | Tim Kim              | myungtkim@gmail.com            | @teembokeem       | [Teembokeem](https://github.com/Teembokeem) |
 | Jerry Lee            | leejb91@gmail.com              | @leejb91          | [leejb91](https://github.com/leejb91) |
 | Jerry Ngov           | jcngov@yahoo.com               | @jcngov           | [jcngov](https://github.com/jcngov) |

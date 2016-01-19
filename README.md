@@ -61,51 +61,45 @@ To be announced soon!
 
 ### Class
 
-| Name                 | Email                       | [Slack](https://ga-students.slack.com) | GitHub |
-|----------------------|:---------------------------:|:------------------:|:------:|
+| Name                 | Email                          | [Slack](https://ga-students.slack.com) | GitHub             |
+|----------------------|:------------------------------:|:-----------------:|:---------------------------------------:|
+| Yael Amir            | yaelamir1@gmail.com            | @yael             | [yaelamir](https://github.com/yaelamir) |
+| Oat Asdon            | o.asdon@gmail.com              | @oatmeal          | [oatterzongit](https://github.com/oatterzongit) |
+| Ray (Jui-Young) Chen | jyc422@gmail.com               | @jyc              | [jyc422](https://github.com/JYC422) |
+| James Coslett        | james.coslett@gmail.co         | @jcoslett         | [jcoslett](https://github.com/jcoslett) |
+| Rebecca Dagnew       | rebecca.dagnew@gmail.com       | @becx21           | [rebecca27](https://github.com/rebecca27) |
+| Markus Dioguardi     | dioguardi.it@gmail.com         | @markusd          | [MDioguardi](https://github.com/MDioguardi) |
+| Michael Duran        | mad2116@gmail.com              | @michaelduran     | [madma](https://github.com/madma) |
+| Tony Estese          | tonyestese@hotmail.com         | @newbie-wankenobi | [newbie-wankenobi](https://github.com/newbie-wankenobi) |
+| Jasmine Guzman       | jasmineguzmanescobar@yahoo.com | @jas_guz_esco     | [jgescobar](https://github.com/jgescobar) |
+| Demetra Haloutsos    | demetra2h@gmail.com            | @demetra2h        | [demetra2h](https://github.com/demetra2h) |
+| Ryan Heeber          |                                | @spector911       | [N/A]() |
+| Tim Kim              | myungtkim@gmail.com            | @teembokeem       | [Teembokeem](https://github.com/Teembokeem) |
+| Jerry Lee            | leejb91@gmail.com              | @leejb91          | [leejb91](https://github.com/leejb91) |
+| Jerry Ngov           | jcngov@yahoo.com               | @jcngov           | [jcngov](https://github.com/jcngov) |
+| David Niederhauser   | niederhauser_david@hotmail.com | @davenhauser      | [davenhauser](https://github.com/davenhauser) |
+| Adrian Nuyda         | adamnuyda@yahoo.com            | @adrianxadamn     | [adrianxadamn](https://github.com/adrianxadamn) |
+| Yel Padillo          | gamalielgad1234@gmail.com      | @gamalielhere     | [gamalielhere](https://github.com/gamalielhere) |
+| Michael Pascual      | mrpascual6@gmail.com           | @mrpascual        | [mrpascual](https://github.com/mrpascual) |
+| Karen Quan           | quan.karen@gmail.com           | @karenquan        | [karenquan](https://github.com/karenquan) |
+| Pare Saku            | parekeet@gmail.com             | @parekeet         | [Parekeet](https://github.com/Parekeet) |
+| Claire Savage        | clairejsavage@gmail.com        | @savageblackout   | [savageblackout](https://github.com/savageblackout) |
+| Jonah Sobol          | Jonah.Sobol@gmail.com          | @cameragadget     | [cameragadget](https://github.com/cameragadget) |
+| Duane Than           | eventsco@aol.com               | @duane            | [watfood](https://github.com/watfood) |
+| Keith To             | keithtkto@gmail.com            | @keithtkto        | [keithtkto](https://github.com/keithtkto) |
+| Nelson Valdivia      | nperez88@gmail.com             | @noslen           | [nevaldiv](https://github.com/nevaldiv) |
 
-<!--
-| Adam Allgood         | allgoodadam@gmail.com       | @allgoodadam       | [allgooda](https://github.com/allgoodadam) |
-| Alex DeMars          | alexdemars@gmail.com        | @alexdemars94      | [ademars94](https://github.com/ademars94) |
-| Andrew Anissi        | andrew@wingedearth.com      | @wingedearth       | [wingedearth](https://github.com/wingedearth) |
-| Anthony Lee          | alee046@ucr.edu             | @alee046           | [alee046](https://github.com/alee046) |
-| Ben Benjamin         | benmbenjamin@gmail.com      | @benmbenjamin      | [benjaminben](https://github.com/benjaminben) |
-| Christopher Sauchak  | csauchak@gmail.com          | @sauchak           | [sauchak](https://github.com/sauchak) |
-| Ferdie Quizon        | fquizon@gmail.com           | @ferdie            | [FerdieQ](https://github.com/FerdieQ) |
-| Fernando Orozco      | forozco2085@gmail.com       | @banando           | [Banando](https://github.com/banando) |
-| Gevork Gharadaghi    | gowithgev@gmail.com         | @gogev             | [gev326](https://github.com/gev326) |
-| James Ewing          | olearysound@gmail.com       | @jimijack          | [jimijack](https://github.com/jimijack) |
-| James Myers          | yesmantoozu2@hotmail.com    | @ace4545           | [ace4545](https://github.com/ace4545) |
-| Jason Asahara        | jasahara@yahoo.com          | @ansel291          | [Ansel291](https://github.com/Ansel291) |
-| Jeffrey Lewis        | jeffersonslewis@gmail.com   | @jeffrey81         | [jeffrey1981](https://github.com/jeffrey1981) |
-| Jessica Vilet        | jvliet@gmail.com            | @jrvleet           | [jrvleet](https://github.com/jrvleet) |
-| Joey Lin             | pujoey@gmail.com            | @pujoey            | [pujoey](https://github.com/pujoey) |
-| Judd Hood            | njthood@yahoo.com           | @juddhood          | [JTGA](https://github.com/JTGA) |
-| Lindsey Bosch        | lindseybbosch@gmail.com     | @lindseybosch      | [lindseybosch](https://github.com/lindseybosch) |
-| Matthew Butt         | matthew.y.butt@gmail.com    | @matthew.y.butt    | [matthewybutt](https://github.com/matthewybutt) |
-| Max Oldham           | maximusoldham@gmail.com     | @maxwelloldham     | [maximusoldham](https://github.com/MaximusOldham) |
-| Melissa Wilcox       | melissa@emdubb.co           | @melissa           | [emdubb](https://github.com/emdubb) |
-| Michael Klophaus     | mmklophaus@gmail.com        | @mklophaus         | [mklophaus](https://github.com/mklophaus) |
-| Rachel Bascetta      | rachelbascetta@gmail.com    | @rachelbascetta    | [rbascetta](https://github.com/rbascetta) |
-| Richard Gutierrez    | ricardoaguilar91@yahoo.com  | @richard_gutierrez | [Richard-Gutierrez](https://github.com/Richard-Gutierrez) |
-| Robert Gonnella      | robgonnella@gmail.com       | @robgonnella       | [robgonnella](https://github.com/robgonnella) |
-| Sebastian Salazar    | sebastian@sasa.guru         | @sebasa1984        | [sebasa1984](https://github.com/sebasa1984) |
-| Tara Strauss         | tara.m.strauss@gmail.com    | @tarastrauss       | [tarastrauss](https://github.com/tarastrauss) |
-| Wayne Takeda         | whtakeda@gmail.com          | @wtakeda           | [whtakeda](https://github.com/whtakeda) |
--->
 
 
 ## Important Dates
 
 | Date             | Day of Week | Event |
 |:----------------:|:-----------:|:------|
+| **January 15**   | Friday      | **Orientation & Installfest** |
+| **January 19**   | Tuesday     | **First day of WDI!** |
+| **February 15**  | Monday      | **President's Day (NO CLASS/CAMPUS CLOSED)** |
+| **April 8**      | Friday      | **Last day of class & graduation!** |
 
-<!--
-| **September 25** | Thursday    | **Orientation & Installfest** |
-| **September 28** | Monday      | **First day of WDI!** |
-| **Nov. 26-29**   | Thurs.-Sun. | **Thanksgiving Break (NO CLASS/CAMPUS CLOSED)** |
-| **December 18**  | Friday      | **Last day of class & graduation!** |
--->
 
 Note: in the weeks following your graduation, there will be a number of various
 job search preparation tutorials and hiring events, with dates TBD.
@@ -116,28 +110,26 @@ Below is a general outline of the course content. See the README for each week f
 
 Keep in mind, this is tentative. **We may (and shall) change topics and dates as necessary.**
 
-| Week(s)     | Dates         | Module                                |
-|:-----------:|:-------------:|:--------------------------------------|
-
-<!--
-| **Week 1**  | 9/28 - 10/1   | Front-end Fundamentals                |
-| **Week 2**  | 10/5 - 10/9   | Intermediate Front-end                |
-| **Week 3**  | 10/12 - 10/16 | *Project Sprint*                      |
-| **Week 4**  | 10/19 -1 0/23 | Ruby & MVC with Rails                 |
-| **Week 5**  | 10/26 - 10/30 | Continue MVC with Rails               |
-| **Week 6**  | 11/2 - 11/6   | *Project Sprint*                      |
-| **Week 7**  | 11/9 - 11/13  | Introduction to Building APIs         |
-| **Week 8**  | 11/16 - 11/20 | Users & Authentication in APIs        |
-| **Week 9**  | 11/23 - 11/27 | *Project Sprint* & Thanksgiving Break |
-| **Week 10** | 11/30 - 12/4  | MV* with Angular                      |
-| **Week 11** | 12/7 - 12/11  | CS Topics & More!                     |
-| **Week 12** | 12/14 - 12/18 | *Project Sprint*                      |
+| Week(s)     | Dates         | Module                       |
+|:-----------:|:-------------:|:-----------------------------|
+| **Week 1**  | 1/19 - 1/22 | Front-end Fundamentals         |
+| **Week 2**  | 1/25 - 1/29 | Intermediate Front-end         |
+| **Week 3**  | 2/1 - 2/5   | *Project Sprint*               |
+| **Week 4**  | 2/8 - 2/12  | Ruby & MVC with Rails          |
+| **Week 5**  | 2/16 - 2/19 | Continue MVC with Rails        |
+| **Week 6**  | 2/22 - 2/26 | *Project Sprint*               |
+| **Week 7**  | 2/29 - 3/4  | Introduction to Building APIs  |
+| **Week 8**  | 3/7 - 3/11  | Users & Authentication in APIs |
+| **Week 9**  | 3/14 - 3/18 | *Project Sprint*               |
+| **Week 10** | 3/21 - 3/25 | MV* with Angular               |
+| **Week 11** | 3/28 - 4/1  | CS Topics & More!              |
+| **Week 12** | 4/4 - 4/8   | *Project Sprint*               |
 
 <!--
 ## Classroom Code of Conduct <a id="coc"></a>
 
 (TODO) link and discuss
--->
+
 
 ## Repo Structure and Use
 
@@ -191,3 +183,4 @@ computer, try [Mou] [2].
 
 [1]: http://daringfireball.net/projects/markdown/    "Markdown"
 [2]: http://mouapp.com/                              "Mou"
+ -->

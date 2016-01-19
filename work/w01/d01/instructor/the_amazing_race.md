@@ -2,7 +2,7 @@
 
 Are you all tired of learning program and dealing with this winter *already*? Well then, let's visit South America the best way we know how: as part of a ridiculous and somewhat offensive [reality TV show](http://en.wikipedia.org/wiki/The_Amazing_Race)!
 
-<img alt="Map of South America" src="img/south_america.jpg" width="200px" />
+<img alt="Map of South America" src="http://i.infopls.com/images/mapsouthamerica.gif" width="200px" />
 
 
 ## Installation & Setup

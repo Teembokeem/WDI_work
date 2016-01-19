@@ -1,8 +1,8 @@
 <img align="left" alt="GA logo." title="General Assemb.ly" src="https://github.com/generalassembly/ga-ruby-on-rails-for-devs/raw/master/images/ga.png" height="90px">
 
-# WDI DTLA 6 Class Repository
+# WDI DTLA 8 Class Repository
 
-Welcome to the WDI DTLA 6 class repository. Here is where
+Welcome to the WDI DTLA 8 class repository. Here is where
 we will store the information you need as students. This includes important
 links and readings, in-class examples, prompts and solutions for exercises,
 labs, homework and projects.
@@ -32,8 +32,7 @@ instructional team and classmates, please follow the
 | **Course Producer**       | Jude Molke         | @judemolke          | jude@ga.co               | [judemolke](judemolke) |
 | **Instructor**            | Phil Hughes        | @phil               | pj@ga.co                 | [h4w5](h4w5) |
 | **Instructor**            | Jim Clark          | @jim-clark          | jim.clark@ga.co          | [jim-clark](jim-clark) |
-| **Instructor**            | Dean Tambling      | @dean               | dean.tambling@ga.co      | [tambling](tambling)|
-| **Instructor Associate**  | Ezra Raez          | @ezraez             | ezra.raez@ga.co          | [earnagram](earnagram)|
+| **Junior Instructor**     | Ezra Raez          | @ezraez             | ezra.raez@ga.co          | [earnagram](earnagram)|
 | **Instructional Support** | Meredith Bryan     | @meredith.bryan     | meredith.bryan@ga.co     | [mer8](mer8) |
 
 <!--
@@ -64,6 +63,8 @@ To be announced soon!
 
 | Name                 | Email                       | [Slack](https://ga-students.slack.com) | GitHub |
 |----------------------|:---------------------------:|:------------------:|:------:|
+
+<!--
 | Adam Allgood         | allgoodadam@gmail.com       | @allgoodadam       | [allgooda](https://github.com/allgoodadam) |
 | Alex DeMars          | alexdemars@gmail.com        | @alexdemars94      | [ademars94](https://github.com/ademars94) |
 | Andrew Anissi        | andrew@wingedearth.com      | @wingedearth       | [wingedearth](https://github.com/wingedearth) |
@@ -91,17 +92,20 @@ To be announced soon!
 | Sebastian Salazar    | sebastian@sasa.guru         | @sebasa1984        | [sebasa1984](https://github.com/sebasa1984) |
 | Tara Strauss         | tara.m.strauss@gmail.com    | @tarastrauss       | [tarastrauss](https://github.com/tarastrauss) |
 | Wayne Takeda         | whtakeda@gmail.com          | @wtakeda           | [whtakeda](https://github.com/whtakeda) |
-
+-->
 
 
 ## Important Dates
 
 | Date             | Day of Week | Event |
 |:----------------:|:-----------:|:------|
+
+<!--
 | **September 25** | Thursday    | **Orientation & Installfest** |
 | **September 28** | Monday      | **First day of WDI!** |
 | **Nov. 26-29**   | Thurs.-Sun. | **Thanksgiving Break (NO CLASS/CAMPUS CLOSED)** |
 | **December 18**  | Friday      | **Last day of class & graduation!** |
+-->
 
 Note: in the weeks following your graduation, there will be a number of various
 job search preparation tutorials and hiring events, with dates TBD.
@@ -114,6 +118,8 @@ Keep in mind, this is tentative. **We may (and shall) change topics and dates as
 
 | Week(s)     | Dates         | Module                                |
 |:-----------:|:-------------:|:--------------------------------------|
+
+<!--
 | **Week 1**  | 9/28 - 10/1   | Front-end Fundamentals                |
 | **Week 2**  | 10/5 - 10/9   | Intermediate Front-end                |
 | **Week 3**  | 10/12 - 10/16 | *Project Sprint*                      |

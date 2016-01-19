@@ -6,10 +6,10 @@
 
 | Lesson Objectives - SWBAT (Students Will Be Able To) |
 | ---------------------------------------- |
-| Structure a basic HTML page using a "doctype" and the <html>,<head>, and <body> elements. |
-| List and explain the role of HTML <head> elements, including <title>, <link>, <script>, and <meta>. |
-| List and give use cases for common HTML elements: <img>, <h1>...<h6>, <p>, <span>, <a>, <ul> & <ol>, <li>, <!--…-->, and <div>. |
-| List the most important structural HTML5 semantic elements: <footer>, <header>, <nav>, <main>, and <section>. |
+| Structure a basic HTML page using a "doctype" and the `<html>`,`<head>`, and `<body>` elements. |
+| List and explain the role of HTML `<head>` elements, including `<title>`, `<link>`, `<script>`, and `<meta>`. |
+| List and give use cases for common HTML elements: `<img>`, `<h1>`...`<h6>`, `<p>`, `<span>`, `<a>`, `<ul>` & `<ol>`, `<li>`, `<!--…-->`, and `<div>`. |
+| List the most important structural HTML5 semantic elements: `<footer>`, `<header>`, `<nav>`, `<main>`, and `<section>`. |
 | Explain the purpose and benefits of using HTML5 semantic elements. |
 | Explain the purpose of HTML attributes as opposed to their content. |
 | Identify the parts of an HTML element (tagname/type, attributes and values, content, and closing tag). |
@@ -44,7 +44,7 @@ For the most part, tags have an opening, and a closing tag with the content sand
 ![Jeanne Gang](http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2011/09/Jeanne-Gang-MacArthur-Genius-Grant-537x357.jpg)
 
 > Why do I need to use <!DOCTYPE html>? Doesn't seem to effect anything...
-> 
+>
 > — Some poor sod
 
 Let's talk about the major pillars of every HTML Page:
@@ -87,7 +87,7 @@ Other common parts of the <head> are attaching stylesheets (<link>), libraries, 
 
 #### <body>
 
-The <body> tag contains all our content. It contains the majority of what we see on the page. 
+The <body> tag contains all our content. It contains the majority of what we see on the page.
 
 ## Structural HTML Tags
 
@@ -111,7 +111,7 @@ Headers, going from biggest(<h1>) to smallest (<h6>).
 
 <u><p></u>
 
-Paragraph tag. Put your prose in the <p> tag! 
+Paragraph tag. Put your prose in the <p> tag!
 
 <u><span></u>
 
@@ -172,7 +172,7 @@ If the image is not found, the text "Tim wants a hug" will appear in the site in
 
 <u><form> & <input></u>
 
-We'll be using these a ton in the future when we have data we want to persist, but for now, just understand that they have their own attributes, such as `for`, `value`, and `type`. 
+We'll be using these a ton in the future when we have data we want to persist, but for now, just understand that they have their own attributes, such as `for`, `value`, and `type`.
 
 Additionally, <input> is also a self-closing tag.
 

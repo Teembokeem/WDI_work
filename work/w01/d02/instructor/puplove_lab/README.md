@@ -70,39 +70,24 @@ Use the following style guide to check the webpage:
 
 **HTML**
 
-​	[ ] All necessary boilerplate (`<head>`, `<!DOCTYPE html>`, etc.)
-
-​	[ ] HTML structures separated by comments
-
-​	[ ] Semantic tags, both *structural* (e.g. `<footer>`, `<header>`, etc.) and 
-
-​		*typographic* (`<strong>`, `<em>`, etc.)
-
-​	[ ] Indentation convention used is 2-space tabs
-
-​	[ ] All text surrounded by tags
-
-​	[ ] Appropriate attributes for html tags
-
-​		[ ] `alt` for `<img>`
-
-​		[ ] `src` for `<img>`
-
-​		[ ] `href` for `<a>`
-
-​		[ ] `href` for `<link>`
+- [ ] [ ] All necessary boilerplate (`<head>`, `<!DOCTYPE html>`, etc.)
+- [ ] [ ] HTML structures separated by comments
+- [ ] [ ] Semantic tags, both *structural* (e.g. `<footer>`, `<header>`, etc.) and *typographic* (`<strong>`, `<em>`, etc.)
+- [ ] [ ] Indentation convention used is 2-space tabs
+- [ ] [ ] All text surrounded by tags
+- [ ] [ ] Appropriate attributes for html tags
+          - [ ] [ ] `alt` for `<img>`
+          - [ ] [ ] `src` for `<img>`
+          - [ ] [ ] `href` for `<a>`
+          - [ ] [ ] `href` for `<link>`
 
 **CSS**
 
-​	[ ] Clear syntax
-
-​	[ ] Clear use of classes 
-
-​	[ ] No ids
-
-​	[ ] Legible styling
-
-​	[ ] If using CSS Inheritance, it is easily read
+- [ ] Clear syntax
+- [ ] Clear use of classes 
+- [ ] No ids
+- [ ] Legible styling
+- [ ] If using CSS Inheritance, it is easily read
 
 ### Part 3 - Discuss
 

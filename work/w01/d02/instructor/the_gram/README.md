@@ -40,7 +40,8 @@ that's reason to feel immensely proud!)
   - `text-decoration`
   - `text-transform`
 - Use a single external CSS stylesheet to style all pages.
-- Use the images provided to construct the appropriate elements on the page:
+- Use the images provided to construct the appropriate elements on the 
+  page:
   - the iPhone
   - App Store and Google Play buttons
   - Instagram Logo
@@ -48,7 +49,9 @@ that's reason to feel immensely proud!)
 
 #### Starter code
 
-The starter-code contains all the files, images, and text content needed to create the page. The text is in the `index.html`, and the color palette is in `main.css`
+The starter-code contains all the files, images, and text content needed
+to create the page. The text is in the `index.html`, and the color 
+palette is in `main.css`
 
 ## Additional Resources
 

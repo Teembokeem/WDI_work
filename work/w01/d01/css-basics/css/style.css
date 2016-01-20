@@ -1,0 +1,28 @@
+body {
+  font-family: "Lucida grande";
+  margin: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  color: blue;
+}
+
+#comments-title {
+  font-size: 28px;
+}
+
+li.another-class {
+  border: solid 2px red;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+#comments-title::first-letter {
+  font-size: 200px;
+}

@@ -19,6 +19,8 @@
 
 > "JavaScript is the world's most popular programming language."<br>
 > _\- someone on the Internet that knows..._
+ 
+![](http://static3.businessinsider.com/image/55d4f958bd86ef13008b46b0-1200/and-for-good-measure-heres-a-look-at-how-those-rankings-have-changed-over-the-past-seven-years.jpg)
 
 **? - Any thoughts as to why JavaScript has become so popular?**
 

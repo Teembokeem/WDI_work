@@ -287,7 +287,7 @@ The following are most, but not all, of the methods available on array objects:
 7. `Array.indexOf()`
 8. `Array.lastIndexOf()`
 9. `Array.join()`
-10. `Array.split()`
+10. `String.split()` - Yes, it's a method on strings, but it's related to arrays
 11. `Array.slice()`
 12. `Array.splice()`
 

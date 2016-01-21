@@ -24,7 +24,7 @@ Similar to how we made Obediah Jecht into an object, you'll **create yourself as
 8. Delete half of the things you were good at
 9. Age yourself.
 10. Add `'sitting'` to the things you're good at and remove everything else from the list.
-11. Add 5 more things to the list of things you're bad at.
+11. Add 5 more things to the list of things you're *bad* at.
 12. Delete yourself from the window
 
 **BONUS**: Create a method that prints out one of your classic sayings!
@@ -42,7 +42,7 @@ You are now a pokemon trainer. Yes, your middle school dreams (lower school mayb
 
 #### <u>Build a Pizza Menu</u>
 
-Become the sweaty human behind the counter, make your menu, and start making some friggin' pizzas. 
+Become the sweaty human behind the counter, make your menu, and start making some friggin' pizzas.
 
 1. Create a menu object.
 2. Create 5 pizzas, each referenced within the menu object as distinct properties.

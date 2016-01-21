@@ -17,6 +17,7 @@ In general, you use Git in two different ways:
 
 ## Basic Git Workflow
 
+![workflow diagram](../../../../resources/cheatsheets/assets/repo-structure-basic.png)
 
 **Our beginning workflow for the class looks like this:**
 

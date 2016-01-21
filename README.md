@@ -96,7 +96,7 @@ To be announced soon!
 |:----------------:|:-----------:|:------|
 | **January 15**   | Friday      | **Orientation & Installfest** |
 | **January 19**   | Tuesday     | **First day of WDI!** |
-| **February 15**  | Monday      | **President's Day (NO CLASS/CAMPUS CLOSED)** |
+| **February 15**  | Monday      | **President's Day (NO CLASS/CAMPUS OPEN)** |
 | **April 8**      | Friday      | **Last day of class & graduation!** |
 
 

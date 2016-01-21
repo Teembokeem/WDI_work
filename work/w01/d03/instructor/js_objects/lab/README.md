@@ -15,7 +15,7 @@ I've included a `starter_code` directory for you to use for practice.
 Similar to how we made Obediah Jecht into an object, you'll **create yourself as an object**. However, unlike Obediah, you'll build your parents first, and then **build yourself by referencing their attributes**!
 
 1. First build two objects `mom` and `dad` as object literals (e.g. `var mom = {};`). If you have a non-traditional family structure, just use someone everybody loves, like Joe Biden or Oprah.
-2. Create two Personality objects for each parent (e.g. `mom.Personality = {};`);
+2. Create one Personality object for each parent (e.g. `mom.personality = {};`);
 3. Using the different data types (Number, String, Array, Object, Null, & Boolean) add **5 physical attributes** your parents.
 4. Do the same with the personality objects!
 5. Now bulid yourself by referencing physical and personality attributes from your folks!
@@ -24,7 +24,7 @@ Similar to how we made Obediah Jecht into an object, you'll **create yourself as
 8. Delete half of the things you were good at
 9. Age yourself.
 10. Add `'sitting'` to the things you're good at and remove everything else from the list.
-11. Add 5 more things to the list of things you're good at.
+11. Add 5 more things to the list of things you're *bad* at.
 12. Delete yourself from the window
 
 **BONUS**: Create a method that prints out one of your classic sayings!
@@ -42,7 +42,7 @@ You are now a pokemon trainer. Yes, your middle school dreams (lower school mayb
 
 #### <u>Build a Pizza Menu</u>
 
-Become the sweaty human behind the counter, make your menu, and start making some friggin' pizzas. 
+Become the sweaty human behind the counter, make your menu, and start making some friggin' pizzas.
 
 1. Create a menu object.
 2. Create 5 pizzas, each referenced within the menu object as distinct properties.

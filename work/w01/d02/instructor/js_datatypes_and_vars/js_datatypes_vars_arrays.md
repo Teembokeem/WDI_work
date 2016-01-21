@@ -154,7 +154,7 @@ Typically, when we discuss _objects_ in JS, we are referring to plain vanilla _o
 - **Object**<br>`{name: 'Joe Cool'}`
 - **Array**<br>`[1, 2, 3]`
 - **Date**<br>`new Date()`
-- **RegExp**<br>`\.*\`
+- **RegExp**<br>`/.*/`
 - **Function**<br>`function() {}`
 
 We will discuss _objects_ in detail in the next lesson.

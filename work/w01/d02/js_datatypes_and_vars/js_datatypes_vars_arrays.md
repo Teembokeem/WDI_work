@@ -19,8 +19,6 @@
 
 > "JavaScript is the world's most popular programming language."<br>
 > _\- someone on the Internet that knows..._
- 
-![](http://static3.businessinsider.com/image/55d4f958bd86ef13008b46b0-1200/and-for-good-measure-heres-a-look-at-how-those-rankings-have-changed-over-the-past-seven-years.jpg)
 
 **? - Any thoughts as to why JavaScript has become so popular?**
 
@@ -154,7 +152,7 @@ Typically, when we discuss _objects_ in JS, we are referring to plain vanilla _o
 - **Object**<br>`{name: 'Joe Cool'}`
 - **Array**<br>`[1, 2, 3]`
 - **Date**<br>`new Date()`
-- **RegExp**<br>`/.*/`
+- **RegExp**<br>`\.*\`
 - **Function**<br>`function() {}`
 
 We will discuss _objects_ in detail in the next lesson.
@@ -287,7 +285,7 @@ The following are most, but not all, of the methods available on array objects:
 7. `Array.indexOf()`
 8. `Array.lastIndexOf()`
 9. `Array.join()`
-10. `String.split()` - Yes, it's a method on strings, but it's related to arrays
+10. `Array.split()`
 11. `Array.slice()`
 12. `Array.splice()`
 

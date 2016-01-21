@@ -1,10 +1,31 @@
 /*The Box Model and its Components*/
-
+.box-model {
+  margin: 0px auto;
+  border: 3px solid red;
+  padding: 20px 500px;
+  width: 100px;
+}
 
 
 /*Inline Vs. Block*/
 
+.inline-vs-block {
+  border: 1px dotted gray;
+}
 
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+  margin: 10px;
+}
+
+.inline-block {
+  display: inline-block;
+  padding: 10px;
+}
 
 /*Positioning*/
 
@@ -22,24 +43,43 @@
   height: 500px;
   width: 500px;
   background-color: gray;
+  position: relative;
 }
 
 .one {
   background-color: red;
+  position: static;
 }
 
 .two {
   background-color: blue;
+  position: relative;
+  top: -100px;
+  left: 100px;
 }
 
 .three {
   background-color: green;
+  position: absolute;
+  top: 200px;
+  left: 200px;
 }
 
 .four {
   background-color: black;
+  position: fixed;
+  right: 100px;
+  top: 80%;
 }
 
 /*Floats*/
+.img-example {
+  float: left;
+  width: 400px;
+}
 
+.columns > div {
+  float: left;
+  width: 50%;
+}
 

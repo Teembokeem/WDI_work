@@ -1,0 +1,82 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  background-repeat: repeat-x;
+}
+.content {
+  margin: 100px;
+}
+
+.cellphone {
+  float: left;
+  padding-left: 200px
+}
+
+.right__text__block {
+  float: left;
+  padding-left: 30px;
+
+}
+
+.text__and__badges {
+  background:url("../images/frame.png");
+  max-width: 505px;
+  background-repeat: no-repeat;
+  padding: 50px;
+}
+.Capture {
+  font-size: 30px;
+  color: #06365f;
+  width: 320px;
+  line-height: 40px;
+}
+
+.paragraph {
+  padding: 30px 90px 0px 0px;
+  font-size: 14px;
+}
+
+.takepicture {
+  padding-top: 20px;
+}
+
+.ohyeah {
+  padding-top: 20px;
+}
+
+.badges {
+  padding-top: 20px;
+}
+.badgeiPhone {
+  float:left;
+}
+
+.badgeAndroid {
+  float:left;
+  padding-left: 10px;
+}
+
+footer {
+  position:fixed;
+  top:80%;
+  text-align: center;
+  margin-top: 50px;
+  padding-left: 200px;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 20px;
+  color: #1c5380;
+}
+
+.copyright {
+  color: grey;
+}

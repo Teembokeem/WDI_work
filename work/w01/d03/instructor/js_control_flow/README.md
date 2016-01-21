@@ -177,6 +177,7 @@ true ? console.log("it is true"): console.log("it is false");
 //=>  "it is false"
 false ? console.log("it si true"): console.log("it is false");
 //=> "it is false"
+```
 
 ## JavaScript Loops
 

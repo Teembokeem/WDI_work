@@ -69,7 +69,7 @@ to [`nano`][nano], a command-line text-editor.
 If you forgot to write a message, type it in there. If there's already
 a message (usually begins "Merge branch ..."), then you're good!
 
-![:nano](assets/git-workflow-nano.png)
+<img src="assets/git-workflow-nano.png" alt="nano merge prompt" width="400px">
 
 Just accept the message by typing `^X` (`Ctrl-X`), and if necessary `Y`
 then `↵` (`Return`).

@@ -47,9 +47,11 @@ $ javascripting
 This begins the lesson. *Read the instructions* and follow them!
 
 **If at any time, you want to _run_ the code**, and not just test if it
-is right, you need to run the code using `node`, your JavaScript
-interpreter on the command line. For example, if you created a file
-`hello_world.js`, and you wanted to run it, you would type:
+is right, you can use `node`, the JavaScript interpreter on the command 
+line.
+
+For example, if you created a file `hello_world.js`, and you wanted to 
+run it, you would type:
 
 ```
 $ node hello_world.js

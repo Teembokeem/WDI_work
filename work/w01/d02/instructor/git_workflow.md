@@ -17,7 +17,6 @@ In general, you use Git in two different ways:
 
 ## Basic Git Workflow
 
-![](assets/repo-structure-basic.png)
 
 **Our beginning workflow for the class looks like this:**
 
@@ -69,7 +68,7 @@ to [`nano`][nano], a command-line text-editor.
 If you forgot to write a message, type it in there. If there's already
 a message (usually begins "Merge branch ..."), then you're good!
 
-<img src="assets/git-workflow-nano.png" alt="nano merge prompt" width="400px">
+<img src="../../../../resources/cheatsheets/assets/git-workflow-nano.png" alt="nano merge prompt" width="400px">
 
 Just accept the message by typing `^X` (`Ctrl-X`), and if necessary `Y`
 then `↵` (`Return`).

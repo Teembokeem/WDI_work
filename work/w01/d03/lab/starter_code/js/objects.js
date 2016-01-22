@@ -48,12 +48,11 @@ var theDevil = [donaldTrumpMon];
 var battle = function(currentPokemon, .currenthealth) {
   while (currentPokemon.currenthealth > 0 && donaldTrumpMon.currenthealth > 0 ) {
     console.log(theBaeAttack(currentPokemon));
-    if (donaldTrumpMon.currenthealth > 0) {
-      console.log(enemyAttack(currentPokemon));
+    if (donaldTrumpMon.currenthealth === 0) {
+      return theOne + " has defeated " + theDevil;
     }
     else {
-      console.log(donaldTrumpMon.monid + " has fainted.")
-      return "you frickin did it.";
+      console.log(enemyAttack(currentPokemon));
     }
   }
 };
@@ -62,10 +61,12 @@ var theBaeAttack = function(currentPokemon) {
     donaldTrumpMon.currenthealth = donaldTrumpMon.maxhealth - currentPokemon.attack.value;
     console.log(pikaFreakingChu.monid + " used " + currentPokemon.attack.attid + " and dealt " + currentPokemon.attack.value);
     if (donaldTrumpMon.currenthealth < 0) {
-      donaldTrumpMon.currenthealth == 0;
-
+      donaldTrumpMon.currenthealth === 0;
+      console.log(donaldTrumpMon.monid + " has " + donaldTrumpMon.health + " health left");
+      console.log(donaldTrumpMon.monid + " has fainted.");
+      return "you frickin did it.";
     } else {
-      return donaldTrumpMon.monid + " has " + donaldTrumpMon.health + " health left";
+      console.log(donaldTrumpMon.monid + " has " + donaldTrumpMon.health + " health left";
     }
 }
 

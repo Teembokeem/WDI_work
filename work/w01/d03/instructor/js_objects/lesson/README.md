@@ -13,6 +13,7 @@
 | Define what "key-value" pairs and "properties" mean in reference to (JS) Objects. |
 | Identify the properties and values in a given (JS) Object. |
 | Reference or update a value in a (JS) Object by its property. |
+| Access the underlying global object (known as the window in the browser) |
 
 ## Roadmap
 
@@ -236,6 +237,18 @@ Now, we've actually removed the property entirely. We can no longer access `obJe
 `obJecht = {};`
 
 We've now assigned him to an empty object. In runtime, this will wipe the object of all custom properties.
+
+#### The Global Object
+
+All variables defined within the file become properties of the Global Object. In the browser, this is known as the `window` object.
+
+Therefore, `window.obJecht` would reference our tragic hero Obediah.
+
+We can try to `delete` window.obJecht, but it won't work. This is because we defined obJecht using the `var` keyword.
+
+However, if we had instantiated a global variable without `var`, then we could delete that variable. Of course, **we will never ever ever forget the var keyword** because global variables of that nature are COMPLETELY evil.
+
+Therefore, we cannot delete `obJecht` entirely from the global object.
 
 ## Outro
 

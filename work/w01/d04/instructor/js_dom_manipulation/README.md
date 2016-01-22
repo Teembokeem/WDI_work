@@ -62,42 +62,40 @@ For the DOM:
 
 ### Retrieving Elements
 
-|: Objectives                                                           |
-|-----------------------------------------------------------------------|
+| Objectives                                                           |
+|:---------------------------------------------------------------------|
 | Create a JS reference to a DOM node (elements) using document.getElementById. |
 | Create JS references to DOM nodes (elements) using document.querySelectorAll. |
 
 ### Editing or Adding Elements
 
-| Objectives                                                            |
-|-----------------------------------------------------------------------|
+| Objectives                                                           |
+|:---------------------------------------------------------------------|
 | Use document.createElement to create new DOM nodes (elements). |
-| Use .appendChild and .insertBefore to add DOM nodes (elements) to an HTML page. |
-| Use .remove and .replaceChild to remove or replace DOM nodes (elements) on an HTML page. |
+| Use Node#appendChild and .Node#nsertBefore to add DOM nodes (elements) to an HTML page. |
+| Use Node#remove and Node#replaceChild to remove or replace DOM nodes (elements) on an HTML page. |
 
 ### Attaching Events
 
-|: Objectives                                                           |
-|-----------------------------------------------------------------------|
-| Use .addEventListener to create "listeners" for DOM events. |
+| Objectives                                                           |
+|:---------------------------------------------------------------------|
+| Use Node#addEventListener to create "listeners" for DOM events. |
 | Have an event handler listen to multiple DOM elements' events. |
 | Explain what is meant by "event listener" and "event handler", and identify the parts of an addEventListener expression. |
-| Name important DOM events and give use cases for attaching interaction to each: click, submit, keypress, mouseover. |
+| Name important DOM events and give use cases for attaching interaction to each: DOMContentLoaded, click, submit, focus, keyup, mouseover. |
 
 ### Writing Event Handlers
 
-|: Objectives                                                           |
-|-----------------------------------------------------------------------|
+| Objectives                                                           |
+|:---------------------------------------------------------------------|
+| Write event handlers as inline anonymous functions. |
 | Access DOM event information inside an event handler. |
-| Explain when and why to attach events to "DOMContentLoaded" / "load". |
-| Define the term "asynchronous" in relation to programming, and relate it to DOM event handling. |
-| Explain the difference between linking your JavaScript in the <head> or at the bottom of the <body>. |
-| Capture data from specific events and iterate or manipulate the data. |
+| Capture data from specific events and manipulate that data. |
 
 ### Modifying Events
 
-|: Objectives                                                           |
-|-----------------------------------------------------------------------|
+| Objectives                                                           |
+|:---------------------------------------------------------------------|
 | Prevent the default DOM event handler from firing. |
 | Explain "event bubbling", or propogation, in the DOM. |
 | Prevent the propogation of events in through the DOM. |

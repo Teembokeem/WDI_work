@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.content {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.tweet-text {
+	width: 400px;
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+.tweet-button {
+	width: 100px;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.error {
+  border: 2px solid red;
+}
+

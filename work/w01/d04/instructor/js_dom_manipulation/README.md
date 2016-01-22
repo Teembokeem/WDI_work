@@ -11,7 +11,7 @@ can help you learn about it.
 
 ### What is the DOM?
 
-| Objectives                                                            |
+|: Objectives                                                           |
 |-----------------------------------------------------------------------|
 | Define DOM and identify where to find it in the browser API. |
 | Define what is meant by DOM node (element), and identify nodes on an HTML page. |
@@ -62,7 +62,7 @@ For the DOM:
 
 ### Retrieving Elements
 
-| Objectives                                                            |
+|: Objectives                                                           |
 |-----------------------------------------------------------------------|
 | Create a JS reference to a DOM node (elements) using document.getElementById. |
 | Create JS references to DOM nodes (elements) using document.querySelectorAll. |
@@ -77,7 +77,7 @@ For the DOM:
 
 ### Attaching Events
 
-| Objectives                                                            |
+|: Objectives                                                           |
 |-----------------------------------------------------------------------|
 | Use .addEventListener to create "listeners" for DOM events. |
 | Have an event handler listen to multiple DOM elements' events. |
@@ -86,7 +86,7 @@ For the DOM:
 
 ### Writing Event Handlers
 
-| Objectives                                                            |
+|: Objectives                                                           |
 |-----------------------------------------------------------------------|
 | Access DOM event information inside an event handler. |
 | Explain when and why to attach events to "DOMContentLoaded" / "load". |
@@ -96,7 +96,7 @@ For the DOM:
 
 ### Modifying Events
 
-| Objectives                                                            |
+|: Objectives                                                           |
 |-----------------------------------------------------------------------|
 | Prevent the default DOM event handler from firing. |
 | Explain "event bubbling", or propogation, in the DOM. |

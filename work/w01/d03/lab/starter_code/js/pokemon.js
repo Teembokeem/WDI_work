@@ -45,7 +45,7 @@ var donaldTrumpMon = {
 
 var theDevil = [donaldTrumpMon];
 
-var battle = function(currentPokemon, .currenthealth) {
+var battle = function(currentPokemon) {
   while (currentPokemon.currenthealth > 0 && donaldTrumpMon.currenthealth > 0 ) {
     console.log(theBaeAttack(currentPokemon));
     if (donaldTrumpMon.currenthealth === 0) {

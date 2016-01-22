@@ -490,7 +490,7 @@ var validatePasswordsMatch = function(pw, pwConf) {
     return false;
   }
 }
-validatePasswordsMatch("yes", "yes");
+validatePasswordsMatch(marvin.password, marvin.passwordConfirmation);
 
 // 2. Use your function on marvin and dave's password and passwordConfirmation
 //    attributes to make sure it works.

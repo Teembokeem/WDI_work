@@ -103,7 +103,7 @@ For the DOM:
 
 <!-- LINKS -->
 
-[cheatsheet]:  ../../../../../resources/cheatsheets/dom_js_cheatsheets.md
+[cheatsheet]:  ../../../../../resources/cheatsheets/dom_js_cheatsheet.md
 [tutorial]:    http://tutorialzine.com/2014/06/10-tips-for-writing-javascript-without-jquery
 [wiki-events]: https://en.wikipedia.org/wiki/DOM_events
 [ch-dom]:      https://christianheilmann.com/stuff/JavaScript-DOM-Cheatsheet.pdf

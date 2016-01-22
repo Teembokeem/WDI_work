@@ -3,7 +3,8 @@ console.log("script linked!");
 
 var pikaFreakingChu = {
   monid: "pikaFreakingChu",
-  health: 4000,
+  maxhealth: 4000,
+  currenthealth: maxhealth,
   attack: {
     attid: "EDM Drop",
     value: 30000000
@@ -34,7 +35,8 @@ theOne[2].koCondition = "You lose Bro.";
 
 var donaldTrumpMon = {
   monid: "TrumpTramp",
-  health: 100000000,
+  maxhealth: 100000000,
+  currenthealth: maxhealth,
   attack: {
       attid:"'I Don't Know What I Am Saying'",
       value: 500
@@ -43,27 +45,32 @@ var donaldTrumpMon = {
 
 var theDevil = [donaldTrumpMon];
 
-var battle = function(currentPokemon) {
-  while (currentPokemon.health > 0 || donaldTrumpMon.health > 0 ) {
+var battle = function(currentPokemon, .currenthealth) {
+  while (currentPokemon.currenthealth > 0 && donaldTrumpMon.currenthealth > 0 ) {
     console.log(theBaeAttack(currentPokemon));
-    console.log(enemyAttack(currentPokemon));
+    if (donaldTrumpMon.currenthealth > 0) {
+      console.log(enemyAttack(currentPokemon));
+    }
+    else {
+      console.log(donaldTrumpMon.monid + " has fainted.")
+      return "you frickin did it.";
+    }
   }
 };
 
 var theBaeAttack = function(currentPokemon) {
-    donaldTrumpMon.health -= currentPokemon.attack.value;
+    donaldTrumpMon.currenthealth = donaldTrumpMon.maxhealth - currentPokemon.attack.value;
     console.log(pikaFreakingChu.monid + " used " + currentPokemon.attack.attid + " and dealt " + currentPokemon.attack.value);
-    if (donaldTrumpMon.health < 0) {
-      donaldTrumpMon.health = 0;
-      console.log(donaldTrumpMon.monid + " has fainted.")
-      return "you frickin did it.";
+    if (donaldTrumpMon.currenthealth < 0) {
+      donaldTrumpMon.currenthealth == 0;
+
     } else {
       return donaldTrumpMon.monid + " has " + donaldTrumpMon.health + " health left";
     }
 }
 
 var enemyAttack = function(currentPokemon) {
-    currentPokemon.health -= donaldTrumpMon.attack.value;
+    currentPokemon.currenthealth = currentPokemon.health - donaldTrumpMon.attack.value;a
     console.log(donaldTrumpMon.monid + " used " + donaldTrumpMon.attack.attid + " and dealt " + donaldTrumpMon.attack.value);
     if (currentPokemon.health < 0) {
       currentPokemon.health = 0;

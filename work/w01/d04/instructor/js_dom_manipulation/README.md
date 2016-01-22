@@ -11,6 +11,7 @@ can help you learn about it.
 
 ### What is the DOM?
 
+|                                                                      |
 |----------------------------------------------------------------------|
 | Define DOM and identify where to find it in the browser API. |
 | Define what is meant by DOM node (element), and identify nodes on an HTML page. |
@@ -61,12 +62,14 @@ For the DOM:
 
 ### Retrieving Elements
 
+|                                                                      |
 |----------------------------------------------------------------------|
 | Create a JS reference to a DOM node (elements) using document.getElementById. |
 | Create JS references to DOM nodes (elements) using document.querySelectorAll. |
 
 ### Editing or Adding Elements
 
+|                                                                      |
 |----------------------------------------------------------------------|
 | Use document.createElement to create new DOM nodes (elements). |
 | Use .appendChild and .insertBefore to add DOM nodes (elements) to an HTML page. |
@@ -74,6 +77,7 @@ For the DOM:
 
 ### Attaching Events
 
+|                                                                      |
 |----------------------------------------------------------------------|
 | Use .addEventListener to create "listeners" for DOM events. |
 | Have an event handler listen to multiple DOM elements' events. |
@@ -82,6 +86,7 @@ For the DOM:
 
 ### Writing Event Handlers
 
+|                                                                      |
 |----------------------------------------------------------------------|
 | Access DOM event information inside an event handler. |
 | Explain when and why to attach events to "DOMContentLoaded" / "load". |
@@ -91,6 +96,7 @@ For the DOM:
 
 ### Modifying Events
 
+|                                                                      |
 |----------------------------------------------------------------------|
 | Prevent the default DOM event handler from firing. |
 | Explain "event bubbling", or propogation, in the DOM. |

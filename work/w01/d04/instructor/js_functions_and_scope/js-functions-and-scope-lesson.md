@@ -220,13 +220,17 @@ Let's examine this code:
 
 ```js
 var x = 5;
+
 var myFun1 = function () {
   console.log(x);   // logs out 5
+  myFun2();
   
   var myFun2 = function () {
     console.log(x);   // logs out 5
   };
 };
+
+myFun1();
 ```
 Note how we go right up the scope chain looking for a variable (or function). Once the variable is found, the JS runtime engine will stop looking up the chain because, well, it found what it was looking for. If it progresses all the way up to the global scope and still does not find the the variable it's looking for, **what do you think is returned?**
 

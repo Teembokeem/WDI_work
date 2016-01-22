@@ -272,7 +272,7 @@ for (var index = 0; index < friends.length; index = index + 1) {
 4. Capitalize the first letter in every word in a string, i.e
   
   ```
-  "hello world" => "Hello World"  
+  "hello world" => "Hello World"
   
   ```
 

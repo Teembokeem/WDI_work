@@ -11,7 +11,7 @@ can help you learn about it.
 
 ### What is the DOM?
 
-|: Objectives                                                           |
+| Objectives                                                            |
 |-----------------------------------------------------------------------|
 | Define DOM and identify where to find it in the browser API. |
 | Define what is meant by DOM node (element), and identify nodes on an HTML page. |
@@ -64,25 +64,25 @@ For the DOM:
 
 | Objectives                                                           |
 |:---------------------------------------------------------------------|
-| Create a JS reference to a DOM node (elements) using document.getElementById. |
-| Create JS references to DOM nodes (elements) using document.querySelectorAll. |
+| Create a JS reference to a DOM node (elements) using `document.getElementById`. |
+| Create JS references to DOM nodes (elements) using `document.querySelectorAll`. |
 
 ### Editing or Adding Elements
 
 | Objectives                                                           |
 |:---------------------------------------------------------------------|
-| Use document.createElement to create new DOM nodes (elements). |
-| Use Node#appendChild and .Node#nsertBefore to add DOM nodes (elements) to an HTML page. |
-| Use Node#remove and Node#replaceChild to remove or replace DOM nodes (elements) on an HTML page. |
+| Use `document.createElement` to create new DOM nodes (elements). |
+| Use `Node#appendChild` and `Node#insertBefore` to add DOM nodes (elements) to an HTML page. |
+| Use `Node#remove` and `Node#replaceChild` to remove or replace DOM nodes (elements) on an HTML page. |
 
 ### Attaching Events
 
 | Objectives                                                           |
 |:---------------------------------------------------------------------|
-| Use Node#addEventListener to create "listeners" for DOM events. |
+| Use `Node#addEventListener` to create "listeners" for DOM events. |
 | Have an event handler listen to multiple DOM elements' events. |
 | Explain what is meant by "event listener" and "event handler", and identify the parts of an addEventListener expression. |
-| Name important DOM events and give use cases for attaching interaction to each: DOMContentLoaded, click, submit, focus, keyup, mouseover. |
+| Name important DOM events and give use cases for attaching interaction to each: `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
 
 ### Writing Event Handlers
 
@@ -99,7 +99,7 @@ For the DOM:
 | Prevent the default DOM event handler from firing. |
 | Explain "event bubbling", or propogation, in the DOM. |
 | Prevent the propogation of events in through the DOM. |
-| Differentiate between using event.stopPropogation and event.preventDefault, and give use cases for each. |
+| Differentiate between using `event.stopPropogation` and `event.preventDefault`, and give use cases for each. |
 
 <!-- LINKS -->
 

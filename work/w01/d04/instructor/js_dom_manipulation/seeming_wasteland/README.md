@@ -1,6 +1,6 @@
 # Seeming Wasteland
 
-![San Fernando Valley](san-fernando-valley.png)
+![San Fernando Valley](assets/san-fernando-valley.png)
 
 ### Setup
 

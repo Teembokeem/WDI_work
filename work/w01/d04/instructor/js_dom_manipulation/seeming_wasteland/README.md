@@ -14,27 +14,44 @@ after each action.
 
 **Use JavaScript to manipulate the DOM and do the following:**
 
-1.  Create a `<div>` element, save it to a variable called `house`, and 
-    give it a class of `dwelling`.
-2.  Append this `<div>` (in the variable `house`) to the `<body>`.
-3.  Create two new elements:
-    - an `<h1>` saved to the variable `topLevelHeaderEl`, and
-    - a `<span>` saved to the variable `span`.
-4.  Check out [this][span-article] article for a second. It explains why
-    the `<span>` tag is useful in HTML. Then:
-    - give the span the text content of **"Seeming Wasteland"**;
-    - give the span the class of `shadowed`.
-5.  Append the span (as a child) to the `topLevelHeaderEl`.
-6.  Append the `topLevelHeaderEl` (as a child) to the `<body>`.
-7.  Create a new `<div>` element and save it to the variable `waldo`.
-8.  Give this `<div>` (in the variable `waldo`) an `id` of `waldo`.
-9.  Append the `<div>` (in the variable `waldo`) to the `<body>`.
+#### Part 1
+
+1.  Create a `<div>` element, save it to a variable called `houseEl`,
+    and give it a class of `dwelling`.
+2.  Take this `<div>` (in the variable `houseEl`), and append it (as a 
+    child) to the `<body>`.
+
+#### Part 2
+
+Check out [this][span-article] article for a second. It explains why the
+`<span>` tag is useful in HTML.
+
+3.  Create the element `<h1>`, and save it to the variable 
+    `topLevelHeaderEl`.
+4.  Create the element `<span>`, and save it to the variable `spanEl`.
+    Then:
+    - give the `spanEl` the text content of **"Seeming Wasteland"**;
+    - give the `spanEl` the class of `shadowed`.
+5.  Append `spanEl` to the `topLevelHeaderEl`.
+6.  Append the `topLevelHeaderEl` to the `<body>`.
+
+#### Part 3
+
+7.  Create a new `<div>` element and save it to the variable `waldoEl`.
+8.  Give this `<div>` (in the variable `waldoEl`) an `id` of `waldo`.
+9.  Append the `<div>` (in the variable `waldoEl`) to the `<body>`.
+
+#### Part 4
+
 10. Create a `<ul>` element and save it to a *sensibly named variable*.
 11. Uncomment the `birds` array. Iterate through the array, and create 
     an `<li>` for each bird. Give each `<li>` the class of `bird` and 
     the text content of the bird's name. Finally, append the `<li>` to
     the `<ul>` you created.
-12. Append the `<ul>` (as a child) to the `<body>`.
+12. Append the `<ul>` to the `<body>`.
+
+#### Part 5
+
 13. Add 5 more elements (each with a different tag) to the DOM so that 
     this seeming wasteland becomes lush. Feel free to get creative with
     the CSS.

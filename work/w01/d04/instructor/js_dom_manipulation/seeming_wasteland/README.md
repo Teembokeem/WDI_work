@@ -44,17 +44,20 @@ Check out [this][span-article] article for a second. It explains why the
 #### Part 4
 
 10. Create a `<ul>` element and save it to a *sensibly named variable*.
-11. Uncomment the `birds` array. Iterate through the array, and create 
-    an `<li>` for each bird. Give each `<li>` the class of `bird` and 
-    the text content of the bird's name. Finally, append the `<li>` to
-    the `<ul>` you created.
+11. Iterate through the `birds` array in `main.js`, and create 
+    an `<li>` for each bird. Give each `<li>`
+    - a class of `bird`, and 
+    - the text content of the bird's name.
+
+    Finally, append the `<li>` to the `<ul>` you created.
+
 12. Append the `<ul>` to the `<body>`.
 
 #### Part 5
 
-13. Add 5 more elements (each with a different tag) to the DOM so that 
-    this seeming wasteland becomes lush. Feel free to get creative with
-    the CSS.
+13. Add 5 more elements (using tags like `<img>`, `<div>`, `<p>`, etc.) 
+    to the DOM so that this seeming wasteland becomes lush. Feel free to
+    get creative with the CSS in either `style.css` or in `main.js`.
 14. Once the wasteland is no longer a wasteland, change the span tag
     (in the variable `span`) to have the text content **"Teeming Funland"**.
 

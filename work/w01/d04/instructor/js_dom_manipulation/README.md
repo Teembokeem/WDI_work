@@ -2,15 +2,15 @@
 
 ### Contents
 
-**[What is the DOM](what-is-the-dom)**   
-  - [The `document` object](the-document-object)
-  - [DOM Node objects (HTML elements)](dom-node-objects)
-**[Retrieving Elements](retrieving-elements)**   
-**[Editing Elements](editing-elements)**   
-**[Adding Elements](adding-elements)**   
-**[Attaching Events](attaching-events)**   
-**[Writing Event Handlers](writing-event-handlers)**   
-**[Modifying Events](modifying-events)**   
+1.  **[What is the DOM](#what-is-the-dom)**
+  - [The `document` object](#the-document-object)
+  - [DOM Node objects (HTML elements)](#dom-node-objects)
+2.  **[Retrieving Elements](#retrieving-elements)**
+3.  **[Editing Elements](#editing-elements)**
+4.  **[Adding Elements](#adding-elements)**
+5.  **[Attaching Events](#attaching-events)**
+6.  **[Writing Event Handlers](#writing-event-handlers)**
+7.  **[Modifying Events](#modifying-events)**
 
 The DOM is a **huge** topic. Before we begin, here are resources that
 can help you learn about it.

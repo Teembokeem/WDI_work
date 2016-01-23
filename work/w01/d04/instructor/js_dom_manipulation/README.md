@@ -7,7 +7,7 @@ can help you learn about it.
 - [A DOM tutorial][tutorial]
 - [MDN Docs][mdn-dm]
 - [Another DOM cheatsheet][ch-dom]
-- [A good, concise list of DOM event][wiki-events]
+- [A good, concise list of DOM events][wiki-events]
 
 ### What is the DOM?
 

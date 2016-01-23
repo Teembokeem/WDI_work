@@ -42,7 +42,7 @@ document.documentURI
 document.body
 document.images
 document.scripts
-document.styles
+document.styleSheets
 document.anchors
 ```
 

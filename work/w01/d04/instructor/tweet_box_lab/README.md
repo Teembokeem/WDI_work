@@ -25,7 +25,8 @@ Every time a user types in to the text area, do the following:
 - Check if the length of the input is between 0 and 140 characters.
   - If it's 0 characters, disable the "Tweet!" button (no empty tweets!).
   - If it's more than 140 characters, disable the "Tweet!" button and
-    change the text area to have a red border.
+    change the text area to have a red border, by giving it the class
+    `error`.
 
 ### Part 2
 

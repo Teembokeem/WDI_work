@@ -8,7 +8,8 @@
 2.  **[Retrieving Elements](#retrieving-elements)**
   - [Using `document.querySelectorAll`](#using-documentqueryselectorall)
 3.  **[Editing Elements](#editing-elements)**
-4.  **[Adding Elements](#adding-elements)**
+  - [JavaScript and Classes](#javascript-and-classes)
+4.  **[Adding and Removing Elements](#adding-removing-elements)**
 5.  **[Attaching Events](#attaching-events)**
 6.  **[Writing Complex Event Handlers](#writing-complex-event-handlers)**
 7.  **[Modifying Events](#modifying-events)**
@@ -21,6 +22,8 @@ can help you learn about it.
 - [MDN Docs][mdn-dm]
 - [Another DOM cheatsheet][ch-dom]
 - [A good, concise list of DOM events][wiki-events]
+
+---
 
 ### What is the DOM?
 
@@ -189,6 +192,8 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 > console, not like most other JavaScript objects. This can be confusing!
 > Keep in mind, they are actually just objects.**
 
+---
+
 #### Using `document.querySelectorAll`
 
 The great thing about `document.querySelectorAll` is that it picks nodes
@@ -270,6 +275,8 @@ console.log(headingEl.textContent);
 headingEl.textContent = "Are you prepared to meet St. Dominic Savio?"
 ```
 
+---
+
 #### JavaScript and Classes
 
 More complex than simply using properties to edit the element, however,
@@ -339,18 +346,73 @@ console.log(imgEl.classList);
 [Extreme Makeover](exercises/extreme_makeover)!**
 -->
 
-### Adding Elements
+---
+
+### Adding and Removing Elements
 
 | Objectives                                                                                |
 |:------------------------------------------------------------------------------------------|
-| Use `document.createElement` to create new DOM Nodes/elements.                            |
-| Use `Node#appendChild` and `Node#insertBefore` to add DOM Nodes/elements to an HTML page. |
 | Use `Node#remove` and `Node#replaceChild` to remove or replace DOM Nodes/elements.        |
+| Use `document.createElement()` to create new DOM Nodes/elements.                          |
+| Use `Node#appendChild` and `Node#insertBefore` to add DOM Nodes/elements to an HTML page. |
+
+The final way we will change our DOM is by creating and adding new
+elements to it and removing elements that are on it.
+
+Easiest is removing nodes. To remove our final paragraph we could write:
+
+```javascript
+var finalParaEl = document.getElementById("outside-link");
+
+finalParaEl.remove(); // tada!
+```
+
+In order to add a new element to the page, however, we need to create
+one first. You create new, empty elements with `document.createElement()`.
+These nodes can be stored in variables, but aren't added to the DOM by
+default. To do that, you must "insert" them into the DOM somewhere.
+
+The most common ways to insert DOM nodes are either with 
+`Node#appendChild` or `Node#insertBefore`. Both of these are called
+**on** nodes and are **passed** nodes as a parameter.
+
+- `Node#appendChild`: inserts the new node as the **last "child" inside**
+   of the called node.
+- `Node#insertBefore`: inserts the new node as **a child** of the called
+   node, **directly before** the second node passed as a parameter. You 
+   can also use `Node#insertAfter`.
+
+For example, to add another paragraph to the `<main>` element, as the
+last paragraph, you could write:
+
+```javascript
+var mainEl    = document.querySelectorAll("main")[0];
+var newParaEl = document.createElement("p");
+
+newParaEl.textContent = "A boy of heroic virtue.";
+
+mainEl.appendChild(newParaEl);
+```
+
+However, if you want to add it as the first paragraph, you would have to
+write:
+
+```javascript
+var mainEl      = document.querySelectorAll("main")[0];
+var firstParaEl = mainEl.children[0];
+var newParaEl   = document.createElement("p");
+
+newParaEl.textContent = "The pious son of a blacksmith.";
+
+mainEl.insertBefore(newParaEl, firstParaEl);
+```
 
 <!--
 **For practice, you can use the exercise 
 [Seeming Wasteland](exercises/seeming_wasteland)!**
 -->
+
+---
 
 ### Attaching Events
 
@@ -366,12 +428,16 @@ console.log(imgEl.classList);
 [We Can Rebuild Her](exercises/we_can_rebuild_her)!**
 -->
 
+---
+
 ### Writing Complex Event Handlers
 
 | Objectives                                                                          |
 |:------------------------------------------------------------------------------------|
 | Write event handlers as inline anonymous functions.                                 |
 | Access and edit DOM event information inside an event handler from an event object. |
+
+---
 
 ### Modifying Events
 

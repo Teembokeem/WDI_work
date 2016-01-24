@@ -6,11 +6,11 @@
   - [The `document` object](#the-document-object)
   - [DOM Node objects (HTML elements)](#dom-node-objects)
 2.  **[Retrieving Elements](#retrieving-elements)**
-  - [`document.querySelectorAll`](#document.queryselectorall)
+  - [Using `document.querySelectorAll`](#using-documentqueryselectorall)
 3.  **[Editing Elements](#editing-elements)**
 4.  **[Adding Elements](#adding-elements)**
 5.  **[Attaching Events](#attaching-events)**
-6.  **[Writing Event Handlers](#writing-event-handlers)**
+6.  **[Writing Complex Event Handlers](#writing-complex-event-handlers)**
 7.  **[Modifying Events](#modifying-events)**
 
 The DOM is a **huge** topic. Before we begin, here are resources that
@@ -87,6 +87,8 @@ var html = {
 Our browser loads all of the HTML into a JS object that is available on
 the global scope, called `document`.
 
+---
+
 #### The `document` object
 
 > Let's use the [`example.html` file](example.html) packaged with this 
@@ -116,6 +118,8 @@ For the DOM:
 - we work with the DOM by calling methods on the global `document`
   object
 
+---
+
 #### DOM "Node" objects
 
 Every single part of web page is represented by a DOM Node JavaScript 
@@ -142,6 +146,8 @@ Using all of these properties and methods we can interact with our
 web page! But first, we need to retrieve the nodes we want directly from
 the DOM (`document` object).
 
+---
+
 ### Retrieving Elements
 
 | Objectives                                                                    |
@@ -149,18 +155,18 @@ the DOM (`document` object).
 | Create a JS reference to a DOM Node/element using `document.getElementById`.  |
 | Create JS references to DOM Nodes/elements using `document.querySelectorAll`. |
 
-> In order to get to elements on our web page, we *could* access them from
-> the DOM like so:
+In order to get to elements on our web page, we *could* access them from
+the DOM like so:
 
 ```javascript
 var someParagraphEl = document.body.children[1].children[0].children[0];
 ```
 
-> But to do that you would be insane!
-> 
-> Instead, there a lot of search methods built in to `document`. We're
-> going to learn to use two of these: `document.getElementById`, and 
-> `document.querySelectorAll`.
+*But to do that you would be insane!*
+
+Instead, there a lot of search methods built in to `document`. We're
+going to learn to use two of these: `document.getElementById`, and 
+`document.querySelectorAll`.
 
 The simple rule is this:
 
@@ -183,7 +189,50 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 > console, not like most other JavaScript objects. This can be confusing!
 > Keep in mind, they are actually just objects.**
 
-#### `document.querySelectorAll`
+#### Using `document.querySelectorAll`
+
+The great thing about `document.querySelectorAll` is that it picks nodes
+from the DOM based on the same rules as CSS selectors! Eg, if we wanted
+to pick and element with the class `no-links` inside the element 
+`<main>`, we would write:
+
+```javascript
+document.querySelectorAll("main .no-links");
+// just like:
+// main .no-links {
+//   ...
+// }
+```
+
+**But there is something to look out for!**
+
+`document.querySelectorAll` *always returns an array of elements*, also
+known as a NodeList. Even if there is only one item! Eg:
+
+```javascript
+var imgEl = document.querySelectorAll("#nice-pic-bro");
+
+// imgEl is NOT an element! It's an array!
+```
+
+Thus, if you want to access that item from the list, you would need to
+write one of:
+
+```javascript
+// Way #1:
+var nodeList = document.querySelectorAll("#nice-pic-bro");
+var imgEl    = nodeList[0];
+
+// Way #2:
+var imgEl = document.querySelectorAll("#nice-pic-bro")[0];
+```
+
+<!--
+**For practice, you can use the exercise 
+[Catch Me If You Can](exercises/catch_me_if_you_can)!**
+-->
+
+---
 
 ### Editing Elements
 
@@ -193,6 +242,102 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 | Access and edit the text of DOM Node/elements.                      |
 | Find, add or remove classes on DOM Nodes/elements.                  |
 
+Once you have a DOM node representing an HTML element, you can make all
+kinds of changes to it!
+
+Any HTML attributes (like `src`, `alt`, `disabled`, `name`, and `id`)
+can be accessed or assigned new values directly, as properties:
+
+```javascript
+var imgEl = document.getElementById("nice-pic-bro");
+
+console.log(imgEl.id);
+console.log(imgEl.alt);
+
+imgEl.src = "http://www.catholic.org/files/images/saints/43.jpg";
+imgEl.alt = "St Dominic Savio, who died of pleurisy, gives the camera sleepy eyes.";
+imgEl.id  = "i-mean-yeah-its-still-an-ok-pic";
+```
+
+You can access and edit the text of any node easily with the property
+`.textContent`:
+
+```javascript
+var headingEl = document.querySelectorAll("header .no-links")[0];
+
+console.log(headingEl.textContent);
+
+headingEl.textContent = "Are you prepared to meet St. Dominic Savio?"
+```
+
+#### JavaScript and Classes
+
+More complex than simply using properties to edit the element, however,
+is working with the classes that are attached to one.
+
+> Remember: classes are stored on HTML elements in the attribute `class`
+> as a space-delimited list (a list of class names separated by spaces).
+
+Since the word "class" has so many uses in programming, and since the 
+`class` attribute in HTML actually represents a list of values, instead
+of one value, the DOM API gives us two oddly-named properties to use
+with classes:
+
+1.  If we want to simply access the string value of the class propery,
+    we can use `Node#className`. Eg:
+ 
+    ```javascript
+    var secondPara = document.querySelectorAll("main p")[1];
+ 
+    console.log(secondPara.className);
+    #=> "no-links code"
+    ```
+2.  Otherwise, we will use `Node#classList` to add, remove, or check for
+    a class, with:
+    - **`Node#classList.contains()`**
+    - **`Node#classList.remove()`**
+    - **`Node#classList.add()`**
+
+For example:
+
+```javascript
+var imgEl = document.querySelectorAll("img")[0];
+
+console.log(imgEl.classList);
+```
+
+Since we are now looking at St. Dominic Savio, let's check for and remove
+any inappropriate classes using `Node#classList.contains()` and 
+`Node#classList.remove()`.
+
+```javascript
+var imgEl = document.querySelectorAll("img")[0];
+
+// if the element has the class "parole-violation"
+if (imgEl.classList.contains("parole-violation")) {
+
+  // remove it!
+  imgEl.classList.remove("parole-violation");
+}
+
+console.log(imgEl.classList.contains("parole-violation"));
+#=> false
+```
+
+Now, let's give St. Dom a new, cool class, using `Node#classList.add()`!
+
+```javascript
+var imgEl = document.querySelectorAll("img")[0];
+
+imgEl.classList.add("halo");
+
+console.log(imgEl.classList);
+```
+
+<!--
+**For practice, you can use the exercise 
+[Extreme Makeover](exercises/extreme_makeover)!**
+-->
 
 ### Adding Elements
 
@@ -201,6 +346,11 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 | Use `document.createElement` to create new DOM Nodes/elements.                            |
 | Use `Node#appendChild` and `Node#insertBefore` to add DOM Nodes/elements to an HTML page. |
 | Use `Node#remove` and `Node#replaceChild` to remove or replace DOM Nodes/elements.        |
+
+<!--
+**For practice, you can use the exercise 
+[Seeming Wasteland](exercises/seeming_wasteland)!**
+-->
 
 ### Attaching Events
 
@@ -211,7 +361,12 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 | Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
 | Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
 
-### Writing Event Handlers
+<!--
+**For practice, you can use the exercise 
+[We Can Rebuild Her](exercises/we_can_rebuild_her)!**
+-->
+
+### Writing Complex Event Handlers
 
 | Objectives                                                                          |
 |:------------------------------------------------------------------------------------|

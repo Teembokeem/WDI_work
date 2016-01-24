@@ -1,6 +1,6 @@
 # DOMination
 
-### Contents
+## Contents
 
 1.  **[What is the DOM](#what-is-the-dom)**
   - [The `document` object](#the-document-object)
@@ -9,10 +9,36 @@
   - [Using `document.querySelectorAll`](#using-documentqueryselectorall)
 3.  **[Editing Elements](#editing-elements)**
   - [JavaScript and Classes](#javascript-and-classes)
-4.  **[Adding and Removing Elements](#adding-removing-elements)**
+4.  **[Adding and Removing Elements](#adding-and-removing-elements)**
 5.  **[Attaching Events](#attaching-events)**
 6.  **[Writing Complex Event Handlers](#writing-complex-event-handlers)**
 7.  **[Modifying Events](#modifying-events)**
+
+## Lesson Objectives
+
+| Section                        | Objectives                                                                          |
+|:-------------------------------|:------------------------------------------------------------------------------------|
+| What is the DOM                | Define DOM and identify where to find it in the browser API.                        |
+| What is the DOM                | Define what is meant by DOM node (element), and identify nodes on an HTML page.     |
+| Retrieving Elements            | Create a JS reference to a DOM Node/element using `document.getElementById`.        |
+| Retrieving Elements            | Create JS references to DOM Nodes/elements using `document.querySelectorAll`.       |
+| Editing Elements               | Directly edit the attributes of DOM Nodes/elements, including `id`.                 |
+| Editing Elements               | Access and edit the text of DOM Node/elements.                                      |
+| Editing Elements               | Find, add or remove classes on DOM Nodes/elements.                                  |
+| Adding and Removing Elements   | Use `Node#remove` and `Node#replaceChild` to remove or replace DOM Nodes/elements.  |
+| Adding and Removing Elements   | Use `document.createElement()` to create new DOM Nodes/elements.                    |
+| Adding and Removing Elements   | Use `Node#appendChild` and `Node#insertBefore` to add DOM Nodes/elements to an HTML page. |
+| Attaching Events               | Use `Node#addEventListener` to create "listeners" for DOM events.                   |
+| Attaching Events               | Have an event handler listen to multiple DOM elements' events.                      |
+| Attaching Events               | Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
+| Attaching Events               | Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
+| Writing Complex Event Handlers | Write event handlers as inline anonymous functions.                                 |
+| Writing Complex Event Handlers | Access and edit DOM event information inside an event handler from an event object. |
+| Modifying Events               | Prevent the default DOM event handler from firing.                                  |
+| Modifying Events               | Explain "event bubbling", or propogation, in the DOM.                               |
+| Modifying Events               | Use event bubbling / propogation to write "smart" event handlers.                   |
+| Modifying Events               | Prevent the propogation of events in through the DOM.                               |
+| Modifying Events               | Differentiate between using `event.stopPropogation` and `event.preventDefault`,<br> and give use cases for each. |
 
 The DOM is a **huge** topic. Before we begin, here are resources that
 can help you learn about it.
@@ -25,13 +51,13 @@ can help you learn about it.
 
 ---
 
-### What is the DOM?
-
+## What is the DOM?
+<!-- 
 | Objectives                                                                      |
 |---------------------------------------------------------------------------------|
 | Define DOM and identify where to find it in the browser API.                    |
 | Define what is meant by DOM node (element), and identify nodes on an HTML page. |
-
+ -->
 **The DOM is the interface (API) that we use to access our web page 
 (HTML/CSS) from our JavaScript.**
 
@@ -92,7 +118,7 @@ the global scope, called `document`.
 
 ---
 
-#### The `document` object
+### The `document` object
 
 > Let's use the [`example.html` file](example.html) packaged with this 
 > lesson. Open the page in your browser and type the following into the
@@ -123,7 +149,7 @@ For the DOM:
 
 ---
 
-#### DOM "Node" objects
+### DOM "Node" objects
 
 Every single part of web page is represented by a DOM Node JavaScript 
 object. "Node" is a type of object that has certain properties
@@ -151,13 +177,13 @@ the DOM (`document` object).
 
 ---
 
-### Retrieving Elements
-
+## Retrieving Elements
+<!-- 
 | Objectives                                                                    |
 |:------------------------------------------------------------------------------|
 | Create a JS reference to a DOM Node/element using `document.getElementById`.  |
 | Create JS references to DOM Nodes/elements using `document.querySelectorAll`. |
-
+ -->
 In order to get to elements on our web page, we *could* access them from
 the DOM like so:
 
@@ -194,7 +220,7 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 
 ---
 
-#### Using `document.querySelectorAll`
+### Using `document.querySelectorAll`
 
 The great thing about `document.querySelectorAll` is that it picks nodes
 from the DOM based on the same rules as CSS selectors! Eg, if we wanted
@@ -239,14 +265,14 @@ var imgEl = document.querySelectorAll("#nice-pic-bro")[0];
 
 ---
 
-### Editing Elements
-
+## Editing Elements
+<!-- 
 | Objectives                                                          |
 |:--------------------------------------------------------------------|
 | Directly edit the attributes of DOM Nodes/elements, including `id`. |
 | Access and edit the text of DOM Node/elements.                      |
 | Find, add or remove classes on DOM Nodes/elements.                  |
-
+ -->
 Once you have a DOM node representing an HTML element, you can make all
 kinds of changes to it!
 
@@ -277,7 +303,7 @@ headingEl.textContent = "Are you prepared to meet St. Dominic Savio?"
 
 ---
 
-#### JavaScript and Classes
+### JavaScript and Classes
 
 More complex than simply using properties to edit the element, however,
 is working with the classes that are attached to one.
@@ -348,14 +374,14 @@ console.log(imgEl.classList);
 
 ---
 
-### Adding and Removing Elements
-
+## Adding and Removing Elements
+<!-- 
 | Objectives                                                                                |
 |:------------------------------------------------------------------------------------------|
 | Use `Node#remove` and `Node#replaceChild` to remove or replace DOM Nodes/elements.        |
 | Use `document.createElement()` to create new DOM Nodes/elements.                          |
 | Use `Node#appendChild` and `Node#insertBefore` to add DOM Nodes/elements to an HTML page. |
-
+ -->
 The final way we will change our DOM is by creating and adding new
 elements to it and removing elements that are on it.
 
@@ -414,15 +440,17 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 
 ---
 
-### Attaching Events
-
+## Attaching Events
+<!-- 
 | Objectives                                                                                  |
 |:--------------------------------------------------------------------------------------------|
 | Use `Node#addEventListener` to create "listeners" for DOM events.                           |
 | Have an event handler listen to multiple DOM elements' events.                              |
 | Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
 | Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
+ -->
 
+ 
 <!--
 **For practice, you can use the exercise 
 [We Can Rebuild Her](exercises/we_can_rebuild_her)!**
@@ -430,7 +458,7 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 
 ---
 
-### Writing Complex Event Handlers
+## Writing Complex Event Handlers
 
 | Objectives                                                                          |
 |:------------------------------------------------------------------------------------|
@@ -439,7 +467,7 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 
 ---
 
-### Modifying Events
+## Modifying Events
 
 | Objectives                                                           |
 |:---------------------------------------------------------------------|

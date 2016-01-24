@@ -118,7 +118,7 @@ the global scope, called `document`.
 
 ---
 
-### The `document` object
+#### The `document` object
 
 > Let's use the [`example.html` file](example.html) packaged with this 
 > lesson. Open the page in your browser and type the following into the
@@ -149,7 +149,7 @@ For the DOM:
 
 ---
 
-### DOM "Node" objects
+#### DOM "Node" objects
 
 Every single part of web page is represented by a DOM Node JavaScript 
 object. "Node" is a type of object that has certain properties
@@ -220,7 +220,7 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 
 ---
 
-### Using `document.querySelectorAll`
+#### Using `document.querySelectorAll`
 
 The great thing about `document.querySelectorAll` is that it picks nodes
 from the DOM based on the same rules as CSS selectors! Eg, if we wanted
@@ -303,7 +303,7 @@ headingEl.textContent = "Are you prepared to meet St. Dominic Savio?"
 
 ---
 
-### JavaScript and Classes
+#### JavaScript and Classes
 
 More complex than simply using properties to edit the element, however,
 is working with the classes that are attached to one.
@@ -441,16 +441,40 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 ---
 
 ## Attaching Events
+
 <!-- 
 | Objectives                                                                                  |
 |:--------------------------------------------------------------------------------------------|
 | Use `Node#addEventListener` to create "listeners" for DOM events.                           |
 | Have an event handler listen to multiple DOM elements' events.                              |
 | Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
-| Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
+| Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `scroll`, and `mouseover`. |
  -->
 
- 
+Once you know how to access, edit and insert new nodes into the DOM, you
+can begin to make your web page interactive. How? By attaching such
+actions to *user-triggered* **events**.
+
+> The big secret to events and **event-driven development** is this: you
+> don't *create* events. The events are described by the designers of the
+> DOM API, and are built in to the browser. They are happenning (or
+> *firing*) all the time! Some cause things to happen, like form `submit`
+> events, but most do not.
+
+Events are created by DOM nodes, when the user interacts with them in a
+certain way. The term for the node that created the event is its *target*.
+Very common events include:
+
+|   Target(s)   |    Event Name   | User Interaction | Default Effect |
+|:-------------:|:---------------:|:-----------------|:---------------|
+|   `document`  | `DOMContentLoaded` | When the page is done loading. | |
+| `document`, inputs |   `keyup`  | Presses (releases) a key while on… | |
+| inputs, links |     `focus`     | Tabs to or clicks on… | Highlights. |
+| forms (via an input) | `submit` | Clicks submit or presses enter inside of… | Send request, refresh page. |
+|   any node    |   `mouseover`   | Moves mouse over… | |
+|   any node    |     `click`     | Clicks on… | |
+|   `window`    |     `scroll`    | Scrolls the window. | Move the viewport up or down. |
+
 <!--
 **For practice, you can use the exercise 
 [We Can Rebuild Her](exercises/we_can_rebuild_her)!**

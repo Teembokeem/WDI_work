@@ -6,6 +6,7 @@
   - [The `document` object](#the-document-object)
   - [DOM Node objects (HTML elements)](#dom-node-objects)
 2.  **[Retrieving Elements](#retrieving-elements)**
+  - [`document.querySelectorAll`](#document.queryselectorall)
 3.  **[Editing Elements](#editing-elements)**
 4.  **[Adding Elements](#adding-elements)**
 5.  **[Attaching Events](#attaching-events)**
@@ -88,8 +89,9 @@ the global scope, called `document`.
 
 #### The `document` object
 
-> Open the console in your browser and type the following. What happens
-> after each?
+> Let's use the [`example.html` file](example.html) packaged with this 
+> lesson. Open the page in your browser and type the following into the
+> console. What is the return value of each?
 
 ```js
 document.documentURI
@@ -137,7 +139,8 @@ Nodes which represent HTML elements also have
   - and more…
 
 Using all of these properties and methods we can interact with our
-web page! 
+web page! But first, we need to retrieve the nodes we want directly from
+the DOM (`document` object).
 
 ### Retrieving Elements
 
@@ -145,6 +148,42 @@ web page!
 |:------------------------------------------------------------------------------|
 | Create a JS reference to a DOM Node/element using `document.getElementById`.  |
 | Create JS references to DOM Nodes/elements using `document.querySelectorAll`. |
+
+> In order to get to elements on our web page, we *could* access them from
+> the DOM like so:
+
+```javascript
+var someParagraphEl = document.body.children[1].children[0].children[0];
+```
+
+> But to do that you would be insane!
+> 
+> Instead, there a lot of search methods built in to `document`. We're
+> going to learn to use two of these: `document.getElementById`, and 
+> `document.querySelectorAll`.
+
+The simple rule is this:
+
+***If you want to get ONE, specific element, give it an `id` attribute,
+and use `document.getElementById`.*** Eg (in `example.html`):
+
+```javascript
+var niceImageEl = document.getElementById("nice-pic-bro");
+```
+
+***If you want to get a GROUP of elements, or if you can't give an 
+element an `id`, you should use `document.querySelectorAll`.***
+Eg (in `example.html`):
+
+```javascript
+var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
+```
+
+> **Note: Chrome's console displays DOM Nodes like HTML elements in the
+> console, not like most other JavaScript objects. This can be confusing!
+> Keep in mind, they are actually just objects.**
+
+#### `document.querySelectorAll`
 
 ### Editing Elements
 
@@ -169,8 +208,8 @@ web page!
 |:--------------------------------------------------------------------------------------------|
 | Use `Node#addEventListener` to create "listeners" for DOM events.                           |
 | Have an event handler listen to multiple DOM elements' events.                              |
-| Explain what is meant by "event listener" and "event handler", and identify the parts of an `.addEventListener()` expression. |
-| Name important DOM events and give use cases for attaching interaction to each: `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
+| Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
+| Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
 
 ### Writing Event Handlers
 
@@ -187,7 +226,7 @@ web page!
 | Explain "event bubbling", or propogation, in the DOM.                |
 | Use event bubbling / propogation to write "smart" event handlers.    |
 | Prevent the propogation of events in through the DOM.                |
-| Differentiate between using `event.stopPropogation` and `event.preventDefault`, and give use cases for each. |
+| Differentiate between using `event.stopPropogation` and `event.preventDefault`,<br> and give use cases for each. |
 
 <!-- LINKS -->
 

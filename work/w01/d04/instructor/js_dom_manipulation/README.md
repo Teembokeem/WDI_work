@@ -11,6 +11,8 @@
   - [JavaScript and Classes](#javascript-and-classes)
 4.  **[Adding and Removing Elements](#adding-and-removing-elements)**
 5.  **[Attaching Events](#attaching-events)**
+  - [Essential Events](#essential-events)
+  - [Event Listeners](#event-listeners)
 6.  **[Writing Complex Event Handlers](#writing-complex-event-handlers)**
 7.  **[Modifying Events](#modifying-events)**
 
@@ -445,10 +447,10 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 <!-- 
 | Objectives                                                                                  |
 |:--------------------------------------------------------------------------------------------|
+| Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `scroll`, and `mouseover`. |
+| Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
 | Use `Node#addEventListener` to create "listeners" for DOM events.                           |
 | Have an event handler listen to multiple DOM elements' events.                              |
-| Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
-| Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `scroll`, and `mouseover`. |
  -->
 
 Once you know how to access, edit and insert new nodes into the DOM, you
@@ -465,6 +467,8 @@ Events are created by DOM nodes, when the user interacts with them in a
 certain way. The term for the node that created the event is its *target*.
 Very common events include:
 
+#### Essential Events
+
 |   Target(s)   |    Event Name   | User Interaction | Default Effect |
 |:-------------:|:---------------:|:-----------------|:---------------|
 |   `document`  | `DOMContentLoaded` | When the page is done loading. | |
@@ -475,6 +479,41 @@ Very common events include:
 |   any node    |     `click`     | Clicks on… | |
 |   `window`    |     `scroll`    | Scrolls the window. | Move the viewport up or down. |
 
+#### Event Listeners
+
+In order to write JavaScript that is triggered by, or reacts to, these
+events / user interactions, we need to attach **event listeners** to
+elements (nodes on the DOM). Every event listener has 4 parts:
+
+1. the element that is listening for the event,
+2. `.addEventListener()`,
+3. the type of event to listen for (first parameter),
+4. the action to perform, as a function (second parameter).
+
+For example:
+
+```javascript
+var el = document.getElementById("example");
+var action = function() {
+  alert("You clicked the element #example!");
+};
+
+el.addEventListener("click", action);
+```
+
+> Now, when someone clicks on that element, the function `action` is run!
+
+The same piece of code would usually be written with an *inline,
+anonymous function*:
+
+```javascript
+var el = document.getElementById("example");
+
+el.addEventListener("click", function () {
+  alert("You clicked the element #example!");
+});
+```
+
 <!--
 **For practice, you can use the exercise 
 [We Can Rebuild Her](exercises/we_can_rebuild_her)!**
@@ -484,10 +523,14 @@ Very common events include:
 
 ## Writing Complex Event Handlers
 
+<!-- 
 | Objectives                                                                          |
 |:------------------------------------------------------------------------------------|
 | Write event handlers as inline anonymous functions.                                 |
 | Access and edit DOM event information inside an event handler from an event object. |
+ -->
+
+ https://jsfiddle.net/h4w5/ej4x75g5/5/
 
 ---
 
@@ -500,6 +543,8 @@ Very common events include:
 | Use event bubbling / propogation to write "smart" event handlers.    |
 | Prevent the propogation of events in through the DOM.                |
 | Differentiate between using `event.stopPropogation` and `event.preventDefault`,<br> and give use cases for each. |
+
+https://jsfiddle.net/h4w5/3y6q4bt0/3/
 
 <!-- LINKS -->
 

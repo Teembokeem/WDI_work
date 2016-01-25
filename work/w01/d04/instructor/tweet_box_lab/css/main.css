@@ -8,8 +8,8 @@ body {
 }
 
 .content {
-	width: 600px;
-	margin: 0 auto;
+  width: 600px;
+  margin: 0 auto;
 }
 
 textarea {
@@ -17,11 +17,11 @@ textarea {
 }
 
 .tweet-text {
-	width: 400px;
-	height: 200px;
-	display: block;
-	margin: 0 auto;
-	font-size: 18px;
+  width: 400px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
   padding: 10px;
   border-radius: 4px;
 }
@@ -33,14 +33,14 @@ textarea {
 }
 
 .tweet-button {
-	width: 100px;
-	height: 40px;
+  width: 100px;
+  height: 40px;
   line-height: 35px;
   font-weight: bold;
-	display: block;
-	margin: 0 auto;
-	margin-top: 15px;
-	margin-bottom: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
   border-radius: 10px;
 }
 
@@ -53,9 +53,11 @@ textarea {
   opacity: 0.40;
 }
 
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
 .error {
   border: 2px solid red;
 }
-
-
-

@@ -448,7 +448,7 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 
 <a name="seeming-wasteland"></a>
 **For practice, you can use the exercise 
-[Seeming Wasteland](exercises/seeming_wasteland)!**
+[Seeming Wasteland][seeming-wasteland]!**
 
 ---
 
@@ -560,7 +560,7 @@ handlers need to be aware of certain things:
 - what element *heard* the event / is this handler registered to?
 - what kind of event is it?
 - if it's a key press, what key was it?
-- if it's a scroll, whic direction?
+- if it's a scroll, which direction?
 - etc…
 
 > How can an event's *target* be separate from the element that "heard" 
@@ -587,7 +587,6 @@ represents it.
 
 **[Example: "Using the Event Object" (JSFiddle)][event-object-example]**
 
-
 ---
 
 ## Modifying Events
@@ -601,7 +600,7 @@ represents it.
 
 **[Example: "Stop Propagation" (JSFiddle)][stop-prop-example]**
 
-**[Example: "Prevent Default" (JSFiddle)][prev-default-example]**
+<!-- **[Example: "Prevent Default" (JSFiddle)][prev-default-example]** -->
 
 <!-- LINKS -->
 
@@ -615,7 +614,9 @@ represents it.
 [mdn-add]:     https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 [mdn-rem]:     https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
 
-[event-object-example]: ...
 [propagation-example]:  https://jsfiddle.net/h4w5/vty05yus
+[event-object-example]: https://jsfiddle.net/h4w5/r8yLggqt
 [stop-prop-example]:    https://jsfiddle.net/h4w5/3y6q4bt0
 [prev-default-example]: ...
+
+[seeming-wasteland]: exercises/seeming_wasteland

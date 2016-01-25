@@ -132,15 +132,15 @@ $ touch README.md
 
 #### HTML 1
 
-![](assets/html-1.png)
+<img src="assets/html-1.png" width="600">
 
 #### HTML 2
 
-![](assets/html-2.png)
+<img src="assets/html-2.png" width="600">
 
 #### HTML 3
 
-![](assets/html-3.png)
+<img src="assets/html-3.jpg" width="600">
 
 
 > Below are a series of chunks of HTML, each of which is contained in the

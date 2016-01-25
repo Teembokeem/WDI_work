@@ -25,21 +25,21 @@ Here are examples of trees:
 
 1. Classification systems, often called taxonomies, or type systems:
 
-![](assets/taxonomy-life.jpg)
+<img src="assets/taxonomy-life.jpg" width="200">
 
-![](assets/taxonomy-objects.jpg)
+<img src="assets/taxonomy-objects.gif" width="200">
 
 2. Storage systems, like your computer's filesystem:
 
-![](assets/filesystem-gui.png)
+<img src="assets/filesystem-gui.png" width="200">
 
-![](assets/filesystem-cli.png)
+<img src="assets/filesystem-cli.png" width="200">
 
 3. Heirarchal systems, like a familyt tree or an HTML page:
 
-![](assets/heirarchy-family.jpg)
+<img src="assets/heirarchy-family.jpg" width="200">
 
-![](assets/heirarchy-dom.jpg)
+<img src="assets/heirarchy-dom.jpg" width="200">
 
 ---
 

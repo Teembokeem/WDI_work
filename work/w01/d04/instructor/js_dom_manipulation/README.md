@@ -31,16 +31,16 @@
 | Adding and Removing Elements   | Use `document.createElement()` to create new DOM Nodes/elements.                    |
 | Adding and Removing Elements   | Use `Node#appendChild` and `Node#insertBefore` to add DOM Nodes/elements to an HTML page. |
 | Attaching Events               | Use `Node#addEventListener` to create "listeners" for DOM events.                   |
-| Attaching Events               | Have an event handler listen to multiple DOM elements' events.                      |
+| Attaching Events               | Write event handlers as inline anonymous functions.                                 |
 | Attaching Events               | Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
 | Attaching Events               | Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
-| Writing Complex Event Handlers | Write event handlers as inline anonymous functions.                                 |
 | Writing Complex Event Handlers | Access and edit DOM event information inside an event handler from an event object. |
+| Writing Complex Event Handlers | Have an event handler listen to multiple DOM elements' events.                      |
+| Writing Complex Event Handlers | Explain "event bubbling", or propogation, in the DOM.                               |
 | Modifying Events               | Prevent the default DOM event handler from firing.                                  |
-| Modifying Events               | Explain "event bubbling", or propogation, in the DOM.                               |
-| Modifying Events               | Use event bubbling / propogation to write "smart" event handlers.                   |
 | Modifying Events               | Prevent the propogation of events in through the DOM.                               |
 | Modifying Events               | Differentiate between using `event.stopPropogation` and `event.preventDefault`,<br> and give use cases for each. |
+| Modifying Events               | Use event bubbling / propogation to write "smart" event handlers.                   |
 
 The DOM is a **huge** topic. Before we begin, here are resources that
 can help you learn about it.
@@ -54,12 +54,14 @@ can help you learn about it.
 ---
 
 ## What is the DOM?
+
 <!-- 
 | Objectives                                                                      |
 |---------------------------------------------------------------------------------|
 | Define DOM and identify where to find it in the browser API.                    |
 | Define what is meant by DOM node (element), and identify nodes on an HTML page. |
- -->
+-->
+
 **The DOM is the interface (API) that we use to access our web page 
 (HTML/CSS) from our JavaScript.**
 
@@ -180,12 +182,14 @@ the DOM (`document` object).
 ---
 
 ## Retrieving Elements
+
 <!-- 
 | Objectives                                                                    |
 |:------------------------------------------------------------------------------|
 | Create a JS reference to a DOM Node/element using `document.getElementById`.  |
 | Create JS references to DOM Nodes/elements using `document.querySelectorAll`. |
- -->
+-->
+
 In order to get to elements on our web page, we *could* access them from
 the DOM like so:
 
@@ -268,6 +272,7 @@ var imgEl = document.querySelectorAll("#nice-pic-bro")[0];
 ---
 
 ## Editing Elements
+
 <!-- 
 | Objectives                                                          |
 |:--------------------------------------------------------------------|
@@ -275,6 +280,7 @@ var imgEl = document.querySelectorAll("#nice-pic-bro")[0];
 | Access and edit the text of DOM Node/elements.                      |
 | Find, add or remove classes on DOM Nodes/elements.                  |
  -->
+
 Once you have a DOM node representing an HTML element, you can make all
 kinds of changes to it!
 
@@ -377,6 +383,7 @@ console.log(imgEl.classList);
 ---
 
 ## Adding and Removing Elements
+
 <!-- 
 | Objectives                                                                                |
 |:------------------------------------------------------------------------------------------|
@@ -384,6 +391,7 @@ console.log(imgEl.classList);
 | Use `document.createElement()` to create new DOM Nodes/elements.                          |
 | Use `Node#appendChild` and `Node#insertBefore` to add DOM Nodes/elements to an HTML page. |
  -->
+
 The final way we will change our DOM is by creating and adding new
 elements to it and removing elements that are on it.
 
@@ -448,9 +456,9 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 | Objectives                                                                                  |
 |:--------------------------------------------------------------------------------------------|
 | Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `scroll`, and `mouseover`. |
-| Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
 | Use `Node#addEventListener` to create "listeners" for DOM events.                           |
-| Have an event handler listen to multiple DOM elements' events.                              |
+| Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
+| Write event handlers as inline anonymous functions.                                 |
  -->
 
 Once you know how to access, edit and insert new nodes into the DOM, you
@@ -488,7 +496,8 @@ elements (nodes on the DOM). Every event listener has 4 parts:
 1. the element that is listening for the event,
 2. `.addEventListener()`,
 3. the type of event to listen for (first parameter),
-4. the action to perform, as a function (second parameter).
+4. the action to perform, as a function (second parameter). This is 
+   called the *event handler*.
 
 For example:
 
@@ -514,6 +523,16 @@ el.addEventListener("click", function () {
 });
 ```
 
+For either of these listeners, we can refer to the action, or function,
+as the **event handler**. The handler is a part of the listener if
+written as an inline anonymous function; but it can exist separately.
+
+Event listeners can be added and removed dynamically, and new handlers
+can be "registered" to listen to events. A single event may have many
+handlers registered to run. To find out more, see the MDN documentation
+for [`Node#addEventListener`][mdn-add] and for 
+[`Node#removeEventListener`][mdn-rem].
+
 <!--
 **For practice, you can use the exercise 
 [We Can Rebuild Her](exercises/we_can_rebuild_her)!**
@@ -526,11 +545,26 @@ el.addEventListener("click", function () {
 <!-- 
 | Objectives                                                                          |
 |:------------------------------------------------------------------------------------|
-| Write event handlers as inline anonymous functions.                                 |
 | Access and edit DOM event information inside an event handler from an event object. |
- -->
+| Have an event handler listen to multiple DOM elements' events.                      |
+| Explain "event bubbling", or propagation, in the DOM.                               |
 
- https://jsfiddle.net/h4w5/ej4x75g5/5/
+-->
+
+---
+
+#### The Event Object
+
+**[Example: "Using the Event Object" (JSFiddle)][event-object-example]**
+
+
+
+---
+
+#### Event Propagation, aka "Bubbling"
+
+**[Example: "Event Propagation" (JS Fiddle)][propagation-example]**
+
 
 ---
 
@@ -539,12 +573,13 @@ el.addEventListener("click", function () {
 | Objectives                                                           |
 |:---------------------------------------------------------------------|
 | Prevent the default DOM event handler from firing.                   |
-| Explain "event bubbling", or propogation, in the DOM.                |
-| Use event bubbling / propogation to write "smart" event handlers.    |
 | Prevent the propogation of events in through the DOM.                |
 | Differentiate between using `event.stopPropogation` and `event.preventDefault`,<br> and give use cases for each. |
+| Use event bubbling / propagation to write "smart" event handlers.    |
 
-https://jsfiddle.net/h4w5/3y6q4bt0/3/
+**[Example: "Stop Propagation" (JSFiddle)][stop-prop-example]**
+
+**[Example: "Prevent Default" (JSFiddle)][prev-default-example]**
 
 <!-- LINKS -->
 
@@ -555,3 +590,10 @@ https://jsfiddle.net/h4w5/3y6q4bt0/3/
 [mdn-dm]:      https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 [node-api]:    https://developer.mozilla.org/en-US/docs/Web/API/Node
 [element-api]: https://developer.mozilla.org/en-US/docs/Web/API/Element
+[mdn-add]:     https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+[mdn-rem]:     https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
+
+[event-object-example]: ...
+[propagation-example]:  https://jsfiddle.net/h4w5/vty05yus
+[stop-prop-example]:    https://jsfiddle.net/h4w5/3y6q4bt0
+[prev-default-example]: ...

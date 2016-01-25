@@ -29,16 +29,15 @@ Here are examples of trees:
    <img src="assets/taxonomy-objects.gif" width="300">
 2. Storage systems, like your computer's filesystem:
 
-<img src="assets/filesystem-gui.png" width="300" align="left">
-
-<img src="assets/filesystem-cli.png" width="300">
-
+   <img src="assets/filesystem-gui.png" width="300" align="left">
+   <img src="assets/filesystem-cli.png" width="300">
 3. Heirarchal systems, like a family tree or an HTML page:
+   
+   <img src="assets/heirarchy-family.jpg" width="300" align="left">
+   <img src="assets/heirarchy-dom.gif" width="300">
 
-<img src="assets/heirarchy-family.jpg" width="300" align="left">
-
-<img src="assets/heirarchy-dom.gif" width="300">
-
+<br>
+<br>
 ---
 
 ### Lab Part 1 – Abstract Tree Structures

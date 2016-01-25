@@ -10,10 +10,13 @@
 3.  **[Editing Elements](#editing-elements)**
   - [JavaScript and Classes](#javascript-and-classes)
 4.  **[Adding and Removing Elements](#adding-and-removing-elements)**
+  - [Exercise: Seeming Wasteland](#seeming-wasteland)
 5.  **[Attaching Events](#attaching-events)**
   - [Essential Events](#essential-events)
   - [Event Listeners](#event-listeners)
 6.  **[Writing Complex Event Handlers](#writing-complex-event-handlers)**
+  - [Event Propagation, aka "Bubbling"](#event-propagation-aka-bubbling)
+  - [The Event Object](#the-event-object)
 7.  **[Modifying Events](#modifying-events)**
 
 ## Lesson Objectives
@@ -443,10 +446,9 @@ newParaEl.textContent = "The pious son of a blacksmith.";
 mainEl.insertBefore(newParaEl, firstParaEl);
 ```
 
-<!--
+<a name="seeming-wasteland"></a>
 **For practice, you can use the exercise 
 [Seeming Wasteland](exercises/seeming_wasteland)!**
--->
 
 ---
 
@@ -548,22 +550,42 @@ for [`Node#addEventListener`][mdn-add] and for
 | Access and edit DOM event information inside an event handler from an event object. |
 | Have an event handler listen to multiple DOM elements' events.                      |
 | Explain "event bubbling", or propagation, in the DOM.                               |
-
 -->
 
----
+While the above examples can work for very trivial uses, almost every
+event handler you write will need to do more complex activities. These
+handlers need to be aware of certain things:
 
-#### The Event Object
+- what element was the *target* of the event?
+- what element *heard* the event / is this handler registered to?
+- what kind of event is it?
+- if it's a key press, what key was it?
+- if it's a scroll, whic direction?
+- etc…
 
-**[Example: "Using the Event Object" (JSFiddle)][event-object-example]**
+> How can an event's *target* be separate from the element that "heard" 
+> it (had a listener capture the event)? Think about a list: if you 
+> click on an item in the list, you're still clicking on the list itself
+> too, right? You could register a listener on the list, and when a user
+> clicks on an item the listener will trigger too! This happens due to
+> a property of events called "propagation," or "event bubbling."
 
-
+First off, we will begin to look at writing more useful listeners, that
+cover multiple elements we want to listen to. Then we'll look at how to
+uncover information about the event by looking at the object that
+represents it.
 
 ---
 
 #### Event Propagation, aka "Bubbling"
 
 **[Example: "Event Propagation" (JS Fiddle)][propagation-example]**
+
+---
+
+#### The Event Object
+
+**[Example: "Using the Event Object" (JSFiddle)][event-object-example]**
 
 
 ---

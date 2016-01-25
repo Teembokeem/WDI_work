@@ -25,7 +25,7 @@ Here are examples of trees:
 
 1. Classification systems, often called taxonomies, or type systems:
 
-<img src="assets/taxonomy-life.jpg" width="300" style="float: left;">
+<img src="assets/taxonomy-life.jpg" width="300" style="float: left;" align="left">
 
 <img src="assets/taxonomy-objects.gif" width="300">
 

@@ -27,7 +27,7 @@ Here are examples of trees:
 
    <img src="assets/taxonomy-life.jpg" width="300" align="left">
    <img src="assets/taxonomy-objects.gif" width="300">
-2. Storage systems, like your computer's filesystem:
+2. Storage systems, like your computer's file system:
 
    <img src="assets/filesystem-gui.png" width="300" align="left">
    <img src="assets/filesystem-cli.png" width="300">
@@ -37,7 +37,25 @@ Here are examples of trees:
    <img src="assets/heirarchy-dom.gif" width="300">
 
 <br>
-<br>
+
+### Definitions
+
+When we discuss trees, what we really want to know is how any two
+nodes relate to one another. While the direct relationships,
+**parent** and **child** are straightforward (only one parent,
+many possible children), there are more possible relationships
+and types for nodes to have:
+
+- **root**: the node that doesn't have a parent; it is the ancestor of
+  all other nodes.
+- **ancestors**: nodes that are a given nodes' parent, or grand-parent,
+  etc. back to the root.
+- **descendants**: nodes that are children, or grand-children, etc.
+- **siblings**: nodes that share a given node's parent.
+- **leaves**: nodes with no children.
+- **branch**: a description for all of a node's descendants through a
+  particular child.
+
 ---
 
 ### Lab Part 1 – Abstract Tree Structures
@@ -108,6 +126,22 @@ $ touch README.md
 ```
 
 ### Lab Part 3 – HTML & the DOM
+
+> Below are images of web pages. Draw a DOM tree that may describe each,
+> using `<body>` as the root:
+
+#### HTML 1
+
+![](assets/html-1.png)
+
+#### HTML 2
+
+![](assets/html-2.png)
+
+#### HTML 3
+
+![](assets/html-3.png)
+
 
 > Below are a series of chunks of HTML, each of which is contained in the
 > `<body>` tag. Treating `<body>` as the root, do the following:

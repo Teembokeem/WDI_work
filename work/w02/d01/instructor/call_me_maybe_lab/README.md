@@ -1,6 +1,6 @@
 # Call Me Maybe
 
-![](http://assets.gcstatic.com/u/apps/asset_manager/uploaded/2012/09/carly-rae-jepsen---call-me-maybe-1330685529-custom-0.png)
+![][the-lady-sings]
 
 ### Setup
 
@@ -8,9 +8,11 @@ Use the code in `starter_code`. Open the `index.html` in your browser.
 Open the `js/main.js` file in Sublime. Follow the instructions to print
 out everyone's favorite song!
 
-[When you're done, it should look like:](http://genius.com/Carly-rae-jepsen-call-me-maybe-lyrics)
+All of your work will be done in the `main.js` file and the `console`.
 
-> *Ahem...   
+[When you're done, the `console` should show:][rap-genius]
+
+> Ahem...   
 >    
 > I threw a wish in the well,   
 > don't ask me I'll never tell,   
@@ -22,7 +24,7 @@ out everyone's favorite song!
 > I wasn't looking for this,   
 > but now you're in my way.   
 >   
-> Your stare was holdin',   
+> [Your stare was holdin'][sigh],   
 > ripped jeans; skin was showin';   
 > hot night, wind was blowin'   
 > where you think you're going baby?   
@@ -48,5 +50,9 @@ out everyone's favorite song!
 > so call me, maybe.   
 >   
 > https://www.youtube.com/watch?v=fWNaR-rxAic   
-> *
 
+<!-- LINK -->
+
+[the-lady-sings]: http://assets.gcstatic.com/u/apps/asset_manager/uploaded/2012/09/carly-rae-jepsen---call-me-maybe-1330685529-custom-0.png
+[rap-genius]:     http://genius.com/Carly-rae-jepsen-call-me-maybe-lyrics
+[sigh]:           https://i.imgur.com/br5repk.jpg

@@ -48,13 +48,16 @@ and types for nodes to have:
 
 - **root**: the node that doesn't have a parent; it is the ancestor of
   all other nodes.
-- **ancestors**: nodes that are a given nodes' parent, or grand-parent,
+- **ancestors**: nodes that are a given nodes' parent, grand-parent,
   etc. back to the root.
-- **descendants**: nodes that are children, or grand-children, etc.
+- **descendants**: all nodes that are children, grand-children, etc.
+  of a given node.
+- **branch**: all of a node's descendants *plus itself*.
 - **siblings**: nodes that share a given node's parent.
 - **leaves**: nodes with no children.
-- **branch**: a description for all of a node's descendants through a
-  particular child.
+- **path**: a list of all of a node's ancestors in order, starting at 
+  the root, and including itself. Every node in a tree has a unique 
+  path!
 
 ---
 
@@ -70,6 +73,8 @@ and types for nodes to have:
 4.  What are the siblings of node `D`?
 5.  What are the descendants of node `C`?
 6.  What are the ancestors of node `F`?
+7.  What nodes are in the branch `D`?
+8.  What is the `E` node's path?
 
 ### Lab Part 2 – Filesystems
 
@@ -77,7 +82,7 @@ and types for nodes to have:
 > of the described filesystem **for each group of commands!** Each group
 > is describing a separate tree, they don't have to work together.
 > 
-> _**Bonus**: do you know what the name of the root node of each tree is?_
+> _**Bonus**: do you know the name of the root node of all of the trees?_
 
 #### Filesystem Tree α (alpha)
 
@@ -138,19 +143,12 @@ $ touch README.md
 
 <img src="assets/html-2.png" width="600">
 
-#### HTML 3
-
-<img src="assets/html-3.jpg" width="600">
-
-
 > Below are a series of chunks of HTML, each of which is contained in the
 > `<body>` tag. Treating `<body>` as the root, do the following:
 > 
 > 1.  Draw the DOM tree for the given HTML.
 > 2.  Give the `id` **or `id`s** of the element requested in the given 
 >     [CSS selectors][relationship-selectors] beneath each set of HTML.
-> 
-> _**Bonus**: the final section, HTML ג (gimmel), is bonus!_
 
 [relationship-selectors]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors#Information.3A_Selectors_based_on_relationships
 
@@ -219,6 +217,15 @@ $ touch README.md
 - `.blue img`
 - `.stars + img`
 - `div > p`
+
+---
+
+> _**Bonus**: the final section is bonus! Only do it once you've 
+> completed everything else!_
+
+#### BONUS: HTML 3
+
+<img src="assets/html-3.jpg" width="600">
 
 #### BONUS: HTML ג (gimmel)
 

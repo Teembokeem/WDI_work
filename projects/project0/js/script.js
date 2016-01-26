@@ -99,9 +99,12 @@ function clearForm() {
     celFindEl[i].addEventListener("click", addImg1, false);
 }
   turnCount = 0;
-  var p1Populate = [];
-  var p2Populate = [];
+  p1Populate = [];
+  p2Populate = [];
   console.log('worked');
+  document.getElementById('ezra_you_dog_you').style.visibility = "hidden";
+  document.getElementById('ezradoe').style.visibility = "hidden";
+
 }
 
 

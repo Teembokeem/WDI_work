@@ -1,3 +1,96 @@
+
+  var lyrics = [
+    {
+      stanza: 5,
+      lines: [
+        "Before you came into my life",
+        "I missed you so bad",
+        "I missed you so bad",
+        "I missed you so so bad",
+        "Before you came into my life",
+        "I missed you so bad",
+        "And you should know that",
+        "I missed you so so bad, bad, bad, bad...."
+      ]
+    }, {
+      stanza: 3,
+      lines: [
+        "Your stare was holdin',",
+        "ripped jeans; skin was showin',",
+        "hot night, wind was blowin'",
+        "where you think you're going baby?"
+      ]
+    }, {
+      stanza: 7,
+      lines: [
+        "Hey I just met you",
+        "And this is crazy",
+        "But here's my number",
+        "So call me maybe",
+        "And all the other boys",
+        "Try to chase me",
+        "But here's my number",
+        "So call me maybe"
+      ]
+    }, {
+      stanza: 4,
+      lines: [
+        "Hey I just met you",
+        "And this is crazy",
+        "But here's my number",
+        "So call me maybe",
+        "It's hard to look right at you baby",
+        "But here's my number",
+        "So call me maybe"
+      ]
+    }, {
+      stanza: 1,
+      lines: [
+        "You took your time with the call",
+        "I took no time with the fall",
+        "You gave me nothing at all",
+        "But still you're in my way"
+      ]
+    }, {
+      stanza: 2,
+      lines: [
+        "I beg and borrow and steal",
+        "At first sight and it's real",
+        "I didn't know I would feel it",
+        "But it's in my way"
+      ]
+    }, {
+      stanza: 8,
+      lines: [
+        "Before you came into my life",
+        "I missed you so bad",
+        "I missed you so bad",
+        "I missed you so so bad",
+        "Before you came into my life",
+        "I missed you so bad",
+        "And you should know that",
+        "So call me, maybe"
+      ]
+    }, {
+      stanza: 6,
+      lines: [
+        "It's hard to look right at you baby",
+        "But here's my number",
+        "So call me maybe"
+      ]
+    }
+  ];
+
+  lyrics.sort(function(a,b) {
+    return a.stanza - b.stanza;
+  });
+
+  setTimeout(function() {
+    for(i=0; i < lyrics.length; i++ ) {
+      lyrics[i].lines.forEach(singLine)
+    };
+    }, 2600);
+
 console.log("Ahem...");
 console.log("");
 
@@ -5,9 +98,11 @@ console.log("");
 //     Test it by having it print the contents of the variable
 //     opening (ie, call it!).
 
-var singLine;
+var singLine = function(something) {
+  console.log(something);
+}
 var opening = "I threw a wish in the well,";
-
+singLine(opening);
 // 2.  Pass the function singLine into the function threeMoreLines below,
 //     in order to have it console.log the given lines.
 
@@ -18,22 +113,27 @@ var threeMoreLines = function(callback) {
 };
 
 console.log("");
+threeMoreLines(singLine);
 // 3.  Write a function, doThis, that takes another function as input.
 //     doThis simply calls the function! Test it by passing it the
 //     function singTradeMySoul.
 
-var doThis;
+var doThis = function(something) {
+  something();
+};
 var singTradeMySoul = function() {
   console.log("I'd trade my soul for a wish,");
 };
-
+doThis(singTradeMySoul);
 // 4.  Write a function, doThisWithThat, that takes TWO parameters, a
 //     a function and a string! It should call the first parameter as a
 //     callback, passing it the second parameter (the string).
 //
 //     Test it with the given examples!
 
-var doThisWithThat = function() {}; // a function stub. replace it!
+var doThisWithThat = function(what, shat) {
+  what(shat);
+}; // a function stub. replace it!
 
 // EXAMPLES:
 doThisWithThat(singLine, "pennies and dimes for a kiss,");
@@ -46,8 +146,9 @@ doThisWithThat(singLine, "I wasn't looking for this,");
 //
 //     Test it with the given example!
 
-var doThisWithThese = function() {}; // a function stub. replace it!
-
+var doThisWithThese = function(cat, hat) {
+  cat(hat.join(' '));
+}; // a function stub. replace it!
 // EXAMPLE:
 doThisWithThese(singLine, ["but now", "you're in", "my way."]);
 
@@ -79,6 +180,11 @@ var singLine4 = function() {
   console.log("where you think you're going baby?");
 };
 
+var coolio =[];
+coolio.push(singLine1, singLine2, singLine3, singLine4)
+
+runFunctionsInOrder(coolio);
+
 
 // ******************** BREAK ********************
 // GOOD JOB SO FAR! NOW WE'RE GOING TO MOVE IN TO
@@ -102,6 +208,61 @@ console.log("");
 //> so call me, maybe.
 //>
 
+/*var hey = function(stupidLine, stupiddd) {
+  setTimeout(function() {
+    stupidLine.push("Hey, I just met you,");
+    stupiddd(stupidLine);
+  }, 1000);
+}
+
+var crazy = function(stupidLine, stupiddd) {
+  setTimeout(function() {
+    stupidLine.push("and this is crazy,");
+    stupiddd(stupidLine);
+  }, 1000);
+}
+var number = function(stupidLine, stupiddd) {
+  setTimeout(function() {
+    stupidLine.push("but here's my number");
+    stupiddd(stupidLine);
+  }, 1000);
+}
+var maybe = function(stupidLine, stupiddd) {
+  setTimeout(function() {
+    stupidLine.push("so call me, maybe.");
+    stupiddd(stupidLine);
+  }, 1000);
+}
+var umph = function(stupidLine, stupiddd) {
+  setTimeout(function() {
+    stupidLine.push(" ");
+    console.log(stupidLine.join(' '));
+  }, 1000);
+}
+
+var okay=[];;
+
+hey(okay, function(whaaa) {
+  crazy(whaaa, function(woop) {
+    number(woop, function(butt) {
+      maybe(butt, function(poop) {
+        umph(poop, function(oopah) {
+        });
+      });
+    });
+  });
+});*/
+
+var chorus = setInterval(function() {
+  console.log("Hey, I just met you, ");
+  console.log("and this is crazy, ");
+  console.log("but here's my number, ");
+  console.log("so call me, maybe");
+  console.log(" ");
+}, 1000);
+
+
+
 // 8.  So we're in the chorus! After the above stanza is printed the
 //     first time, but before it's printed the second time (between 1
 //     2 seconds, so 1500 milliseconds, eg), use setTimeout to print the
@@ -112,6 +273,15 @@ console.log("");
 //> but here's my number,
 //> so call me, maybe.
 
+  setTimeout(function() {
+  console.log("It's hard to look right,");
+  console.log("at you ba-aby,");
+  console.log("but here's my number,");
+  console.log("so call me, maybe.");
+  console.log(" ");
+}, 1500)
+
+
 // 9.  Ok, ok, ok. You're like a Top 40 DJ over here, putting this on
 //     infinite repeat! Let's make sure it stops after printing *twice*!
 //     This means we'll need to "clear" the interval, and we'll need to
@@ -121,6 +291,10 @@ console.log("");
 //     Save the return value of the above set interval as a variable
 //     `chorus`. Use setTimeout to call clearInterval on `chorus` at
 //     2500 milliseconds.
+
+setTimeout(function() {
+  clearInterval(chorus);
+}, 2500);
 
 // 10.  Great! We're almost there! Now, we have to print the last part
 //      of the chorus. Look up the Array#forEach method on MDN, and
@@ -140,6 +314,9 @@ var finalStanza = [
   "https://www.youtube.com/watch?v=zwDvF0NtgdU"
 ];
 
+setTimeout(function() {
+  finalStanza.forEach(singLine);
+}, 2500);
 // WELL DONE, EH!
 
 // BONUS!
@@ -148,84 +325,3 @@ var finalStanza = [
 //     both setTimeout and .forEach to print it all out after all the
 //     above stanzas!
 
-var lyrics = [
-  {
-    stanza: 5,
-    lines: [
-      "Before you came into my life",
-      "I missed you so bad",
-      "I missed you so bad",
-      "I missed you so so bad",
-      "Before you came into my life",
-      "I missed you so bad",
-      "And you should know that",
-      "I missed you so so bad, bad, bad, bad...."
-    ]
-  }, {
-    stanza: 3,
-    lines: [
-      "Your stare was holdin',",
-      "ripped jeans; skin was showin',",
-      "hot night, wind was blowin'",
-      "where you think you're going baby?"
-    ]
-  }, {
-    stanza: 7,
-    lines: [
-      "Hey I just met you",
-      "And this is crazy",
-      "But here's my number",
-      "So call me maybe",
-      "And all the other boys",
-      "Try to chase me",
-      "But here's my number",
-      "So call me maybe"
-    ]
-  }, {
-    stanza: 4,
-    lines: [
-      "Hey I just met you",
-      "And this is crazy",
-      "But here's my number",
-      "So call me maybe",
-      "It's hard to look right at you baby",
-      "But here's my number",
-      "So call me maybe"
-    ]
-  }, {
-    stanza: 1,
-    lines: [
-      "You took your time with the call",
-      "I took no time with the fall",
-      "You gave me nothing at all",
-      "But still you're in my way"
-    ]
-  }, {
-    stanza: 2,
-    lines: [
-      "I beg and borrow and steal",
-      "At first sight and it's real",
-      "I didn't know I would feel it",
-      "But it's in my way"
-    ]
-  }, {
-    stanza: 8,
-    lines: [
-      "Before you came into my life",
-      "I missed you so bad",
-      "I missed you so bad",
-      "I missed you so so bad",
-      "Before you came into my life",
-      "I missed you so bad",
-      "And you should know that",
-      "So call me, maybe"
-    ]
-  }, {
-    stanza: 6,
-    lines: [
-      "It's hard to look right at you baby",
-      "But here's my number",
-      "So call me maybe"
-    ]
-  }
-];

@@ -188,7 +188,7 @@ var allPets = function(kitties, puppies) {
 
 Examples:
 
-- `hugs([3,7,'2',4]);` should return `"(3)(7)('2')(4)"`
+- `hugs([3,7,'2',4]);` should return `"(3)(7)(2)(4)"`
 
 ###### Starter Code:
 
@@ -384,7 +384,7 @@ Examples:
 - `wordSearch("me", ["home", "milk", "Mercury", "fish"]);` 
   - should return `["home", "Mercury"]`
 - `wordSearch("fix", ["home", "milk", "Mercury", "fish"]);`
-  - should return `"Empty"`
+  - should return `["Empty"]`
 
 ###### Starter Code:
 

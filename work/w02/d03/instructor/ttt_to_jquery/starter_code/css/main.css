@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.align-right {
+  position: absolute;
+  right: 0px;
+  height: 100px;
+  width: 100px;
+  border: 1px solid red;
+  padding: 30px 0;
+  font-size: 20px;
+}
+
+.board {
+  width: 600px;
+  border: 1px solid black;
+  margin: 0 auto;
+  position: relative;
+}
+
+#board {
+  cursor: pointer;
+}
+
+.board table {
+  width: 400px;
+  height: 400px;
+}
+
+div {
+  display: inline-block;
+}
+
+button {
+  clear: both;
+}
+
+td {
+  width: 125px;
+  height: 125px;
+  border: 1px solid black;
+  font-size: 40px;
+}
+
+.above {
+  top: 50px;
+}
+
+.below {
+  top: 200px;
+}
+
+.fade-in {
+  background-color: rgba(255, 0, 0, 1);
+  transition: background-color .5s linear;
+}
+
+.fade-out {
+  background-color: rgba(255, 0, 0, 0);
+  transition: background-color .5s linear;
+}

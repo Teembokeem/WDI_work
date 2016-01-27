@@ -29,6 +29,8 @@
 
     His name was Arnold Schwarzenegger.  */
 
+console.log("connected");
+
 var arnold = {
   firstName: "Arnold",
   lastName:  "Schwarzenegger",
@@ -55,9 +57,14 @@ var arnold = {
 	// Include a gender key
 	// Include a name key
 
-var Schwarzenegger = function() {
-
+var Schwarzenegger = function(health, gender, name) {
+  this.health = health;
+  this.gender = gender;
+  this.name = name;
 }
+
+var mama = new Schwarzenegger(52, "female", "Mama");
+var papa = new Schwarzenegger(57, "male", "Dad");
 
 /* Arnold was a special boy from day one, but he experienced tragedy early on. */
 
@@ -73,7 +80,9 @@ var batman = {
 	// Use the batman object's method revenge to kill both parents (pass them in
   // as an array - e.g. [mom, dad]).
 
+var victims = [mama, papa];
 
+batman.revenge(victims);
 
 /* After that day, at a mere age of 7, Arnold swore revenge. */
 
@@ -82,7 +91,8 @@ var batman = {
 	// Add an age key to arnold and set the value to 7
 	// Add a swearRevenge key to arnold and set it to the batman variable.
 
-
+arnold.age = 7;
+arnold.swearRevenge = batman;
 
 /* Arnold then moved to the jungle to train for his future fight. He learned much
 and grew strong chopping down the vines in the jungle.
@@ -101,6 +111,10 @@ arnold.machete = function(enemy) {
   }
 }
 
+arnold.firstName = "Conan";
+arnold.oneLiners.push("Stick Around!");
+
+
 /* Conan moved on from the jungle, and met a young, brilliant scientist named
 Dr. Larry Arbogast */
 
@@ -111,6 +125,13 @@ Dr. Larry Arbogast */
 
 	// Push larry's name into Arnold's friends array
 
+var larry = {
+  doctor: true,
+  health: 30,
+  name: "Dr. Larry Arbogast",
+};
+
+arnold.friends.push(larry);
 
 /* They became friends - best friends. That is until batman killed him too!*/
 
@@ -118,6 +139,7 @@ Dr. Larry Arbogast */
 	// Use the revenge method again and kill larry. Remember, pass larry into the
   // method as an array (e.g. [larry]).
 
+batman.revenge([larry]);
 
 /* Conan realized he would never be happy unless he went after batman */
 
@@ -136,6 +158,23 @@ Conan from the planet forever. He was building an army. */
 
 	// Create 3 henchmen
 
+var henchbat = function() {
+  this.health = 20;
+  this.boss = batman;
+  this.scream = "nuuuuuuu..."
+  this.shoot = function(enemy) {
+    enemy.health -= 100;
+    console.log("NYEH!");
+  }
+  this.alarm = function() {
+    console.log("The ENEMY HAS BREACHED THE DINGUS is here!!!!");
+  }
+}
+
+var henchbat1 = new henchbat();
+var henchbat2 = new henchbat();
+var henchbat3 = new henchbat();
+
 /* Bruce Wayne knew these henchmen would only slow Conan down - he had another
 plan up his sleeve. */
 
@@ -149,15 +188,29 @@ defeat the evil Batman. He went to the nearest gun shop and bought a shotgun.*/
 	// If their health goes below 1, make them scream!
 	// Log out Hasta La Vista from Arnold's oneLiners array to the console.
 
+arnold.oneLiners.push("Hasta la Vista... baby.");
+
 arnold.shotgun = function(enemy1, enemy2, enemy3) {
-	// Your awesome code here
-}
+  var enemies = [enemy1, enemy2, enemy3];
+  for (i = 0; i < enemies.length; i++) {
+    enemies[i].health -= 100;
+    if (enemies[i].health < 1) {
+      console.log(enemies[i].scream);
+    }
+  }
+  console.log(arnold.oneLiners[2]);
+};
 
 /* On one of Batman's nightly patrols, he sees Conan roaming his streets with a
 shotgun! Batman sends out three henchmen to take out Conan. */
 
 	// Have a gunfight in the streets of gotham!
 	// Make sure Conan wins!
+
+henchbat1.shoot(arnold);
+henchbat2.shoot(arnold);
+henchbat3.shoot(arnold);
+arnold.shotgun(henchbat1, henchbat2, henchbat3);
 
 /* Conan was bloodied and bruised, but he was ready for more. Batman looked down
 on him from a steeple. He called out
@@ -180,6 +233,8 @@ weapons. */
 
 
 	// Push "Here's my ticket" into the arnold.oneLiners array
+
+arnold.oneLiners.push("Here's my ticket");
 
 arnold.dynamite = function(enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7) {
   enemy1.health -= 300;
@@ -208,6 +263,24 @@ arnold.dynamite = function(enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy
 
 	// Create 7 terminators
 
+var Terminator = function(name, defense, build, health, attack, power, oneLiner, scream) {
+  this.scream = scream;
+  this.defense = defense;
+  this.build = build;
+  this.health = health;
+  this.attack = function(enemy) {
+    enemy.health -= power;
+    console.log(oneLiner);
+    if (enemy.health < 1) return console.log(enemy.name + " has fainted cause he was weakshit.");
+  }
+};
+
+var r2D2 = new Terminator("R2D2", 20, "stuff from tatooine", 500, "BEEP BEEP BOO BOP", 2000, "WOOOOO BLOP", "blargh");
+var tI89 = new Terminator("TI-89", 5, "your high school project", 500, "calculus", 2000, "DERIVATE OF 0/0", "blargh");
+var doomsday = new Terminator("DoomsDay Device", 1000, "Impossible Alloys", 500, "YOUR BASE ARE BELONG TO US", 5999, "YOUR BASE ARE BELONG TO US", "blargh");
+
+
+
 /* Conan received a mysterious letter in the mail from a CW that showed a map
 to the Batcave.  With dynamite in hand, Conan felt ready to take on the Batman.
 
@@ -225,6 +298,24 @@ friends. */
 	// Create 3 friends
 	// Make sure one of them is Carl Weathers
 
+arnold.cellphone = true;
+
+var Friends = function(name, health, attack, power, oneLiner) {
+  this.name = name;
+  this.scream = "omg im dying, cause im generic."
+  this.health = health;
+  this.bestFriend = arnold;
+  this.attack = function(enemy) {
+    enemy.health = power - enemy.defense;
+    console.log(oneLiner);
+    console.log(name + " did " + power + " damage, but " + enemy.defense + " less.")
+  }
+};
+
+var carlWeathers = new Friends("Carl Weathers", 100, "mmph", 500, "mmph");
+var basic1 = new Friends("Basic Friend 1", 100, "mmph", 500, "mmph");
+var basic2 = new Friends("Basic Friend 2", 100, "mmph", 500, "mmph");
+
 /* Conan goes to the batcave with his cellphone and dynamite. And an enormous
 battle ensues. */
 
@@ -233,6 +324,28 @@ battle ensues. */
 	// When Conan's health gets low, bring in his friends!
 
 	// Defeat the terminators (bring their health down to 0).
+
+r2D2.attack(arnold);
+tI89.attack(arnold);
+doomsday.attack(arnold);
+
+console.log(carlWeathers.name + ", " + basic1.name + ", and " + basic2.name + " came to the rescue.....");
+
+carlWeathers.attack(r2D2);
+basic1.attack(tI89);
+basic2.attack(doomsday);
+
+console.log("The terminators are wtf.");
+
+
+r2D2.attack(carlWeathers);
+tI89.attack(tI89);
+doomsday.attack(doomsday);
+
+console.log(carlWeathers.name + "got raped and had ")
+console.log("Conan only had " + arnold.health + " health...but he gets up and finishes it. cause hes boss.");
+
+arnold.shotgun(r2D2, tI89, doomsday);
 
 /* Conan has batman cornered. He's hurt, and isn't going anywhere.
 
@@ -246,6 +359,13 @@ Conan was hurt - he had no idea his future would hurt Batman so bad.
 In fact, he was so hurt, he decided to ice Batman.
 */
 
+arnold.oneLiners.push("What killed de Dinosaurs? DE ICE AGE!");
+arnold.ice = function(enemy) {
+  enemy.health = 0;
+  console.log(arnold.oneLiners[4]);
+}
+
+arnold.ice(batman);
 
 	// push "What killed de Dinosaurs? DE ICE AGE!" to arnold.oneLiners
 	// Add an ice method to arnold that brings an enemy down to zero and

@@ -59,4 +59,4 @@ var closeWelcomeScreen = function() {
 /* INTERACTION and GAMEPLAY */
 
 openWelcomeScreen();
-setTimeout(closeWelcomeScreen, 3000);
+setTimeout(closeWelcomeScreen, 3400);

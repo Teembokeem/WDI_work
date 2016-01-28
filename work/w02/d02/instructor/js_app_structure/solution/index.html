@@ -5,7 +5,7 @@
   <title>Whack-a-molé</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
 </head>
 <body>
   <main id="game-container">
@@ -18,23 +18,30 @@
       </h1>
     </div>
     -->
-    <table id="board">
+    <table id="board" class="board">
       <tr>
-        <td id="cell0" class="hole"></td>
-        <td id="cell1" class="hole"></td>
-        <td id="cell2" class="hole"></td>
+        <td id="cell0"></td>
+        <td id="cell1"></td>
+        <td id="cell2"></td>
       </tr>
       <tr>
-        <td id="cell3" class="hole"></td>
-        <td id="cell4" class="hole"></td>
-        <td id="cell5" class="hole"></td>
+        <td id="cell3"></td>
+        <td id="cell4"></td>
+        <td id="cell5"></td>
       </tr>
       <tr>
-        <td id="cell6" class="hole"></td>
-        <td id="cell7" class="hole"></td>
-        <td id="cell8" class="hole"></td>
+        <td id="cell6"></td>
+        <td id="cell7"></td>
+        <td id="cell8"></td>
       </tr>
     </table>
+    <div id="panel-welcome" class="panel">
+      <button id="start">Click to Play!</button>
+    </div>
+    <div id="panel-game" class="panel hidden">
+      <button id="toggle">Pause</button>
+      <button id="restart">Restart</button>
+    </div>
   </main>
 
   <audio id="song" src="sounds/la-cucaracha.mp3"></audio>

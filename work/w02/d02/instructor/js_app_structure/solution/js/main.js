@@ -49,6 +49,9 @@ var moveTheAvocado = function() {
 
   // MOVE THAT THING!
   avocadoCell = nextAvocadoCell;
+
+  blipEl.currentTime = 0;
+  blipEl.play(); // breaking the render rule!!!
 };
 
 var whack = function(cellIndex) {
@@ -57,9 +60,11 @@ var whack = function(cellIndex) {
     closedCells.push(avocadoCell);
     closedCells.sort(); // just to keep it pretty!
 
-    // Since it was mashed, it is no longer the
-    // avocado.
+    // Since it was mashed, it is no longer the avocado.
     avocadoCell = undefined;
+
+    swooshEl.currentTime = 0;
+    swooshEl.play(); // breaking the render rule!!!
 
     // Are there any open cells left?
     if (openCells.length === 0) gameWon = true;
@@ -75,8 +80,8 @@ var printState = function() {
         "-> Avocado: " + (avocadoCell === undefined ? "-" : avocadoCell),
         " (P: " + gamePaused + ", W: " + gameWon + ")",
       "\n   Open:    " + "[" + openCells + "]",
-      "\n   Closed:  " + "[" + closedCells + "]",
-      "\n   View:    " + "[" + currentViewState + "]"
+      "\n   Closed:  " + "[" + closedCells + "]" //,
+      // "\n   View:    " + "[" + currentViewState + "]"
     );
   }
 };
@@ -88,12 +93,15 @@ var printState = function() {
 
 var gameContainerEl = document.getElementById("game-container");
 var boardEl         = document.getElementById("board");
-var songEl          = document.getElementById("song");
 var welcomePanelEl  = document.getElementById("panel-welcome");
 var gamePanelEl     = document.getElementById("panel-game");
 var startButton     = document.getElementById("start");
 var toggleButton    = document.getElementById("toggle");
 var restartButton   = document.getElementById("restart");
+
+var songEl   = document.getElementById("song");
+var blipEl   = document.getElementById("blip");
+var swooshEl = document.getElementById("swoosh");
 
 // Dyanmically create elements and their children...
 var startCoverEl = document.createElement("div");
@@ -123,6 +131,7 @@ var replayCoverEl = document.createElement("div");
  * ... TODO: WCPhil
  */
 
+// SOOOO IMPORTANT!
 var getCellElByIndex = function(index) {
   return document.getElementById("cell" + index);
 };
@@ -130,15 +139,30 @@ var getCellElByIndex = function(index) {
 var openWelcomeScreen = function() {
   gameContainerEl.insertBefore(startCoverEl, boardEl);
 
-  renderAddAvocado(0);
-  renderAddGuac(8);
+  renderAvocado(0);
+  renderGuac(8);
 
-  // play song from start
   songEl.currentTime = 0; songEl.play();
+  setTimeout(function() {
+    songEl.pause();
+  }, 3500);
 };
 
-var closeWelcomeScreen = function() {
+var openWinScreen = function() {
+  gameContainerEl.insertBefore(replayCoverEl, boardEl);
+
+  gamePanelEl.classList.add("hidden");
+  welcomePanelEl.classList.remove("hidden");
+
+  songEl.currentTime = 0; songEl.play();
+  setTimeout(function() {
+    songEl.pause();
+  }, 13000);
+};
+
+var closeScreen = function() {
   startCoverEl.remove();
+  replayCoverEl.remove();
 
   getCellElByIndex(0).innerHTML = "";
   getCellElByIndex(8).innerHTML = "";
@@ -149,11 +173,16 @@ var closeWelcomeScreen = function() {
   songEl.pause();
 };
 
-var openWinScreen = function() {
-  gameContainerEl.insertBefore(replayCoverEl, boardEl);
+var renderAvocado = function(cellIndex) {
+  var el = document.createElement("div");
+  el.className = "avocado mole animated zoomIn";
+  getCellElByIndex(cellIndex).appendChild(el);
+};
 
-  // play song from start
-  songEl.currentTime = 0; songEl.play();
+var renderGuac = function(cellIndex) {
+  var el = document.createElement("div");
+  el.className = "guac mole animated zoomIn";
+  getCellElByIndex(cellIndex).appendChild(el);
 };
 
 /* VIEW: RENDER ********************************************************
@@ -161,121 +190,23 @@ var openWinScreen = function() {
  * ... TODO: WCPhil
  */
 
-var renderAddAvocado = function(cellIndex) {
-  var el = document.createElement("div");
-  el.className = "avocado mole animated zoomIn";
-  getCellElByIndex(cellIndex).appendChild(el);
-};
-
-var renderAddGuac = function(cellIndex) {
-  var el = document.createElement("div");
-  el.className = "guac mole animated zoomIn";
-  getCellElByIndex(cellIndex).appendChild(el);
-};
-
-var renderRemoveMole = function(cellIndex) {
-  var currentCellEl = getCellElByIndex(cellIndex);
-  // currentCellEl.firstChild.classList.remove("zoomIn");
-  // currentCellEl.firstChild.classList.add("animated", "zoomOut");
-  // setTimeout(function() {
-    currentCellEl.innerHTML = "";
-  // }, 500);
-};
-
-var renderMashItUp = function(cellIndex) {
-  getCellElByIndex(cellIndex).firstChild.className = "guac mole";
-};
-
-// // E: empty, A: avocado, G: guac
-// var currentViewState = [
-//   "E", "E", "E",
-//   "E", "E", "E",
-//   "E", "E", "E"
-// ]; // We be diffin' bru!
-
-// var render = function() {
-//   // render the board
-//   for (var i = 0; i < 9; i++) {
-//     currentCellState = currentViewState[i];
-
-//     // E -> A
-//     if ((currentCellState === "E") && (i === avocadoCell)) {
-//       console.log("   - adding av " + i);
-//       renderAddAvocado(i);
-//       currentViewState[i] = "A";
-//     // A -> E, G -> E
-//     } else if (
-//         (currentCellState === "A" ||
-//         currentCellState === "G") &&
-//         openCells.indexOf(i) !== -1
-//       ) {
-//       console.log("   - removing " + i);
-//       renderRemoveMole(i);
-//       currentCellState = "E";
-//     // E -> G
-//     } else if (
-//        (currentCellState === "E") &&
-//        (closedCells.indexOf(i) !== -1)
-//       ) {
-//       console.log("   - adding gu" + i);
-//       renderAddGuac(i);
-//       currentCellState = "G";
-//     // A -> G MASH IT UP!
-//     } else if (
-//         currentCellState === "A" &&
-//         closedCells.indexOf(i) !== -1
-//       ) {
-//       console.log("   - mashitup " + i);
-//       renderMashItUp(i);
-//       currentCellState = "G";
-//     // E -> E, A -> A, G -> G
-//     } else {
-//       // nothing...
-//     }
-//   }
-
-//   // Add the right text to the toggle button
-//   toggleButton.textContent = gamePaused ? "Play" : "Pause";
-// };
-
 var render = function() {
   // render the board
   for (var i = 0; i < 9; i++) {
+    var currentCellEl = getCellElByIndex(i);
 
-    // E -> A
-    if ((currentViewState[i] === "E") && (i === avocadoCell)) {
-      console.log("   - adding av " + i);
-      renderAddAvocado(i);
-      currentViewState[i] = "A";
-    // A -> E, G -> E
-    } else if (
-        (currentViewState[i] === "A" ||
-        currentViewState[i] === "G") &&
-        openCells.indexOf(i) !== -1
-      ) {
-      console.log("   - removing " + i);
-      renderRemoveMole(i);
-      currentViewState[i] = "E";
-    // E -> G
-    } else if (
-       (currentViewState[i] === "E") &&
-       (closedCells.indexOf(i) !== -1)
-      ) {
-      console.log("   - adding gu" + i);
-      renderAddGuac(i);
-      currentViewState[i] = "G";
-    // A -> G MASH IT UP!
-    } else if (
-        currentViewState[i] === "A" &&
-        closedCells.indexOf(i) !== -1
-      ) {
-      console.log("   - mashitup " + i);
-      renderMashItUp(i);
-      currentViewState[i] = "G";
-    // E -> E, A -> A, G -> G
-    } else {
-      // nothing...
+    currentCellEl.innerHTML = ""; // clear the cell, always!
+    if (i === avocadoCell) {
+      renderAvocado(i);
+    } else if (closedCells.indexOf(i) !== -1) {
+      renderGuac(i);
     }
+  }
+
+  // if game won, open the win screen!
+  if (gameWon && !gamePaused) {
+    openWinScreen();
+    return;
   }
 
   // Add the right text to the toggle button
@@ -285,12 +216,16 @@ var render = function() {
 /* INTERACTION: User-initiated  */
 
 var swing = function(evt) {
-  var catchEl  = this;       // the element the listener is registered to!
-  // var targetEl = evt.target; // the element the event targeted!
-  var idx      = parseInt(catchEl.id.slice(-1));
+  // find the element the listener is registered to!
+  var catchEl = this;
+  var index   = parseInt(catchEl.id.slice(-1));
 
-  console.log("  * Click: " + idx +" *");
-  whack(idx);
+  // hey, cheater!
+  if (!gamePaused) {
+    console.log("  * Click: " + index +" *");
+    whack(index);
+    render();
+  }
 };
 
 /* INTERACTION: Timer-initiated  */
@@ -306,7 +241,7 @@ var tick = function() {
   }
 };
 
-/* INTERACTION: Game-play */
+/* INTERACTION: helper methods */
 
 var startGame = function() {
   clearInterval(timer);
@@ -318,13 +253,12 @@ var startGame = function() {
   avocadoCell = undefined;
 
   playGame();
-  // setTimeout(playGame, 5000);
 };
 
 var playGame = function() {
   gamePaused = false;
-  // setTimeout(tick, ); // run the first tick sooner!
-  timer = setInterval(tick, 1100);
+  tick(); // run the first tick sooner!
+  timer = setInterval(tick, 700);
 
   console.log("* PLAY GAME!");
   printState(); render();
@@ -346,18 +280,11 @@ var toggleGame = function(evt) {
   }
 }
 
-// var winGame = function() {
-//   openWinScreen();        // breaking rules!
-//   console.log("YOU WIN!");
-// };
-
-// var loseGame = function() {};
-
 /* STARTUP */
 
 startButton.addEventListener("click", function(evt) {
-  closeWelcomeScreen();
-  setTimeout(startGame, 1000);
+  closeScreen();
+  if (gamePaused) startGame(); // might have already started, etc.
 });
 toggleButton.addEventListener("click", toggleGame);
 restartButton.addEventListener("click", startGame);
@@ -374,8 +301,3 @@ cellEls[7].addEventListener("click", swing);
 cellEls[8].addEventListener("click", swing);
 
 openWelcomeScreen();
-// setTimeout(closeWelcomeScreen, 3000);
-// setTimeout(playGame, 3000);
-// setTimeout(endGame, 11005);
-
-

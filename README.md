@@ -65,9 +65,8 @@ To be announced soon!
 |----------------------|:------------------------------:|:-----------------:|:---------------------------------------:|
 | Yael Amir            | yaelamir1@gmail.com            | @yael             | [yaelamir](https://github.com/yaelamir) |
 | Oat Asdon            | o.asdon@gmail.com              | @oatmeal          | [oatterzongit](https://github.com/oatterzongit) |
-| Ray (Jui-Young) Chen | jyc422@gmail.com               | @jyc              | [jyc422](https://github.com/JYC422) |
+| Ray Chen             | jyc422@gmail.com               | @jyc              | [jyc422](https://github.com/JYC422) |
 | James Coslett        | james.coslett@gmail.co         | @jcoslett         | [jcoslett](https://github.com/jcoslett) |
-| Rebecca Dagnew       | rebecca.dagnew@gmail.com       | @becx21           | [rebecca27](https://github.com/rebecca27) |
 | Markus Dioguardi     | dioguardi.it@gmail.com         | @markusd          | [MDioguardi](https://github.com/MDioguardi) |
 | Michael Duran        | mad2116@gmail.com              | @michaelduran     | [madma](https://github.com/madma) |
 | Tony Estese          | tonyestese@hotmail.com         | @newbie-wankenobi | [newbie-wankenobi](https://github.com/newbie-wankenobi) |

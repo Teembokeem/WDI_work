@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+
+body {
+  background-color: tan;
+}
+
+/* Top Navbar */
+
+nav {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* Large Header */
+
+header {
+  clear: both;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  background-color: navy;
+  max-width: 90%;
+  max-height: 920px;
+  border-radius: 20px;
+  color: white;
+  font-family: Cabin Condensed;
+}
+
+header h1 {
+  font-size: 3rem;
+  padding-top: 20px;
+}
+
+header h2 {
+  font-size: 2.3rem;
+  padding-bottom: 20px;
+}
+
+header img {
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: -10px 0 -10px 0;
+  max-width: 90%;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Three Info Media Boxes */
+
+main {
+  background-color: navy;
+  color: white;
+  max-width: 90%;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+main > div {
+  margin: 15px 3px 10px 3px;
+}
+
+main > div > img {
+  max-width: 250px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+/* Footer Navbar */
+
+footer {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* ------------------ */
+/* Navbar with Floats */
+/* ------------------ */
+
+nav .nav {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+nav .container-ul {
+  float: right;
+}
+
+nav .nav-menu-items {
+  float: left;
+  padding: 0 0 0 20px;
+}
+
+nav .nav-strong {
+  float: left;
+}
+
+/* ------------- */
+/* Media Queries */
+/* ------------- */
+
+@media (max-width:600px) {
+  nav .nav {
+    display: block;
+    float: none;
+  }
+
+  nav .container-ul {
+    float: left;
+  }
+
+  nav .nav-menu-items {
+    padding-left: 0;
+  }
+}
+
+/* --------------------------- */
+/* Using Display Flex */
+/* --------------------------- */
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main > div {
+  max-width: 260px;
+  padding: 5px;
+}
+
+/* ------------------- */
+/* Navbar with FlexBox */
+/* ------------------- */
+
+footer > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.flex-grow-class {
+  padding: 8px;
+}
+
+.flex-grow-class:nth-child(1) {
+  flex-grow: 1;
+}
+
+@media (max-width:600px) {
+  footer > ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

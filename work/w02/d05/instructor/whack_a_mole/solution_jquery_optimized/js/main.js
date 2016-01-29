@@ -41,16 +41,12 @@
 
     if (game.avocadoCell !== undefined) game.openCells.push(game.avocadoCell);
     game.avocadoCell = nextAvocadoCell;
-
-    game.playAudio(blipEl, 0);
   };
 
   game.mash = function(cellIndex) {
     if (cellIndex === game.avocadoCell) {
       game.closedCells.push(game.avocadoCell);
       game.avocadoCell = undefined;
-
-      game.playAudio(swooshEl, 0);
 
       if (game.openCells.length === 0) game.isWon = true;
     }
@@ -134,12 +130,14 @@
         if (game.closedCells.indexOf(i) !== -1) { //   if
           $c.children()                           //   it is IN the closed cells
             .removeClass("avocado")               //     then MASH IT UP!
-            .addClass("guac");                    //   else if
+            .addClass("guac");                    //     and play the sound
+          game.playAudio(swooshEl, 0);            //   else if
         } else if (i !== game.avocadoCell) {      //   it is not the avocado
           game.removeMole(i);                     //     then fade out avocado
         }                                         // else if (no avocado and)
       } else if (i === game.avocadoCell) {        // this is the avocado in state
         game.renderAvocado(i);                    //   then fade in avocado
+        game.playAudio(blipEl, 0);                //   and play the swoosh
       }
     });
 

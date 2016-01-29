@@ -95,4 +95,4 @@ work? Is it what you expected?
 
 [whack_a_mole]: https://en.wikipedia.org/wiki/Whac-A-Mole
 [wireframes]:   assets/wireframe.jpg
-[game_link]:    ...
+[game_link]:    http://h4w5.github.io/whack_a_mole/

@@ -22,6 +22,8 @@ Now, using the below images, update your User Stories to fit the new
 information you can find by more actively "envisioning" the application
 and how a user interacts with it.
 
+**[Click here to see wireframes.][wireframes]***
+
 <!-- IMAGES -->
 
 <!-- ![](https://i.imgur.com/lXp6FXD.jpg) -->
@@ -92,4 +94,5 @@ work? Is it what you expected?
 <!-- LINKS -->
 
 [whack_a_mole]: https://en.wikipedia.org/wiki/Whac-A-Mole
+[wireframes]:   assets/wireframes.jpg
 [game_link]:    ...

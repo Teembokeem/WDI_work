@@ -24,9 +24,13 @@ and how a user interacts with it.
 
 **[Click here to see wireframes.][wireframes]**
 
-<!-- IMAGES -->
+Put the User Stories into an Agile (Kanban) workflow:
 
-<!-- ![](https://i.imgur.com/lXp6FXD.jpg) -->
+- Ice Box
+- MVP (Current/Sprint)
+- Complete (Delivered/Accepted)
+
+Order the sotries from most-to-least important (top-to-bottom).
 
 ### Part 3 – User Story Overview
 
@@ -40,12 +44,6 @@ Identify:
 - How would you re-order your features?
 - Is there anything essential that is missing from the game? Do you
   think it is an MVP?
-
-Put the User Stories into an Agile (Kanban) workflow:
-
-- Ice Box
-- MVP (Current/Sprint)
-- Complete (Delivered/Accepted)
 
 ---
 

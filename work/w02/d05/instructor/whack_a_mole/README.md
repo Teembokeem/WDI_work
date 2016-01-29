@@ -91,5 +91,5 @@ work? Is it what you expected?
 
 <!-- LINKS -->
 
-[whack_a_mole]: ...
+[whack_a_mole]: https://en.wikipedia.org/wiki/Whac-A-Mole
 [game_link]:    ...

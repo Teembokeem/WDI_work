@@ -54,9 +54,6 @@ var printState = function() {
  * The game itself (tick) advances by moving that
  * avocado. In order to do that, it must find a
  * random open cell.
- *
- * There is also a helpful function for us to print
- * the state!
  */
 
 var pickRandomOpenCell = function() {
@@ -205,7 +202,7 @@ var render = function() {
 
 var swing = function(evt) {
   // Find the element the listener is registered to!
-  var catchEl = this;
+  var catchEl = evt.currentTarget;
   var index   = parseInt(catchEl.id.slice(-1));
 
   if (!gamePaused) { // Hey, cheater; it's paused!

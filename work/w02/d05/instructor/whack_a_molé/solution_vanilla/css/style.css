@@ -1,3 +1,7 @@
+/*
+ * Full pages styles.
+ */
+
 html,
 body {
   width: 100%;
@@ -15,8 +19,10 @@ main {
   margin: -300px 0 0 -300px;
 
   background: url("../images/skull-pattern.png") no-repeat 100%;
+}
 
-  /* cursor: url("../images/pestle.gif"), auto; */
+main * {
+  /* cursor: url("../images/pestle.gif") 20 70, pointer; */
   cursor: pointer;
 }
 
@@ -126,9 +132,8 @@ main {
   font-weight: bold;
   text-transform: uppercase;
 
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-
 
 /*
  * Other useful styles.
@@ -136,4 +141,8 @@ main {
 
 .hidden {
   visibility: hidden;
+}
+
+.none {
+  display: none;
 }

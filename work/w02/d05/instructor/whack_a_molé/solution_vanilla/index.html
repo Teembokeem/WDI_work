@@ -9,15 +9,19 @@
 </head>
 <body>
   <main id="game-container">
-    <!--
-    <div id="start-cover" class="cover cover-dark">
+    <div id="welcome-cover" class="cover cover-dark">
       <h1 class="animated zoomIn">
         <span class="show-first infinite swing animated">Whack</span><br>
         <span class="show-second infinite swing animated">– a –</span><br>
         <span class="show-third infinite swing animated">molé!</span>
       </h1>
     </div>
-    -->
+    <div id="replay-cover" class="cover cover-dark none">
+      <h1 class="animated zoomIn">
+        <span class="show-first infinite swing animated">You</span><br>
+        <span class="show-second infinite swing animated">Win!</span>
+      </h1>
+    </div>
     <table id="board" class="board">
       <tr>
         <td id="cell0"></td>
@@ -47,6 +51,7 @@
   <audio id="song"   src="sounds/la-cucaracha.mp3"></audio>
   <audio id="blip"   src="sounds/blip.wav"></audio>
   <audio id="swoosh" src="sounds/swoosh.wav"></audio>
+
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -41,6 +41,12 @@ Identify:
 - Is there anything essential that is missing from the game? Do you
   think it is an MVP?
 
+Put the User Stories into an Agile (Kanban) workflow:
+
+- Ice Box
+- MVP (Current/Sprint)
+- Complete (Delivered/Accepted)
+
 ---
 
 ### Part 4 – Initialize Application

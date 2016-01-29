@@ -273,7 +273,7 @@ var pauseGame = function() {
   printState(); render();
 };
 
-var toggleGame = function(evt) {
+var toggleGame = function() {
   if (!gamePaused) {
     pauseGame();
   } else {

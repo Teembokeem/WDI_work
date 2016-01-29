@@ -132,15 +132,3 @@ main * {
   font-weight: bold;
   text-transform: uppercase;
 }
-
-/*
- * Other useful styles.
- */
-
-.hidden {
-  visibility: hidden;
-}
-
-.none {
-  display: none;
-}

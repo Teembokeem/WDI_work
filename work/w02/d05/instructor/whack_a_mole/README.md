@@ -1,5 +1,7 @@
 # Whack–a–molé
 
+<img src="assets/mortar-pestle.jpg" alt="A mortar and pestle." width="300px">
+
 **A comprehesive JavaScript application-building lab.**
 
 ### Part 1 – Initial Planning

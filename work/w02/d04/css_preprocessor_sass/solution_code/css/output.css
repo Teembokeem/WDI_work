@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Calligraffitti);
+body {
+  border: 10px solid red;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background: radial-gradient(ellipse farthest-corner at center center, silver, gray);
+  color: #666;
+  margin: 2em;
+  text-align: center;
+  height: 100%; }
+
+h1 {
+  color: #ff00ff;
+  font-family: Calligraffitti, monospace;
+  text-shadow: 1px 1px 1px #000; }
+
+.example, .flair {
+  display: inline-block; }
+
+.flair {
+  margin: 2em;
+  margin-top: 100px;
+  width: 200px;
+  height: 300px;
+  position: relative; }
+  .flair > div {
+    border: 1px dashed blue; }
+  .flair .flair-head {
+    width: 40%;
+    height: 20%;
+    margin: 0 auto;
+    transform-origin: 50% 100%;
+    background-color: #ffe4c4; }
+  .flair .flair-body {
+    width: 60%;
+    height: 40%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 200;
+    background-color: #ff00ff; }
+  .flair .flair-arm {
+    width: 7.5%;
+    height: 40%;
+    position: absolute;
+    top: 20%;
+    background-color: #ffe4c4; }
+    .flair .flair-arm-l {
+      left: 10%;
+      transform-origin: 60% 12%; }
+    .flair .flair-arm-r {
+      right: 10%;
+      transform-origin: 40% 12%; }
+  .flair .flair-leg {
+    width: 15%;
+    height: 40%;
+    position: absolute;
+    top: 55%;
+    transform-origin: 50% 0%;
+    background-color: #ffe4c4; }
+    .flair .flair-leg-l {
+      left: 30%; }
+    .flair .flair-leg-r {
+      right: 30%; }
+
+#basic > div {
+  border-radius: 20%; }
+#basic .flair-head {
+  border-radius: 50%; }
+
+/*# sourceMappingURL=output.css.map */

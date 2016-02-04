@@ -10,62 +10,117 @@
 	font-style: normal;
 }
 
+* { box-sizing: border-box; }
+
+html,
 body {
-	background-color: #333333;
-	color: #FFF;
-	font-family: "Edmond Sans Bold", sans-serif;
+  margin: 0 auto;
+
+  background-color: #333333;
+
+  color: white;
+  text-align: center;
+  font-family: "Edmond Sans Bold", sans-serif;
+  text-align: center;
+
+  font-size: 16px;
+}
+
+h1,
+p,
+span,
+button {
+  text-transform: uppercase;
 }
 
 h1 {
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 64px;
+  letter-spacing: 1px;
+  font-size: 4rem;
 }
 
-#board{
-	width: 310px;
-	height: 310px;
-	margin: 0 auto 0;
+.board-container {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
 }
 
-#board div {
-	width: 100px;
-	height: 100px;
-	display: block;
-	float: left;
-	border: 0 solid #FFF;
-	text-align: center;
-	cursor: pointer;
+.board-container > table {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+
+  /*table-layout: fixed;*/
+  border-collapse: collapse;
 }
 
-.locked div {
-	cursor: default !important;
+.board-container td {
+  min-width: 110px;
+  width: 110px;
+  min-height: 110px;
+  height: 110px;
+
+  border: 0px solid white;
+
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.board-container tr:nth-child(2) td { border-width: 5px 0; }
+.board-container tr td:nth-child(2) { border-width: 0 5px; }
+.board-container tr:nth-child(2) td:nth-child(2) { border-width: 5px; }
+
+.locked {
+  cursor: default !important;
+}
+
+.info-container {
+  padding: 0 10%;
+}
+
+.info {
+  border: 5px solid white;
+  width: 40%;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.turn {
+  margin-right: 3rem;
+}
+
+button {
+  width: 40%;
+  height: 2.5rem;
+  border-radius: 1rem;
+  background-color: white;
+
+  color: #333333;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 2rem;
+
+  cursor: pointer;
 }
 
 i.fa {
-	font-size: 95px;
 	line-height: 100px;
 	-webkit-animation: enterMark .5s;
 	-o-animation: enterMark .5s;
 	animation: enterMark .5s;
 }
 
-i.xmark {
-	color: #75A3D1;
-}
+.player-x { color: #75A3D1; }
+.player-o { color: #FFD452; }
+i.player-x { font-size: 90px; }
+i.player-o { font-size: 80px; }
 
-i.omark {
-	color: #FFD452;
-}
-
-.xmark.winner {
+.player-x.winner {
 	-webkit-animation: xWinnerDances 2s linear infinite !important;
 	-o-animation: xWinnerDances 2s linear infinite !important;
 	animation: xWinnerDances 2s linear infinite !important;
 }
 
-.omark.winner {
+.player-o.winner {
 	-webkit-animation: oWinnerDances 2s linear infinite !important;
 	-o-animation: oWinnerDances 2s linear infinite !important;
 	animation: oWinnerDances 2s linear infinite !important;
@@ -85,6 +140,7 @@ i.omark {
 	margin-top: 40px;
 }
 
+/*
 #btn-clear-board {
 	border: none;
 	background: #E05151;
@@ -121,25 +177,7 @@ i.omark {
 	opacity: 1;
 	cursor: pointer;
 }
-
-/* square borders for board outline */
-#board div:nth-child(1),
-#board div:nth-child(2),
-#board div:nth-child(4),
-#board div:nth-child(5),
-#board div:nth-child(7),
-#board div:nth-child(8) {
-	border-right-width: 5px;
-}
-
-#board div:nth-child(4),
-#board div:nth-child(5),
-#board div:nth-child(6),
-#board div:nth-child(7),
-#board div:nth-child(8),
-#board div:nth-child(9) {
-	border-top-width: 5px;
-}
+*/
 
 /* animation (for both webkit and default), should gracefully degrade on IE */
 @keyframes enterMark {
@@ -149,10 +187,10 @@ i.omark {
 		animation-timing-function: ease-in;
   }
 	50% {
-    font-size: 110px;
+    font-size: 90px;
   }
 	100% {
-    font-size: 95px;
+    font-size: 85px;
     opacity: 1;
 		animation-timing-function: ease-out;
   }
@@ -165,10 +203,10 @@ i.omark {
 		animation-timing-function: ease-in;
   }
 	50% {
-    font-size: 110px;
+    font-size: 90px;
   }
 	100% {
-    font-size: 95px;
+    font-size: 85px;
     opacity: 1;
 		animation-timing-function: ease-out;
   }
@@ -319,3 +357,8 @@ i.omark {
 		animation-timing-function: ease-out;
   }
 }
+
+/*
+
+
+*/

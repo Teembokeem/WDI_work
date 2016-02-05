@@ -1,26 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head lang="en">
+<head>
   <meta charset="utf-8">
   <title>Tic Tac Toe</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <section class="game">
-    <header><h1>Tic Tac Toe</h1></header>
-    <div class="board" id="board">
-      <div class="square" id="0,0"></div><div class="square" id="0,1"></div><div class="square" id="0,2"></div>
-      <div class="square" id="1,0"></div><div class="square" id="1,1"></div><div class="square" id="1,2"></div>
-      <div class="square" id="2,0"></div><div class="square" id="2,1"></div><div class="square" id="2,2"></div>
+  <h1>Tic Tac Toe!</h1>
+  <div class="board-container">
+    <table id="board">
+      <tbody>
+        <tr>
+          <td id="cell0"></td>
+          <td id="cell1"></td>
+          <td id="cell2"></td>
+        </tr>
+        <tr>
+          <td id="cell3"></td>
+          <td id="cell4"></td>
+          <td id="cell5"></td>
+        </tr>
+        <tr>
+          <td id="cell6"></td>
+          <td id="cell7"></td>
+          <td id="cell8"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info-container">
+      <div class="info player-x">
+        <p>&nbsp;</p>
+      </div>
     </div>
-    <section class="info">
-      <p></p>
-      <p></p>
-      <button>Begin a Game!</button>
-    </section>
-  </section>
+    <button id="restart">Restart</button>
+  </div>
 
-  <script type="text/javascript" src="tictactoe-model.js"></script>
-  <script type="text/javascript" src="tictactoe-domInteraction.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

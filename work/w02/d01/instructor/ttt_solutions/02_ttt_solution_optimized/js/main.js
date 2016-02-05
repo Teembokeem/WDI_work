@@ -13,16 +13,16 @@ console.log("main.js loaded!");
 var game = {
   players: [
     {
+      id: "X",
       name: "Player 1",
       markerClasses: "fa fa-times player-x",
-      value: 1,
-      id: "X"
+      value: 1
     },
     {
+      id: "O",
       name: "Player 2",
-      markerClasses: "fa fa-circle-o player-o",
-      value: -1,
-      id: "O"
+      markerClasses: "fa fa-eye player-o",
+      value: -1
     }
   ],
   turn:       0, // represents the index of the above player

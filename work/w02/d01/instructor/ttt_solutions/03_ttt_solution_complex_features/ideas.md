@@ -1,17 +1,17 @@
 - make a modal
-  - fade rest of page or not
-  - animations:
-    1. pop in from below
-    2. scale up from a point in the middle
-    3. fade out
+    x fade rest of page or not
+    x animations:
+        x 1. pop in from below
+        x 2. scale up from a point in the middle
+        x 3. fade out
   - content:
     1. welcome to tic tac toe / instructions
     2. settings
     3. high scores
     4. you failed to make high scores
-    5. you win
+        x 5. you win
     6. you lose (AI wins)
-    7. you tie
+        x 7. you tie
 
 - timer 5 seconds per turn
 - set player names

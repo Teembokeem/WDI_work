@@ -1,3 +1,13 @@
+@keyframes blow-past {
+  50% {
+    opacity: 0;
+  }
+  to {
+    transform: scale3d(20,20,20);
+    opacity: 0;
+  }
+}
+
 @keyframes enterMark {
   0% {
     font-size: 50px;

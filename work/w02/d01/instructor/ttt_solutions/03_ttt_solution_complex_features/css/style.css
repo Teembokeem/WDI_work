@@ -153,3 +153,23 @@ button.over {
 	animation: playAgain 2s 1s 1 forwards ease-in;
 	cursor: pointer;
 }
+
+.modal.text {
+  position: fixed;
+  top:      50%;
+  left:     50%;
+
+  width:  650px;
+  height: 150px;
+
+  margin-left: -325px;
+  margin-top:  -75px;
+
+  font-size:   7rem;
+  line-height: 150px;
+}
+
+.blow-past {
+  animation-name: blow-past;
+  animation-duration: 2s;
+}

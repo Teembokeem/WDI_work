@@ -7,7 +7,7 @@
 | Michael Duran      |      Arcade       | [Tetris](https://github.com/madma/project01) |
 | Michael Pascual    |      Arcade       | [Balloon Pop](https://github.com/mrpascual/balloon_pop) |
 | Jonah Sobol        |      Arcade       | [Bust a Move](https://github.com/cameragadget/project1/) |
-| Nelson Valdivia    |      Arcade       | [Cannons?](https://github.com/nevaldiv/project01_cannons) |
+| Nelson Valdivia    |      Arcade       | [Cañón](https://github.com/nevaldiv/project01_cannons) |
 | Yel Padillo        |      Arcade       | [Snake](https://github.com/gamalielhere/snake/tree/master) |
 | Jasmine Guzman     |       Board       | [Connect 4](https://github.com/jgescobar/project1) |
 | Jerry Lee          |       Board       | [Mancala](https://github.com/leejb91/project1) |

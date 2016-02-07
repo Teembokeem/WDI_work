@@ -46,31 +46,50 @@ game.render = function() {
 
   renderBoard();
 
-  $infoBox.removeClass().addClass("info " + playerClass);
+  // $infoBoxes.removeClass().addClass("info " + playerClass);
 
   if (game.isStarting() || game.isPlaying()) {
-    $info.text(player.name + "'s turn");
-    $infoBox.removeClass("winner loser");
-    $restartButton.removeClass("over");
+    $infoTurn.text(player.name + "'s turn");
+    $infoBoxes.removeClass("winner loser player-x player-o");
+
+    $infoTimer.text("8 / 1:00 Total");
+    $infoTimer.parent().removeClass("restart");
+    // Dynamically remove event listener…
+    $infoTimer.parent().off();
+
+    // var $m = $('<div class="modal box"><h1>Welcome to Tic Tac Toe!</h1></div>');
+    // $("body").on("click", function() {
+    //   console.log("click")
+    //   modal.close();
+    // });
+    // modal.open($m, true, "animated bounceInUp", "bounceOutDown");
 
   } else if (game.isWon()) {
-    $info.text(player.name + " won!");
-    $infoBox.addClass("winner");
-    $restartButton.addClass("over");
+    $infoTurn.text(player.name + " won!");
+    $infoTurn.parent().addClass("winner " + playerClass);
 
     var $m = $('<div class="modal text">You Win!</div>').addClass(playerClass);
     modal.open($m, false, "animated zoomIn", "blow-past");
     setTimeout(modal.close, 800);
 
+    $infoTimer.text("Restart");
+    $infoTimer.parent().addClass("restart");
+    // Dynamically add event listener…
+    $infoTimer.parent().on("click", restartHandler);
+
   } else if (game.isTied()) {
 
-    $info.text("You both tied…");
-    $infoBox.addClass("loser");
-    $restartButton.addClass("over");
+    $infoTurn.text("You both tied…");
+    $infoTurn.parent().addClass("loser");
 
     var $m = $('<div class="modal text">You Tied…</div>');
     modal.open($m, false, "animated zoomIn", "blow-past");
     setTimeout(modal.close, 800);
+
+    $infoTimer.text("Restart");
+    $infoTimer.parent().addClass("restart");
+    // Dynamically add event listener…
+    $infoTimer.parent().on("click", restartHandler);
   }
 };
 
@@ -99,9 +118,9 @@ var moveHandler = function(evt) {
 
 // Globally-accesible!
 var $cells,
-    $infoBox,
-    $info,
-    $restartButton,
+    $infoBoxes,
+    $infoTurn,
+    $infoTimer,
     $board;
 
 // Once the DOM loads…
@@ -109,14 +128,13 @@ document.addEventListener("DOMContentLoaded", function(evt) {
 
   // Cache DOM references.
   $cells         = $("#board td");
-  $infoBox       = $(".info");
-  $info          = $infoBox.children();
-  $restartButton = $("#restart");
+  $infoBoxes     = $(".info");
+  $infoTurn      = $(".info.turn").children();
+  $infoTimer     = $(".info.timer").children();
   $board         = $("#board");
 
   // Register event listeners.
   $board.on("click", moveHandler);
-  $restartButton.on("click", restartHandler);
 
   game.render();
 });

@@ -36,6 +36,7 @@ button {
 h1 {
   letter-spacing: 1px;
   font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .board-container {
@@ -73,30 +74,40 @@ h1 {
   cursor: default !important;
 }
 
+
 .info-container {
-  padding: 0 10%;
+  padding: 0 5%;
+  margin-top: 1rem;
 }
 
 .info {
+  width: 45%;
+  height: 4rem;
+  margin: 1rem 0;
   border: 5px solid white;
   border-radius: 20px;
-  width: 60%;
   display: inline-block;
-  margin: 1rem 0;
+  overflow: hidden;
 }
 
-button {
-  width: 40%;
-  height: 2.5rem;
-  border-radius: 1rem;
-  background-color: white;
+.info p {
+  line-height: 3.5rem;
+  margin: 0;
+  vertical-align: middle;
+}
 
-  color: #333333;
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 2rem;
+.info.turn {
+  margin-right: 1rem;
+}
 
+.info.restart {
+  background: #E05151;
   cursor: pointer;
+  animation: play-again 2s 1s 1 forwards ease-in;
+}
+
+.info.restart:hover {
+  background: #AE4141;
 }
 
 i.fa {
@@ -127,31 +138,6 @@ i.player-o { font-size: 80px; }
 i.loser {
   font-size: 60px !important;
   transition:  all 2.5s;
-}
-
-#info {
-	text-align: center;
-	margin-top: 40px;
-}
-
-
-button {
-	border: none;
-	background: #E05151;
-	color: #FFF;
-	outline: none;
-	font-family: "Edmond Sans Bold", sans-serif;
-	line-height: 36px;
-	transition:  all .3s;
-}
-
-button:hover {
-	background: #AE4141;
-}
-
-button.over {
-	animation: playAgain 2s 1s 1 forwards ease-in;
-	cursor: pointer;
 }
 
 .modal.text {

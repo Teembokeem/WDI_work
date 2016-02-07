@@ -1,11 +1,14 @@
 @keyframes blow-past {
-  50% {
-    opacity: 0;
-  }
-  to {
+  50% { opacity: 0; }
+  to  {
     transform: scale3d(20,20,20);
     opacity: 0;
   }
+}
+
+@keyframes play-again {
+  from { font-size: 1rem; }
+  to   { font-size: 2rem; }
 }
 
 @keyframes enterMark {
@@ -24,15 +27,7 @@
   }
 }
 
-@keyframes playAgain {
-  0% {
-    font-size: 1rem;
-  }
-  100% {
-    font-size: 30px;
-    line-height: 40px;
-  }
-}
+
 
 @keyframes xWinnerDances {
   0% {

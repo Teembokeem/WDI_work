@@ -18,8 +18,8 @@ Run your `world_data.sql` file with the following commands to get the data
 you need for this lab:
 
 ```
-createdb carmen
-psql -d carmen -f world_data.sql
+createdb world_data_db
+psql -d world_data_db -f world_data.sql
 ```
 
 ### Answer the Clues
@@ -31,7 +31,7 @@ file as your "answer sheet."
 Test the output with the command:
 
 ```
-psql -d carmen -f clues.sql
+psql -d world_data_db -f clues.sql
 ```
 
 When you're finished, you can tell us where she's heading!

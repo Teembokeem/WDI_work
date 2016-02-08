@@ -8,7 +8,7 @@ The categories are, in order:
 
 1. <img src="assets/black-hat.jpg" height="14px"> **FACTS** (Black Hat)
 2. <img src="assets/green-hat.jpg" height="14px"> **POSITIVE POINTS** (Green Hat)
-3. <img src="assets/red-hat.png" height="14px">   **NEGATIVE POINTS** (Red Hat)
+3. <img src="assets/red-hat.jpg" height="14px">   **NEGATIVE POINTS** (Red Hat)
 4. <img src="assets/blue-hat.jpg" height="14px">  RE/**SOLUTIONS** (Blue Hat)
 
 Helpful links:
@@ -95,7 +95,7 @@ After this, follow the steps for each section of the retro:
     remind everyone to critically identify "wins." Positive points 
     should be written in Green, and *must reference a fact*. This 
     section should take no more than 5 minutes.
-3.  <img src="assets/red-hat.png" height="14px">
+3.  <img src="assets/red-hat.jpg" height="14px">
     **Red Hat**: the group should now work together to go back over
     the facts, and find things about the sprint that were "negative."
     These should be phrased as answers to the questions:

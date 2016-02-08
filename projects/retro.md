@@ -8,8 +8,8 @@ The categories are, in order:
 
 0. <img src="assets/whitehat.jpg" height="14px"> **EMOTIONS**      (White Hat)
 1. <img src="assets/blackhat.jpg" height="14px"> **FACTS**         (Black Hat)
-2. <img src="assets/greenhat.jpg" height="14px"> **GOOD THINGS**   (Green Hat)
-3. <img src="assets/redhat.png" height="14px">   **BAD THINGS**    (Red Hat)
+2. <img src="assets/greenhat.jpg" height="14px"> **POSITIVE THINGS**   (Green Hat)
+3. <img src="assets/redhat.png" height="14px">   **NEGATIVE THINGS**    (Red Hat)
 4. <img src="assets/bluehat.jpg" height="14px">  RE/**SOLUTIONS**  (Blue Hat)
 
 Helpful links:
@@ -49,9 +49,10 @@ open.* The retro facilitator (instructor) will run this process, either
 having the groups share back what they've discovered, or retro as a 
 class for one or more of the "hats."
 
-After this, follow the steps:
+After this, follow the steps for each section of the retro:
 
-1.  **White Hat**: go around the group and have each person give at least
+0.  <img src="assets/whitehat.jpg" height="14px"> 
+    **White Hat**: go around the group and have each person give at least
     one, and no more than two, emotive statements. They should be framed 
     as answers to the question: 
  
@@ -65,24 +66,113 @@ After this, follow the steps:
  
     If any emotions are shared, write them down. If they are positive, 
     use Green, if negative use Red, and if neutral use Black.
-2.  **Black Hat**: now each group should 
+1.  <img src="assets/blackhat.jpg" height="14px">
+    **Black Hat**: the group should now work together to collect as many
+    ***facts*** about the sprint as possible. This is usually the
+    hardest part of the retro, since you have to answer: 
 
-> What happenned during the sprint?
+    > What happenned during the sprint?
 
-no emotions, no qualitative, no judgements, no comparisons, no "whys"
+    … without reference to emotions, qualitative or valuative statements,
+    judgements, comparisons, or even '*why*'s.
 
-Ex bad: we struggled with using jquery
-Ex good: we used jquery to interact with the DOM
+    The purpose of this part is to simply jog everyone's memory about
+    the sprint, and to focus the retro. It should take no longer than 8
+    minutes (maximum!).
 
-Ex bad: we did not meet our goal of 15 tickets closed
-Ex good: we closed 12 tickets, our goal was to close 12 tickets
+    Here are some examples of bad or unacceptable facts, and better ways
+    to state them:
 
-Ex bad: phil didn't pull his weight* (esp. bad!)
-Ex good: the team averaged 3 tickets per member, (phil:) "i did not close any tickets"
+    > Bad: *we struggled with using jQuery*   
+    > Good: *we used jquery to interact with the DOM*   
+    > 
+    > Bad: *we did not meet our goal of 15 tickets closed*   
+    > Good: (1) *we closed 12 tickets*, 
+    >       (2) *our goal was to close 12 tickets*   
+    > 
+    > Bad: *Phil didn't pull his weight* (especially bad, since it 
+    >      breaks the Prime Directive!)   
+    > Good: (1) *the team averaged 3 tickets per member*,
+    >       (2) (Phil should offer:) *I did not close any tickets…*   
 
+    All of the facts are written in Black (along with the neutral
+    emotions). They are not erased for the rest of the retro! From here 
+    on, every part needs to reference some *fact* that was listed in 
+    this section of the retro.
+2.  <img src="assets/greenhat.jpg" height="14px">
+    **Green Hat**: the group should now work together to go back over
+    the facts, and offer up positive outcomes or events from the sprint.
+    These should be phrased as answers to the question:
 
+    > What went well, or what did you do that was successful, during the
+    > sprint.
 
-<!-- ### Class Resolutions and Solutions
+    These "positive things" should help set the tone for the retro, and
+    remind everyone to critically identify "wins." Positive things 
+    should be written in Green, and *must reference a fact or neutral 
+    feeling*. This section should take no more than 5 minutes.
+3.  <img src="assets/redhat.png" height="14px">
+    **Red Hat**: the group should now work together to go back over
+    the facts, and find things about the sprint that were "negative."
+    These should be phrased as answers to the questions:
+
+    > What went wrong during the sprint?   
+    > What could have gone better?   
+    > What "pain points" or "bottlenecks" were encountered?   
+    
+    … and finally:
+
+    > What obstacles, or "blockers," kept the team or its members from
+    > reaching their goals?
+
+    Remember always: **[the Prime Directive](#the-prime-directive)**! 
+    At the same time however, don't let the urge to "be constructive" 
+    lead you to begin proposing solutions or dismissing criticisms that 
+    are raised. Just record them! Save the judgements for the next 
+    section!
+
+    Negative things should be written in Red, and *must reference a fact
+    or neutral feeling*. This section should take no more than 5 
+    minutes.
+4.  <img src="assets/bluehat.jpg" height="14px">
+    **Blue Hat**: this section of the retro takes place in two parts,
+
+    - first, identifying positive and negative priorities, and…
+    - next, proposing resolutions and solutions.
+
+    Once the recorder has photographed all of the points from the retro
+    so far (Black, Red and Green), pick a subset of positives and
+    negatives to work with: usually at least **one positive** and
+    **two negatives**, but no more than three of either. These are the
+    priorities for the team, or the most important of the points to
+    come out of the retro. *Erase all of the facts, and the positive
+    and negative points that are not priorities.*
+
+    Work first with the positive points: write ***resolutions*** for
+    each, identifying what the team can do to continue to hit these
+    points and institute them in their sprints. For example:
+
+    > In order to ensure the continued support we've found on Slack
+    > between team members, we resolve to create a new channel
+    > `#support` specifically for asking questions of the team.
+
+    Finally, go through the negative points, and offer concrete
+    suggestions, rules or new processes to avoid having these problems
+    in the future. For example:
+
+    > The team had major problems this sprint in implementing design
+    > tickets. A possible solution may be to have all design tickets
+    > go through a single team member in the next cycle, who can
+    > pair directly with the designer to implement their tickets.
+
+**And that's that!** Congratulations on finishing your first retro!
+
+Once the team has their set of resolutions/solutions, the recorder should
+keep track of them by sending them (as Markdown, not images) to the
+facilitator (instructor).
+
+<!--
+### Class Resolutions and Solutions
 
 We resolve to:
 
@@ -90,7 +180,8 @@ We resolve to:
 
 We plan to fix the following problems:
 
-... -->
+...
+-->
 
 <!-- LINKS -->
 

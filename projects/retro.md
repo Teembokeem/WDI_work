@@ -6,10 +6,10 @@ collaborate to discuss the course of the project and our own work on it.
 
 The categories are, in order:
 
-1. <img src="assets/blackhat.jpg" height="14px"> **FACTS** (Black Hat)
-2. <img src="assets/greenhat.jpg" height="14px"> **POSITIVE THINGS** (Green Hat)
-3. <img src="assets/redhat.png" height="14px">   **NEGATIVE THINGS** (Red Hat)
-4. <img src="assets/bluehat.jpg" height="14px">  RE/**SOLUTIONS** (Blue Hat)
+1. <img src="assets/black-hat.jpg" height="14px"> **FACTS** (Black Hat)
+2. <img src="assets/green-hat.jpg" height="14px"> **POSITIVE POINTS** (Green Hat)
+3. <img src="assets/red-hat.png" height="14px">   **NEGATIVE POINTS** (Red Hat)
+4. <img src="assets/blue-hat.jpg" height="14px">  RE/**SOLUTIONS** (Blue Hat)
 
 Helpful links:
 
@@ -50,7 +50,7 @@ class for one or more of the "hats."
 
 After this, follow the steps for each section of the retro:
 
-1.  <img src="assets/blackhat.jpg" height="14px">
+1.  <img src="assets/black-hat.jpg" height="14px">
     **Black Hat**: the group begins by collecting as many
     ***facts*** about the sprint as possible. This is usually the
     hardest part of the retro, since you have to answer: 
@@ -83,7 +83,7 @@ After this, follow the steps for each section of the retro:
     emotions). They are not erased for the rest of the retro! From here 
     on, every part needs to reference some *fact* that was listed in 
     this section of the retro.
-2.  <img src="assets/greenhat.jpg" height="14px">
+2.  <img src="assets/green-hat.jpg" height="14px">
     **Green Hat**: the group should now work together to go back over
     the facts, and offer up positive outcomes or events from the sprint.
     These should be phrased as answers to the question:
@@ -91,11 +91,11 @@ After this, follow the steps for each section of the retro:
     > What went well, or what did you do that was successful, during the
     > sprint.
 
-    These "positive things" should help set the tone for the retro, and
-    remind everyone to critically identify "wins." Positive things 
+    These "positive points" should help set the tone for the retro, and
+    remind everyone to critically identify "wins." Positive points 
     should be written in Green, and *must reference a fact*. This 
     section should take no more than 5 minutes.
-3.  <img src="assets/redhat.png" height="14px">
+3.  <img src="assets/red-hat.png" height="14px">
     **Red Hat**: the group should now work together to go back over
     the facts, and find things about the sprint that were "negative."
     These should be phrased as answers to the questions:
@@ -115,9 +115,9 @@ After this, follow the steps for each section of the retro:
     are raised. Just record them! Save the judgements for the next 
     section!
 
-    Negative things should be written in Red, and *must reference a 
+    Negative points should be written in Red, and *must reference a 
     fact*. This section should take no more than 5 minutes.
-4.  <img src="assets/bluehat.jpg" height="14px">
+4.  <img src="assets/blue-hat.jpg" height="14px">
     **Blue Hat**: this section of the retro takes place in two parts,
 
     - first, identifying positive and negative priorities, and…

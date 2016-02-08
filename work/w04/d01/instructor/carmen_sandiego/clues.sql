@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 -- "We're counting on you, gumshoe!"
--- –Chief Lynne Thigpen
+-- Chief Lynne Thigpen
 --
 -- Find out where Carmen Sandiego's headed, send us the info, and we'll
 -- be sure to nab her before she can steal more ridiculous landmarks!

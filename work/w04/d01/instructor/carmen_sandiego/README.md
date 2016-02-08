@@ -1,5 +1,7 @@
 # Where in the World?
 
+![This close.](https://i.ytimg.com/vi/hz43ZpZZG9U/hqdefault.jpg)
+
 We're going to use what we've learned already about searching with SQL 
 commands, and apply it to chase down and capture the elusive, world-reknowned 
 thief [Carmen Sandiego][about].

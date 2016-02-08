@@ -6,11 +6,10 @@ collaborate to discuss the course of the project and our own work on it.
 
 The categories are, in order:
 
-0. <img src="assets/whitehat.jpg" height="14px"> **EMOTIONS**      (White Hat)
-1. <img src="assets/blackhat.jpg" height="14px"> **FACTS**         (Black Hat)
-2. <img src="assets/greenhat.jpg" height="14px"> **POSITIVE THINGS**   (Green Hat)
-3. <img src="assets/redhat.png" height="14px">   **NEGATIVE THINGS**    (Red Hat)
-4. <img src="assets/bluehat.jpg" height="14px">  RE/**SOLUTIONS**  (Blue Hat)
+1. <img src="assets/blackhat.jpg" height="14px"> **FACTS** (Black Hat)
+2. <img src="assets/greenhat.jpg" height="14px"> **POSITIVE THINGS** (Green Hat)
+3. <img src="assets/redhat.png" height="14px">   **NEGATIVE THINGS** (Red Hat)
+4. <img src="assets/bluehat.jpg" height="14px">  RE/**SOLUTIONS** (Blue Hat)
 
 Helpful links:
 
@@ -51,30 +50,15 @@ class for one or more of the "hats."
 
 After this, follow the steps for each section of the retro:
 
-0.  <img src="assets/whitehat.jpg" height="14px"> 
-    **White Hat**: go around the group and have each person give at least
-    one, and no more than two, emotive statements. They should be framed 
-    as answers to the question: 
- 
-    > What feelings do you have about, or did you have during, the sprint?
- 
-    Take up to 2 minute per team member (up to ten minutes total) to
-    discuss these. Feel free to ask each other why, or when, you felt 
-    these emotions. **Use this time to calibrate your own responses**, 
-    and to be aware of one another's outlook during the course of the 
-    retro.
- 
-    If any emotions are shared, write them down. If they are positive, 
-    use Green, if negative use Red, and if neutral use Black.
 1.  <img src="assets/blackhat.jpg" height="14px">
-    **Black Hat**: the group should now work together to collect as many
+    **Black Hat**: the group begins by collecting as many
     ***facts*** about the sprint as possible. This is usually the
     hardest part of the retro, since you have to answer: 
 
     > What happenned during the sprint?
 
-    … without reference to emotions, qualitative or valuative statements,
-    judgements, comparisons, or even '*why*'s.
+    … without reference to emotions, qualitative or valuative 
+    statements, judgements, comparisons, or even '*why*'s.
 
     The purpose of this part is to simply jog everyone's memory about
     the sprint, and to focus the retro. It should take no longer than 8
@@ -109,8 +93,8 @@ After this, follow the steps for each section of the retro:
 
     These "positive things" should help set the tone for the retro, and
     remind everyone to critically identify "wins." Positive things 
-    should be written in Green, and *must reference a fact or neutral 
-    feeling*. This section should take no more than 5 minutes.
+    should be written in Green, and *must reference a fact*. This 
+    section should take no more than 5 minutes.
 3.  <img src="assets/redhat.png" height="14px">
     **Red Hat**: the group should now work together to go back over
     the facts, and find things about the sprint that were "negative."
@@ -131,9 +115,8 @@ After this, follow the steps for each section of the retro:
     are raised. Just record them! Save the judgements for the next 
     section!
 
-    Negative things should be written in Red, and *must reference a fact
-    or neutral feeling*. This section should take no more than 5 
-    minutes.
+    Negative things should be written in Red, and *must reference a 
+    fact*. This section should take no more than 5 minutes.
 4.  <img src="assets/bluehat.jpg" height="14px">
     **Blue Hat**: this section of the retro takes place in two parts,
 

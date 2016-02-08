@@ -1,0 +1,161 @@
+@font-face {
+	font-family: "Edmond Sans Bold";
+	src: url("../fonts/edmondsans-bold-webfont.eot");
+	src: url("../fonts/edmondsans-bold-webfont.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/edmondsans-bold-webfont.woff2") format("woff2"),
+	url("../fonts/edmondsans-bold-webfont.woff") format("woff"),
+	url("../fonts/edmondsans-bold-webfont.ttf") format("truetype"),
+	url("../fonts/edmondsans-bold-webfont.svg#Edmond Sans Bold") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  margin: 0 auto;
+
+  background-color: #333333;
+
+  color: white;
+  text-align: center;
+  font-family: "Edmond Sans Bold", sans-serif;
+  text-align: center;
+
+  font-size: 16px;
+}
+
+h1,
+p,
+span,
+button {
+  text-transform: uppercase;
+}
+
+h1 {
+  letter-spacing: 1px;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.board-container {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.board-container > table {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+
+  /*table-layout: fixed;*/
+  border-collapse: collapse;
+}
+
+.board-container td {
+  min-width: 110px;
+  width: 110px;
+  min-height: 110px;
+  height: 110px;
+
+  border: 0px solid white;
+
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.board-container tr:nth-child(2) td { border-width: 5px 0; }
+.board-container tr td:nth-child(2) { border-width: 0 5px; }
+.board-container tr:nth-child(2) td:nth-child(2) { border-width: 5px; }
+
+.locked {
+  cursor: default !important;
+}
+
+
+.info-container {
+  padding: 0 5%;
+  margin-top: 1rem;
+}
+
+.info {
+  width: 45%;
+  height: 4rem;
+  margin: 1rem 0;
+  border: 5px solid white;
+  border-radius: 20px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.info p {
+  line-height: 3.5rem;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.info.turn {
+  margin-right: 1rem;
+}
+
+.info.restart {
+  background: #E05151;
+  cursor: pointer;
+  animation: play-again 2s 1s 1 forwards ease-in;
+}
+
+.info.restart:hover {
+  background: #AE4141;
+}
+
+i.fa {
+	line-height: 100px;
+	-webkit-animation: enterMark .5s;
+	-o-animation: enterMark .5s;
+	animation: enterMark .5s;
+}
+
+.player-x { color: #75A3D1; }
+.player-o { color: #FFD452; }
+i.player-x { font-size: 90px; }
+i.player-o { font-size: 80px; }
+
+.player-x.winner {
+	animation: xWinnerDances 2s linear infinite !important;
+}
+
+.player-o.winner {
+	animation: oWinnerDances 2s linear infinite !important;
+}
+
+.loser {
+	color: #999 !important;
+	transition:  all 2.5s;
+}
+
+i.loser {
+  font-size: 60px !important;
+  transition:  all 2.5s;
+}
+
+.modal.text {
+  position: fixed;
+  top:      50%;
+  left:     50%;
+
+  width:  650px;
+  height: 150px;
+
+  margin-left: -325px;
+  margin-top:  -75px;
+
+  font-size:   7rem;
+  line-height: 150px;
+}
+
+.blow-past {
+  animation-name: blow-past;
+  animation-duration: 2s;
+}

@@ -1,12 +1,12 @@
 DROP TABLE IF EXISTS receipts;
 
 CREATE TABLE receipts (
-  id          serial      PRIMARY KEY,
-  store       text        NOT NULL,
-  item        text        NOT NULL,
-  quantity    integer     DEFAULT 1,
-  price       money       NOT NULL,
-  date_bought date        DEFAULT current_date,
+  id          serial  PRIMARY KEY,
+  store       text                 NOT NULL,
+  item        text                 NOT NULL,
+  quantity    integer              DEFAULT 1,
+  price       money                NOT NULL,
+  date_bought date                 DEFAULT current_date,
   parent      text
 );
 

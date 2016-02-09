@@ -106,6 +106,7 @@ var opening = "I threw a wish in the well,";
 singLine(opening);
 =======
 
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 
 // !!!
 singLine = function(line) {
@@ -114,6 +115,8 @@ singLine = function(line) {
 singLine(opening);
 
 >>>>>>> da08df596f6c5feb59ffa8fdefc47020a5bdc380:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
+=======
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 // 2.  Pass the function singLine into the function threeMoreLines below,
 //     in order to have it console.log the given lines.
 
@@ -123,11 +126,8 @@ var threeMoreLines = function(callback) {
   callback("and now you're \"in my way.\"");
 };
 
-
-// // !!!
-threeMoreLines(singLine);
-
 console.log("");
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 <<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 threeMoreLines(singLine);
 // 3.  Write a function, doThis, that takes another function as input.
@@ -138,6 +138,11 @@ threeMoreLines(singLine);
 // //     doThis simply calls the function! Test it by passing it the
 // //     function singTradeMySoul.
 >>>>>>> da08df596f6c5feb59ffa8fdefc47020a5bdc380:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
+=======
+// 3.  Write a function, doThis, that takes another function as input.
+//     doThis simply calls the function! Test it by passing it the
+//     function singTradeMySoul.
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 
 var doThis = function(something) {
   something();
@@ -158,37 +163,31 @@ var doThisWithThat = function(what, shat) {
 }; // a function stub. replace it!
 =======
 
-// //!!!
-doThis = function(cb) {
-  cb();
-};
-doThis(singTradeMySoul);
+// 4.  Write a function, doThisWithThat, that takes TWO parameters, a
+//     a function and a string! It should call the first parameter as a
+//     callback, passing it the second parameter (the string).
+//
+//     Test it with the given examples!
 
-// // 4.  Write a function, doThisWithThat, that takes TWO parameters, a
-// //     a function and a string! It should call the first parameter as a
-// //     callback, passing it the second parameter (the string).
-// //
-// //     Test it with the given examples!
-
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 // var doThisWithThat = function() {}; // a function stub. replace it!
 >>>>>>> da08df596f6c5feb59ffa8fdefc47020a5bdc380:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
+=======
+var doThisWithThat = function() {}; // a function stub. replace it!
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 
-// //!!
-doThisWithThat = function(callback, param) {
-  callback(param);
-};
-
-// // EXAMPLES:
+// EXAMPLES:
 doThisWithThat(singLine, "pennies and dimes for a kiss,");
 doThisWithThat(singLine, "I wasn't looking for this,");
 
-// // 5.  Write a function, doThisWithThese, that takes TWO parameters, a
-// //     a function and an array of strings! It should concatenate all of
-// //     the strings in the array with spaces in between them, and then
-// //     pass that value to the callback function as a parameter.
-// //
-// //     Test it with the given example!
+// 5.  Write a function, doThisWithThese, that takes TWO parameters, a
+//     a function and an array of strings! It should concatenate all of
+//     the strings in the array with spaces in between them, and then
+//     pass that value to the callback function as a parameter.
+//
+//     Test it with the given example!
 
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 <<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 var doThisWithThese = function(cat, hat) {
   cat(hat.join(' '));
@@ -209,16 +208,21 @@ doThisWithThese = function(callback, arry) {
 
 // // EXAMPLE:
 >>>>>>> da08df596f6c5feb59ffa8fdefc47020a5bdc380:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
+=======
+var doThisWithThese = function() {}; // a function stub. replace it!
+
+// EXAMPLE:
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 doThisWithThese(singLine, ["but now", "you're in", "my way."]);
 
-// console.log("");
-// // 6.  Call runFunctionsInOrder ONCE, passing it the functions below,
-// //     such that the console prints:
+console.log("");
+// 6.  Call runFunctionsInOrder ONCE, passing it the functions below,
+//     such that the console prints:
 
-// //> Your stare was holdin',
-// //> ripped jeans; skin was showin';
-// //> hot night, wind was blowin'
-// //> where you think you're going baby?
+//> Your stare was holdin',
+//> ripped jeans; skin was showin';
+//> hot night, wind was blowin'
+//> where you think you're going baby?
 
 var runFunctionsInOrder = function(arrayOfFunctions) {
   for (var i = 0; i < arrayOfFunctions.length; i++) {
@@ -240,6 +244,7 @@ var singLine4 = function() {
 };
 
 <<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 var coolio =[];
 coolio.push(singLine1, singLine2, singLine3, singLine4)
 
@@ -249,19 +254,24 @@ runFunctionsInOrder(coolio);
 // // !!!
 runFunctionsInOrder([singLine1, singLine2, singLine3, singLine4]);
 >>>>>>> da08df596f6c5feb59ffa8fdefc47020a5bdc380:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
+=======
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 
-// // ******************** BREAK ********************
-// // GOOD JOB SO FAR! NOW WE'RE GOING TO MOVE IN TO
-// // THE CHORUS THAT TOOK THE WORLD BY STORM. REM-
-// // 2012? IF YOU DON'T RIGHT NOW, YOU WILL IN A
-// // LITTLE BIT. ANYWAY, 2012 ASIDE, YOU'LL NEED TO
-// // USE setTimeout AND setInterval BELOW. FOR MORE
-// // INFO, CHECK OUT THE README! READY TO GO? YAY!
-// //
-// // ♪ I missed you so bad… And you should know that… ♪
+// ******************** BREAK ********************
+// GOOD JOB SO FAR! NOW WE'RE GOING TO MOVE IN TO
+// THE CHORUS THAT TOOK THE WORLD BY STORM. REM-
+// 2012? IF YOU DON'T RIGHT NOW, YOU WILL IN A
+// LITTLE BIT. ANYWAY, 2012 ASIDE, YOU'LL NEED TO
+// USE setTimeout AND setInterval BELOW. FOR MORE
+// INFO, CHECK OUT THE README! READY TO GO? YAY!
+//
+// ♪ I missed you so bad… And you should know that… ♪
 
 console.log("");
 <<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
+=======
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 // 7.  We're working with a chorus now. Write a function, and pass it
 //     to setInterval with a period of 1000 (one second), so that you
 //     print the following lines OVER AND OVER! Note: this includes the
@@ -273,6 +283,7 @@ console.log("");
 //> so call me, maybe.
 //>
 
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 /*var hey = function(stupidLine, stupiddd) {
   setTimeout(function() {
     stupidLine.push("Hey, I just met you,");
@@ -328,6 +339,8 @@ var chorus = setInterval(function() {
 
 
 
+=======
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 // 8.  So we're in the chorus! After the above stanza is printed the
 //     first time, but before it's printed the second time (between 1
 //     2 seconds, so 1500 milliseconds, eg), use setTimeout to print the
@@ -338,6 +351,7 @@ var chorus = setInterval(function() {
 //> but here's my number,
 //> so call me, maybe.
 
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
   setTimeout(function() {
 =======
 // // 7.  We're working with a chorus now. Write a function, and pass it
@@ -382,6 +396,8 @@ setTimeout(function() {
 }, 1500)
 
 
+=======
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 // 9.  Ok, ok, ok. You're like a Top 40 DJ over here, putting this on
 //     infinite repeat! Let's make sure it stops after printing *twice*!
 //     This means we'll need to "clear" the interval, and we'll need to
@@ -392,6 +408,7 @@ setTimeout(function() {
 //     `chorus`. Use setTimeout to call clearInterval on `chorus` at
 //     2500 milliseconds.
 
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 =======
   console.log("");
 }, 1500);
@@ -413,6 +430,8 @@ setTimeout(function() {
 }, 2500);
 
 <<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
+=======
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 // 10.  Great! We're almost there! Now, we have to print the last part
 //      of the chorus. Look up the Array#forEach method on MDN, and
 //      use it on the array below to print all of the lines to the
@@ -431,9 +450,12 @@ var finalStanza = [
   "https://www.youtube.com/watch?v=zwDvF0NtgdU"
 ];
 
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 setTimeout(function() {
   finalStanza.forEach(singLine);
 }, 2500);
+=======
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
 // WELL DONE, EH!
 
 // BONUS!
@@ -442,6 +464,7 @@ setTimeout(function() {
 //     both setTimeout and .forEach to print it all out after all the
 //     above stanzas!
 
+<<<<<<< HEAD:work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
 =======
 // // 10.  Great! We're almost there! Now, we have to print the last part
 // //      of the chorus. Look up the Array#forEach method on MDN, and
@@ -567,3 +590,86 @@ setTimeout(function() {
 //   });
 // }, 3500);
 >>>>>>> da08df596f6c5feb59ffa8fdefc47020a5bdc380:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js
+=======
+var lyrics = [
+  {
+    stanza: 5,
+    lines: [
+      "Before you came into my life",
+      "I missed you so bad",
+      "I missed you so bad",
+      "I missed you so so bad",
+      "Before you came into my life",
+      "I missed you so bad",
+      "And you should know that",
+      "I missed you so so bad, bad, bad, bad...."
+    ]
+  }, {
+    stanza: 3,
+    lines: [
+      "Your stare was holdin',",
+      "ripped jeans; skin was showin',",
+      "hot night, wind was blowin'",
+      "where you think you're going baby?"
+    ]
+  }, {
+    stanza: 7,
+    lines: [
+      "Hey I just met you",
+      "And this is crazy",
+      "But here's my number",
+      "So call me maybe",
+      "And all the other boys",
+      "Try to chase me",
+      "But here's my number",
+      "So call me maybe"
+    ]
+  }, {
+    stanza: 4,
+    lines: [
+      "Hey I just met you",
+      "And this is crazy",
+      "But here's my number",
+      "So call me maybe",
+      "It's hard to look right at you baby",
+      "But here's my number",
+      "So call me maybe"
+    ]
+  }, {
+    stanza: 1,
+    lines: [
+      "You took your time with the call",
+      "I took no time with the fall",
+      "You gave me nothing at all",
+      "But still you're in my way"
+    ]
+  }, {
+    stanza: 2,
+    lines: [
+      "I beg and borrow and steal",
+      "At first sight and it's real",
+      "I didn't know I would feel it",
+      "But it's in my way"
+    ]
+  }, {
+    stanza: 8,
+    lines: [
+      "Before you came into my life",
+      "I missed you so bad",
+      "I missed you so bad",
+      "I missed you so so bad",
+      "Before you came into my life",
+      "I missed you so bad",
+      "And you should know that",
+      "So call me, maybe"
+    ]
+  }, {
+    stanza: 6,
+    lines: [
+      "It's hard to look right at you baby",
+      "But here's my number",
+      "So call me maybe"
+    ]
+  }
+];
+>>>>>>> 6c390aafeacd041218f978875e5ec358544ebd78:work/w02/d01/instructor/call_me_maybe_lab/starter_code/js/main.js

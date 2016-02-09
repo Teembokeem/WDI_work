@@ -26,7 +26,7 @@ Keeping track of your answers in a file called `stats.sql`, figure
 out the appropriate SQL commands to return the following:
 
 1.  All columns for all players from the New York Knicks (NYK).
-2.  All columns for all players from the Indiana Packers (IND) who are 
+2.  All columns for all players from the Indiana Pacers (IND) who are 
     under 26 years old.
 3.  All columns for all players, ordered from least points scored to 
     most points scored.

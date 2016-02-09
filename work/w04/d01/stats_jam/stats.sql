@@ -32,3 +32,26 @@ SELECT AVG(age) FROM players WHERE team = 'OKC';
 -- 7.  The average age for all players who played more than 40 games.
 
 SELECT AVG(age) FROM players WHERE games >= 40;
+
+### Bonus
+
+-- Once you finish the above, you can try to add the following to your
+-- `stats.sql` file:
+
+-- 1.  The team and total points scored from all players on that team
+--     (team points), ordered from most team points to least.
+
+SELECT team, SUM(points) FROM players GROUP BY team ORDER BY SUM(points) DESC ;
+
+-- 2.  The age and the average points per game for that age, ordered from
+--     youngest to oldest for all ages.
+
+SELECT age, AVG(points) FROM players GROUP BY age ORDER BY age DESC;
+
+
+
+-- 3.  The team and then the number of players who score above 12 points per
+--     game on that team, ordered from the most number of players to the
+--     least number of players.
+
+SELECT team, COUNT(points/games) FROM players WHERE points/games > 12 GROUP BY team ORDER BY COUNT(points/games) DESC;

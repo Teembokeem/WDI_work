@@ -1,6 +1,6 @@
-# Space Jam
+# Method Masala
 
-![Weird questions about space and music](assets/space-jam.jpg)
+![Its just everything in the cupboard thrown together.](assets/bollywood.jpg)
 
 > Ignore the above photo.
 
@@ -137,8 +137,8 @@ Using the above calculators, figure out:
 
 > What do you have to change to make your methods work? What can stay the same?
 
-[au]:          https://www.google.com/search?q=astronomical+unit&oq=astronima&aqs=chrome.1.69i57j0l5.3668j0j4&sourceid=chrome&es_sm=119&ie=UTF-8
-[carlos_slim]: https://www.google.com/search?q=carlos+slim+net+worth&oq=carlos+slim+net+worth&aqs=chrome..69i57j0l5.377j0j9&sourceid=chrome&es_sm=119&ie=UTF-8
-[kuiper_belt]: https://www.google.com/search?q=distance+to+the+kuiper+belt&oq=distance+to+the+kuiper+belt&aqs=chrome..69i57j0l2.276j0j9&sourceid=chrome&es_sm=119&ie=UTF-8
+[au]:          https://www.google.com/search?q=astronomical+unit
+[carlos_slim]: https://www.google.com/search?q=carlos+slim+net+worth&oq=carlos+slim+net+worth
+[kuiper_belt]: https://www.google.com/search?q=distance+to+the+kuiper+belt
 [rumours]:     http://en.wikipedia.org/wiki/Rumours_%28album%29
 [heliopause]:  http://en.wikipedia.org/wiki/Heliosphere#Heliopause

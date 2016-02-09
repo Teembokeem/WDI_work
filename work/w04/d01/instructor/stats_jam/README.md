@@ -49,4 +49,4 @@ Once you finish the above, you can try to add the following to your
     game on that team, ordered from the most number of players to the 
     least number of players.
 
-[data]: https://raw.githubusercontent.com/ga-instructors/lots_o_data/master/sql/nba_season_2011-2012.sql
+[data]: https://github.com/ga-instructors/lots_o_data/blob/master/sql/nba_season_2011-2012.sql

@@ -81,11 +81,14 @@ SELECT name FROM cities WHERE id = 211;
 -- still catch her, however, we just have to know where she's heading.
 -- This one is difficult, and should take a few searches: we know she
 -- is heading to a country where some people speak the same language as
--- the one she's in. She wants to get far away, but can't make it too
+-- the one she's in (at least, 97.5 of the population in this country
+-- speaks it). She wants to get far away, but can't make it too
 -- far, so we suspect that it's also a country in the North America
 -- region. If there's more than one we'll have to split our resources:
 -- you go to the one with a greater population!
 
+SELECT language FROM countries_languages WHERE country_code = 'BRA' AND percentage = 97.5;
+-- Portugeuse
 SELECT country_code FROM countries_languages WHERE language = 'Portuguese';
 -- AND, BRA, CAN, CPV, FRA, GNB, LUX, MAC, PRT, PRY, TMP, USA
 SELECT name, code, population FROM countries WHERE region = 'North America';

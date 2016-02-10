@@ -17,7 +17,7 @@ prideful = true
 - Use pry to add the key-value pair :torture_count => 931
 
 
-$stdout.puts("#{name} loves #{fav_hobby}")
+puts("#{name} loves #{fav_hobby}")
 
 Rewrite the code below using a hash called `batman`
 
@@ -29,7 +29,7 @@ alter_ego = "Batman"
 
 msg = "#{alter_ego} is the secret identity of #{f_name} #{l_name}, an American #{billionaire ? "billionaire, industrialist, and philanthropist" : "hobo"}."
 
-$stdout.puts(msg)
+puts(msg)
 ```
 
 Rewrite the following code using hashes and arrays
@@ -50,6 +50,6 @@ sidekick_3_alter_ego = "Robin"
 
 origin = "Having witnessed the murder of his parents as a child, he swore revenge on #{villain_2}, an oath tempered with a sense of justice with his best friend #{sidekick_1_f_name} #{sidekick_2_l_name} otherwise known as #{sidekick_2_alter_ego}" 
 
-$stdout.puts(origin)
+puts(origin)
 ```
 

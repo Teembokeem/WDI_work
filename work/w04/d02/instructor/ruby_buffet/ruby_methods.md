@@ -60,7 +60,7 @@ What is your height in inches?
 You have a BMI of 26.
 ```
 
-> Phil and Dean are having a competition to reduce their BMI over the 
+> Phil and Ezra are having a competition to reduce their BMI 
 > for bikini season. What are your plans to stay healthy in class?
 
 #### Part C: Methods
@@ -124,11 +124,11 @@ use it in a program that interacts with a user.
 
 ## Exercise 5 — Space Oddity
 
-Using the above calculators, figure out:
+Using the above calculators (and any more you may write), figure out:
 
-1. If you left today and wanted to reach Mars by March 10, 2016, how fast would 
-   you have to drive? Consider that the average distance to Mars from Earth is 
-   140 million miles.
+1. If you left today and wanted to reach Mars by March 10 of next year, 
+   how fast would you have to drive? Consider that the average distance 
+   to Mars from Earth is 140 million miles.
 1. How far could [Carlos Slim][carlos_slim] drive before he ran out of gas? 
    Would he make it past the [Kuiper Belt][kuiper_belt]?
 1. If the Voyager probe wanted to listen to Fleetwood Mac's seminal album 

@@ -1,4 +1,4 @@
-hammonds_mines = {
+ hammonds_mines = {
   :working => [
     {
       :location      => "Mongolia",
@@ -69,3 +69,58 @@ hammonds_mines[:working].each do |place|
      puts "A stegosaurus was found in #{place[:location]}"
   end
 end
+
+
+# Exercise 2
+
+# The budget must be cut! Write a method (low_budget_mines)
+# hat returns an array of only the mines with a budget at
+# or below 1_000_000.
+def low_budget_mines (wat)
+  @arr = Array.new
+  wat.each do |this|
+    if this[:annual_budget].to_i < 1000000
+      @arr.push(this[:location])
+    end
+  end
+end
+
+low_budget_mines(hammonds_mines[:working])
+
+
+# Write a method (high_yield_mines) that returns an array
+# only of the mines that have 4 or more specimens.
+
+def high_yield_mines (a)
+  @arr2 = Array.new
+  a.each do |this|
+    if this[:specimens].length >= 4
+      @arr2.push(this[:location])
+    end
+  end
+end
+
+high_yield_mines(hammonds_mines[:working])
+
+
+# Write a method (mine_analysis) that it returns a hash of
+# each mine's location and it's budget per specimen,
+#  like this:
+# {
+#   :location => "...",
+#   :budget_per_specimen => 0.0
+# }
+
+def mine_analysis (a)
+  @analysis_hash = Hash.new
+end
+
+
+
+# Write a method (best_mines) that sorts an array of mines
+#  of the type above based on their "mine analysis,"
+#   from lowest budget per specimen to highest!
+
+
+
+

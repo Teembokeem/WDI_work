@@ -31,7 +31,7 @@ hammonds_mines = {
       :annual_budget => 1_500_000,
       :specimens => [
         "Tyrannosaurus Rex", 
-        "Stegosaurous", 
+        "Stegosaurus", 
         "Triceratops"
       ]
     },
@@ -51,7 +51,7 @@ hammonds_mines = {
       :depth         => "350 meters",
       :annual_budget => 900_000,
       :specimens => [
-        "Stegosaurous",
+        "Stegosaurus",
         "Gallimimus",
         "Parasaurolophus"
       ]
@@ -84,7 +84,7 @@ the files named.
   - If there are 50 workers there, how much is the maximum each can be 
     payed every month (in US dollars)?
 1. Access the list of dinosaur specimens found in Nicaragua.
-1. Access all the Stegosaurouses.
+1. Access all the Stegosauruses.
 
 Once you have the answers to the above questions 
 (and the code snippets for each), stop.
@@ -136,8 +136,9 @@ Exercise 3)!
 
 Write a program that:
 
-1. takes a user's decision about a location, after printing the working locations,
-1. prints out a list of the specimens found there.
+1.  prints all working locations,
+2.  takes a user's decision about one location, and
+3.  prints out a list of the specimens found there.
 
 > **There's a big problem**; it's a liability to create dinosaurs that can 
 > breed in the wild, so you have to add a dash of hermaphroditic frog DNA to 

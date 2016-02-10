@@ -7,10 +7,10 @@ operators and blocks, conditionals, loops, arrays, collections, and iterators.
 It's a veritable *smörgåsbord* of code!
 
 For your homework tonight, you have to order up some of the Ruby exercises 
-below. **Complete the first few exercises** in each category, **Blocks**,
+below. **Complete the first few exercises** in each category, **Methods**,
 **Control Flow**, and **Collections**:
 
-- Blocks: first three,
+- Methods: first three,
 - Control Flow: first two,
 - Collections: first one.
 
@@ -20,13 +20,13 @@ finished the first two from each of the categories.
 
 Work on the categories in the order below.
 
-## Blocks
+## Methods
 
-- **[Exercise 1](ruby_blocks.md#exercise-1--calculators-two-files)**
-- **[Exercise 2](ruby_blocks.md#exercise-2--road-music)**
-- **[Exercise 3](ruby_blocks.md#exercise-3--what-would-opec-do)**
-- [Exercise 4](ruby_blocks.md#exercise-4--george-jetson-has-had-enough)
-- [Exercise 5](ruby_blocks.md#exercise-5--space-oddity)
+- **[Exercise 1](ruby_methods.md#exercise-1--calculators-two-files)**
+- **[Exercise 2](ruby_methods.md#exercise-2--road-music)**
+- **[Exercise 3](ruby_methods.md#exercise-3--what-would-opec-do)**
+- [Exercise 4](ruby_methods.md#exercise-4--george-jetson-has-had-enough)
+- [Exercise 5](ruby_methods.md#exercise-5--space-oddity)
 
 ## Control Flow
 

@@ -60,7 +60,7 @@ What is your height in inches?
 You have a BMI of 26.
 ```
 
-> Phil and Dean are having a competition to reduce their BMI over the 
+> Phil and Ezra are having a competition to reduce their BMI 
 > for bikini season. What are your plans to stay healthy in class?
 
 #### Part C: Methods

@@ -152,7 +152,7 @@ Inside the loop, it will do the following, in order:
 
 ---
 
-### Exercise 3 — *[Bounty hunters &ndash; we don't need that scum...][youtube3]*
+### Exercise 3 — *[Bounty hunters – we don't need that scum...][youtube3]*
 
 **File name:** `ig_88a.rb`
 

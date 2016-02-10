@@ -1,6 +1,6 @@
 # Heroes and Villains 
 
-Create a new file called `heroes_and_villains.rb`
+Do the following in `pry`.
 
 Rewrite the following code using a hash called `vladamir_putins_brain`
 

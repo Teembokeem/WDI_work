@@ -23,32 +23,32 @@ lines = mta.keys.join(', ')
 #########
 
 # print the title of the application
-$stdout.puts("*** MTA ***")
-$stdout.puts # an empty line
+puts("*** MTA ***")
+puts # an empty line
 
 # ask the line the user wants to get on
-$stdout.puts("Which line do you want to get on to?")
-$stdout.puts("Your choices are: #{lines}")
+puts("Which line do you want to get on to?")
+puts("Your choices are: #{lines}")
 
 # store the user's answer as a symbol to access the line from the mta hash
 on_line = $stdin.gets.chomp.to_sym
 
 # ask the station the user wants to get on
-$stdout.puts("Which station?")
-$stdout.puts("Your choices are: #{mta[on_line].join(', ')}")
+puts("Which station?")
+puts("Your choices are: #{mta[on_line].join(', ')}")
 on_station = $stdin.gets.chomp
 
-$stdout.puts
+puts
 
 # ask the line and station the user wants to get off, and store them in variables
-$stdout.puts("Which line do you want to get off of?")
-$stdout.puts("Your choices are: #{lines}")
+puts("Which line do you want to get off of?")
+puts("Your choices are: #{lines}")
 off_line = $stdin.gets.chomp.to_sym
-$stdout.puts("Which station?")
-$stdout.puts("Your choices are: #{mta[off_line].join(', ')}")
+puts("Which station?")
+puts("Your choices are: #{mta[off_line].join(', ')}")
 off_station = $stdin.gets.chomp
 
-$stdout.puts
+puts
 
 # decide if we have to transfer or not
 if on_line != off_line # if we do have to transfer
@@ -87,7 +87,7 @@ on_station_text  = "#{on_station.split('-').first} #{on_line_text} station"
 off_station_text = "#{off_station.split('-').first} #{off_line_text} station"
 
 # print out the trip length
-$stdout.puts("Your trip from the #{on_station_text} to the #{off_station_text} is #{total_trip_length} stops long.")
+puts("Your trip from the #{on_station_text} to the #{off_station_text} is #{total_trip_length} stops long.")
 if on_line != off_line
-  $stdout.puts("You will have to make 1 transfer at Union Square to the #{off_line_text} line.")
+  puts("You will have to make 1 transfer at Union Square to the #{off_line_text} line.")
 end

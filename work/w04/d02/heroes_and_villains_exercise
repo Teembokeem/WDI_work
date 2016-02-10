@@ -1,0 +1,676 @@
+Last login: Tue Feb  9 09:01:05 on ttys000
+ GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 2.6.3
+Homebrew 0.9.5 (git revision 9185; last commit 2016-01-15)
+ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin15]
+node v5.4.1
+psql (PostgreSQL) 9.5.0
+------------------------------------------
+type unwelcome to remove this message
+myunghoonkim ~
+$ cd code/wdi/WDI_DTLA_8/work/w04/d02/
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ ruby cf.rb
+!
+Enter a, b, or c: d
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ ruby cf.rb
+!
+Enter a, b, or c: a
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ ruby cf.rb
+!
+Enter a, b, or c: a
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ ruby cf.rb
+!
+Enter a, b, or c: a
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ ruby cf.rb
+!
+cf.rb:4:in `<main>': undefined local variable or method `choice' for main:Object (NameError)
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ ruby cf.rb
+!
+Enter a, b, or c: a
+a is for apple
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ b
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04 on master[?]
+$ c
+-bash: c: command not found
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04 on master[?]
+$ cd d02/
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ ruby cf.rb
+!
+Enter a, b, or c: d
+youre a rebel, but i like it
+Enter a, b, or c: e
+youre a rebel, but i like it
+Enter a, b, or c: f
+youre a rebel, but i like it
+Enter a, b, or c: g
+youre a rebel, but i like it
+Enter a, b, or c: h
+youre a rebel, but i like it
+Enter a, b, or c: j
+youre a rebel, but i like it
+Enter a, b, or c: hype
+youre a rebel, but i like it
+Enter a, b, or c: boss
+youre a rebel, but i like it
+Enter a, b, or c: jigga
+youre a rebel, but i like it
+Enter a, b, or c: a
+a is for apple, you pleb
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ cd ../../../..
+myunghoonkim ~/code/wdi
+$ cd ../..
+myunghoonkim ~
+$ cd code/wdi/
+myunghoonkim ~/code/wdi
+$ cd project_pokemon/
+myunghoonkim ~/code/wdi/project_pokemon on master[!]
+$ git add -A
+myunghoonkim ~/code/wdi/project_pokemon on master[+]
+$ git commit
+[master b6ba1f4] people die now. awesome.
+ 1 file changed, 21 insertions(+), 26 deletions(-)
+myunghoonkim ~/code/wdi/project_pokemon on master
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 614 bytes | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Teembokeem/GauntletOcho-PROJECT1.git
+To git@github.com:Teembokeem/project_pokemon.git
+   202c936..b6ba1f4  master -> master
+myunghoonkim ~/code/wdi/project_pokemon on master
+$ git checkout gh-pages
+Switched to branch 'gh-pages'
+myunghoonkim ~/code/wdi/project_pokemon on gh-pages
+$ git merge master
+Updating 202c936..b6ba1f4
+Fast-forward
+ js/reloaded.js | 47 +++++++++++++++++++++--------------------------
+ 1 file changed, 21 insertions(+), 26 deletions(-)
+myunghoonkim ~/code/wdi/project_pokemon on gh-pages
+$ git push origin gh-pages
+Total 0 (delta 0), reused 0 (delta 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Teembokeem/GauntletOcho-PROJECT1.git
+To git@github.com:Teembokeem/project_pokemon.git
+   202c936..b6ba1f4  gh-pages -> gh-pages
+myunghoonkim ~/code/wdi/project_pokemon on gh-pages
+$ git checkout master
+Switched to branch 'master'
+myunghoonkim ~/code/wdi/project_pokemon on master
+$ cd ../..
+myunghoonkim ~/code
+$ cd wdi/WDI_DTLA_8/
+myunghoonkim ~/code/wdi/WDI_DTLA_8 on master[?]
+$ git pull upstream master
+remote: Counting objects: 90, done.
+remote: Compressing objects: 100% (59/59), done.
+remote: Total 90 (delta 38), reused 71 (delta 19), pack-reused 0
+Unpacking objects: 100% (90/90), done.
+From github.com:ga-students/WDI_DTLA_8
+ * branch            master     -> FETCH_HEAD
+   da08df5..6c390aa  master     -> upstream/master
+Removing work/w04/d01/instructor/stats_jam/stats.sql
+Removing work/w04/d01/instructor/stats_jam/nba_season_2011-2012.sql
+Removing work/w04/d01/instructor/modeling_school/README.md
+Auto-merging work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
+CONFLICT (content): Merge conflict in work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
+Automatic merge failed; fix conflicts and then commit the result.
+myunghoonkim ~/code/wdi/WDI_DTLA_8 on master[+!?]
+$ git status
+On branch master
+Your branch and 'upstream/master' have diverged,
+and have 55 and 10 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Changes to be committed:
+
+	modified:   work/w04/d01/instructor/carmen_sandiego/clues.sql
+	new file:   work/w04/d01/instructor/carmen_sandiego/clues_solution.sql
+	deleted:    work/w04/d01/instructor/modeling_school/README.md
+	modified:   work/w04/d01/instructor/stats_jam/README.md
+	deleted:    work/w04/d01/instructor/stats_jam/nba_season_2011-2012.sql
+	deleted:    work/w04/d01/instructor/stats_jam/stats.sql
+	new file:   work/w04/d01/instructor/stats_jam/stats_solution.sql
+	new file:   work/w04/d02/instructor/heros_and_villains.md
+	new file:   work/w04/d02/instructor/nyc_mta/README.md
+	new file:   work/w04/d02/instructor/nyc_mta/assets/union-square.jpg
+	new file:   work/w04/d02/instructor/ruby_arrays_hashes_blocks.md
+	new file:   work/w04/d02/instructor/ruby_buffet/README.md
+	new file:   work/w04/d02/instructor/ruby_buffet/assets/bollywood.jpg
+	new file:   work/w04/d02/instructor/ruby_buffet/assets/ig88.png
+	new file:   work/w04/d02/instructor/ruby_buffet/assets/john_hammond.jpg
+	new file:   work/w04/d02/instructor/ruby_buffet/assets/leia-vader-tarkin.jpg
+	new file:   work/w04/d02/instructor/ruby_buffet/assets/sushi-menu.jpg
+	new file:   work/w04/d02/instructor/ruby_buffet/ruby_blocks.md
+	new file:   work/w04/d02/instructor/ruby_buffet/ruby_collections.md
+	new file:   work/w04/d02/instructor/ruby_buffet/ruby_control_flow.md
+	renamed:    work/w04/d02/ruby_control_flow.md -> work/w04/d02/instructor/ruby_control_flow.md
+	renamed:    work/w04/d02/ruby_vars_datatypes.md -> work/w04/d02/instructor/ruby_vars_datatypes.md
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   work/w02/d01/call_me_maybe_lab/starter_code/js/main.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	work/w04/d02/cf.rb
+	work/w04/d02/first_ruby.rb
+
+myunghoonkim ~/code/wdi/WDI_DTLA_8 on master[+!?]
+$ git add -A
+myunghoonkim ~/code/wdi/WDI_DTLA_8 on master[+]
+$ git commit
+[master e16fbe9] Merge branch 'master' of github.com:ga-students/WDI_DTLA_8
+myunghoonkim ~/code/wdi/WDI_DTLA_8 on master
+$ git pull upstream master
+From github.com:ga-students/WDI_DTLA_8
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+myunghoonkim ~/code/wdi/WDI_DTLA_8 on master
+$ cd work/w04/d02/
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ ll
+total 8.0K
+drwxr-xr-x 5 myunghoonkim staff 170 Feb  9 14:43 ./
+drwxr-xr-x 4 myunghoonkim staff 136 Feb  9 10:26 ../
+drwxr-xr-x 8 myunghoonkim staff 272 Feb  9 14:43 instructor/
+-rw-r--r-- 1 myunghoonkim staff 339 Feb  9 12:43 cf.rb
+-rw-r--r-- 1 myunghoonkim staff  95 Feb  9 11:46 first_ruby.rb
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ cd instructor/
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02/instructor on master
+$ ll
+total 44K
+drwxr-xr-x 8 myunghoonkim staff  272 Feb  9 14:43 ./
+drwxr-xr-x 5 myunghoonkim staff  170 Feb  9 14:43 ../
+drwxr-xr-x 4 myunghoonkim staff  136 Feb  9 14:43 nyc_mta/
+drwxr-xr-x 7 myunghoonkim staff  238 Feb  9 14:43 ruby_buffet/
+-rw-r--r-- 1 myunghoonkim staff 1.5K Feb  9 14:43 heros_and_villains.md
+-rw-r--r-- 1 myunghoonkim staff  11K Feb  9 14:43 ruby_arrays_hashes_blocks.md
+-rw-r--r-- 1 myunghoonkim staff 9.1K Feb  9 14:43 ruby_control_flow.md
+-rw-r--r-- 1 myunghoonkim staff  13K Feb  9 14:43 ruby_vars_datatypes.md
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02/instructor on master
+$ cd ../../../..
+myunghoonkim ~/code/wdi/WDI_DTLA_8 on master
+$ cd ..
+myunghoonkim ~/code/wdi
+$ mkdir project_momentum
+mkdir: created directory ‘project_momentum’
+myunghoonkim ~/code/wdi
+$ cd project_momentum/
+myunghoonkim ~/code/wdi/project_momentum
+$ touch index.html
+myunghoonkim ~/code/wdi/project_momentum
+$ mkdir js
+mkdir: created directory ‘js’
+myunghoonkim ~/code/wdi/project_momentum
+$ mkdir css
+mkdir: created directory ‘css’
+myunghoonkim ~/code/wdi/project_momentum
+$ cd js
+myunghoonkim ~/code/wdi/project_momentum/js
+$ touch main.js
+myunghoonkim ~/code/wdi/project_momentum/js
+$ cd ..
+myunghoonkim ~/code/wdi/project_momentum
+$ cd css/
+myunghoonkim ~/code/wdi/project_momentum/css
+$ touch main.css
+myunghoonkim ~/code/wdi/project_momentum/css
+$ cd ..
+myunghoonkim ~/code/wdi/project_momentum
+$ rm -rf js/
+removed ‘js/main.js’
+removed directory: ‘js/’
+myunghoonkim ~/code/wdi/project_momentum
+$ rm -rf css/
+removed ‘css/main.css’
+removed directory: ‘css/’
+myunghoonkim ~/code/wdi/project_momentum
+$ rm -rf index.html 
+removed ‘index.html’
+myunghoonkim ~/code/wdi/project_momentum
+$ ll
+total 0
+drwxr-xr-x 2 myunghoonkim staff  68 Feb  9 15:08 ./
+drwxr-xr-x 8 myunghoonkim staff 272 Feb  9 15:06 ../
+myunghoonkim ~/code/wdi/project_momentum
+$ git init project_momentum
+Initialized empty Git repository in /Users/myunghoonkim/code/wdi/project_momentum/project_momentum/.git/
+myunghoonkim ~/code/wdi/project_momentum
+$ cd project_momentum/
+myunghoonkim ~/code/wdi/project_momentum/project_momentum on master
+$ ll
+total 0
+drwxr-xr-x  3 myunghoonkim staff 102 Feb  9 15:09 ./
+drwxr-xr-x  3 myunghoonkim staff 102 Feb  9 15:09 ../
+drwxr-xr-x 10 myunghoonkim staff 340 Feb  9 15:09 .git/
+myunghoonkim ~/code/wdi/project_momentum/project_momentum on master
+$ git remove
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+	remote
+myunghoonkim ~/code/wdi/project_momentum/project_momentum on master
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+myunghoonkim ~/code/wdi/project_momentum/project_momentum on master
+$ rm -rf .git
+removed directory: ‘.git/branches’
+removed ‘.git/config’
+removed ‘.git/description’
+removed ‘.git/HEAD’
+removed ‘.git/hooks/applypatch-msg.sample’
+removed ‘.git/hooks/commit-msg.sample’
+removed ‘.git/hooks/post-update.sample’
+removed ‘.git/hooks/pre-applypatch.sample’
+removed ‘.git/hooks/pre-commit.sample’
+removed ‘.git/hooks/pre-push.sample’
+removed ‘.git/hooks/pre-rebase.sample’
+removed ‘.git/hooks/prepare-commit-msg.sample’
+removed ‘.git/hooks/update.sample’
+removed directory: ‘.git/hooks’
+removed ‘.git/info/exclude’
+removed directory: ‘.git/info’
+removed directory: ‘.git/objects/info’
+removed directory: ‘.git/objects/pack’
+removed directory: ‘.git/objects’
+removed directory: ‘.git/refs/heads’
+removed directory: ‘.git/refs/tags’
+removed directory: ‘.git/refs’
+removed directory: ‘.git’
+myunghoonkim ~/code/wdi/project_momentum/project_momentum
+$ cd ..
+myunghoonkim ~/code/wdi/project_momentum
+$ rm -rf project_momentum/
+removed directory: ‘project_momentum/’
+myunghoonkim ~/code/wdi/project_momentum
+$ ll
+total 0
+drwxr-xr-x 2 myunghoonkim staff  68 Feb  9 15:10 ./
+drwxr-xr-x 8 myunghoonkim staff 272 Feb  9 15:06 ../
+myunghoonkim ~/code/wdi/project_momentum
+$ cd ..
+myunghoonkim ~/code/wdi
+$ rm -rf project_momentum/
+removed directory: ‘project_momentum/’
+myunghoonkim ~/code/wdi
+$ ll
+total 4.0K
+drwxr-xr-x  7 myunghoonkim staff 238 Feb  9 15:10 ./
+drwxr-xr-x  5 myunghoonkim staff 170 Jan 20 17:38 ../
+drwxr-xr-x  9 myunghoonkim staff 306 Jan 28 14:35 WDI_DTLA_8/
+drwxr-xr-x 10 myunghoonkim staff 340 Jan 29 11:27 Whack_the_juan/
+drwxr-xr-x 10 myunghoonkim staff 340 Feb  5 12:22 project_pokemon/
+drwxr-xr-x  5 myunghoonkim staff 170 Jan 26 11:55 ttt_model/
+-rw-r--r--  1 myunghoonkim staff 129 Jan 19 10:04 example.txt
+myunghoonkim ~/code/wdi
+$ git init project_momentum
+Initialized empty Git repository in /Users/myunghoonkim/code/wdi/project_momentum/.git/
+myunghoonkim ~/code/wdi
+$ ll
+total 4.0K
+drwxr-xr-x  8 myunghoonkim staff 272 Feb  9 15:10 ./
+drwxr-xr-x  5 myunghoonkim staff 170 Jan 20 17:38 ../
+drwxr-xr-x  9 myunghoonkim staff 306 Jan 28 14:35 WDI_DTLA_8/
+drwxr-xr-x 10 myunghoonkim staff 340 Jan 29 11:27 Whack_the_juan/
+drwxr-xr-x  3 myunghoonkim staff 102 Feb  9 15:10 project_momentum/
+drwxr-xr-x 10 myunghoonkim staff 340 Feb  5 12:22 project_pokemon/
+drwxr-xr-x  5 myunghoonkim staff 170 Jan 26 11:55 ttt_model/
+-rw-r--r--  1 myunghoonkim staff 129 Jan 19 10:04 example.txt
+myunghoonkim ~/code/wdi
+$ cd project_momentum/
+myunghoonkim ~/code/wdi/project_momentum on master
+$ mkdir js
+mkdir: created directory ‘js’
+myunghoonkim ~/code/wdi/project_momentum on master
+$ mkdir css
+mkdir: created directory ‘css’
+myunghoonkim ~/code/wdi/project_momentum on master
+$ touch index.html
+myunghoonkim ~/code/wdi/project_momentum on master[?]
+$ cd js/
+myunghoonkim ~/code/wdi/project_momentum/js on master
+$ touch main.js
+myunghoonkim ~/code/wdi/project_momentum/js on master[?]
+$ cd ..
+myunghoonkim ~/code/wdi/project_momentum on master[?]
+$ cd css/
+myunghoonkim ~/code/wdi/project_momentum/css on master
+$ touch main.css
+myunghoonkim ~/code/wdi/project_momentum/css on master[?]
+$ cd ..
+myunghoonkim ~/code/wdi/project_momentum on master[?]
+$ git push origin master 
+error: src refspec master does not match any.
+error: failed to push some refs to 'origin'
+myunghoonkim ~/code/wdi/project_momentum on master[?]
+$ git add -A
+myunghoonkim ~/code/wdi/project_momentum on master[+]
+$ git commit
+[master (root-commit) 4e2263f] first commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 css/main.css
+ create mode 100644 index.html
+ create mode 100644 js/main.js
+myunghoonkim ~/code/wdi/project_momentum on master
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myunghoonkim ~/code/wdi/project_momentum on master
+$ hub create
+Updating origin
+created repository: Teembokeem/project_momentum
+myunghoonkim ~/code/wdi/project_momentum on master
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 364 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:Teembokeem/project_momentum.git
+ * [new branch]      master -> master
+myunghoonkim ~/code/wdi/project_momentum on master
+$ hub browse
+myunghoonkim ~/code/wdi/project_momentum on master
+$ cd ..
+myunghoonkim ~/code/wdi
+$ cd WDI_DTLA_8/work/w04/d02/
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ ll
+total 8.0K
+drwxr-xr-x 5 myunghoonkim staff 170 Feb  9 14:43 ./
+drwxr-xr-x 4 myunghoonkim staff 136 Feb  9 10:26 ../
+drwxr-xr-x 8 myunghoonkim staff 272 Feb  9 14:43 instructor/
+-rw-r--r-- 1 myunghoonkim staff 339 Feb  9 12:43 cf.rb
+-rw-r--r-- 1 myunghoonkim staff  95 Feb  9 11:46 first_ruby.rb
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ cd instructor/
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02/instructor on master
+$ ll
+total 44K
+drwxr-xr-x 8 myunghoonkim staff  272 Feb  9 14:43 ./
+drwxr-xr-x 5 myunghoonkim staff  170 Feb  9 14:43 ../
+drwxr-xr-x 4 myunghoonkim staff  136 Feb  9 14:43 nyc_mta/
+drwxr-xr-x 7 myunghoonkim staff  238 Feb  9 14:43 ruby_buffet/
+-rw-r--r-- 1 myunghoonkim staff 1.5K Feb  9 14:43 heros_and_villains.md
+-rw-r--r-- 1 myunghoonkim staff  11K Feb  9 14:43 ruby_arrays_hashes_blocks.md
+-rw-r--r-- 1 myunghoonkim staff 9.1K Feb  9 14:43 ruby_control_flow.md
+-rw-r--r-- 1 myunghoonkim staff  13K Feb  9 14:43 ruby_vars_datatypes.md
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02/instructor on master
+$ cd ..
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ touch heroes_and_villains.rb
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ rm heroes_and_villains.rb 
+removed ‘heroes_and_villains.rb’
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ touch heroes_and_villains.rb
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ subl heroes_and_villains.rb 
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master[?]
+$ rm heroes_and_villains.rb 
+removed ‘heroes_and_villains.rb’
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ pry
+[1] Pry(main)> vladamir_putins_brain = {
+[1] Pry(main)*   name = 'vladamir putin"
+[1] Pry(main)*   launch_code = 
+[1] Pry(main)* 
+[1] Pry(main)* }
+[1] Pry(main)* quit
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ pry
+[1] Pry(main)> vladamir_putins_brain = {
+[1] Pry(main)*   name: "vladamir putin"
+[1] Pry(main)*   launch_code: "a5Mjp257GHMGH23e5qxE"
+SyntaxError: unexpected tIDENTIFIER, expecting '}'
+  launch_code: "a5Mjp257GHMGH23e5qxE"
+             ^
+[1] Pry(main)> vladamir_putins_brain = {
+[1] Pry(main)*   name: "vladamir putin"  
+[1] Pry(main)*   launch_code: "a5Mjp257GHMGH23e5qxE"  
+SyntaxError: unexpected tIDENTIFIER, expecting '}'
+  launch_code: "a5Mjp257GHMGH23e5qxE"
+             ^
+[1] Pry(main)> vladamir_putins_brain = {
+[1] Pry(main)*   name: "vladamir putin"  
+[1] Pry(main)*   launch_code: "a5Mjp257GHMGH23e5qxE"  
+SyntaxError: unexpected tIDENTIFIER, expecting '}'
+  launch_code: "a5Mjp257GHMGH23e5qxE"
+             ^
+[1] Pry(main)> vladamir_putins_brain = { name = "vladamir putin"
+SyntaxError: unexpected '\n', expecting =>
+[1] Pry(main)> launch_code = "a5Mjp257GHMGH23e5qxE"
+=> "a5Mjp257GHMGH23e5qxE"
+[2] Pry(main)> fav_hobby = "Riding ponies"
+=> "Riding ponies"
+[3] Pry(main)> prideful = true
+=> true
+[4] Pry(main)> quit
+myunghoonkim ~/code/wdi/WDI_DTLA_8/work/w04/d02 on master
+$ pry
+[1] Pry(main)> vladamir_putins_brain = {
+[1] Pry(main)*   name: "vladamir putin"
+[1] Pry(main)*   launch_code: "a5Mjp257GHMGH23e5qxE"
+SyntaxError: unexpected tIDENTIFIER, expecting '}'
+  launch_code: "a5Mjp257GHMGH23e5qxE"
+             ^
+[1] Pry(main)> vladamir_putins_brain = {
+[1] Pry(main)*   name: "vladamir putin"  
+[1] Pry(main)*   
+[1] Pry(main)*   
+[1] Pry(main)*   launch_code: "a5Mjp257GHMGH23e5qxE"  
+SyntaxError: unexpected tIDENTIFIER, expecting '}'
+  launch_code: "a5Mjp257GHMGH23e5qxE"
+             ^
+[1] Pry(main)> vladamir_putins_brain = {
+[1] Pry(main)*   name: "vladamir putin",  
+[1] Pry(main)*   launch_code: "a5Mjp257GHMGH23e5qxE",  
+[1] Pry(main)*   fav_hobby: "Riding pones",
+[1] Pry(main)* prideful: true}  
+=> {:name=>"vladamir putin",
+ :launch_code=>"a5Mjp257GHMGH23e5qxE",
+ :fav_hobby=>"Riding pones",
+ :prideful=>true}
+[2] Pry(main)> vladamir_putins_brain
+=> {:name=>"vladamir putin",
+ :launch_code=>"a5Mjp257GHMGH23e5qxE",
+ :fav_hobby=>"Riding pones",
+ :prideful=>true}
+[3] Pry(main)> vladamir_putins_brain[:fav_hobby]
+=> "Riding pones"
+[4] Pry(main)> vladamir_putins_brain["obsessive_crush"] = "Condoleeza Rice"
+=> "Condoleeza Rice"
+[5] Pry(main)> vladamir_putins_brain
+=> {:name=>"vladamir putin",
+ :launch_code=>"a5Mjp257GHMGH23e5qxE",
+ :fav_hobby=>"Riding pones",
+ :prideful=>true,
+ "obsessive_crush"=>"Condoleeza Rice"}
+[6] Pry(main)> vladamir_putins_brain[:torture_count] = 931
+=> 931
+[7] Pry(main)> vladamir_putins_brain
+=> {:name=>"vladamir putin",
+ :launch_code=>"a5Mjp257GHMGH23e5qxE",
+ :fav_hobby=>"Riding pones",
+ :prideful=>true,
+ "obsessive_crush"=>"Condoleeza Rice",
+ :torture_count=>931}
+[8] Pry(main)> puts("#{name} loves #{fav_hobby}")
+NameError: undefined local variable or method `name' for main:Object
+from (pry):12:in `__pry__'
+[9] Pry(main)> puts("#{vladamir_putins_brain[:name]} loves #{vladamir_putins_brain[:fav_hobby]}")
+vladamir putin loves Riding pones
+=> nil
+[10] Pry(main)> batman = Hash.new
+=> {}
+[11] Pry(main)> batman = { f_name: "Bruce", l_name: "Wayne", billionaire: true, alter_ego: "Batman", msg: "#{alter_ego} is the secret identity of #{f_name} #{l_name}, an American #{billionaire ? "billionaire, industrialist, and philanthropist" : "hobo"}."}
+NameError: undefined local variable or method `alter_ego' for main:Object
+from (pry):15:in `__pry__'
+[12] Pry(main)> batman = { f_name: "Bruce", l_name: "Wayne", billionaire: true, alter_ego: "Batman", msg: "#{alter_ego} is the secret identity of #{f_name} #{l_name}, an American #{billionaire ? "billionaire, industrialist, and philanthropist" : "hobo"}."}
+NameError: undefined local variable or method `alter_ego' for main:Object
+from (pry):16:in `__pry__'
+[13] Pry(main)> batman
+=> {}
+[14] Pry(main)> batman[f_name: "Bruce"]
+=> nil
+[15] Pry(main)> batman
+=> {}
+[16] Pry(main)> batman = { f_name: "Bruce", l_name: "Wayne", billionaire: true, alter_ego: "Batman}
+[16] Pry(main)* "}
+=> {:f_name=>"Bruce", :l_name=>"Wayne", :billionaire=>true, :alter_ego=>"Batman}\n"}
+[17] Pry(main)> batman = { f_name: "Bruce", l_name: "Wayne", billionaire: true, alter_ego: "Batman"}
+=> {:f_name=>"Bruce", :l_name=>"Wayne", :billionaire=>true, :alter_ego=>"Batman"}
+[18] Pry(main)> batman[:msg] = "#{:alter_ego} is the secret identity of #{f_name} #{l_name}, an American #{:billionaire ? "billionaire, philanthropist, playboy" : "hobo"}."
+NameError: undefined local variable or method `f_name' for main:Object
+from (pry):23:in `__pry__'
+[19] Pry(main)> batman[:msg] = "#{:alter_ego} is the secret identity of #{:f_name} #{:l_name}, an American #{:billionaire ? "billionaire, philanthropist, playboy" : "hobo"}."
+=> "alter_ego is the secret identity of f_name l_name, an American billionaire, philanthropist, playboy."
+[20] Pry(main)> batman
+=> {:f_name=>"Bruce",
+ :l_name=>"Wayne",
+ :billionaire=>true,
+ :alter_ego=>"Batman",
+ :msg=>
+  "alter_ego is the secret identity of f_name l_name, an American billionaire, philanthropist, playboy."}
+[21] Pry(main)> batman[:msg]
+=> "alter_ego is the secret identity of f_name l_name, an American billionaire, philanthropist, playboy."
+[22] Pry(main)> batman[:msg] = "#{batman[:alter_ego]} is the secret identity of #{batman[:f_name]} #{batman[:l_name]}, an American #{batman[:billionaire] ? "billionaire, philanthropist, playboy" : "hobo"}."
+=> "Batman is the secret identity of Bruce Wayne, an American billionaire, philanthropist, playboy."
+[23] Pry(main)> batman[:msg]
+=> "Batman is the secret identity of Bruce Wayne, an American billionaire, philanthropist, playboy."
+[24] Pry(main)> villains = [:villain_1 = "The Penguin", :villain_2 = "The Joker", :villain_3 = "The Riddler"]
+SyntaxError: unexpected ',', expecting end-of-input
+... = [:villain_1 = "The Penguin", :villain_2 = "The Joker", :v...
+...                               ^
+[24] Pry(main)> villains = [villain_1: "The Penguin",villain_2: "The Joker", villain_3: "The Riddler"]
+=> [{:villain_1=>"The Penguin", :villain_2=>"The Joker", :villain_3=>"The Riddler"}]
+[25] Pry(main)> villains
+=> [{:villain_1=>"The Penguin", :villain_2=>"The Joker", :villain_3=>"The Riddler"}]
+[26] Pry(main)> villains[:villain_1]
+TypeError: no implicit conversion of Symbol into Integer
+from (pry):31:in `[]'
+[27] Pry(main)> villains[0]
+=> {:villain_1=>"The Penguin", :villain_2=>"The Joker", :villain_3=>"The Riddler"}
+[28] Pry(main)> villains[:villain_1]
+TypeError: no implicit conversion of Symbol into Integer
+from (pry):33:in `[]'
+[29] Pry(main)> villains[0]]
+SyntaxError: unexpected ']', expecting end-of-input
+[29] Pry(main)> villains[0]
+=> {:villain_1=>"The Penguin", :villain_2=>"The Joker", :villain_3=>"The Riddler"}
+[30] Pry(main)> villains = ["The Penguin", "The Joker", "The Riddler"]
+=> ["The Penguin", "The Joker", "The Riddler"]
+[31] Pry(main)> villains
+=> ["The Penguin", "The Joker", "The Riddler"]
+[32] Pry(main)> sidekicks= []
+=> []
+[33] Pry(main)> sidekicks[0] = {:f_name= "Jason", :l_name= "Todd", :alter_ego= "Robin"}
+SyntaxError: unexpected ',', expecting end-of-input
+...dekicks[0] = {:f_name= "Jason", :l_name= "Todd", :alter_ego=...
+...                               ^
+[33] Pry(main)> sidekicks.push = {:f_name=> "Jason", :l_name=> "Todd", :alter_ego=> "Robin"}
+NoMethodError: undefined method `push=' for []:Array
+from (pry):38:in `__pry__'
+[34] Pry(main)> sidekicks.push  ({:f_name=> "Jason", :l_name=> "Todd", :alter_ego=> "Robin"})
+=> [{:f_name=>"Jason", :l_name=>"Todd", :alter_ego=>"Robin"}]
+[35] Pry(main)> sidekicks.push ({:f_name=> "Dick", :l_name=>"Grayson", :alter_eg=>"Robin"})
+=> [{:f_name=>"Jason", :l_name=>"Todd", :alter_ego=>"Robin"},
+ {:f_name=>"Dick", :l_name=>"Grayson", :alter_eg=>"Robin"}]
+[36] Pry(main)> sidekicks
+=> [{:f_name=>"Jason", :l_name=>"Todd", :alter_ego=>"Robin"},
+ {:f_name=>"Dick", :l_name=>"Grayson", :alter_eg=>"Robin"}]
+[37] Pry(main)> sidekicks[1]
+=> {:f_name=>"Dick", :l_name=>"Grayson", :alter_eg=>"Robin"}
+[38] Pry(main)> sidekicks.push({:f_name=>"Tim", :l_name=>"Drake", :alter_ego=>"Robin"})
+=> [{:f_name=>"Jason", :l_name=>"Todd", :alter_ego=>"Robin"},
+ {:f_name=>"Dick", :l_name=>"Grayson", :alter_eg=>"Robin"},
+ {:f_name=>"Tim", :l_name=>"Drake", :alter_ego=>"Robin"}]
+[39] Pry(main)> sidekicks.push(:origin=>"Having witnessed the murder of his parents as a child, he swore revenge on #{villain[1]}, an oath tempered with a sense of justice with his best friend #{sidekicks[0][:f_name] #{sidekicks[1][:l_name]} otherwise known as #{sidekicks[2][:alter_ego]}" 
+[39] Pry(main)* )
+SyntaxError: unexpected ')', expecting tSTRING_DEND
+[39] Pry(main)> sidekicks.push(:origin=>"Having witnessed the murder of his parents as a child, he swore revenge on #{villain[1]}, an oath tempered with a sense of justice with his best friend #{sidekicks[0][:f_name] #{sidekicks[1][:l_name]} otherwise known as #{sidekicks[2][:alter_ego]}")
+[39] Pry(main)* sidekicks.push({:origin=>"Having witnessed the murder of his parents as a child, he swore revenge on #{villain[1]}, an oath tempered with a sense of justice with his best friend #{sidekicks[0][:f_name] #{sidekicks[1][:l_name]} otherwise known as #{sidekicks[2][:alter_ego]}"})
+[39] Pry(main)*   sidekicks.push({:origin=>"Having witnessed the murder of his parents as a child, he swore revenge on #{villain[1]}, an oath tempered with a sense of justice with his best friend #{sidekicks[0][:f_name]} #{sidekicks[1][:l_name]} otherwise known as #{sidekicks[2][:alter_ego]}"})
+[39] Pry(main)*   
+[39] Pry(main)* )  
+SyntaxError: unexpected ')', expecting tSTRING_DEND
+[39] Pry(main)> sidekicks
+=> [{:f_name=>"Jason", :l_name=>"Todd", :alter_ego=>"Robin"},
+ {:f_name=>"Dick", :l_name=>"Grayson", :alter_eg=>"Robin"},
+ {:f_name=>"Tim", :l_name=>"Drake", :alter_ego=>"Robin"}]
+[40] Pry(main)> sidekicks.push(:origin=> "Having witnessed the murder of his parents as a child, he swore revenge on #{villain[1]}, an oath tempered with a sense of justice with his best friend #{sidekicks[0][:f_name]} #{sidekicks[1][:l_name]} otherwise known as #{sidekicks[2][:alter_ego]}")  
+NameError: undefined local variable or method `villain' for main:Object
+from (pry):45:in `__pry__'
+[41] Pry(main)> sidekicks.push(:origin=> "Having witnessed the murder of his parents as a child, he swore revenge on #{villains[1]}, an oath tempered with a sense of justice with his best friend #{sidekicks[0][:f_name]} #{sidekicks[1][:l_name]} otherwise known as #{sidekicks[2][:alter_ego]}")
+=> [{:f_name=>"Jason", :l_name=>"Todd", :alter_ego=>"Robin"},
+ {:f_name=>"Dick", :l_name=>"Grayson", :alter_eg=>"Robin"},
+ {:f_name=>"Tim", :l_name=>"Drake", :alter_ego=>"Robin"},
+ {:origin=>
+   "Having witnessed the murder of his parents as a child, he swore revenge on The Joker, an oath tempered with a sense of justice with his best friend Jason Grayson otherwise known as Robin"}]
+[42] Pry(main)> sidekicks[3]
+=> {:origin=>
+  "Having witnessed the murder of his parents as a child, he swore revenge on The Joker, an oath tempered with a sense of justice with his best friend Jason Grayson otherwise known as Robin"}
+[43] Pry(main)> 

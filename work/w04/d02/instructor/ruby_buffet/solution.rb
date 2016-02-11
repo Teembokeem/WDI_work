@@ -189,4 +189,105 @@
 # CONTROL FLOW
 #######################
 
-# TBD… Sorry! –PJH
+######## HELP ME, OBI-WAN KENOBI
+
+# puts "Hello, I am C-3P0, human-cyborg relations."
+# puts "And your name is?"
+# name = gets.chomp
+
+# if name == "Obi-Wan Kenobi"
+#   puts "Oh, marvelous! Simply marvelous! Say hello to R2-D2;"
+#   puts "he's been looking all over for you!"
+# else
+#   puts "It is a pleasure to meet you, #{name}. I'm terribly sorry for prying,"
+#   puts "but you don't by any chance go by the alias of Obi-Wan Kenobi, do you?"
+
+#   answer = gets.chomp
+
+#   if ["yes", "Yes", "YES", "y", "Y"].include? answer
+#     puts "Oh, marvelous! Simply marvelous! Say hello to R2-D2;"
+#     puts "he's been looking all over for you!"
+#     puts
+#   elsif ["no", "No", "NO", "n", "N"].include? answer
+#     puts "I've really enjoyed speaking with you, #{name}, "
+#     puts "but if you'll please excuse me, I have to help my friend find "
+#     puts "someone named Obi-Wan Kenobi."
+#     puts
+#     puts "Well R2, I suppose we'll just have to keep looking."
+#     puts
+#     puts "R2-D2: (Agreeable droid noises)"
+#   else
+#     puts "I'm sorry, I didn't hear you correctly. I only respond to \"yes\" or \"no\"..."
+#     puts
+#     puts "Well R2, I suppose we'll just have to keep looking."
+#     puts
+#     puts "R2-D2: (Agreeable droid noises)"
+#   end
+# end
+
+####### YOU'RE A FEISTY LITTLE ONE…
+
+# puts "(beep-boop whrrrrrr bleep)"
+# puts "Welcome to the R2D2 calculator!"
+
+# while true
+#   puts "Please enter which operator you would like to use ('+', '-', '*', '/')."
+#   puts "Enter 'q' to exit."
+
+#   operator = gets.chomp
+#   puts
+
+#   exit if operator == "q"
+
+#   if ["+", "-", "*", "/"].include? operator
+#     print "Enter your first operand:  "
+#     op1 = gets.chomp.to_i
+#     print "Enter your second operand: "
+#     op2 = gets.chomp.to_i
+
+#     solution = case operator
+#     when "+"
+#       op1 + op2
+#     when "-"
+#       op1 - op2
+#     when "*"
+#       op1 * op2
+#     when "/"
+#       op1 / op2
+#     end
+
+#     # another, elegant solution is
+#     # solution = op1.send operator, op2
+
+#     puts "The solution to #{op1} #{operator} #{op2} is #{solution}."
+#   else
+#     puts "(whheeaaarrrrr! beee-ooohhh) You did not enter a viable operator!"
+#     puts
+#   end
+# end
+
+########## BOUNTY HUNTERS – WE DON'T NEED THAT SCUM
+
+# while true
+#   puts "Freeze! Who are you?"
+#   name = gets.chomp
+
+#   if name == "(zap)"
+#     20.times { puts "(zap)" }
+#     exit
+#   elsif name != "Han Solo"
+#     puts "You must die! (zap zap kaboom)"
+#   else
+#     puts "You are mine at last, Solo!"
+#     20.times { puts "(zap)" }
+
+#     if rand >= 0.50
+#       puts "Solo is caught! Jabba the Hutt will pay handsomely…"
+#     else
+#       puts "I'll get you next time, Solo!"
+#     end
+#     exit
+#   end
+
+#   puts
+# end

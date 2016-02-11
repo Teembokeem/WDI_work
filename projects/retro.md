@@ -154,17 +154,37 @@ Once the team has their set of resolutions/solutions, the recorder should
 keep track of them by sending them (as Markdown, not images) to the
 facilitator (instructor).
 
-<!--
 ### Class Resolutions and Solutions
 
-We resolve to:
+##### We resolve to:
 
-...
+- In order to better approach a problem, we resolve to break it down 
+  into as many discrete parts as necessary and revisit these to confirm.
+- In order to keep MV* separation, we need to process and synthesize a 
+  working pseudo code / representation as a component of the wire-framing
+  process.
+- In order to ensure great stand-ups, we resolve to:
+  - hold supportive stand-ups with good attendance,
+  - talk more about how we fixed our problems when we do stand-ups.
 
-We plan to fix the following problems:
+##### We plan to fix the following problems:
 
-...
--->
+- In order to avoid jumping ahead before working out basic functionality,
+  we plan to priortize and organize user stories in Trello.
+- In order to not lose time following the wrong approach, we plan to 
+  keep the initial idea (MVP) simple, and to expand on that.
+- In order to avoid a lack of organization, we plan to use our tools
+  (Trello, separation of concerns / MV*, best practices / patterns) when 
+  writing code.
+- In order to avoid working with a poor data model, we plan to better 
+  research our domain.
+- In order to handle highly complex models, we plan to break them down 
+  into the smallest, most understandable parts possible.
+- In order to be prepared for one-on-ones, we plan to have a more a 
+  complete and structured vision of what we want to do when they begin.
+- In order to get better help, we plan to ask for more help, and to ask
+  questions the right way, by following the 
+  [Corson technique](http://collegeinfogeek.com/corson-technique/).
 
 <!-- LINKS -->
 

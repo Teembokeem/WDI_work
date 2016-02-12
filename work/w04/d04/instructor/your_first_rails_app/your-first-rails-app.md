@@ -92,8 +92,8 @@ Ruby on Rails has lots of rules and opinions about how Rails applications should
 
     ```ruby
     beans = Bean.create([
-        {name: "Jimmy's Jittery Java", roast: "medium", origin: "Colombia", quantity: 100},
-        {name: "Shawn's Mustache Mayhem Blend", roast: "hella strong", origin: "Texas", quantity: 101}
+        {name: "Jim's Jittery Java", roast: "medium", origin: "The OC Baby", quantity: 100},
+        {name: "Phil's Freaky Brew", roast: "hella strong", origin: "Ohio", quantity: 101}
       ])
     ```
 

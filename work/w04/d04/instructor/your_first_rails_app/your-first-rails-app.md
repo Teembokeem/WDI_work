@@ -290,3 +290,277 @@ Now that we have a controller action and a corresponding route, let's build a vi
 3. Notice that we have a submit button that will work once we add our **create** controller action in a few minutes.
 
 4. At this point, we can navigate to `localhost:3000/beans/new` to take a look at our form and the HTML elements that our Rails form helper built for us.  But this form won't work yet!  For that, we will need...
+5. 
+
+####Create
+**Create** is the other half of the **new/create** pairing, and it will use the **HTTP POST** method that corresponds with the submit button in our **new** view template.  This is the controller action that actually saves your new record to the database.
+
+#####Controller Action
+* We will define the **create** action in our controller like this:
+
+    ```ruby
+    def create
+      @bean = Bean.new(params.require(:bean).permit(:name, :roast, :origin, :quantity))
+
+      if @bean.save
+        redirect_to beans_path
+      else
+        render :new
+      end
+    end
+    ```
+
+* Let's break down the first line:
+
+    ```ruby
+    @bean = Bean.new(params.require(:bean).permit(:name, :roast, :origin, :quantity))
+    ```
+
+    We're creating a new Bean, so we're going to **require** the bean key in our parameters hash and **permit** the fields for which we created inputs in the `form_for` of our new.html.erb. We don't have to include every field -- we could leave out any of them (though it helps to have more complete records by permitting as many fields as needed), and we intentionally exclude fields like id and timestamps.
+
+* Next, let's break down the conditional:
+    
+    ```ruby
+    if @bean.save
+      redirect_to beans_path
+    ```
+
+    If our new record saves to the database, we'll **redirect** to the **index** view (the `beans_path` in this example), where we should see that our new record has been added to the list.
+
+    ```ruby
+    else
+      render :new
+    end
+    ```
+
+    If our new record doesn't save -- for any number of reasons, such as server error, incorrectly entered information, a failed validation, etc. -- we'll **render** the form again so the user may re-attempt the submit.
+
+#####Route
+* We need to define a route in our **routes.rb** file, which will tell our app what to do when it receives an HTTP request from a client.  We'll do this in our **config/routes.rb** file:
+
+    ```ruby
+    post "beans/" => "beans#create"
+    ```
+
+* Note that this time we are using the HTTP verb **post** for this route.
+
+#####View Template
+**Create** piggybacks off the view for **new**, so we don't make a view template for this action.
+
+1. Let's go check out our handiwork!  Navigate to `localhost:3000/beans/new` and try to add a new bean.  Does it show up after being redirected to the index view?
+
+####Edit
+**Edit** is all about modifying an existing record and is usually done with a form.  It is one half of the **edit/update** pairing that is needed to save changes to our database.  It is important to note that the **edit** action alone does not save a record.
+
+The **update** action will utilize an HTTP PATCH method, the HTTP verb for **edit** is **GET**.
+
+Just like with index, show, and new, we will need a controller action, a route, and a view template for **edit**.
+
+#####Controller Action
+* We will define the **edit** action in our controller like this:
+
+    ```ruby
+    def edit
+      @bean = Bean.find(params[:id])
+    end
+    ```
+
+* Because this controller action will be responsible for retrieving a single record (the one that we will be modifying), our instance variable (`@bean`) is singular.
+
+* `find` is a method available to our Bean model that takes in a single parameter: the id of a bean. Behind the scenes, Rails will query our database to find the bean record that has that id. Because database ids are always unique, we can be assured that the find method will only return one record.
+
+#####Route
+* We need to define a route in our **routes.rb** file, which will tell our app what to do when it receives an HTTP request from a client.  We'll do this in our **config/routes.rb** file:
+
+    ```ruby
+        get "beans/:id/edit" => "beans#edit", as: :edit_bean
+    ```
+
+* The `as: :edit_bean` at the end of our route definition sets a **named route** called **edit_bean_path** that we can use throughout the app to refer to this route.  We'll see later how this can be helpful.
+
+#####View Template
+* Let's build a view template with a form so that we can edit a new bean before updating it in our database.
+
+1. Navigate to the **app/views/beans** directory and create a new file called **edit.html.erb**.  This file must be called "edit" to correspond with our "edit" controller action and our "edit" route.
+
+2. Generally we will use a form to edit an existing record.  We can use a form that is very similar to the one we used for our "new" view template (in the future, we'll learn how to DRY up this code using a **form partial**).  Here's how we'll build out our form:
+
+    ```erb
+    <h1>Edit this bean!</h1>
+
+    <%= form_for @bean do |f| %>
+
+        <div>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </div>
+
+        <div>
+            <%= f.label :roast %>
+            <%= f.text_field :roast %>
+        </div>
+
+        <div>
+            <%= f.label :origin %>
+            <%= f.text_field :origin %>
+        </div>
+
+        <div>
+            <%= f.label :quantity %>
+            <%= f.text_field :quantity %>
+        </div>
+
+        <%= f.submit "Submit these changes!" %>
+
+    <% end %>
+
+    <%= link_to "Back to the list!", beans_path %>
+    ```
+
+3. Let's check out our handiwork!  We will need an ID for one of our beans, which we can grab by checking out our Rails console and looking up the ID of one of our beans (`Bean.first.id`).  Make sure your Rails server is running (`rails s`) and then navigate to `localhost:3000/beans/YOUR_ID_HERE/edit`.  Like our "new" bean form, this one won't work yet!  For that, we will need...
+
+####Update
+**Update** is the other half of the **edit/update** pairing, and it will use the **HTTP PATCH** method that corresponds with the submit button in our **edit** view template.  This is the controller action that actually saves the changes to the database.
+
+#####Controller Action
+* We will define the **update** action in our controller like this:
+
+    ```ruby
+    def update
+      @bean = Bean.find(params[:id])
+
+      if @bean.update_attributes(params.require(:bean).permit(:name, :roast, :origin, :quantity))
+        redirect_to beans_path
+      else
+        render :edit
+      end
+    end
+    ```
+
+* The first thing our **update** action needs to do is retrieve the bean object that we want to edit and set it to an instance variable.  This is achieved by that first line of code: `@bean = Bean.find(params[:id])`.
+
+* Just like in the **create** controller action, we have a conditional statement.  If our record is successfully updated and saved to the database, we'll **redirect** to the **index** view (the `beans_path` in this case).  If our modified record doesn't save--for any number of reasons, including server error, incorrectly entered information, failed model validations, etc.--we'll **render** the form again so that the user may re-attempt the submission.
+ 
+#####Route
+* We need to define a route in our **routes.rb** file, which will tell our app what to do when it receives an HTTP request from a client.  We'll do this in our **config/routes.rb** file:
+
+    ```ruby
+    patch "beans/:id" => "beans#update"
+    ```
+
+* Note that this time we are using the HTTP verb **patch** for this route.
+
+#####View Template
+**Update** piggybacks off the view for **edit**, so we don't make a view template for this action.
+
+1. Let's see if we can update a bean!  We will need an ID for one of our beans, which we can grab by going to our Rails console.  Make sure your Rails server is running (`rails s`) and then navigate to `localhost:3000/beans/YOUR_ID_HERE/edit` and make some changes to one of your beans.
+
+####Destroy
+**Destroy** is the action that allows users to delete records from the database.  The HTTP verb for destroy is **DELETE**.
+
+#####Controller Action
+* We will define the **destroy** action in our controller like this:
+
+    ```ruby
+    def destroy
+      @bean = Bean.find(params[:id])
+      @bean.destroy
+      redirect_to beans_path
+    end
+    ```
+
+* The first line (`@bean = Bean.find(params[:id])`) will retrieve the record that we want to remove.
+
+* After we call the `.destroy` method on our bean, we redirect the user back to the **index** view (`beans_path`).
+
+#####Route
+* We need to define a route in our **routes.rb** file, which will tell our app what to do when it receives an HTTP request from a client.  We'll do this in our **config/routes.rb** file:
+
+    ```ruby
+    delete "beans/:id" => "beans#destroy"
+    ```
+
+* Note that this time we are using the HTTP verb **delete** for this route.
+
+#####View Template
+
+* **Destroy** doesn't have its own view template, but we'll need to call on it from somewhere.  **Show** or **index** are good candidates.  For this app, we'll add a `link_to` in our **show** view template.
+
+    ```erb
+    <%= link_to "Delete this bean!", bean_path, method: :delete, data: { confirm: "Are you sure you want to delete this bean?"} %>
+    ```
+
+* Now we can navigate to `localhost:3000/beans/YOUR_ID_HERE` (retrieve an ID from your Rails console).  Let's try to delete this bean.  Check your **index** view.  Did it work?
+
+####Refactoring our controller
+If you think you saw some ugly duplication going on in our controller, you are correct! Our `create` and `update` actions use the same bit of code for the params. We can DRY that up by extracting that duplication into a private method:
+
+```ruby
+# app/controllers/beans_controller.rb
+
+# this gets added to the bottom of our controller
+private
+def bean_params
+  params.require(:bean).permit(:name, :roast, :origin, :quantity)
+end
+```
+
+Now that we have this code extracted into a private method, we can refactor our `create` and `update` actions to make use of it:
+
+```ruby
+# app/controllers/beans_controller.rb
+
+def create
+  @bean = Bean.new(bean_params) # here we use our bean_params method
+  
+  if @bean.save
+    redirect to :beans
+  else
+    render :new
+  end
+end
+
+def update
+  @bean = Bean.find(params[:id])
+
+  if @bean.update_attributes(bean_params) #here we use our bean_params method
+    redirect_to :beans
+  else
+    render :edit
+  end
+end
+```
+
+####Adding Some Navigational Links
+Now that the basic CRUD actions are in place, let's add some **link_to**'s to make our app easier to use.
+
+#####Index to Show
+* Right now, our **index** view doesn't have any meaningful links to connect us to the **show** views.  Let's fix that!
+
+    ```erb
+    <h1>Today's Beans</h1>
+
+    <ul>
+        <% @beans.each do |bean| %>
+            <li>
+                <strong><%= bean.name %></strong> - <%= bean.roast %>
+                <%= link_to "More info", bean_path(bean) %>
+            </li>
+        <% end %>
+    </ul>
+    ```
+
+* We pass the `bean` into the `bean_path` because we want to route to a single bean's show view.  By passing in the bean object, Rails will know which bean we want to link to.
+
+#####Show to Edit
+* Now, let's add an **edit** link in the **show** view.
+
+    ```erb
+    <h1><%= @bean.name %></h1>
+
+    <p>This coffee is a <%= @bean.roast %> roast from <%= @bean.origin %>, and we have <%= @bean.quantity %> pounds available.</p>
+
+    <%= link_to "Edit this bean!", edit_bean_path(@bean) %>
+    <%= link_to "Delete this bean!", :bean, method: :delete, data: { confirm: "Are you sure you want to delete this bean?"} %>
+    <%= link_to "Back to the list!", beans_path %>
+    ```

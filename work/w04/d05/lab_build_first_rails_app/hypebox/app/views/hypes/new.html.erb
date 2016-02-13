@@ -1,0 +1,21 @@
+<!-- eventually change this post box on same page as index. with div popping up -->
+
+<h1>Fresh Hypes</h1>
+
+<%= form_for @hype do  |h| %>
+
+  <div>
+    <%= h.label :msg %>
+    <%= h.text_field :msg %>
+  </div>
+
+  <div>
+    <%= h.label :user %>
+    <%= h.text_field :user %>
+  </div>
+
+<%= h.submit "Lock That Shit In" %>
+
+<% end %>
+
+<%= link_to "Hype Central", hypes_path %>

@@ -1,0 +1,9 @@
+<h1>Locale Hypes</h1>
+
+<ul>
+  <% @hypes.each do |hype| %>
+    <li>
+      <strong> @<%= hype.user %> </strong>  "<%= hype.msg %>" (<span><%= time_ago_in_words(Time.now) %></span>)
+    </li>
+  <% end %>
+</ul>

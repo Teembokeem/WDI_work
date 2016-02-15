@@ -1,9 +1,25 @@
-<h1>Locale Hypes</h1>
+<h1>LOCAL {HYPES}:</h1>
 
 <ul>
   <% @hypes.each do |hype| %>
     <li>
-      <strong> @<%= hype.user %> </strong>  "<%= hype.msg %>" (<span><%= time_ago_in_words(Time.now) %></span>)
+      <strong> @<%= hype.user %>: </strong>  <%= link_to "\"#{hype.msg.upcase}\"", hype_path([hype.id]), class: "link" %>
     </li>
   <% end %>
 </ul>
+
+<%= form_for @hype do  |h| %>
+
+  <div id="msg_container">
+    <%= h.text_field :msg, :autofocus => true, :autocomplete => "off" %>
+  </div>
+
+  <div>
+|
+    <%= h.text_field :user %>
+  </div>
+
+  <%= h.submit "Lock That Shit In", :class => "hellogoodbye" %>
+
+
+<% end %>

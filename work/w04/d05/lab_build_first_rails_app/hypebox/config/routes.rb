@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "hypes/" => "hypes#index"
 
-  get "hypes/new" => "hypes#new", as: :new_hype
+  get "hypes/:id" => "hypes#new", as: :new_hype
 
   get "hypes/:id" => "hypes#show", as: :hype
 

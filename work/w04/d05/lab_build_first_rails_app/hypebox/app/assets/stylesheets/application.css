@@ -17,14 +17,20 @@
 body {
   text-align: center;
   list-style-type: none;
-  font-family: 'Gochi Hand', cursive;
-  background: url("http://2.bp.blogspot.com/-e0NO7Iq-adE/VJkSesXaCxI/AAAAAAAAGDY/SZTp1AL-F90/s0/2014%2B-%2B2.png");
-  background-size: 150%;
+  font-family: 'Lato', sans-serif;
+  background: url("http://cdn.paper4pc.com/images/cityscape-hd-wallpaper-wallpaper-8.jpg");
   color: white;
+  overflow: hidden;
 }
 
 h1 {
-  font-size: 130px;
+  font-size: 85px;
+  margin: 0 auto;
+  float: left;
+  position: absolute;
+  top: 25%;
+  letter-spacing: 3px;
+  border-bottom: 3px solid white;
 }
 
 h2 {
@@ -35,14 +41,77 @@ ul {
   list-style-type: none;
   font-family: 'Josefin Slab', serif;
   text-align: left;
-  display: inline-block;
-  font-size: 22px;
+  display: block;
+  font-size: 30px;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 60.8%;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+  padding-right: 15px
+  letter-spacing: 5px;
+
+}
+
+li {
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+
 }
 
 strong {
-  font-size: 30px;
+  font-size: 60px;
+  letter-spacing: 0;
 }
 
 span {
-  font-size: 15px;
+  font-size: 20px;
+  float: right;
+  bottom: 0;
+  padding-top: 10px;
+}
+
+.link {
+  color: white;
+  display: inline;
+  text-decoration: none;
+}
+
+.new_hype {
+  display: block;
+  position: absolute;
+  top: 24.5%;
+  right: 7%;
+  display: inline-block;
+}
+
+#msg_container {
+  font-size: 90px;
+}
+
+#hype_msg {
+  height: 100px;
+  width: 640px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 85px;
+  text-align: left;
+  outline: none;
+  opacity: 1;
+}
+
+#hype_user {
+  background: none;
+  color: white;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.hellogoodbye {
+  display: none;
 }

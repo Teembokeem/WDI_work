@@ -3,7 +3,7 @@
 <ul>
   <% @hypes.each do |hype| %>
     <li>
-      <strong> @<%= hype.user %>: </strong>  <%= link_to "\"#{hype.msg.upcase}\"", hype_path([hype.id]), class: "link" %>
+      <strong> @<%= hype.user %>: </strong>  <%= link_to "\"#{hype.msg.upcase}\"", hype_path([hype.id]), class: "link" %> <%= time_ago_in_words(hype.created_at) %>
     </li>
   <% end %>
 </ul>

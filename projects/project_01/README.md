@@ -1,4 +1,4 @@
-# ![](../../resources/assets/ga-icon-small.png) Project #1: The Game
+# ![](../../resources/assets/ga-icon-small.png) Client-side Game
 
 ### Overview
 

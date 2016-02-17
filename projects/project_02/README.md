@@ -42,7 +42,7 @@ Your app must:
 ### Necessary Deliverables
 
 - A **working full-stack application, built by you**, hosted on Heroku.
-- A ** git repository hosted on Github** for your app with frequent 
+- A **git repository hosted on Github** for your app with frequent 
   commits dating back to the **very beginning** of your project. Commit
   early, commit often.
 - A **link to your hosted working app** in the GitHub `README.md` file.

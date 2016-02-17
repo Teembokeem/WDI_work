@@ -1,4 +1,4 @@
-# ![](../../assets/ga-icon-small.png) Project #2: Building Your First Full-stack Application
+# ![](../../resources/assets/ga-icon-small.png) Project #2: Building Your First Full-stack Application
 
 ### Overview
 

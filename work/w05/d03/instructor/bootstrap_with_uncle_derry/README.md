@@ -48,7 +48,7 @@ started with precompiled CSS or build on the source.
 
 ## Installing Bootstrap
 
-I've added a markdown for [How to Add Twitter Bootstrap to Your Rails App](https://github.com/ga-students/WDI_DTLA_8/blob/master/resources/cheatsheets/bootstrap_cheatsheet.md)
+I've added a markdown for [How to Add Twitter Bootstrap to Your Rails App](https://github.com/ga-students/WDI_DTLA_8/blob/master/resources/cheatsheets/bootstrap_rails_setup.md)
 to Github and included it in `WDI_DTLA_8/resources/cheatsheets` (in
 your repos).
 

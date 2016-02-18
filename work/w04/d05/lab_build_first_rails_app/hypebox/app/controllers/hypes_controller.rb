@@ -2,7 +2,7 @@ class HypesController < ApplicationController
 
   def index
     @hypes = Hype.all
-    new
+  new
 
   end
 

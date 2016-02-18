@@ -1,0 +1,8 @@
+body {
+  background: url(https://lh6.googleusercontent.com/XZ8NLHwuOSmgAYyegKBt9Vd3iNYP6m1zdXAqi6eG8aoJiinKPLecO_s2dCGpPyk3ypmVLXT6-XtZwJxfgPFJ43RreIGnOqq147h_iwUPcvcKQANBXu3iPTb1mw);
+  color:white;
+}
+
+.col-md-1, .col-md-3, .col-md-4, .col-md-6, .col-md-8 {
+  border: 1px solid black;
+}

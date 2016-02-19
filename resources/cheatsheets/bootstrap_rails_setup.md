@@ -37,21 +37,20 @@ Start Servers in different Command Line tabs
 
 ### Step 4
 
-Within the App > Assets > Javascripts > Application.js
-
-Add:
+Within the file `app` > `assets` > `javascripts` > `application.js`,   
+add:
 
 ``` 
 //= require bootstrap-sprockets
 //= require bootstrap
 ```
 
-to directives ***in this order:***
+to directives ***after jquery:***
 
 ``` 
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= ...
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_tree .
@@ -60,24 +59,36 @@ to directives ***in this order:***
 
 ### Step 5
 
-Within the App > Assets > Stylesheets > Application.css
+Within the `app` > `assets` > `stylesheets` > `application.css`,   
+add to bottom of file:
 
-Add to bottom of file:
-
-``` 
- *
- *= require rails_bootstrap_forms
- *= require_tree .
- *= require_self
- */
-
+```
 @import "bootstrap-sprockets";
 @import "bootstrap";
 ```
 
+and, if you want to use forms, add:
 
+``` 
+ *
+ *= require rails_bootstrap_forms
+ *= ...
+ */
+```
 
-Then rename file Application.css***.scss***
+**Importantly**, re-arrange the "requires" at the bottom of the
+page to put the `require_self` *after* any libraries (including
+`rails_bootstrap_forms` but *before* user-generated CSS!
+
+``` 
+ *
+ *= require rails_bootstrap_forms
+ *= require_self
+ *= require_tree .
+ */
+```
+
+Then, ***rename file `application.css.scss`!***
 
 Make sure you keep them in this order! As you can see, we're also adding 
 
@@ -85,11 +96,8 @@ bootstrap forms to make our forms simpler!
 
 ### Step 6
 
-Within the Apps > Views > Layouts > Application.html.erb
-
-Add these scripts/links to the HEAD:
-
-
+Within the `apps` > `views` > `layouts` > `application.html.erb`   
+add these scripts/links to the `<head>`:
 
 ``` 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -97,6 +105,4 @@ Add these scripts/links to the HEAD:
 
 This enables jquery animations!
 
-### Bootstrap Away!
-
-# getbootstrap.com
+### RESTART YOUR SERVER to Bootstrap away! Then, [docs](getbootstrap.com)!

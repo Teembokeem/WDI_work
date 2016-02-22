@@ -66,7 +66,7 @@
 [gh-jonah]:          https://github.com/cameragadget/project2_app
 [deploy-jonah]:      http://www.textfiles.com/underconstruction/
 
-[trello-karen]:      http://www.textfiles.com/underconstruction/
+[trello-karen]:      https://trello.com/b/kABEN5rc/pug-life
 [gh-karen]:          https://github.com/karenquan/pug_life_app
 [deploy-karen]:      http://www.textfiles.com/underconstruction/
 

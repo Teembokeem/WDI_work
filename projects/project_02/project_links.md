@@ -5,13 +5,13 @@
 | Adrian Nuyda         | [Link][trello-adrian]     | [Team of Legends][gh-adrian]         | [Link][deploy-adrian]     |
 | Claire Savage        | [Link][trello-claire]     | [Beyhive][gh-claire]                 | [Link][deploy-claire]     |
 | David Niederhauser   | [Link][trello-david]      | [Insta-Vid][gh-david]                | [Link][deploy-david]      |
-| Demetria Haloutsos   | [Link][trello-demetria]   | [Petster][gh-demetria]               | [Link][deploy-demetria]   |
-| Duane Than           | [Link][trello-duane]      | [__N/A__][gh-duane]                  | [Link][deploy-duane]      |
+| Demetra Haloutsos    | [Link][trello-demetra]    | [Petster][gh-demetra]                | [Link][deploy-demetra]    |
+| Duane Than           | [Link][trello-duane]      | [World of Dance][gh-duane]           | [Link][deploy-duane]      |
 | James Coslett        | [Link][trello-james]      | [__Tutoring Service N/A__][gh-james] | [Link][deploy-james]      |
 | Jasmine Guzman       | [Link][trello-jasmine]    | [Through the Lens][gh-jasmine]       | [Link][deploy-jasmine]    |
 | Jerry Lee            | [Link][trello-stretch]    | [X-League Stats][gh-stretch]         | [Link][deploy-stretch]    |
 | Jerry Ngov           | [Link][trello-jerry-ngov] | [Yugen][gh-jerry-ngov]               | [Link][deploy-jerry-ngov] |
-| Jonah Sobol          | [Link][trello-jonah]      | [__N/A__][gh-jonah]                  | [Link][deploy-jonah]      |
+| Jonah Sobol          | [Link][trello-jonah]      | [Pinheads][gh-jonah]                 | [Link][deploy-jonah]      |
 | Karen Quan           | [Link][trello-karen]      | [Pug Life][gh-karen]                 | [Link][deploy-karen]      |
 | Keith To             | [Link][trello-keith]      | [Pacis][gh-keith]                    | [Link][deploy-keith]      |
 | Michael Duran        | [Link][trello-doctor]     | [Communico][gh-doctor]               | [Link][deploy-doctor]     |
@@ -34,16 +34,16 @@
 [gh-claire]:         https://github.com/savageblackout/beyhive_app
 [deploy-claire]:     ###
 
-[trello-david]:      ###
+[trello-david]:      https://trello.com/b/ghQIs91q/instavid
 [gh-david]:          https://github.com/davenhauser/insta_vid_application
 [deploy-david]:      ###
 
-[trello-demetria]:   ###
-[gh-demetria]:       https://github.com/demetra2h/petster_app
-[deploy-demetria]:   ###
+[trello-demetra]:    https://trello.com/b/gyhMlRtg/project2-petster-app
+[gh-demetra]:        https://github.com/demetra2h/petster_app
+[deploy-demetra]:    ###
 
-[trello-duane]:      ###
-[gh-duane]:          ###
+[trello-duane]:      https://trello.com/b/s8Q58WSt/world-of-dance
+[gh-duane]:          https://github.com/watfood/worldofdance_app
 [deploy-duane]:      ###
 
 [trello-james]:      https://trello.com/b/4Tutn2fH/tutoring-service
@@ -62,8 +62,8 @@
 [gh-jerry-ngov]:     https://github.com/jcngov/yugen
 [deploy-jerry-ngov]: ###
 
-[trello-jonah]:      ###
-[gh-jonah]:          ###
+[trello-jonah]:      https://trello.com/b/Gmq3EqaH/project-2-pinheads
+[gh-jonah]:          https://github.com/cameragadget/project2_app
 [deploy-jonah]:      ###
 
 [trello-karen]:      ###
@@ -90,7 +90,7 @@
 [gh-oat]:            https://github.com/oatterzongit/ondeck
 [deploy-oat]:        ###
 
-[trello-pare]:       ###
+[trello-pare]:       https://trello.com/b/eZ8JquEy/mint-thai
 [gh-pare]:           https://github.com/Parekeet/mint_thai
 [deploy-pare]:       ###
 

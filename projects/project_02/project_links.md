@@ -1,29 +1,29 @@
 # Project Links and Descriptions
 
-| Name                 | Trello Link               | GitHub                               | Deployed Version          |
-|----------------------|:-------------------------:|:------------------------------------:|:-------------------------:|
-| Adrian Nuyda         | [Link][trello-adrian]     | [Team of Legends][gh-adrian]         | [Link][deploy-adrian]     |
-| Claire Savage        | [Link][trello-claire]     | [Beyhive][gh-claire]                 | [Link][deploy-claire]     |
-| David Niederhauser   | [Link][trello-david]      | [Insta-Vid][gh-david]                | [Link][deploy-david]      |
-| Demetra Haloutsos    | [Link][trello-demetra]    | [Petster][gh-demetra]                | [Link][deploy-demetra]    |
-| Duane Than           | [Link][trello-duane]      | [World of Dance][gh-duane]           | [Link][deploy-duane]      |
-| James Coslett        | [Link][trello-james]      | [__Tutoring Service N/A__][gh-james] | [Link][deploy-james]      |
-| Jasmine Guzman       | [Link][trello-jasmine]    | [Through the Lens][gh-jasmine]       | [Link][deploy-jasmine]    |
-| Jerry Lee            | [Link][trello-stretch]    | [X-League Stats][gh-stretch]         | [Link][deploy-stretch]    |
-| Jerry Ngov           | [Link][trello-jerry-ngov] | [Yugen][gh-jerry-ngov]               | [Link][deploy-jerry-ngov] |
-| Jonah Sobol          | [Link][trello-jonah]      | [Pinheads][gh-jonah]                 | [Link][deploy-jonah]      |
-| Karen Quan           | [Link][trello-karen]      | [Pug Life][gh-karen]                 | [Link][deploy-karen]      |
-| Keith To             | [Link][trello-keith]      | [Pacis][gh-keith]                    | [Link][deploy-keith]      |
-| Michael Duran        | [Link][trello-doctor]     | [Communico][gh-doctor]               | [Link][deploy-doctor]     |
-| Michael Pascual      | [Link][trello-mikey]      | [Savr][gh-mikey]                     | [Link][deploy-mikey]      |
-| Nelson Valdivia      | [Link][trello-nelson]     | [ViTOR][gh-nelson]                   | [Link][deploy-nelson]     |
-| Oat Asdon            | [Link][trello-oat]        | [Ondex][gh-oat]                      | [Link][deploy-oat]        |
-| Pare Saku            | [Link][trello-pare]       | [Mint Thai][gh-pare]                 | [Link][deploy-pare]       |
-| Ray Chen             | [Link][trello-ray]        | [UVIEW][gh-ray]                      | [Link][deploy-ray]        |
-| Tim Kim              | [Link][trello-tim]        | [BREWCODE][gh-tim]                   | [Link][deploy-tim]        |
-| Tony Estese          | [Link][trello-tony]       | [Up n Running][gh-tony]              | [Link][deploy-tony]       |
-| Yael Amir            | [Link][trello-yael]       | [Date a Dev][gh-yael]                | [Link][deploy-yael]       |
-| Yel Padillo          | [Link][trello-yel]        | [Gadit][gh-yel]                      | [Link][deploy-yel]        |
+| Name                 | Trello Link               | GitHub                         | Deployed Version          |
+|----------------------|:-------------------------:|:------------------------------:|:-------------------------:|
+| Adrian Nuyda         | [Link][trello-adrian]     | [Team of Legends][gh-adrian]   | [Link][deploy-adrian]     |
+| Claire Savage        | [Link][trello-claire]     | [Beyhive][gh-claire]           | [Link][deploy-claire]     |
+| David Niederhauser   | [Link][trello-david]      | [Insta-Vid][gh-david]          | [Link][deploy-david]      |
+| Demetra Haloutsos    | [Link][trello-demetra]    | [Petster][gh-demetra]          | [Link][deploy-demetra]    |
+| Duane Than           | [Link][trello-duane]      | [World of Dance][gh-duane]     | [Link][deploy-duane]      |
+| James Coslett        | [Link][trello-james]      | [Tutoring Service][gh-james]   | [Link][deploy-james]      |
+| Jasmine Guzman       | [Link][trello-jasmine]    | [Through the Lens][gh-jasmine] | [Link][deploy-jasmine]    |
+| Jerry Lee            | [Link][trello-stretch]    | [X-League Stats][gh-stretch]   | [Link][deploy-stretch]    |
+| Jerry Ngov           | [Link][trello-jerry-ngov] | [Yugen][gh-jerry-ngov]         | [Link][deploy-jerry-ngov] |
+| Jonah Sobol          | [Link][trello-jonah]      | [Pinheads][gh-jonah]           | [Link][deploy-jonah]      |
+| Karen Quan           | [Link][trello-karen]      | [Pug Life][gh-karen]           | [Link][deploy-karen]      |
+| Keith To             | [Link][trello-keith]      | [Pacis][gh-keith]              | [Link][deploy-keith]      |
+| Michael Duran        | [Link][trello-doctor]     | [Communico][gh-doctor]         | [Link][deploy-doctor]     |
+| Michael Pascual      | [Link][trello-mikey]      | [Savr][gh-mikey]               | [Link][deploy-mikey]      |
+| Nelson Valdivia      | [Link][trello-nelson]     | [ViTOR][gh-nelson]             | [Link][deploy-nelson]     |
+| Oat Asdon            | [Link][trello-oat]        | [Ondex][gh-oat]                | [Link][deploy-oat]        |
+| Pare Saku            | [Link][trello-pare]       | [Mint Thai][gh-pare]           | [Link][deploy-pare]       |
+| Ray Chen             | [Link][trello-ray]        | [UVIEW][gh-ray]                | [Link][deploy-ray]        |
+| Tim Kim              | [Link][trello-tim]        | [BREWCODE][gh-tim]             | [Link][deploy-tim]        |
+| Tony Estese          | [Link][trello-tony]       | [Up n Running][gh-tony]        | [Link][deploy-tony]       |
+| Yael Amir            | [Link][trello-yael]       | [Date a Dev][gh-yael]          | [Link][deploy-yael]       |
+| Yel Padillo          | [Link][trello-yel]        | [Gadit][gh-yel]                | [Link][deploy-yel]        |
 
 
 [trello-adrian]:     https://trello.com/b/92O0Rgos/project-2-team-of-legends
@@ -47,7 +47,7 @@
 [deploy-duane]:      http://www.textfiles.com/underconstruction/
 
 [trello-james]:      https://trello.com/b/4Tutn2fH/tutoring-service
-[gh-james]:          http://www.textfiles.com/underconstruction/
+[gh-james]:          https://github.com/jcoslett/project2
 [deploy-james]:      http://www.textfiles.com/underconstruction/
 
 [trello-jasmine]:    https://trello.com/b/X6sjAe5G/through-the-lens-blog-ruby-rails-project

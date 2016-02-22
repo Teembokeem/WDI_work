@@ -26,90 +26,90 @@
 | Yel Padillo          | [Link][trello-yel]        | [Gadit][gh-yel]                      | [Link][deploy-yel]        |
 
 
-[trello-adrian]:     ###
+[trello-adrian]:     https://trello.com/b/92O0Rgos/project-2-team-of-legends
 [gh-adrian]:         https://github.com/adrianxadamn/Team_of_Legends
-[deploy-adrian]:     ###
+[deploy-adrian]:     http://www.textfiles.com/underconstruction/
 
-[trello-claire]:     ###
+[trello-claire]:     https://trello.com/b/XgUTcJ9L/beyhive-app
 [gh-claire]:         https://github.com/savageblackout/beyhive_app
-[deploy-claire]:     ###
+[deploy-claire]:     http://www.textfiles.com/underconstruction/
 
 [trello-david]:      https://trello.com/b/ghQIs91q/instavid
 [gh-david]:          https://github.com/davenhauser/insta_vid_application
-[deploy-david]:      ###
+[deploy-david]:      http://www.textfiles.com/underconstruction/
 
 [trello-demetra]:    https://trello.com/b/gyhMlRtg/project2-petster-app
 [gh-demetra]:        https://github.com/demetra2h/petster_app
-[deploy-demetra]:    ###
+[deploy-demetra]:    http://www.textfiles.com/underconstruction/
 
 [trello-duane]:      https://trello.com/b/s8Q58WSt/world-of-dance
 [gh-duane]:          https://github.com/watfood/worldofdance_app
-[deploy-duane]:      ###
+[deploy-duane]:      http://www.textfiles.com/underconstruction/
 
 [trello-james]:      https://trello.com/b/4Tutn2fH/tutoring-service
-[gh-james]:          ###
-[deploy-james]:      ###
+[gh-james]:          http://www.textfiles.com/underconstruction/
+[deploy-james]:      http://www.textfiles.com/underconstruction/
 
-[trello-jasmine]:    ###
+[trello-jasmine]:    https://trello.com/b/X6sjAe5G/through-the-lens-blog-ruby-rails-project
 [gh-jasmine]:        https://github.com/jgescobar/project2/tree/master/through_the_lens_app
-[deploy-jasmine]:    ###
+[deploy-jasmine]:    http://www.textfiles.com/underconstruction/
 
-[trello-stretch]:    ###
+[trello-stretch]:    https://trello.com/b/582FLLtx/project-2-x-league
 [gh-stretch]:        https://github.com/jgescobar/project2/tree/master/through_the_lens_app
-[deploy-stretch]:    ###
+[deploy-stretch]:    http://www.textfiles.com/underconstruction/
 
-[trello-jerry-ngov]: ###
+[trello-jerry-ngov]: https://trello.com/jerryngov
 [gh-jerry-ngov]:     https://github.com/jcngov/yugen
-[deploy-jerry-ngov]: ###
+[deploy-jerry-ngov]: http://www.textfiles.com/underconstruction/
 
 [trello-jonah]:      https://trello.com/b/Gmq3EqaH/project-2-pinheads
 [gh-jonah]:          https://github.com/cameragadget/project2_app
-[deploy-jonah]:      ###
+[deploy-jonah]:      http://www.textfiles.com/underconstruction/
 
-[trello-karen]:      ###
+[trello-karen]:      http://www.textfiles.com/underconstruction/
 [gh-karen]:          https://github.com/karenquan/pug_life_app
-[deploy-karen]:      ###
+[deploy-karen]:      http://www.textfiles.com/underconstruction/
 
-[trello-keith]:      ###
+[trello-keith]:      https://trello.com/b/rp8rFFZV/wdi-project-2-crud-web-app-pacis
 [gh-keith]:          https://github.com/keithtkto/pacis
-[deploy-keith]:      ###
+[deploy-keith]:      http://www.textfiles.com/underconstruction/
 
 [trello-doctor]:     https://trello.com/b/jaNDfv82/wdi-project-2-communico
 [gh-doctor]:         https://github.com/madma/communico
-[deploy-doctor]:     ###
+[deploy-doctor]:     http://www.textfiles.com/underconstruction/
 
-[trello-mikey]:      ###
+[trello-mikey]:      https://trello.com/b/LDRsddwA/savr
 [gh-mikey]:          https://github.com/mrpascual/savr
-[deploy-mikey]:      ###
+[deploy-mikey]:      http://www.textfiles.com/underconstruction/
 
-[trello-nelson]:     ###
+[trello-nelson]:     https://trello.com/b/obtdqzRl/vitor
 [gh-nelson]:         https://github.com/nevaldiv/Vitor_project2_app
-[deploy-nelson]:     ###
+[deploy-nelson]:     http://www.textfiles.com/underconstruction/
 
-[trello-oat]:        ###
+[trello-oat]:        https://www.railstutorial.org/book/updating_and_deleting_users
 [gh-oat]:            https://github.com/oatterzongit/ondeck
-[deploy-oat]:        ###
+[deploy-oat]:        http://www.textfiles.com/underconstruction/
 
 [trello-pare]:       https://trello.com/b/eZ8JquEy/mint-thai
 [gh-pare]:           https://github.com/Parekeet/mint_thai
-[deploy-pare]:       ###
+[deploy-pare]:       http://www.textfiles.com/underconstruction/
 
-[trello-ray]:        ###
+[trello-ray]:        https://trello.com/b/5MxuGn55/u-v-i-e-w
 [gh-ray]:            https://github.com/JYC422/UVIEW
-[deploy-ray]:        ###
+[deploy-ray]:        http://www.textfiles.com/underconstruction/
 
-[trello-tim]:        ###
+[trello-tim]:        https://trello.com/b/jxbGrr33/coffee-roast-app
 [gh-tim]:            https://github.com/Teembokeem/CoffeeApp
-[deploy-tim]:        ###
+[deploy-tim]:        http://www.textfiles.com/underconstruction/
 
-[trello-tony]:       ###
-[gh-tony]:           https://github.com/newbie-wankenobi/up_n_running_workout/blob/master/README.md
-[deploy-tony]:       ###
+[trello-tony]:       https://trello.com/b/5RDxsCOG/up-n-running
+[gh-tony]:           https://github.com/newbie-wankenobi/up_n_running_workout
+[deploy-tony]:       http://www.textfiles.com/underconstruction/
 
 [trello-yael]:       https://trello.com/b/Z0A8hjMb/date-a-dev
 [gh-yael]:           https://github.com/yaelamir/date_a_dev
-[deploy-yael]:       ###
+[deploy-yael]:       http://www.textfiles.com/underconstruction/
 
-[trello-yel]:        ###
+[trello-yel]:        https://trello.com/b/Z0UOgIQD/ga-dit
 [gh-yel]:            https://github.com/gamalielhere/gadit
-[deploy-yel]:        ###
+[deploy-yel]:        http://www.textfiles.com/underconstruction/

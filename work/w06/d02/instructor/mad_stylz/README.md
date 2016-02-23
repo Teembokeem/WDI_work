@@ -108,3 +108,4 @@ See all the options:
 #### References
 
 [Controller Specific Assets](http://theflyingdeveloper.com/controller-specific-assets-with-rails-4/)
+[The Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)

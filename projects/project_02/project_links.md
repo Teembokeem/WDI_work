@@ -86,8 +86,8 @@
 [gh-nelson]:         https://github.com/nevaldiv/Vitor_project2_app
 [deploy-nelson]:     http://www.textfiles.com/underconstruction/
 
-[trello-oat]:        https://www.railstutorial.org/book/updating_and_deleting_users
-[gh-oat]:            https://github.com/oatterzongit/ondeck
+[trello-oat]:        https://trello.com/b/BBncBX5o/project-02-1-current
+[gh-oat]:            https://github.com/oatterzongit/ondex
 [deploy-oat]:        http://www.textfiles.com/underconstruction/
 
 [trello-pare]:       https://trello.com/b/eZ8JquEy/mint-thai

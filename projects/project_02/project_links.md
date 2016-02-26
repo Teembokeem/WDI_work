@@ -21,7 +21,7 @@
 | Pare Saku          | [Link][trello-pare]       | [Mint Thai][gh-pare]           |
 | Ray Chen           | [Link][trello-ray]        | [UVIEW][gh-ray]                |
 | Tim Kim            | [Link][trello-tim]        | [BREWCODE][gh-tim]             |
-| Tony Estese        | [Link][trello-tony]       | [Up n Running][gh-tony]        |
+| Tony Estese        | [Link][trello-tony]       | [Sink or Swim][gh-tony]        |
 | Yael Amir          | [Link][trello-yael]       | [Date a Dev][gh-yael]          |
 | Yel Padillo        | [Link][trello-yel]        | [Gadit][gh-yel]                |
 

@@ -84,7 +84,7 @@
 [gh-tim]:            https://github.com/Teembokeem/CoffeeApp
 
 [trello-tony]:       https://trello.com/b/5RDxsCOG/up-n-running
-[gh-tony]:           https://github.com/newbie-wankenobi/up_n_running_workout
+[gh-tony]:           https://github.com/newbie-wankenobi/sink_or_swim_app
 
 [trello-yael]:       https://trello.com/b/Z0A8hjMb/date-a-dev
 [gh-yael]:           https://github.com/yaelamir/date_a_dev

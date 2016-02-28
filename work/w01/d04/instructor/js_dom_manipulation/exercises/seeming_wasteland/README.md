@@ -1,6 +1,6 @@
 # Seeming Wasteland
 
-![San Fernando Valley](assets/san-fernando-valley.png)
+![San Fernando Valley](images/san-fernando-valley.png)
 
 ### Setup
 
@@ -18,7 +18,7 @@ after each action.
 
 1.  Create a `<div>` element, save it to a variable called `houseEl`,
     and give it a class of `dwelling`.
-2.  Take this `<div>` (in the variable `houseEl`), and append it (as a 
+2.  Take this `<div>` (in the variable `houseEl`), and append it (as a
     child) to the `<body>`.
 
 #### Part 2
@@ -26,7 +26,7 @@ after each action.
 Check out [this][span-article] article for a second. It explains why the
 `<span>` tag is useful in HTML.
 
-3.  Create the element `<h1>`, and save it to the variable 
+3.  Create the element `<h1>`, and save it to the variable
     `topLevelHeaderEl`.
 4.  Create the element `<span>`, and save it to the variable `spanEl`.
     Then:
@@ -44,9 +44,9 @@ Check out [this][span-article] article for a second. It explains why the
 #### Part 4
 
 10. Create a `<ul>` element and save it to a *sensibly named variable*.
-11. Iterate through the `birds` array in `main.js`, and create 
+11. Iterate through the `birds` array in `main.js`, and create
     an `<li>` for each bird. Give each `<li>`
-    - a class of `bird`, and 
+    - a class of `bird`, and
     - the text content of the bird's name.
 
     Finally, append the `<li>` to the `<ul>` you created.
@@ -55,7 +55,7 @@ Check out [this][span-article] article for a second. It explains why the
 
 #### Part 5
 
-13. Add 5 more elements (using tags like `<img>`, `<div>`, `<p>`, etc.) 
+13. Add 5 more elements (using tags like `<img>`, `<div>`, `<p>`, etc.)
     to the DOM so that this seeming wasteland becomes lush. Feel free to
     get creative with the CSS in either `style.css` or in `main.js`.
 14. Once the wasteland is no longer a wasteland, change the span tag

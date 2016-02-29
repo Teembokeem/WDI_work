@@ -38,12 +38,13 @@
 | Attaching Events               | Explain what is meant by "event listener" and "event handler", and identify the<br> parts of an `.addEventListener()` expression. |
 | Attaching Events               | Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `mouseover`. |
 | Writing Complex Event Handlers | Access and edit DOM event information inside an event handler from an event object. |
+| Writing Complex Event Handlers | Differentiate between the elements referred-to by `event.target` and `event.currentTarget.` |
 | Writing Complex Event Handlers | Have an event handler listen to multiple DOM elements' events.                      |
-| Writing Complex Event Handlers | Explain "event bubbling", or propogation, in the DOM.                               |
+| Writing Complex Event Handlers | Explain "event bubbling", or propagation, in the DOM.                               |
 | Modifying Events               | Prevent the default DOM event handler from firing.                                  |
-| Modifying Events               | Prevent the propogation of events in through the DOM.                               |
-| Modifying Events               | Differentiate between using `event.stopPropogation` and `event.preventDefault`,<br> and give use cases for each. |
-| Modifying Events               | Use event bubbling / propogation to write "smart" event handlers.                   |
+| Modifying Events               | Prevent the propagation of events in through the DOM.                               |
+| Modifying Events               | Differentiate between using `event.stopPropagation` and `event.preventDefault`,<br> and give use cases for each. |
+| Modifying Events               | Use event bubbling / propagation to write "smart" event handlers.                   |
 
 The DOM is a **huge** topic. Before we begin, here are resources that
 can help you learn about it.
@@ -58,14 +59,14 @@ can help you learn about it.
 
 ## What is the DOM?
 
-<!-- 
+<!--
 | Objectives                                                                      |
 |---------------------------------------------------------------------------------|
 | Define DOM and identify where to find it in the browser API.                    |
 | Define what is meant by DOM node (element), and identify nodes on an HTML page. |
 -->
 
-**The DOM is the interface (API) that we use to access our web page 
+**The DOM is the interface (API) that we use to access our web page
 (HTML/CSS) from our JavaScript.**
 
 ```html
@@ -76,19 +77,19 @@ can help you learn about it.
 </ul>
 ```
 
-> Think about the HTML code above, about what information each element 
-> contains and how they relate to each other. How might we represent this 
+> Think about the HTML code above, about what information each element
+> contains and how they relate to each other. How might we represent this
 > information and these relationships as a JavaScript object?
 
 As we've learned, usually we model things in JavaScript as objects. These
 may be modeled as:
 
 ```javascript
-var html = { 
+var html = {
   // the HTML Element, or Node, <ul>
   tag: "ul",
   classList: [
-    "cool-list", 
+    "cool-list",
     "hotness"
   ],
   styles: {
@@ -127,7 +128,7 @@ the global scope, called `document`.
 
 #### The `document` object
 
-> Let's use the [`example.html` file](example.html) packaged with this 
+> Let's use the [`example.html` file](example.html) packaged with this
 > lesson. Open the page in your browser and type the following into the
 > console. What is the return value of each?
 
@@ -140,7 +141,7 @@ document.styleSheets
 document.anchors
 ```
 
-`document` holds the ***Document Object Model***, or the document (web 
+`document` holds the ***Document Object Model***, or the document (web
 page) modeled as a JS object. That means it has a lot of attributes and
 methods, and many of these attributes are also JS objects. It's a very
 complex structure.
@@ -158,7 +159,7 @@ For the DOM:
 
 #### DOM "Node" objects
 
-Every single part of web page is represented by a DOM Node JavaScript 
+Every single part of web page is represented by a DOM Node JavaScript
 object. "Node" is a type of object that has certain properties
 and methods, which [you can explore on MDN][node-api], including:
   - `.textContent`,
@@ -167,7 +168,7 @@ and methods, which [you can explore on MDN][node-api], including:
   - `.insertBefore()`,
   - and more…
 
-Nodes which represent HTML elements also have 
+Nodes which represent HTML elements also have
 [Element-specific properties and methods][element-api], including:
   - `.tagName`,
   - `.id`,
@@ -186,7 +187,7 @@ the DOM (`document` object).
 
 ## Retrieving Elements
 
-<!-- 
+<!--
 | Objectives                                                                    |
 |:------------------------------------------------------------------------------|
 | Create a JS reference to a DOM Node/element using `document.getElementById`.  |
@@ -203,7 +204,7 @@ var someParagraphEl = document.body.children[1].children[0].children[0];
 *But to do that you would be insane!*
 
 Instead, there a lot of search methods built in to `document`. We're
-going to learn to use two of these: `document.getElementById`, and 
+going to learn to use two of these: `document.getElementById`, and
 `document.querySelectorAll`.
 
 The simple rule is this:
@@ -215,7 +216,7 @@ and use `document.getElementById`.*** Eg (in `example.html`):
 var niceImageEl = document.getElementById("nice-pic-bro");
 ```
 
-***If you want to get a GROUP of elements, or if you can't give an 
+***If you want to get a GROUP of elements, or if you can't give an
 element an `id`, you should use `document.querySelectorAll`.***
 Eg (in `example.html`):
 
@@ -233,7 +234,7 @@ var paraWithoutLinkEls = document.querySelectorAll("p.no-links");
 
 The great thing about `document.querySelectorAll` is that it picks nodes
 from the DOM based on the same rules as CSS selectors! Eg, if we wanted
-to pick and element with the class `no-links` inside the element 
+to pick and element with the class `no-links` inside the element
 `<main>`, we would write:
 
 ```javascript
@@ -268,7 +269,7 @@ var imgEl = document.querySelectorAll("#nice-pic-bro")[0];
 ```
 
 <!--
-**For practice, you can use the exercise 
+**For practice, you can use the exercise
 [Catch Me If You Can](exercises/catch_me_if_you_can)!**
 -->
 
@@ -276,7 +277,7 @@ var imgEl = document.querySelectorAll("#nice-pic-bro")[0];
 
 ## Editing Elements
 
-<!-- 
+<!--
 | Objectives                                                          |
 |:--------------------------------------------------------------------|
 | Directly edit the attributes of DOM Nodes/elements, including `id`. |
@@ -296,7 +297,7 @@ var imgEl = document.getElementById("nice-pic-bro");
 console.log(imgEl.id);
 console.log(imgEl.alt);
 
-imgEl.src = "http://www.catholic.org/files/images/saints/43.jpg";
+imgEl.src = "images/dom-savio-pic.jpg";
 imgEl.alt = "St Dominic Savio, who died of pleurisy, gives the camera sleepy eyes.";
 imgEl.id  = "i-mean-yeah-its-still-an-ok-pic";
 ```
@@ -322,17 +323,17 @@ is working with the classes that are attached to one.
 > Remember: classes are stored on HTML elements in the attribute `class`
 > as a space-delimited list (a list of class names separated by spaces).
 
-Since the word "class" has so many uses in programming, and since the 
+Since the word "class" has so many uses in programming, and since the
 `class` attribute in HTML actually represents a list of values, instead
 of one value, the DOM API gives us two oddly-named properties to use
 with classes:
 
 1.  If we want to simply access the string value of the class propery,
     we can use `Node#className`. Eg:
- 
+
     ```javascript
     var secondPara = document.querySelectorAll("main p")[1];
- 
+
     console.log(secondPara.className);
     #=> "no-links code"
     ```
@@ -351,7 +352,7 @@ console.log(imgEl.classList);
 ```
 
 Since we are now looking at St. Dominic Savio, let's check for and remove
-any inappropriate classes using `Node#classList.contains()` and 
+any inappropriate classes using `Node#classList.contains()` and
 `Node#classList.remove()`.
 
 ```javascript
@@ -379,7 +380,7 @@ console.log(imgEl.classList);
 ```
 
 <!--
-**For practice, you can use the exercise 
+**For practice, you can use the exercise
 [Extreme Makeover](exercises/extreme_makeover)!**
 -->
 
@@ -387,7 +388,7 @@ console.log(imgEl.classList);
 
 ## Adding and Removing Elements
 
-<!-- 
+<!--
 | Objectives                                                                                |
 |:------------------------------------------------------------------------------------------|
 | Use `Node#remove` and `Node#replaceChild` to remove or replace DOM Nodes/elements.        |
@@ -411,14 +412,14 @@ one first. You create new, empty elements with `document.createElement()`.
 These nodes can be stored in variables, but aren't added to the DOM by
 default. To do that, you must "insert" them into the DOM somewhere.
 
-The most common ways to insert DOM nodes are either with 
+The most common ways to insert DOM nodes are either with
 `Node#appendChild` or `Node#insertBefore`. Both of these are called
 **on** nodes and are **passed** nodes as a parameter.
 
 - `Node#appendChild`: inserts the new node as the **last "child" inside**
    of the called node.
 - `Node#insertBefore`: inserts the new node as **a child** of the called
-   node, **directly before** the second node passed as a parameter. You 
+   node, **directly before** the second node passed as a parameter. You
    can also use `Node#insertAfter`.
 
 For example, to add another paragraph to the `<main>` element, as the
@@ -447,14 +448,14 @@ mainEl.insertBefore(newParaEl, firstParaEl);
 ```
 
 <a name="seeming-wasteland"></a>
-**For practice, you can use the exercise 
+**For practice, you can use the exercise
 [Seeming Wasteland][seeming-wasteland]!**
 
 ---
 
 ## Attaching Events
 
-<!-- 
+<!--
 | Objectives                                                                                  |
 |:--------------------------------------------------------------------------------------------|
 | Name important DOM events and give use cases for attaching interaction to each:<br> `DOMContentLoaded`, `click`, `submit`, `focus`, `keyup`, `scroll`, and `mouseover`. |
@@ -498,7 +499,7 @@ elements (nodes on the DOM). Every event listener has 4 parts:
 1. the element that is listening for the event,
 2. `.addEventListener()`,
 3. the type of event to listen for (first parameter),
-4. the action to perform, as a function (second parameter). This is 
+4. the action to perform, as a function (second parameter). This is
    called the *event handler*.
 
 For example:
@@ -532,11 +533,11 @@ written as an inline anonymous function; but it can exist separately.
 Event listeners can be added and removed dynamically, and new handlers
 can be "registered" to listen to events. A single event may have many
 handlers registered to run. To find out more, see the MDN documentation
-for [`Node#addEventListener`][mdn-add] and for 
+for [`Node#addEventListener`][mdn-add] and for
 [`Node#removeEventListener`][mdn-rem].
 
 <!--
-**For practice, you can use the exercise 
+**For practice, you can use the exercise
 [We Can Rebuild Her](exercises/we_can_rebuild_her)!**
 -->
 
@@ -544,7 +545,7 @@ for [`Node#addEventListener`][mdn-add] and for
 
 ## Writing Complex Event Handlers
 
-<!-- 
+<!--
 | Objectives                                                                          |
 |:------------------------------------------------------------------------------------|
 | Access and edit DOM event information inside an event handler from an event object. |
@@ -556,19 +557,12 @@ While the above examples can work for very trivial uses, almost every
 event handler you write will need to do more complex activities. These
 handlers need to be aware of certain things:
 
-- what element was the *target* of the event?
-- what element *heard* the event / is this handler registered to?
+- what element *emitted* of the event?
+- what element *heard* the event, ie is this handler registered to?
 - what kind of event is it?
 - if it's a key press, what key was it?
 - if it's a scroll, which direction?
 - etc…
-
-> How can an event's *target* be separate from the element that "heard" 
-> it (had a listener capture the event)? Think about a list: if you 
-> click on an item in the list, you're still clicking on the list itself
-> too, right? You could register a listener on the list, and when a user
-> clicks on an item the listener will trigger too! This happens due to
-> a property of events called "propagation," or "event bubbling."
 
 First off, we will begin to look at writing more useful listeners, that
 cover multiple elements we want to listen to. Then we'll look at how to
@@ -577,15 +571,72 @@ represents it.
 
 ---
 
+#### The Event Object
+
+**What is the event object?**
+
+We will return to what is happening with event listeners when we
+discuss callbacks. For now, suffice to say that we are "registering"
+a function to listen for an event, and when it "hears" the event it
+runs its code.
+
+Importantly, when the listener runs, we have access to an object that
+represents that event as well! It will be whatever we name the first
+parameter of our listener function. Eg:
+
+```javascript
+var sampleEl = document.getElementById("sample");
+
+sampleEl.addEventListener(function(event) {
+  console.log(event);     // "event" is the event object!
+});
+sampleEl.addEventListener(function(evt) {
+  console.log(evt);       // "evt" is the event object!
+});
+sampleEl.addEventListener(function(e) {
+  console.log(e);         // "e" is the event object!
+});
+sampleEl.addEventListener(function(yassQueen) {
+  console.log(yassQueen); // "yassQueen" is the event object!
+});
+```
+
+**Where does the event object come from?**
+
+The browser creates it and hands it to all of the functions registered
+to listen for the given event, when the event is emitted. *Thanks again,
+browser!*
+
+**What types of events are there?**
+
+Every interaction the user has with an HTML page triggers events. Scrolling,
+clicking, typing, etc. Furthermore, there are events for a number of other
+things that happen (when images load, for example), but we'll deal with
+these later. For now, experiment with some events:
+
+**[Example: "Types of events" (JSFiddle)][event-object-example]**
+
+**Why and when do we use the event object?**
+
+We use the event object whenever we need to trigger reactions to an event
+that reference the interaction that triggered it. This means: most of the
+time!
+
+---
+
 #### Event Propagation, aka "Bubbling"
 
 **[Example: "Event Propagation" (JS Fiddle)][propagation-example]**
 
----
+> How can an event's *emitter* be separate from the element that "heard"
+> it (had a listener capture the event)? Think about a list: if you
+> click on an item in the list, you're still clicking on the list itself
+> too, right? You could register a listener on the list, and when a user
+> clicks on an item the listener will trigger too! This happens due to
+> a property of events called "propagation," or "event bubbling."
 
-#### The Event Object
-
-**[Example: "Using the Event Object" (JSFiddle)][event-object-example]**
+event.target
+event.currentTarget
 
 ---
 
@@ -594,8 +645,8 @@ represents it.
 | Objectives                                                           |
 |:---------------------------------------------------------------------|
 | Prevent the default DOM event handler from firing.                   |
-| Prevent the propogation of events in through the DOM.                |
-| Differentiate between using `event.stopPropogation` and `event.preventDefault`,<br> and give use cases for each. |
+| Prevent the propagation of events in through the DOM.                |
+| Differentiate between using `event.stopPropagation` and `event.preventDefault`,<br> and give use cases for each. |
 | Use event bubbling / propagation to write "smart" event handlers.    |
 
 **[Example: "Stop Propagation" (JSFiddle)][stop-prop-example]**

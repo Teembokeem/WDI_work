@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Events Example</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <!-- .swim, .wiggle, .jump -->
+  <link rel="stylesheet" href="css/csshake.css">
+</head>
+<body>
+  <header>
+    <h1>Dom's Pets</h1>
+    <p id="dom-says" class="hidden">Watch out for Yaya, she's a feisty one!</p>
+  </header>
+  <main class="pet-store">
+    <div class="cages">
+      <div id="dog-cage" class="cage">
+        <div id="adeline" class="pet dog"></div>
+      </div>
+      <div id="hamster-cage" class="cage">
+        <div id="phil" class="pet hamster"></div>
+        <div id="albert" class="pet hamster"></div>
+        <div id="sammy" class="pet hamster shake shake-little"></div>
+        <div class="bedding"></div>
+      </div>
+      <div id="fish-tank" class="cage tank">
+        <div id="kojo"  class="pet red fish swim"></div>
+        <div id="afua"  class="pet green fish swim"></div>
+        <div id="ekua"  class="pet green fish swim"></div>
+        <div id="kwasi" class="pet yellow fish swim"></div>
+        <div id="yaya"  class="pet blue fish swim"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var domSaysEl = document.getElementById("dom-says");
+    var flashWords = function(words) {
+      domSaysEl.classList.toggle("hidden");
+      setTimeout(function() {
+        domSaysEl.classList.toggle("hidden");
+      }, 1500);
+    };
+    document.getElementById("yaya").addEventListener("click", flashWords);
+  </script>
+</body>
+</html>

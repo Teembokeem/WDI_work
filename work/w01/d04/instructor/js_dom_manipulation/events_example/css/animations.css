@@ -1,0 +1,56 @@
+
+.swim {
+  animation-name: float-animation, swim-animation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes float-animation {
+  to, from { margin-top: -25px }
+
+   6.25% { margin-top: -40px }
+  18.75% { margin-top: -10px }
+  31.25% { margin-top: -40px }
+  43.75% { margin-top: -10px }
+  56.25% { margin-top: -40px }
+  68.75% { margin-top: -10px }
+  81.25% { margin-top: -40px }
+  93.75% { margin-top: -10px }
+}
+
+@keyframes swim-animation {
+  to, from { margin-left: -25px }
+
+  22%  { transform: scaleX(1);  }
+  25%  { margin-left: -125px;   }
+  28%  { transform: scaleX(-1); }
+
+  72%  { transform: scaleX(-1); }
+  75%  { margin-left: 75px;     }
+  78%  { transform: scaleX(1);  }
+}
+
+.wiggle {
+  animation-name: wiggle-animation;
+}
+
+@keyframes wiggle-animation {
+
+}
+
+.shake {
+  animation-name: shake-animation;
+}
+
+@keyframes shake-animation {
+
+}
+
+.jump {
+  animation-name: jump-animation;
+}
+
+@keyframes jump-animation {
+
+}

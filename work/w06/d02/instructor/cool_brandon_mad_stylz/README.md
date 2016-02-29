@@ -56,7 +56,7 @@ __PS: My .tff is called ABITE__
 
 4. Then add to the `assets.rb` in `/config/initializers/`:
 
-	`Rails.application.config.assets.precompile += %w( about.css )`
+    `Rails.application.config.assets.precompile += %w( about.css )`
 
 ### Adding View-Specific Scripts the Rails Way
 
@@ -65,45 +65,45 @@ There's a similar order to things with scripts.
 1. Add `contact.js` in your `assets/javascripts` directory
 
 2. Add the script tag to the page:
-	`<%= javascript_include_tag 'contact' %>`
+    `<%= javascript_include_tag 'contact' %>`
 
 3. Add to `contact.js`:
 
-	```javascript
-	console.log('linked!');
+    ```javascript
+    console.log('linked!');
 
-	(document.getElementById('take').onkeyup = function(){
-	    $('#place').text($('#take').val());
-	})();
-	```
+    (document.getElementById('take').onkeyup = function(){
+        $('#place').text($('#take').val());
+    })();
+    ```
 4. Then add to the `assets.rb` in `/config/initializers/`:
 
-	`Rails.application.config.assets.precompile += %w( contact.js )`
+    `Rails.application.config.assets.precompile += %w( contact.js )`
 
 5. Finally, don't forget to bring up `app/assets/javascripts/application.js` and
 replace:
 
-	`//= require_tree .`
+    `//= require_tree .`
 
-	with
+    with
 
-	`//= require static_pages`
+    `//= require static_pages`
 
 #### Working with the Asset Pipeline: Precompile
 
 Precompile your assets - this is calling what's set in
 `config/initializers/assets.rb`:
 
-	`rake assets:precompile`
+    `rake assets:precompile`
 
 Before production, clear the precompile (since Heroku runs it when
 deployed):
 
-	`rake assets:clobber`
+    `rake assets:clobber`
 
 See all the options:
 
-	`rake -T`
+    `rake -T`
 
 #### References
 

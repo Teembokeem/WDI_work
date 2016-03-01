@@ -6,12 +6,16 @@ var facepaints = [
     price:        2.99,
     endorsements: [
                     {
+                      fp_id:      0,
                       stage_name: "Shaggy 2 Dope",
-                      comment:    "I'll be wearing this to the Carnival. Woot Woot."
+                      comment:    "I'll be wearing this to the Carnival. Woot Woot.",
+                      id:         0
                     },
                     {
+                      fp_id:      0,
                       stage_name: "Violent J",
-                      comment:    "I'm just an evil clown, guys."
+                      comment:    "I'm just an evil clown, guys.",
+                      id:         1
                     }
                   ]
   },
@@ -23,15 +27,21 @@ var facepaints = [
     endorsements: [
                     {
                       stage_name: "Gene Simmons",
-                      comment:    "It doesn't taste so bad."
+                      comment:    "It doesn't taste so bad.",
+                      fp_id:      1,
+                      id:         2
                     },
                     {
                       stage_name: "Violent J",
-                      comment:    "No really, just an evil clown."
+                      comment:    "No really, just an evil clown.",
+                      fp_id:      1,
+                      id:         3
                     },
                     {
                       stage_name: "King Diamond",
-                      comment:    "YAAAAAAAAA!!!!!!!!! Soooo WHIIIIIIIIIITTTE!"
+                      comment:    "YAAAAAAAAA!!!!!!!!! Soooo WHIIIIIIIIIITTTE!",
+                      fp_id:      1,
+                      id:         4
                     }
                   ]
   }

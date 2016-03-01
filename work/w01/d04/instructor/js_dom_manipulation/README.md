@@ -271,6 +271,7 @@ var imgEl = document.querySelectorAll("#nice-pic-bro")[0];
 <!--
 **For practice, you can use the exercise
 [Catch Me If You Can](exercises/catch_me_if_you_can)!**
+https://en.wikipedia.org/wiki/Catch_Me_If_You_Can
 -->
 
 ---
@@ -382,6 +383,7 @@ console.log(imgEl.classList);
 <!--
 **For practice, you can use the exercise
 [Extreme Makeover](exercises/extreme_makeover)!**
+https://en.wikipedia.org/wiki/Extreme_Makeover:_Home_Edition
 -->
 
 ---
@@ -539,6 +541,7 @@ for [`Node#addEventListener`][mdn-add] and for
 <!--
 **For practice, you can use the exercise
 [We Can Rebuild Her](exercises/we_can_rebuild_her)!**
+https://en.wikipedia.org/wiki/The_Bionic_Woman
 -->
 
 ---

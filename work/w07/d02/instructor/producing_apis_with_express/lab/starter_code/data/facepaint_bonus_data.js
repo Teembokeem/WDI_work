@@ -48,5 +48,6 @@ var facepaints = [
 ];
 
 facepaints.id = 2;
+facepaints.en_id = 5;
 
 module.exports = facepaints;

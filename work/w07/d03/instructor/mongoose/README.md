@@ -9,7 +9,7 @@
 | Mongoose ODM      | Explain what Mongoose is (ODM, schema) and why one would use it.
 | Mongoose ODM      | Use Mongoose models to CRUD JavaScript "documents" in MongoDB.
 | Mongoose ODM      | Handle the output of Mongoose queries using callbacks and promises.
-| Mongoose ODM      | Use Mongoose schema to validate documents.
+| Mongoose ODM      | Use Mongoose schema to validate documents and create defaults.
 | Mongoose ODM      | Use Mongoose schema to add application logic to models/documents.
 | Document Modeling | Compare & contrast MongoDB's structure to that implemented by Mongoose.
 

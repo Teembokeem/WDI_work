@@ -6,9 +6,9 @@
 ### Contents
 
 1.  [**MongoDB**](#mongodb)
-    - Starting and Stopping MongoDB
-    - Using the Mongo Shell
-    - Mongo Shell Commands
+    - [Starting and Stopping MongoDB](#starting-and-stopping-mongodb)
+    - [Using the Mongo Shell](#using-the-mongo-shell)
+    - [Mongo Shell Commands](#mongo-shell-commands)
 2.  [**Using Mongoose**](#using-mongoose)
 3.  [**Mongoose Vocabulary**](#vocabulary)
 4.  [**Mongoose Core API**](#core-api)
@@ -89,18 +89,18 @@ Computer-name(mongod-3.2.1) test> help
 ##### Databases
 
 1.  **See all databases**:
-  
+
     ```
     prompt> show dbs
     ```
 2.  **Connect to a database**:
-  
+
     ```
     prompt> use <dbName> # eg, use mongo-example-app
     ```
-    
+
     You'll know that you are connected to the database by the prompt:
-    
+
     ```
     Computer-name(mongod-3.2.1) test> use mongo-example-app
     switched to db mongo-example-app
@@ -110,6 +110,7 @@ Computer-name(mongod-3.2.1) test> help
 ##### Collections
 
 1.  **See all collections in a database**:
+
     ```
     prompt> show collections
     ```
@@ -117,30 +118,40 @@ Computer-name(mongod-3.2.1) test> help
 ##### Documents
 
 1.  **See all documents in a collection**:
+
     ```
     prompt> db.<collectionName>.find()
     ```
 2.  **See only some documents in a collection**:
+
     Pass the find method a list of the paths or attributes of the
     document, and a value to match them on:
+
     ```
     prompt> db.<collectionName>.find( {path: "value"} )
     ```
+
     For example, if you want to find students named "Phil":
+
     ```
     prompt> db.students.find( {name "Phil"} )
     ```
 3.  **Delete or empty and entire collection**:
+
     ```
     prompt> db.<collectionName>.remove()
     ```
 4.  **Remove some documents in a collection**:
+
     Like with find above, you can remove specific documents by passing
     paths for it to match:
+
     ```
     prompt> db.<collectionName>.remove( {path: "value"} )
     ```
+
     For example (removing by an ID):
+
     ```
     prompt> db.students.remove({"_id": ObjectId("56d74a0c1d2be212d8af997c")})
     ```

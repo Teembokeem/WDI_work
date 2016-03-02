@@ -117,7 +117,7 @@ To help with that, we have put together a cheatsheet with the
 fundamental points of using Mongoose:
 
 :star:
-**[Mongoose Cheatsheet](../../../../../resources/cheatsheets/mongoose_cheatsheet.md)**
+**[Mongoose Cheatsheet][cheatsheet]**
 :star:
 
 When the cheatsheet is not enough, however (or if you'd like to read
@@ -146,8 +146,7 @@ lot of good information here!
 [mg-quick]:  http://mongoosejs.com/docs/index.html
 [mg-guide]:  http://mongoosejs.com/docs/guide.html
 [mg-api]:    http://mongoosejs.com/docs/api.html
-
 [mdb-schemaless]:    http://blog.mongodb.org/post/119945109/why-schemaless
 [fowler-schemaless]: http://martinfowler.com/articles/schemaless/
-
 [so-sch-mod]: http://stackoverflow.com/questions/22950282/mongoose-schema-vs-model?lq=1
+[cheatsheet]: ../../../../../resources/cheatsheets/mongoose_cheatsheet.md

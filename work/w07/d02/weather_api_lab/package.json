@@ -1,0 +1,19 @@
+{
+  "name": "weather_api_lab",
+  "version": "1.0.0",
+  "description": "![Seasonally appropriate weather image.][weather-image]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "locus": "^1.2.0",
+    "opener": "^1.4.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {}
+}

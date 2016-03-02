@@ -117,7 +117,7 @@ To help with that, we have put together a cheatsheet with the
 fundamental points of using Mongoose:
 
 :star:
-**[Mongoose Cheatsheet](/resources/cheatsheets/mongoose_cheatsheet.md)**
+**[Mongoose Cheatsheet](../../../../../resources/cheatsheets/mongoose_cheatsheet.md)**
 :star:
 
 When the cheatsheet is not enough, however (or if you'd like to read

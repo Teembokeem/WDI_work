@@ -89,16 +89,18 @@ Computer-name(mongod-3.2.1) test> help
 ##### Databases
 
 1.  **See all databases**:
-2.  
+  
     ```
     prompt> show dbs
     ```
 2.  **Connect to a database**:
-3.  
+  
     ```
     prompt> use <dbName> # eg, use mongo-example-app
     ```
-    You'll know that you are connected to the database by the prompt:  
+    
+    You'll know that you are connected to the database by the prompt:
+    
     ```
     Computer-name(mongod-3.2.1) test> use mongo-example-app
     switched to db mongo-example-app

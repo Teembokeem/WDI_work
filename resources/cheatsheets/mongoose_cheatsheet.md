@@ -153,42 +153,104 @@ Computer-name(mongod-3.2.1) test> help
     For example (removing by an ID):
 
     ```
-    prompt> db.students.remove({"_id": ObjectId("56d74a0c1d2be212d8af997c")})
+    prompt> db.students.remove( {"_id": ObjectId("56d74a0c1d2be212d8af997c")} )
     ```
 
 ### Using Mongoose
 
 ```javascript
+// Load the Mongoose NPM lib:
 var mongoose = require('mongoose');
 
+// Connect to the database if you want to do CRUD:
 mongoose.connect('mongodb://localhost/blog_app');
 
+// Define schemas:
 var userSchema = new mongoose.Schema({
-    email:  String
+    email:  String // Path or attribute name, and then type.
 });
 
 var commentSchema = new mongoose.Schema({
-    author: mongoose.Schema.ObjectId,
-    text:   String,
-    date:   Date
-});
+    author: mongoose.Schema.ObjectId,          // Reference other
+                                               //  collections.
+    text:   { type: String,  required: true }, // Add built-in validation.
+    date:   { type: Date, default: Date.now }  // Add default values.
+
 
 var postSchema = new mongoose.Schema({
     author:   mongoose.Schema.ObjectId,
-    title:    String,
+    title:    {
+                type: String,
+                validate: {                 // Write custom validators.
+                  validator: function(text) {
+                    return /stupid/.match(text)
+                  },
+                  message: '{VALUE} is mean!'
+                }
+              }
     body:     String,
-    date:     Date,
-    comments: [commentSchema]
-});
+    date:     Date                         // Date works for dates AND
+                                           //  times (timestamps).
+    comments: [commentSchema]              // Embed or nest sub-
+});                                        //  documents.
 
+// Use statics to add collection-wide logic.
+postSchema.static.todaysPosts = function(cb) {
+  this.find({date: Date.today}, cb);
+}
+// Post.todaysPosts(function(err, results) {
+//   console.log(results);
+// });
+
+// Use methods to add document-specific logic.
+postSchema.methods.authorsComments = function(cb) {
+  this.comments.find({author: this.author}, cb);
+};
+// Post.findById("43848596838292", function(err, post) {
+//   post.authorsComments(function(err, results) {
+//     console.log(results);
+//   });
+// });
+
+// Use models to allow database interaction and ODM.
 var User = mongoose.model("User", userSchema),
     Post = mongoose.model("Post", postSchema);
 
-create two users
-create a post
-add a comment
+// Create new documents in the database, sometimes as a batch!
+User.create(
+  [{email: "pj@ga.co"}, {email: "jim@ga.co"}],
+  function(err, users) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("2 users inserted!");
+    }
+});
 
-get all users
+// Get data from the database.
+User.find({}, function(err, users) {
+  console.log(users);
+});
+
+// Create document objects locally, and save to the database.
+var post = new Post({title: "Test", body: "Lorem ipsum."});
+post.save(function(err, post) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Post inserted!");
+  }
+});
+
+// Find specific data with queries.
+User.findOne({email: "pj@ga.co"}, function(err, user) {
+  post.author = user;
+  post.save();
+});
+
+// add a comment
+// update some data
+// remove some data
 ```
 
 ### Vocabulary
@@ -241,4 +303,4 @@ lot of good information here!
 [mg-quick]:  http://mongoosejs.com/docs/index.html
 [mg-guide]:  http://mongoosejs.com/docs/guide.html
 [mg-api]:    http://mongoosejs.com/docs/api.html
-[lesson]:    https://github.com/ga-students/WDI_DTLA_8/tree/mongoose/work/w07/d03/instructor/mongoose
+[lesson]:    https://github.com/ga-students/WDI_DTLA_8/tree/master/work/w07/d03/instructor/mongoose

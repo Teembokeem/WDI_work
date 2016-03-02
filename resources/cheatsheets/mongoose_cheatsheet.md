@@ -195,7 +195,7 @@ var postSchema = new mongoose.Schema({
 });                                        //  documents.
 
 // Use statics to add collection-wide logic.
-postSchema.static.todaysPosts = function(cb) {
+postSchema.statics.todaysPosts = function(cb) {
   this.find({date: Date.today}, cb);
 }
 // Post.todaysPosts(function(err, results) {
@@ -227,12 +227,12 @@ User.create(
     }
 });
 
-// Get data from the database.
+// Get documents from the database.
 User.find({}, function(err, users) {
   console.log(users);
 });
 
-// Create document objects locally, and save to the database.
+// Create document objects locally, and save them to the database.
 var post = new Post({title: "Test", body: "Lorem ipsum."});
 post.save(function(err, post) {
   if (err) {
@@ -242,30 +242,30 @@ post.save(function(err, post) {
   }
 });
 
-// Find specific data with queries.
+// Find specific documents with queries.
 User.findOne({email: "pj@ga.co"}, function(err, user) {
   post.author = user;
   post.save();
 });
 
-// add a comment
-// update some data
-// remove some data
+// Embed new documents as sub-docs.
+// Update the data stored in documents in the database.
+// Delete documents from the database.
 ```
 
 ### Vocabulary
 
 - **connection**:
-- schema
-  - path
-- models
-- documents
-- statics
-- methods
-- queries
-- embedding
-- referencing
-- callbacks and promises
+- **schema**:
+- **path**:
+- **models**:
+- **documents**:
+- **statics**:
+- **methods**:
+- **queries**:
+- **embedding**:
+- **referencing**:
+- **callbacks** and **promises**:
 
 ### Core API
 
@@ -278,6 +278,7 @@ The API documentation is here.
   - statics (class methods) & methods (instance/document methods)
   - setters/getters
   <!-- - paths and virtuals -->
+  - toObject & toJSON
 - Model
   - documents (ie, instances): #save, #remove, #populate, #execPopulate, etc.
   - queries: .count, .find, .findById, .findByIdAndUpdate, .exec, etc.

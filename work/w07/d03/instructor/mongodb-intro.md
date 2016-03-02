@@ -334,6 +334,8 @@ __What would be a downside of embedding data?__
 
 <br><br><br>
 
+The embedded data objects, like we see above, are often referred to as _subdocuments_. When we start working with Mongoose, these subdocuments may even have their own `_id`s.
+
 If the embedded data's growth is _unbound_, MongoDB's maximum document size of 16 megabytes could be exceeded.  However, that's a pretty big document, assuming you're not trying to store binary file data in there.
 
 The above approach of embedding "contact" data provides a great deal of flexibility in what types and how many contacts a person may have.

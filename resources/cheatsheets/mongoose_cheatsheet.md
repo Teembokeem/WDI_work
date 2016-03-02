@@ -89,10 +89,12 @@ Computer-name(mongod-3.2.1) test> help
 ##### Databases
 
 1.  **See all databases**:
+2.  
     ```
     prompt> show dbs
     ```
 2.  **Connect to a database**:
+3.  
     ```
     prompt> use <dbName> # eg, use mongo-example-app
     ```

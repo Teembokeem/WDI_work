@@ -30,9 +30,9 @@ function printMenu() {
     switch (input) {
       case 1:
         console.log("You chose to show the class roster…".red);
-        showRoster(function() {
-          printMenu();
-        });
+        // showRoster(function() {
+        //   printMenu();
+        // });
         break;
       case 2:
         console.log("You chose to add student…".red);
@@ -54,7 +54,7 @@ function printMenu() {
         console.log("Input not understood…".red);
     }
     console.log();
-    // printMenu(); // do it again!
+    printMenu(); // do it again!
   });
 }
 

@@ -1,0 +1,11 @@
+{
+  "name": "weatherApi",
+  "version": "0.0.0",
+  "description": "n/a",
+  "main": "weatherApi.js",
+  "author": "Philip Hughes <p+npm@hews.co> (http://hews.co)",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "request": "^2.65.0"
+  }
+}

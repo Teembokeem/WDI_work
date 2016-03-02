@@ -1,8 +1,8 @@
-# ![](http://i.imgur.com/4yNYDLI.png) Mongoose
+# ![logo](assets/logo.png) Mongoose
 
 ![Be careful… I… am death…](assets/rikkitikkitavi.jpg)
 
-### A JavaScript ODM with Explicit MongoDB schema
+### A JavaScript ODM with Explicit MongoDB Schema
 
 |   | Lesson Objectives |
 |:-:|:------------------|
@@ -12,8 +12,6 @@
 | Mongoose ODM      | Use Mongoose schema to validate documents.
 | Mongoose ODM      | Use Mongoose schema to add application logic to models/documents.
 | Document Modeling | Compare & contrast MongoDB's structure to that implemented by Mongoose.
-
-<!-- | Document Modeling | Use Mongoose schema to implement complex/nested structures. -->
 
 ## Context
 
@@ -67,6 +65,7 @@ stored as documents, and is therefore called an
 ***Object-Document Mapper (ODM)***.
 
 Here is a side-by-side comparison:
+<a name="comparison-table"></a>
 
 |       Technology           |       Entities        |      Instances      | Attributes & Types |
 |---------------------------:|:---------------------:|:-------------------:|:------------------:|
@@ -110,67 +109,45 @@ docs:
 
 ## Using Mongoose and its API
 
-The guide is here, with quickstarts here and here.
+One of the problems with Mongoose is its poor documentation, and the
+fact that its API has changed a lot over time (so many online solutions
+and examples are contradictory or out of date).
 
-http://mongoosejs.com/docs/guide.html
-http://mongoosejs.com/docs/index.html
-https://github.com/Automattic/mongoose
+To help with that, we have put together a cheatsheet with the
+fundamental points of using Mongoose:
 
-**Mongoose Vocab:**
+:star:
+**[Mongoose Cheatsheet](/resources/cheatsheets/mongoose_cheatsheet.md)**
+:star:
 
-- Connections
-- schema
-  - Paths
-- Models
-- Documents
-- Queries
-- Embedding
-- Referencing
-- Callbacks and Promises
+When the cheatsheet is not enough, however (or if you'd like to read
+further about the library), here are some links. Keep in mind, that
+while the documentation may be fragmented and frustrating, there is a
+lot of good information here!
 
-**Intro to Mongoose API:**
+- [The GitHub site has the code and a nice, clear quick start guide.][mg-github]
+- [The docs also have a quick start.][mg-quick]
+- [The docs follow that with a more comprehensive guide.][mg-guide]
+- [Finally, there is a complete API reference in the docs.][mg-api]
 
-The API documentation is here.
+## Introductory Walkthroughs and Examples
 
-- Connection
-- Schema
-  - types
-  - validations
-  - statics (class methods) & methods (instance/document methods)
-  - setters/getters
-  - paths and virtuals
-- Model
-  - documents (ie, instances): #save, #remove, #populate, #execPopulate, etc.
-  - queries: .count, .find, .findById, .findByIdAndUpdate, .exec, etc.
-
-**[Mongoose Cheatsheet](mongoose_cheatsheet.md)**
-
-### Introductory Walkthrough
-
-Mongoose Models
-
-Mongoose schema
-
-Validation
-
-Adding Application Logic with Statics and Methods
-
-<!-- Managing the Document Structure with Setters, Getters and Middleware -->
-
-Embedding, or Nesting Documents
-
-Referencing Documents and Populating Queries
-
-### Document Modeling
-
-https://www.youtube.com/watch?v=qI_g07C_Q5I
+1.  [Using Mongoose Models: Student DB](models_example)
+2.  [Using Mongoose Schema and Validations:
+    Tween Charm Bracelet](schema_example)
+3.  [Adding Application Logic with Statics and Methods:
+    Serious Business Rolodex](methods_example)
 
 <!-- LINKS -->
 
 [mg-home]:   http://mongoosejs.com/index.html
 [mg-models]: http://mongoosejs.com/docs/models.html
+[mg-github]: https://github.com/Automattic/mongoose
+[mg-quick]:  http://mongoosejs.com/docs/index.html
+[mg-guide]:  http://mongoosejs.com/docs/guide.html
+[mg-api]:    http://mongoosejs.com/docs/api.html
 
-[mdb-schemaless]: http://blog.mongodb.org/post/119945109/why-schemaless
+[mdb-schemaless]:    http://blog.mongodb.org/post/119945109/why-schemaless
 [fowler-schemaless]: http://martinfowler.com/articles/schemaless/
 
 [so-sch-mod]: http://stackoverflow.com/questions/22950282/mongoose-schema-vs-model?lq=1

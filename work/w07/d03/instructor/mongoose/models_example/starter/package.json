@@ -1,5 +1,5 @@
 {
-  "name": "mongoose_model_example",
+  "name": "models_example",
   "version": "0.1.0",
   "main": "app.js",
   "dependencies": {

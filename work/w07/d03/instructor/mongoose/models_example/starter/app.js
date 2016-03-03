@@ -20,8 +20,7 @@ function printMenu() {
     1. See the class roster.
     2. Add a new student.
     3. Edit a student's information.
-    4. Give a student a new grade.
-    5. Remove a student.
+    4. Remove a student.
   `);
   prompt("Enter a number from above, or 'q' to quit: ".red, function(input) {
     if (input === "q") process.exit(0);
@@ -43,12 +42,9 @@ function printMenu() {
         // console.log("Choose student by id:");
         break;
       case 4:
-        console.log("You chose to give student a grade…".red);
-        // console.log("Class roster:");
-        // console.log("Choose student by id:");
-        break;
-      case 5:
         console.log("You chose to remove a student…".red);
+        // showRoster();
+        // console.log("Choose student by id:");
         break;
       default:
         console.log("Input not understood…".red);

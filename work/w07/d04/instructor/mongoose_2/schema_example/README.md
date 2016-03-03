@@ -1,6 +1,6 @@
 # Tween Charm Bracelet
 
-> I'm basically grown-up, and I have an appreciation for fine things.
+> I'm basically a grown-up, and I have an appreciation for fine things.
 > Have you seen my charm bracelet?
 
 ![](http://www.ourkidsmom.com/wp-content/uploads/2012/07/IMG_6056.jpg)

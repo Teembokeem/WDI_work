@@ -12,6 +12,27 @@ All she's giving you is the basic fields of what she wants made - **can you have
 
 ### Assignment
 
+For each of the below scenarios, create a file `resource_seeds.js` that
+defines:
+
+- a schema, and
+- a model
+
+The file then connects to MongoDB and inserts at least 3
+documents for the resource.
+
+Finally, the file prints out the state of the collection in MongoDB.
+
+For example, for the resource "W2 Forms":
+
+```bash
+$ node w2_forms_seeds.js
+#=> Creating W2 Forms...
+#=>
+#=> The database now has the forms:
+#=> [{name: "Bob", deductions: 1}, {name: "Sarah", deductions: 3}, ...]
+```
+
 #### Coffee Mugs
 
 > So there I am, draining my daily Sencha, about to leave, when I get a new i-903d7 on my desk from Geoff! 

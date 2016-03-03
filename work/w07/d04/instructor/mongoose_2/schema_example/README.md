@@ -46,12 +46,6 @@ Finally let's write some validations, since Sophia is starting to assert
 herself. I mean, she want's her charm bracelet to represent who she is,
 right?
 
-### Validations
-
-Finally let's write some validations, since Sophia is starting to assert
-herself. I mean, she want's her charm bracelet to represent who she is,
-right?
-
 1. Only charms that are made of silver, gold, ceramic, or shell allowed.
 2. Any charms worth less than $10 or more than $50 are not allowed.
 3. Only Sophia, Grammy, and Uncle Colin can purchase charms (no more 

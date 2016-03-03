@@ -1,6 +1,6 @@
 # Tween Charm Bracelet
 
-> I'm basically grown-up, and I have an appreciation for fine things.
+> I'm basically a grown-up, and I have an appreciation for fine things.
 > Have you seen my charm bracelet?
 
 ![](http://www.ourkidsmom.com/wp-content/uploads/2012/07/IMG_6056.jpg)
@@ -46,10 +46,13 @@ Finally let's write some validations, since Sophia is starting to assert
 herself. I mean, she want's her charm bracelet to represent who she is,
 right?
 
-1. No more charms from Mom!
-2. Only charms that are made of silver, gold, ceramic, or shell allowed.
-3. Any charms worth less than $10 or more than $50 are not allowed.
-4. If a charm is a cross, it can only come from Grammy.
-5. If a charm's theme is "Life Experience," then there *must* be a 
+1. Only charms that are made of silver, gold, ceramic, or shell allowed.
+2. Any charms worth less than $10 or more than $50 are not allowed.
+3. Only Sophia, Grammy, and Uncle Colin can purchase charms (no more 
+   charms from Mom)!
+4. Descriptions must be under 50 characters.
+5. If a charm is a cross, it can only come from Grammy.
+6. If a charm's theme is "Life Experience," then there *must* be a 
    description.
 
+Check each of these with failing (and passing) charms.

@@ -98,11 +98,22 @@ var kings = [
 //     "Long live King [name]!" (five times...)
 console.log("Number 1:");
 
+var i = 0;
+
+while (i < kings.length) {
+  console.log(hailTo(kings[i]));
+  i++;
+}
 
 // 2.  Print the above using a `for` loop.
 console.log("Number 2:");
 
+for (var i = 0; i < kings.length; i++) {
+  console.log(hailTo(kings[i]));
+}
 
 // 3.  Print the above using a `forEach` enumeration method
 console.log("Number 3:");
-
+kings.forEach(function(king) {
+  console.log(hailTo(king));
+});

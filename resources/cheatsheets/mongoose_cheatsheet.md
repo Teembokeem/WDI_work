@@ -14,7 +14,7 @@
 4.  [**Mongoose Core API**](#core-api)
 5.  [**Links**](#links)
 
-### MongoDB
+### [MongoDB][mdb-intro]
 
 #### Starting and Stopping MongoDB
 
@@ -55,7 +55,7 @@ command `kill`:
 $ kill 26284
 ```
 
-#### Using the Mongo Shell
+#### [Using the Mongo Shell][mdb-shell]
 
 Once MongoDB is running, you can open the MongoDB Shell (in another
 terminal) in order to interact with it:
@@ -281,7 +281,7 @@ The API documentation is here.
   - toObject & toJSON
 - Model
   - documents (ie, instances): #save, #remove, #populate, #execPopulate, etc.
-  - queries: .count, .find, .findById, .findByIdAndUpdate, .exec, etc.
+  - queries: .count, .find, .findById, .findOneAndUpdate, .findByIdAndUpdate, .exec, etc.
 
 ### Links
 
@@ -298,7 +298,8 @@ lot of good information here!
 <!-- LINKS -->
 
 [mdb-install]: https://docs.mongodb.org/v3.0/tutorial/install-mongodb-on-os-x/
-
+[mdb-intro]:   https://docs.mongodb.org/getting-started/shell/introduction/
+[mdb-shell]:   https://docs.mongodb.org/getting-started/shell/client/
 
 [mg-github]: https://github.com/Automattic/mongoose
 [mg-quick]:  http://mongoosejs.com/docs/index.html

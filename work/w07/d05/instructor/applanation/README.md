@@ -48,7 +48,7 @@ If so, write down those questions! We'll address them in the class share!
 
 Let's ask the class about the things we don't understand.
 
-We'll take 30 minutes to go around and address at least one question from each group.
+We'll take 40 minutes to go around and address at least one question from each group.
 
 ## Deployment (40 minutes)
 

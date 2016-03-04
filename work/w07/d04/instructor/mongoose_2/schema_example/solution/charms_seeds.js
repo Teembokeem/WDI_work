@@ -3,20 +3,28 @@ var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/necronomicon");
 
 var charmSchema = new mongoose.Schema({
-  purchaser:   String,
-  theme:       String,
-  material:    String,
-  cost:        Number,
-  description: String
+  purchaser:   {
+                 type: String,
+                 required: true,
+                 match: /(sophia|grammy|uncle colin)/i
+               },
+  theme:       { type: String, default: "Life Experience" },
+  material:    {
+                 type: String,
+                 required: true,
+                 enum: ["silver", "gold", "ceramic", "shell"]
+               },
+  cost:        { type: Number, default: 10, min: 10, max: 50 },
+  description: { type: String, maxlength: 50 }
 });
 
 var Charm = mongoose.model("Charm", charmSchema);
 
 Charm.remove({}, function(err, results) {
   Charm.create([
-    {material: "nickel-plated", theme: "tennis racket", purchaser: "Mom"},
-    {material: "nickel-plated", theme: "cross",         purchaser: "Grammy"},
-    {material: "wooden",        theme: "tennis racket", purchaser: "Uncle Colin"},
+    // {material: "silver", theme: "tennis racket", purchaser: "Mom"},
+    // {material: "nickel-plated", theme: "cross",         purchaser: "Grammy"},
+    // {material: "wooden",        theme: "tennis racket", purchaser: "Uncle Colin"},
     {
       material: "ceramic",
       theme: "bear",
@@ -36,8 +44,11 @@ Charm.remove({}, function(err, results) {
       description: "found and glued to a clasp during a Scout trip"
     }
     ], function(err, results) {
-      console.log(results);
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(results);
+      }
       mongoose.connection.close();
   });
 });
-

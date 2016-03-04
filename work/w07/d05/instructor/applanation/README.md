@@ -58,7 +58,7 @@ You'll also need to set up an account on mLab to set up your database.
 
 After you've signed up, you'll need to:
 
-1. :lightning: Create new DB (select Single-node:Sandbox, aka FREE)
+1. :lightning_cloud: Create new DB (select Single-node:Sandbox, aka FREE)
 2. Name your DB
 3. Create a DB User (give full permissions)
 4. Copy the "connect using a driver via …" :point_down:

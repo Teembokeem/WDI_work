@@ -100,6 +100,23 @@ When you're done, it should look like:
 
 <img alt="Example of the starter code." src="assets/local-solution-4.png" style="width: 400px;">
 
+### Part 5 - Save searches and venues to the database
+
+Next, we are going to store previous searches in order to make our app
+quickly send us to where we want to be!
+
+Add a model for `Search` that stores the search location/`place` and 
+search `term`. Each search also saves a list of `venues` with the 
+venues' `name`, address (`formattedAddress`), and a link to a website 
+(`url`) for them.
+
+Have all of your old searches listed on the index page, under the search
+form.
+
+When you're done, the  should look like:
+
+<img alt="Example of the starter code." src="assets/local-solution-5.png" style="width: 400px;">
+
 ### Part 6 - Render with EJS and return
 
 Now, instead of returning raw JSON, let's actually display the results!
@@ -119,7 +136,7 @@ Hints:
 
 When you're done, it should look something like:
 
-<img alt="Example of the starter code." src="assets/local-solution-5.png" style="width: 400px;">
+<img alt="Example of the starter code." src="assets/local-solution-6.png" style="width: 400px;">
 
 ---
 

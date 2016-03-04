@@ -96,10 +96,11 @@ You do not need to, but may:
 ### Suggested Ways to Get Started
 
 1.  **Identify roles** on the team, which may be (but are not limited to):
-    - Scrum Master: the leader of the Agile processes (stand-ups, retro)
-      and manager of Trello.
-    - GitHub Manager: the primary person for running Git and managing
-      code share for the whole team.
+    
+    - **Scrum Master**: the leader of the Agile processes (stand-ups, 
+      retro) and manager of Trello.
+    - **GitHub Manager**: the primary person for running Git and 
+      managing code share for the whole team.
     - Presentation Manager: the primary speaker for the pitch deck, who
       runs and creates the presentation.
     - Documentation: the person in charge of the README, etc.
@@ -107,6 +108,9 @@ You do not need to, but may:
       have to *accept* pull requests with new features.
     - Database manager: this person will be in charge of creating and
       managing the models and datasets used in the process.
+
+    You *don't have to fulfill any of these roles!* They are only there
+    in case someone on the team *really* wants to "own" these things.
 2.  **Read the docs for whatever technologies / frameworks / API’s you use**.
 3.  **Be consistent with your code style.** You're working in teams, but 
     you're only making one app per team. Make sure it looks like a unified

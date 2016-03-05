@@ -84,7 +84,7 @@ In order to do this, you will need to:
 1.  **Load your API keys in to the application using `dotenv`.**
 2.  Add the `request` module to your application.
 3.  Add an API call, and handle it, in the `POST /search` route
-    handler, found in [`/config/routes.js`](/starter/config/routes.js).
+    handler, found in [`/config/routes.js`](starter/config/routes.js).
 4.   *Note: the word in the Foursquare API for place will be `near`.*
 
 When you're done, it should look more like:

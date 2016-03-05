@@ -85,6 +85,7 @@ In order to do this, you will need to:
 2.  Add the `request` module to your application.
 3.  Add an API call, and handle it, in the `POST /search` route
     handler, found in [`/routes/root.js`](/starter/config/routes.js).
+4.   *Note: the word in the Foursquare API for place will be `near`.*
 
 When you're done, it should look more like:
 
@@ -94,7 +95,8 @@ When you're done, it should look more like:
 
 Now you must update the original form to include another search param,
 named `term`, that filters the results. In the form, it should display
-with the title "Search For."
+with the title "Search For." *Note: the word in the Foursquare API for
+`term` will be `query`.*
 
 When you're done, it should look like:
 
@@ -117,21 +119,22 @@ When you're done, the  should look like:
 
 <img alt="Example of the starter code." src="assets/local-solution-5.png" style="width: 400px;">
 
-### Part 6 - Render with EJS and return
+### Bonus Part 1 - Render with EJS and return
 
 Now, instead of returning raw JSON, let's actually display the results!
 Use an EJS view, and template the return data into it.
 
+First, make your old searches link to a new route, `SHOW search` that
+lists the venues in the search.
+
+Next, have your form submission, when successful, create a new search in
+Mongo and then redirect to the `SHOW search` route.
+
 Hints:
 
-1.  Update your routes to be RESTful! If you are listing venues,
+1.  Update your routes to be RESTful! If you are showing a search,
     what is the route structure and name?
-2.  If you're going to `GET /venues`, then your form needs to change 
-    it's `method` and `action` to match!
-3.  If you're changing to a Get request, data is submitted into query
-    parameters instead of body parameters. These can be found in
-    [`req.query`][ex-api-req-query]
-4.  Rendering EJS can be different than ERB. [Check out the docs][ejs],
+2.  Rendering EJS can be different than ERB. [Check out the docs][ejs],
     especially around "unescaped buffering" (printing HTML) and layouts.
 
 When you're done, it should look something like:
@@ -140,7 +143,7 @@ When you're done, it should look something like:
 
 ---
 
-### Bonus – Integrate the Google Maps API on the client-side
+### Bonus Part 2 – Integrate the Google Maps API on the client-side
 
 Add a small, embedded map for each location! Use the 
 [Google Javascript Map API][gmap-api]. This is especially difficult,

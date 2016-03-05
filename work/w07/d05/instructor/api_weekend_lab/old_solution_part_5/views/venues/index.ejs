@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <%- include('../_head'); %>
+<body>
+  <%- include('../_header'); %>
+
+  <p><a href="/">&lt; Back to search form.</a></p>
+
+  <% venues.forEach(function(venue) { %>
+    <div class="venue">
+      <h2><a href="<%= venue.url %>"><%= venue.name %></a></h2>
+      <p><%- venue.location.formattedAddress.join('<br>') %></p>
+    </div>
+  <% }); %>
+
+</body>
+</html>

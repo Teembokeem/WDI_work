@@ -1,4 +1,4 @@
-# Foursquare API App :tada:
+# Foursquare API App Solution (Part 3) :tada:
 
 Here is the code. Check, especially, the changes to:
 

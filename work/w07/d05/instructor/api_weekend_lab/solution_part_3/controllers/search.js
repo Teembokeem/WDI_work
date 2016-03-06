@@ -20,8 +20,8 @@ var baseUri = "https://api.foursquare.com/v2/venues/search";
 // file .env in to the current process, using
 // `require("dotenv").load()` in config/environment.
 
-var clientIdParam     = "?client_id="     + process.env.FOURSQUARE_CLIENT_ID;
-var clientSecretParam = "&client_secret=" + process.env.FOURSQUARE_CLIENT_SECRET;
+var clientIdParam     = "?client_id="     + env.FOURSQUARE_CLIENT_ID;
+var clientSecretParam = "&client_secret=" + env.FOURSQUARE_CLIENT_SECRET;
 
 // Adding the auth params together with the "versioning" param:
 // - https://developer.foursquare.com/overview/versioning

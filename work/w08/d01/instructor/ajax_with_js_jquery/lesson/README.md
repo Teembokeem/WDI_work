@@ -206,12 +206,12 @@ it `console.log`'s the response when an AJAX request actually succeeds, instead
 of when we type it in the console?
 
 ```js
-  var ajax = $.get('http://localhost:3000/fishes')
-    .then(function(data){
-      console.log(data);
-    }, function(err) {
-      console.log(err);
-    });
+var ajax = $.get('http://localhost:3000/fishes')
+  .then(function(data){
+    console.log(data);
+  }, function(err) {
+    console.log(err);
+  });
 ```
 
 Type that with me, and hit enter. If there's any luck, our connection will be a

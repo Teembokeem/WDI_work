@@ -1,0 +1,17 @@
+{
+  "name": "sbc_mongoose_ah",
+  "version": "1.0.0",
+  "description": "![Hmmm… Databases…](assets/sbc_database.png)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "locus": "^1.2.0",
+    "mongoose": "^4.4.6",
+    "prompt": "^1.0.0"
+  }
+}

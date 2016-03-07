@@ -1,0 +1,16 @@
+{
+  "name": "schemas_example",
+  "version": "0.1.0",
+  "main": "spike.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "locus": "^1.2.0",
+    "mongoose": "^4.4.5"
+  },
+  "scripts": {
+    "example": "node ./spike.js"
+  },
+  "description": "…",
+  "license": "MIT",
+  "repository": "…"
+}

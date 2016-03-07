@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Fancy App</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+  <!-- Source library scripts here (sometimes). -->
+  <script type="text/javascript" src="/js/lodash.js"></script>
+  <script type="text/javascript" src="/js/jquery-2.1.4.js"></script>
+</head>
+<body>
+<div class="content">
+  <header>
+    <h1>So Much Fancy</h1>
+  </header>
+
+  <main>
+    <p>Fancy things:</p>
+    <ul id="fanciness">
+    </ul>
+  </main>
+
+  <footer>
+    <hr>
+    <span>Fancy Since Forever, © 2015</span>
+  </footer>
+</div>
+
+<!-- Define HTML templates here. -->
+<script type="text/template" id="li-template">
+  <li class="fancy-item">
+    <%= name %><br>
+    <img src="<%= link %>" class="fancy-img">
+  </li>
+</script>
+
+<!-- Source local scripts here. -->
+<!-- <script type="text/javascript" src="/js/main.js"></script> -->
+
+</body>
+</html>

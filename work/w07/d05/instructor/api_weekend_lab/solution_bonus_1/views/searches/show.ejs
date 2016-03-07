@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('../partials/head') %>
+</head>
+<body>
+  <%- include('../partials/header') %>
+
+  <p><a href="/">&lt; Back to search form.</a></p>
+
+  <% search.venues.forEach(function(venue) { %>
+    <div class="venue">
+      <% if (venue.url) { %>
+        <h2><a href="<%= venue.url %>"><%= venue.name %></a></h2>
+      <% } else { %>
+        <h2><%= venue.name %></h2>
+      <% } %>
+      <p><%- venue.formattedAddress %></p>
+    </div>
+  <% }); %>
+
+</body>
+</html>

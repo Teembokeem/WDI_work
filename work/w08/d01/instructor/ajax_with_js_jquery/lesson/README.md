@@ -207,7 +207,7 @@ of when we type it in the console?
 
 ```js
 var ajax = $.get('http://localhost:3000/fishes')
-  .then(function(data){
+  .then(function(data) {
     console.log(data);
   }, function(err) {
     console.log(err);

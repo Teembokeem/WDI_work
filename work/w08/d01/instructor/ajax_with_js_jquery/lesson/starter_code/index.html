@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Derry's Fishin' Triumphs</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="../solution_code/independent_practice_solution.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron">
+
+            <div class="row">
+                <img class="pull-left" src="http://i.somethingawful.com/cliff/ihateyou/page-119-02.jpg" alt="derry">
+                <h1>Uncle Derry's Fishin' Triumphs</h1>
+            </div>
+            <h2>My phone number: (273) 555-2744</h2>
+            <h6>please call me.</h6>
+        </div>
+
+        <form id="new-fish">
+        <input type="text" name='fish[name]' id="fish-name" placeholder="Get Specific!">
+        <select name="fish[category]" id="fish-category">
+            <option value="Fish">Fish</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Corpse">Corpse</option>
+            <option value="Trash">Trash</option>
+        </select>
+        <input type="submit" value='Save My Catch'>
+        </form>
+
+        <ul id="fishes">
+        </ul>
+
+    </body>
+    <footer>
+        <strong><p>Please post selfies with your catches on
+            <a href="https://www.facebook.com/unclederry/timeline">
+                Uncle Derry's Selfie Emporium!
+            </a>
+        </p></strong>
+    </footer>
+</html>

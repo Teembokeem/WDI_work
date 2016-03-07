@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('../partials/head') %>
+</head>
+<body>
+  <%- include('../partials/header', {subHeading: 'Welcome'}) %>
+
+  <main>
+    <h3>Search <%= (Math.random() > 0.5) ? "Foursquare" : "Swarm" %></h3>
+    <form method="POST" action="/searches">
+      <label for="search">Place Name</label>
+      <input id="search" type="text" name="search[place]" placeholder="Cleveland, OH"/>
+      <br>
+      <label for="term" style="display: inline-block; width: 80px">Search For</label>
+      <input id="term" type="text" name="search[term]" placeholder="hot dogs"/>
+      <input type="submit" value="Search" />
+    </form>
+    <div class="search-list">
+      <ul>
+        <% searches.forEach(function(search) { %>
+          <li>
+            <a href="/searches/<%= search._id %>">
+              <%= search.place + ": " + search.term %>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </main>
+
+  <%- include('../partials/scripts') %>
+</body>
+</html>

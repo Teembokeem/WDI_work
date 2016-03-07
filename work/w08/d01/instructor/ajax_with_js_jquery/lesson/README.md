@@ -180,7 +180,7 @@ AJAX GET request with jQuery, together.
 If you hit `cmd+k` in your browser console, it'll clear it to start fresh.
 
 ```js
-  var ajax = $.get('http://localhost:3000/fishes');
+var ajax = $.get('http://localhost:3000/fishes');
 ```
 
 Let's look at what our `ajax` variable holds now.
@@ -190,7 +190,7 @@ Let's look at what our `ajax` variable holds now.
 That's some awesome info. What's this `responseJSON`? Looks useful:
 
 ```js
-  ajax.responseJSON
+ajax.responseJSON
 ```
 
 Well isn't that just exactly what we need? How handy!

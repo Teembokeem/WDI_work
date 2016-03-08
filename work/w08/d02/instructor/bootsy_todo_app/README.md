@@ -54,7 +54,7 @@ Let's quickly look at what the final app will resemble.
 Things to note from photos:
 
 - The navbar elements' bottom-border changes when on its corresponding page (**HINT**: Using the custom - written by me - class name `selected`)
-- In the todos page, when a Todo is clicked, it moves to the "Baby, I Gotta…" field.
+- In the todos page, when a Todo's checkbox is checked, it moves to the "Baby, I Gotta…" field.
 - Each todo has a bootsy level, from 0-5. The color of the hint corresponds to the level.
   - Bootsy Level 0: No background color, class name `bootsy0`
   - Bootsy Level 1: Blue background, class name `bootsy1`
@@ -65,15 +65,33 @@ Things to note from photos:
 
 ## Server-Side Templates v. Client-Side Templates
 
+![Bootsy](http://www.laut.de/Bootsy-Collins/bootsy-collins-1668.jpg)
 
+In this app we use BOTH server-side templates and client-side templates.
+
+**How do you know when you should use one or the other?**
+
+In terms of this app, we've made it pretty simple. However, in the future, it might be hard to tell. Here's a good way to think about it:
+
+- Is the data static or dynamic? By that I mean, do we see a resource changing in front of our eyes, or do we simply see a value that doesn't change on screen?
+
+If your data remains static, you can use server-side templates, as the data will probably not change between page loads.
+
+If the data is constantly changing, you need to use client-side templates to update the database AND update the view BETWEEN page-loads!
 
 ## Things We GOTTA Know!
 
-Delimiters.
+In order to get started, there's a few things you should know.
 
-Some stuff about JQuery UI draggables
-
-
+1. I changed the ejs delimiter to differentiate it between the LoDash delimiter.
+   - EJS: `<$= todo.name $>`
+   - LoDash: `<%= todo.name %>`
+2. **You shouldn't have to worry about CSS… much.** You most likely won't have to write any CSS. The only classes you'll need to know are:
+   - `todo-item` — for each new `<li>` in the todos box
+   - `remove-item` — for each delete `<span>` (or you may rewrite it with a button, since it's a little ugly)
+   - `bootsy0` - `bootsy5` — to give the li the correct corresponding background color
+   - `selected` — to show which page we're on in the navbar
+3. You must write your own `seeds.js` and `todo.js` model.
 
 ## Let Us Begin!
 
@@ -81,16 +99,10 @@ We'll be building this app for the remainder of the day. Here's how I expect we'
 
 1. Set up the back-end to ensure we are delivering data.
    - Create a todo model
-   - Set up our Todo controller
+   - Set up our Pages controller
    - Set up our routes
+   - Set up 
    - Ensure we can persist and access data using Postman
-2. Build our templates
-3. Build our scripts to fill said template
-   - Set up AJAX calls to gain access to data
-   - Attach data to templates
-4. Bring it all together and do a bit of styling
-   - Use provided css classnames to style page
-   - Improve UI by incorporating Drag and Drop with JQuery UI
 
 Today's going to be a busy day, so enjoy your break and then lets get to it.
 

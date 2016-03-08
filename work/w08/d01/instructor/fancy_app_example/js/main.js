@@ -4,29 +4,48 @@ $(document).ready(function() {
   console.log('document loaded!');
   var $destination,
       $templateEl,
+      templateString,
       renderLi,
       renderedHtmlView,
       fancyThings;
 
-  // CACHE DOM REFERENCES
+  /*
+   * CACHE DOM REFERENCES
+   */
 
   // Step 1: get a reference to where we
   // insert the templated code.
   $destination = $('#fanciness');
 
   // Step 2: get a reference to the actual
-  // "Underscore"-syntax template on the
-  // page.
-  $templateEl  = $('#li-template');
+  // "Underscore/Lodash"-syntax template on
+  // the page, and get it's internal HTML
+  // as a string.
+  $templateEl    = $('#li-template');
+  templateString = $templateEl.html();
 
-  // CREATE HELPER FUNCTIONS
+  // Step 2 (alternate): use the new style
+  // of JS string delimiters ("template strings")
+  // to create a template string!
+  templateString = `
+<li class="fancy-item">
+  <span><%= name %></span><br>
+  <img src="<%= link %>" class="fancy-img">
+</li>
+  `;
+
+  /*
+   * CREATE RENDER FUNCTION
+   */
 
   // Step 3: generate the render function by
   // passing the template to Underscore's
   // template method.
-  renderLi = _.template($templateEl.html());
+  renderLi = _.template(templateString);
 
-  // RENDER!
+  /*
+   * RENDER!
+   */
 
   // Step 4: ensure that you have data to
   // pass in to the template with the

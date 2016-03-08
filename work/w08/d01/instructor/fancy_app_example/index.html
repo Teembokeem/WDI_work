@@ -6,12 +6,12 @@
   <title>Fancy App</title>
   <meta name="description" content="">
 
-  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
   <!-- Source library scripts here (sometimes). -->
-  <script type="text/javascript" src="/js/lodash.js"></script>
-  <script type="text/javascript" src="/js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/lodash.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 </head>
 <body>
 <div class="content">
@@ -31,16 +31,16 @@
   </footer>
 </div>
 
-<!-- Define HTML templates here. -->
+<!-- Define HTML templates here (if doing so). -->
 <script type="text/template" id="li-template">
   <li class="fancy-item">
-    <%= name %><br>
+    <span><%= name %></span><br>
     <img src="<%= link %>" class="fancy-img">
   </li>
 </script>
 
 <!-- Source local scripts here. -->
-<!-- <script type="text/javascript" src="/js/main.js"></script> -->
+<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>

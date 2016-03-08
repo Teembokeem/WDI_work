@@ -6,9 +6,9 @@
 
 | Lesson Objectives: SWBAT                 |
 | ---------------------------------------- |
-| Use the underscore library to place dynamic parts of HTML |
-| Use templates within EJS                 |
-| Build a full MEN stack app               |
+| Use the LoDash library to place dynamic parts of HTML |
+| Use EJS templates                        |
+| Build a full "MEN" stack app             |
 | Use AJAX calls within a full stack application |
 
 #### Road Map
@@ -41,17 +41,29 @@ Let's quickly look at what the final app will resemble.
 
 ![home page](./public/readme_images/home_page.png)
 
-**About Page**: Needs only the amount of todos in the db.
+**About Page**: Needs only the amount of todos in the db - should be solved by server-side templating.
 
 ![about page](./public/readme_images/about_page.png)
 
-**Todos Page**: Needs a significant amount of data to CRUD a resource. Additionally, 
+**Todos Page**: This page needs a significant amount of data to CRUD our Todo resource. Additionally, if we're planning to handle CRUDing between page-loads, we'll need client-side templates with LoDash. 
 
 ![todos page](./public/readme_images/todos_page.png)
 
+#### Take 5 minutes to review the code.
 
+Things to note from photos:
 
-## Understanding Lodash templates with AJAX
+- The navbar elements' bottom-border changes when on its corresponding page (**HINT**: Using the custom - written by me - class name `selected`)
+- In the todos page, when a Todo is clicked, it moves to the "Baby, I Gotta…" field.
+- Each todo has a bootsy level, from 0-5. The color of the hint corresponds to the level.
+  - Bootsy Level 0: No background color, class name `bootsy0`
+  - Bootsy Level 1: Blue background, class name `bootsy1`
+  - Bootsy Level 2: Green background, class name `bootsy2`
+  - Bootsy Level 3: Brown background, class name `bootsy3`
+  - Bootsy Level 4: Red background, class name `bootsy4`
+  - Bootsy Level 5: Gold background, class name `bootsy5`
+
+## Server-Side Templates v. Client-Side Templates
 
 
 

@@ -39,15 +39,15 @@ Let's quickly look at what the final app will resemble.
 
 **Home Page**: No data is being pulled from the DB.
 
-![home page](./public/readme_images/home_page.png)
+![home page](./readme_images/home_page.png)
 
 **About Page**: Needs only the amount of todos in the db - should be solved by server-side templating.
 
-![about page](./public/readme_images/about_page.png)
+![about page](./readme_images/about_page.png)
 
 **Todos Page**: This page needs a significant amount of data to CRUD our Todo resource. Additionally, if we're planning to handle CRUDing between page-loads, we'll need client-side templates with LoDash. 
 
-![todos page](./public/readme_images/todos_page.png)
+![todos page](./readme_images/todos_page.png)
 
 #### Take 5 minutes to review the code.
 

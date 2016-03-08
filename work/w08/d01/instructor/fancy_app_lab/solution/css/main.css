@@ -1,0 +1,184 @@
+/*
+ * Since this is not Sass, the below syntax
+ * will break. It's only to help you identify
+ * the colors in the example.
+ *
+ * $navy:       #373C49; // nav bar, headers, caption name/cost
+ * $dark-gray:  #96999E; // nav bar options, subheadings, caption data
+ * $light-gray: #EAEBEC; // background, icons, highlighted options
+ * $borders:    #DBDBDC; // borders on the items
+ */
+
+h1 {
+  font-size:   30px;
+  font-weight: bold;
+  color:       #373C49;
+}
+
+body {
+  font-size: 16px;
+  background-color: #EAEBEC;
+  padding-top: 95px;
+  color: #96999E;
+}
+
+/*
+ ******************* NAV BAR *******************
+ */
+
+nav {
+  background-color: #373C49;
+}
+
+nav,
+.caption {
+    font-size: 13px;
+}
+
+.nav > li > a:link,
+.nav > li > a:visited,
+.nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a:focus {
+  color: inherit;
+  background-color: transparent;
+}
+
+.nav > li.active > a,
+.nav > li > a:hover,
+.nav > li > a:active {
+  color: #EAEBEC;
+}
+
+.navbar {
+  /*-webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;*/
+  box-shadow: 0 1px 6px 0px #999;
+}
+
+.logo {
+  display: inline-block;
+  width: 12px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.logo-white {
+  background: url("../images/icon-logo-white.png") no-repeat;
+}
+
+.logo-gray {
+  background: url("../images/icon-logo-gray.png") no-repeat;
+}
+
+.nav-center {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  margin-left: -8px;
+}
+
+/*
+ ******************* MAIN SECTION *******************
+ */
+
+main {
+  margin: 0 auto;
+}
+
+.content {
+  width: 640px;
+}
+
+/*
+ ******************* FANCY LIST *******************
+ */
+
+.fancy-list-container {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+/*
+ ******************* FANCY ITEM *******************
+ */
+
+.fancy-item-wrapper {
+  border-radius: 6px;
+  border: 1px solid #DBDBDC;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.fancy-item img {
+  width: 100%;
+  border-bottom: 1px solid #DBDBDC;
+}
+
+.caption {
+  padding: 10px 11px 8px;
+  font-weight: 200;
+}
+
+.caption-data {
+  border-bottom: 1px solid #DBDBDC;
+}
+
+.caption-name,
+.caption-cost {
+  color: #373C49;
+}
+
+.caption-cost,
+.caption-actions {
+  font-weight: bold;
+}
+
+.caption > .buttons > a {
+  padding: 0 10px;
+}
+
+.caption > .buttons > a > span {
+  padding-right: 4px;
+}
+
+.caption-actions > .buttons,
+.caption-actions > .buttons > * {
+  color: #96999E;
+  opacity: 0.85;
+}
+
+/*
+ ******************* FANCY ITEM SIZES *******************
+ */
+
+.fancy-item {
+  width: 312px;
+  display: inline-block;
+}
+
+.fancy-item.right {
+  margin-left: 11px;
+}
+
+.fancy-item.wide {
+  width: 100%;
+  display: block;
+}
+
+/* using nth-child */
+
+/*.fancy-item {
+  width: 312px;
+  display: inline-block;
+}
+
+.fancy-item:nth-child(3n) {
+  margin-left: 11px;
+}
+
+.fancy-item:nth-child(3n+1) {
+  width: 100%;
+  display: block;
+}*/

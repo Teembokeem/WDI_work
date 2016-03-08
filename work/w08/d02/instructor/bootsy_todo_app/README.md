@@ -1,4 +1,4 @@
-# Make Me Bootsy, Baby
+# Make Me Bootsy, Baby!
 
 ![Bootsy Baby](http://2ap6ndle7dn3hxy4u3p0d587.wpengine.netdna-cdn.com/wp-content/uploads/2010/11/bootsy-collins-bootzilla.jpeg)
 
@@ -23,7 +23,7 @@
 
 ![](http://okp-cdn.okayplayer.com/wp-content/uploads/2014/09/JBsPhoto.jpg)
 
-Today we'll be building a Todo app all about [Bootsy Collins](https://en.wikipedia.org/wiki/Bootsy_Collins), The Man Who Put Bass In Yer Face (back left, here seen in the JBs).
+Today we'll be building a Todo app all about [Bootsy Collins](https://en.wikipedia.org/wiki/Bootsy_Collins), The Man Who Put Bass In Yer Face (back left, seen here in the JBs - James Brown's Band).
 
 As a lousy bass player, I always wondered, how did Bootsy get so dang good at bass?
 
@@ -31,7 +31,9 @@ As a poor dresser, I always wondered, how did Bootsy get so dang good at dressin
 
 As a poor chiller, I alwasy wondered, how did Bootsy chill so dang hard!?
 
-Quickly, I realized I needed an application that would help me become more like Bootsy Collins. Could you build me a todo app that could help me lead a more Bootsy lifestyle?
+Quickly, I realized I needed an application that would help me become more like Bootsy Collins. 
+
+**Could you build me a todo app that could help me lead a more Bootsy lifestyle?**
 
 ## Pre-Planning
 
@@ -108,18 +110,24 @@ We'll be building this app for the remainder of the day. Here's how I expect we'
    - Create seeds for that todo
    - Set up our pages controller
    - Set up routes for our pages
+
 2. Complete server side templating for the about page
 3. Make the navbar reflect which page we're on
 4. Todos Page - Move through this in bite-sized pieces:
    - First, make an API controller for Todos, so you can interact with them using AJAX
    - Require the controller in your routes file
+
 5. Go through each action (create, index, update, destroy) - Let's assume we start with #create:
    - Create the create action on the Todo API controller.
    - Create a POST route for the create action on the API controller.
    - Move to client side - be sure you can access the new todo from the form
    - Then try and post the todo to your database - check in Postman to see if it's persisted
    - Finally, take that new data and prepend/append it to the Bootsy todo column
+
 6. Once you've finished all the actions, you're done!
+   - [Deploy your app](https://github.com/ga-students/WDI_DTLA_8/tree/master/work/w07/d05/instructor/applanation)!
+   
+
    - **BONUS**: Use jQueryUI's drag and drop feature, and remove the ugly checkbox!
 
 Today's going to be a busy day, so enjoy your break and then lets get to it.

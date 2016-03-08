@@ -25,19 +25,31 @@
 
 Today we'll be building a Todo app all about [Bootsy Collins](https://en.wikipedia.org/wiki/Bootsy_Collins), The Man Who Put Bass In Yer Face (back left, here seen in the JBs).
 
-As a poor bass player, I always wondered, how did Bootsy get so dang good at bass?
+As a lousy bass player, I always wondered, how did Bootsy get so dang good at bass?
 
 As a poor dresser, I always wondered, how did Bootsy get so dang good at dressing himself?
 
 As a poor chiller, I alwasy wondered, how did Bootsy chill so dang hard!?
 
-Quickly, I realized I needed an application that would help me become more like Bootsy Collins. Could you build me a todo application that could help me lead a more Bootsy lifestyle?
+Quickly, I realized I needed an application that would help me become more like Bootsy Collins. Could you build me a todo app that could help me lead a more Bootsy lifestyle?
 
 ## Pre-Planning
 
-Here's what the final app will look like. Let's write out our model schema for our Todos as well.
+Let's quickly look at what the final app will resemble.
 
-JQuery UI.
+**Home Page**: No data is being pulled from the DB.
+
+![home page](./public/readme_images/home_page.png)
+
+**About Page**: Needs only the amount of todos in the db.
+
+![about page](./public/readme_images/about_page.png)
+
+**Todos Page**: Needs a significant amount of data to CRUD a resource. Additionally, 
+
+![todos page](./public/readme_images/todos_page.png)
+
+
 
 ## Understanding Lodash templates with AJAX
 

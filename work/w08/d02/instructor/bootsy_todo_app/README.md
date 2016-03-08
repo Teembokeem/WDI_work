@@ -81,6 +81,10 @@ If the data is constantly changing, you need to use client-side templates to upd
 
 ## Things We GOTTA Know!
 
+![The Great Bootsy](http://www.edroman.com/guitars/bootsy/images/bootsy_collins89054893.jpg)
+
+**Listen to the Great Bootsy!**
+
 In order to get started, there's a few things you should know.
 
 1. I changed the ejs delimiter to differentiate it between the LoDash delimiter.
@@ -93,16 +97,30 @@ In order to get started, there's a few things you should know.
    - `selected` — to show which page we're on in the navbar
 3. You must write your own `seeds.js` and `todo.js` model.
 
-## Let Us Begin!
+## Let Us Begin, Bobble!
+
+![Bootsy](http://api.ning.com/files/Vl9kv5g9jpKhFclMV5OI8yJviage0LTTabGSzq9TSTFkczmxv25Ic*OPZTx9HG6sAZj5CsgmuhE0FnCfLIF73a34QQIAJCYC/Banner_Bootsy.jpg?width=750)
 
 We'll be building this app for the remainder of the day. Here's how I expect we'll start:
 
-1. Set up the back-end to ensure we are delivering data.
+1. Set up the basics.
    - Create a todo model
-   - Set up our Pages controller
-   - Set up our routes
-   - Set up 
-   - Ensure we can persist and access data using Postman
+   - Create seeds for that todo
+   - Set up our pages controller
+   - Set up routes for our pages
+2. Complete server side templating for the about page
+3. Make the navbar reflect which page we're on
+4. Todos Page - Move through this in bite-sized pieces:
+   - First, make an API controller for Todos, so you can interact with them using AJAX
+   - Require the controller in your routes file
+5. Go through each action (create, index, update, destroy) - Let's assume we start with #create:
+   - Create the create action on the Todo API controller.
+   - Create a POST route for the create action on the API controller.
+   - Move to client side - be sure you can access the new todo from the form
+   - Then try and post the todo to your database - check in Postman to see if it's persisted
+   - Finally, take that new data and prepend/append it to the Bootsy todo column
+6. Once you've finished all the actions, you're done!
+   - **BONUS**: Use jQueryUI's drag and drop feature, and remove the ugly checkbox!
 
 Today's going to be a busy day, so enjoy your break and then lets get to it.
 

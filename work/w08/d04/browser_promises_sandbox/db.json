@@ -1,0 +1,148 @@
+{
+  "profile": {
+    "id": 3
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Jim",
+      "email": "jim@ga.co"
+    },
+    {
+      "id": 2,
+      "name": "Phil",
+      "email": "pj@ga.co"
+    },
+    {
+      "id": 3,
+      "name": "Dean",
+      "email": "deano@ga.co"
+    },
+    {
+      "id": 4,
+      "name": "Ezra",
+      "email": "ez-money@msn.com"
+    },
+    {
+      "id": 5,
+      "name": "Mer",
+      "email": "mermaid@ga.co"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Information about Cats",
+      "author": "Mer",
+      "comments": [
+        {
+          "commenter": "Dean",
+          "text": "Left me wanting more!"
+        },
+        {
+          "commenter": "Dean",
+          "text": "As in cat facts."
+        },
+        {
+          "commenter": "Mer",
+          "text": "Thanks!"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Catsabration: a Cat Celebration!",
+      "author": "Mer",
+      "comments": []
+    },
+    {
+      "id": 3,
+      "title": "LA Hotspots for MockRock, an Insider's Guide",
+      "author": "Jim",
+      "comments": [
+        {
+          "commenter": "Phil",
+          "text": "GWAR at the Echoplex. You in?"
+        },
+        {
+          "commenter": "Jim",
+          "text": "No."
+        },
+        {
+          "commenter": "Ezra",
+          "text": "Yes."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Cats: what's the Deal?",
+      "author": "Jim",
+      "comments": []
+    },
+    {
+      "id": 5,
+      "title": "Cat Gifs: Enough with the Hate",
+      "author": "Dean",
+      "comments": [
+        {
+          "commenter": "Mer",
+          "text": "Hear hear!"
+        },
+        {
+          "commenter": "Jim",
+          "text": "I don't get it. Seriously."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "More Information about Cats",
+      "author": "Mer",
+      "comments": [
+        {
+          "commenter": "Dean",
+          "text": "All salient points."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "The Internet of Wings: a Tribute to Paul McCartney Gifs",
+      "author": "Dean",
+      "comments": [
+        {
+          "commenter": "Phil",
+          "text": "So underrated, right?"
+        },
+        {
+          "commenter": "Dean",
+          "text": "I know!"
+        },
+        {
+          "commenter": "Jim",
+          "text": "This is worse than the cats!"
+        },
+        {
+          "commenter": "Mer",
+          "text": "Don't be hatin, J!"
+        },
+        {
+          "commenter": "Dean",
+          "text": "Let's keep it respectful."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Spurs: Boring or Not-so Boring?",
+      "author": "Ezra",
+      "comments": [
+        {
+          "commenter": "Ezra",
+          "text": "Hello?"
+        }
+      ]
+    }
+  ]
+}

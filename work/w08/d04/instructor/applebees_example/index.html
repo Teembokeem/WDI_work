@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><!-- Always first. -->
+
+  <title>Async Applebee's</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+  <header>
+    <img class="underlay" src="/images/interior.jpg">
+    <h1 class="logo overlay">Applebee's</h1>
+    <h2 class="overlay">Welcome to Applebee's!</h2>
+    <h3 class="overlay">We'll seat you as soon as possible.</h3>
+  </header>
+  <main class="cleared">
+    <table class="content">
+      <thead><tr><th>Visitor</th><th>Host</th></tr></thead>
+      <tbody><tr>
+
+        <td class="visitor">
+          <div class="option event">
+            <span><em>
+              "Grab a seat and wait…"
+            </em></span>
+            <button>Sit and Listen</button>
+          </div>
+
+          <div class="option callback">
+            <span><em>
+              "Give us your number.
+              We'll call you back."
+            </em></span>
+            <input id="phone" name="phone" type="text">
+            <button>Wait for a Call Back</button>
+          </div>
+
+          <div class="option promise">
+            <span><em>
+              "Take a buzzer. We promise to
+              trigger it when we're ready."
+            </em></span>
+            <button>Take a Buzzer</button>
+          </div>
+        </td>
+
+        <td class="host">
+          <div class="option seat">
+            <button>Seat Table!</button>
+            <span><strong class="message"></strong></span>
+          </div>
+
+          <div class="option buzzer hidden">
+            <button>Check Buzzer</button>
+          </div>
+        </td>
+
+      </tr></tbody>
+    </table>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

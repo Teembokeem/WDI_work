@@ -34,12 +34,17 @@ together.**
 Your team must:
 
 - **Present an idea** to the instructors with a **deck**,
-  covering the period of [project inception][inception], that includes:
-  - a list of included technologies
-  - a list of third-party APIs consumed (if any)
-  - which OAuth provider(s) your app will use for authentication
-  - wireframes for the central interactions, and
-  - an underlying data model.
+  covering the period of [project inception][inception], that includes 
+  (**at least**):
+  - the application name, slogan and elevator pitch,
+  - your team members and their roles/goals,
+  - the problem you are going to solve with your app,
+  - the solution your app provides, and the 3 central values or benefits of it,
+  - your product's MVP:
+    - wireframes for the central interactions, and
+    - an underlying data model,
+    - a list of included technologies and third-party APIs consumed (if any)
+      - this inlcudes the OAuth provider(s) your app will use for authentication
 - **Document your app's RESTful API**.
 - **Craft thoughtful user stories together**, as a team, and manage
   and distribute those user stories to team members based on skills and

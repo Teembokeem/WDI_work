@@ -261,25 +261,6 @@ Let Tilda prove it to you!
 
 As you can see, the data is synced in (nearly) real time!
 
-#### More on `ng-model`
-
-You don't actually need a "skeleton" for data in the controller. You can actually accomplish the same thing without a `newHint` object in your controller.
-
-However, you must can still refer to this mystery object within your controller and view! This goes against most of what you know about JavaScript, but I assure you, Angular sorts it out through it's magic. Simply by attaching:
-
-```html
-<form ng-submit="vm.addHint()">
-          <input ng-model="vm.newHint.wisdom" id="darken-text" class="shade" type="text" placeholder='But think...'>
-        </form>
-        <p class="shade">About to incorporate hint:
-          <strong>{{ vm.newHint.wisdom }}</strong>
-		</p>
-```
-
-We can now call to `vm.newHint` in our controller without ever instantiating it!
-
-Try it out - delete the skeleton from your code!
-
 ## Tilda's Secrets
 
 ![](http://animalnewyork.com/wp-content/uploads/david-bowie-tilda-swinton.jpg)

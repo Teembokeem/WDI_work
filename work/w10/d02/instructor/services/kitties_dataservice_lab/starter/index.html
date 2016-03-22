@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Kitten Adoptions App</title>
+  <meta name="description" content="lots of ng">
+
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body ng-app="app">
+
+  <div id="container" ng-controller="KittiesController as vm">
+
+    <div class="left-container">
+      <h1>Up for Adoption</h1>
+      <div class="dashed" ng-repeat="k in vm.kittiesList | filter: {adopted: false}">
+        <h2>My name is {{k.catName}}</h2>
+        <p>I am {{k.monthsOld}} months old.</p>
+        <p>I am a {{k.gender}}.</p>
+        <img ng-src={{k.image}}>
+        <p>Adopt?<input type="checkbox" ng-model="k.adopted"></p>
+        <button ng-click="vm.deleteKitty(k)">Delete {{k.catName}}</button>
+      </div>
+    </div>
+
+    <div class="right-container">
+      <h1>♡ At their 4ever homes ♡</h1>
+      <div class="dashed" ng-repeat="k in vm.kittiesList | filter: {adopted: true}">
+        <h2>My name is {{k.catName}}</h2>
+        <p>I am {{k.monthsOld}} months old.</p>
+        <p>I am a {{k.gender}}.</p>
+        <img ng-src={{k.image}}>
+        <p>Adopt?<input type="checkbox" ng-model="k.adopted"></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/js/app/app.module.js"></script>
+  <script type="text/javascript" src="/js/app/kitties/kitties.controller.js"></script>
+</body>
+</html>

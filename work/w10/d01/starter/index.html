@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="hintApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Tilda's hints</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body class="container" ng-controller="HintsController as vm">
+
+      <header>
+        <div class="row">
+          <img class="tilda-head three columns" src="http://i.imgur.com/Lk4GzwZ.jpg" alt="tilda">
+          <div class="nine columns">
+            <h1>Advice on this Chaotic Life <span class="sm-header-text">
+              from <a href="https://twitter.com/nottildaswinton">Tilda Swinton</a>
+            </span></h1>
+          </div>
+        </div>
+        <br>
+      </header>
+
+      <div class="image-here">
+        <h5 class="shade">You have
+            <span ng-bind="vm.allHints.length"></span>
+                          hints to incorporate into your chaotic life!</h5>
+        <form ng-submit="vm.addHint()">
+          <input ng-model="vm.newHint.wisdom" id="darken-text" class="shade" type="text" placeholder='But think...'>
+        </form>
+        <p class="shade" ng-if='vm.newHint.wisdom'>Considering this hint:
+          <strong>{{vm.newHint.wisdom}}</strong>
+        </p>
+        <ul>
+          <li class="hint shade" ng-repeat="hint in vm.allHints">
+            <span ng-class="{'incorporated' : hint.incorporated}" ng-click="hint.incorporated = !hint.incorporated">
+              {{hint.wisdom}}
+            </span>
+              <button class="destroy" ng-click="vm.remove(hint)">X</button>
+          </li>
+        </ul>
+      </div>
+    <!-- <script src="js/hints_controller.js"></script> -->
+
+  </body>
+</html>

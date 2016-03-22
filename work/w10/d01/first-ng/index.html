@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body class="container" style="background-color:{{crazyColor}}" ng-controller="MainController">
+  <h1>{{title}}</h1>
+  <label>Color: <input type="text" class="form-control" ng-model="crazyColor"></label>
+  <label>Color: <input type="text" class="form-control" ng-model="title"></label>
+  <div ng-show="showNames">
+     Names:
+     <ul>
+       <li ng-repeat="name in names">{{name | uppercase}}</li>
+     </ul>
+     {{extraNames.length ? 'Extra Names' : ''}}
+     <ul>
+       <li ng-repeat="name in extraNames">{{name | lowercase}}</li>
+     </ul>
+     <button class="btn btn-success" ng-click="addName()">Add Name</button>
+   </div>
+   <br>
+     <button class="btn btn-info" ng-click="showNames = !showNames">
+      {{showNames ? "Hide Names" : "Show Names"}}
+     </button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    /*display: inline-block;*/
+}
+
+.dashed {
+
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-container, .right-container {
+
+}
+h1 {
+
+}
+
+.kitties {
+  list-style-type: none;
+}

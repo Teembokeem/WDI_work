@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html ng-app="kittiesApp">
+	<head>
+
+		<title>Kitties App!</title>
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+
+	<body ng-controller="kController as vm">
+    <nav class="nav nav-bar">
+      <h1>K A T Z | adoption</h1>
+    </nav>
+
+
+    <ul class="container">
+      <li class="kitties" ng-repeat="cat in vm.adoptList">
+        <span> name: {{cat.catName | uppercase}} </span><br>
+        <span> gender: {{cat.gender}} </span><br>
+        <span> age: {{cat.monthsOld}} </span><br>
+        <span>{{cat.adopted ? "Adopted!" : "Not Adopted...yet!"}} </span><br>
+        <img ng-src="{{cat.image}}" alt="">
+        <button class="destroy" ng-click="vm.remove(cat)">X</button>
+
+      </li>
+    </ul>
+
+
+    <form ng-submit="vm.addCat()">
+      <input type="text" placeholder="name of the cat" ng-model="vm.newCat.catName">
+      <input type="text" placeholder="age in months" ng-model="vm.newCat.monthsOld">
+      <input type="text" placeholder="gender" ng-model="vm.newCat.gender">
+      <input type="submit">
+    </form>
+
+
+
+
+
+    <!--Sourcing Angular-->
+    <script src="js/angular.min.js"></script>
+		<!-- Source in module -->
+    <script src="js/main.js"></script>
+		<!-- Source in controller -->
+    <script src="js/KittiesController.js"></script>
+	</body>
+</html>

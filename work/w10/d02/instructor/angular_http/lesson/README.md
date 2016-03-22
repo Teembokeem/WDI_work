@@ -106,8 +106,8 @@ function PresidentsController($http){
   function getPresidents(){
     $http
       .get('http://localhost:3000/api/presidents')
-      .then(function(response){
-        vm.all = response.data.presidents;
+      .then(function(res){
+        vm.all = res.data.presidents;
     }, function(err) {
           console.log(err);
     });
@@ -128,8 +128,8 @@ function PresidentsController($http){
   function getPresidents(){
     $http
       .get('http://localhost:3000/api/presidents')
-      .then(function(response){
-        vm.all = response.data.presidents;
+      .then(function(res){
+        vm.all = res.data.presidents;
     }, function(err) {
           console.log(err);
     });
@@ -141,9 +141,9 @@ function PresidentsController($http){
 }
 ```
 
-We call `$http`, then our favorite HTTP verb, `.get`. There's one for `.post`, `.put`, and `.delete` too. It's asynchronous, so we'll use `.then` - a promise -to make sure when it's _done_ it'll do what we want. And what we want is just to overwrite our `.all` array with the response we get back.
+We call `$http`, then our favorite HTTP verb, `.get`. There's one for `.post`, `.put`, and `.delete` too. It's asynchronous, so we'll use `.then`, a promise, to make sure when it's _done_ it'll do what we want. And what we want is just to overwrite our `.all` array with the response we get back.
 
-Feel free to `console.log(response)` and see everything that comes back. `.data` is just the data, `.presidents` is the key inside our JSON holding an array of presidents.
+Feel free to `console.log(res)` and see everything that comes back. `.data` is just the data, `.presidents` is the key inside our JSON holding an array of presidents.
 
 That's all we're doing in that function. Afterwords, we literally just run the function, which runs when we first load up the app. Easy.
 
@@ -173,9 +173,9 @@ function PresidentsController($http){
   function getPresidents(){
     $http
       .get('http://localhost:3000/api/presidents')
-      .then(function(response){
+      .then(function(res){
         // Where is 'this' scoped to?
-        this.all = response.data.presidents;
+        this.all = res.data.presidents;
     });
   }
 // ...
@@ -195,8 +195,8 @@ function PresidentsController($http){
   function getPresidents(){
     $http
       .get('http://localhost:3000/api/presidents')
-      .then(function(response){
-        vm.all = response.data.presidents;
+      .then(function(res){
+        vm.all = res.data.presidents;
     }, function(err) {
           console.log(err);
     });
@@ -224,7 +224,7 @@ function PresidentsController($http){
   var vm = this;
   vm.all = [];
   // ...
-  
+
   function addPresident(){
     $http
     .post('http://localhost:3000/api/presidents', vm.newPresident)
@@ -235,7 +235,7 @@ function PresidentsController($http){
       console.log(err);
     });
   }  	
-  
+
   // ...
 }
 ```

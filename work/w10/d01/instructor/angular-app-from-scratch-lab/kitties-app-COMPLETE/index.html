@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<title>COMPLETE Kitties App!</title>
+
+		<link rel="stylesheet" href="css/style.css">
+		
+	</head>
+
+	<body ng-app="kittiesApp"> <!-- This is where we use the ng-app directive to auto-bootstrap the Angular app that we named in app.js, kittiesApp -->
+
+		<div id="container" ng-controller="KittiesController as kitties"> <!-- This is where we use the ng-controller directive to bring in the controller we constructed in app.js, KittiesController -->
+			
+			<div class="left-container">
+				<h1>Kitties for Adoption</h1>
+				<div class="dashed" ng-repeat="k in kitties.kittiesList | filter: false"> <!-- Here, we're filtering kitties based on the 'adopted' boolean (looking for 'false'). Only kitties with 'false' present as a value will appear in this column. -->
+					<h2>My name is {{k.catName}}</h2> <!-- Displays the cat's name based on the object in $scope.kitties. -->
+					<p>I am {{k.monthsOld}} months old.</p> <!-- Displays the cat's age based on the object in $scope.kitties. -->
+					<p>I am a {{k.gender}}.</p> <!-- Displays the cat's gender based on the object in $scope.kitties. -->
+					<img ng-src={{k.image}}> <!-- Displays an image with a path noted in the object in $scope.kitties. -->
+					<p>Adopt?<input type="checkbox" ng-model="k.adopted"></p> <!-- NG-MODEL = The ng-model directive binds the value of HTML controls (input, select, textarea) to application data. Allows user to set boolean value of 'adopted' in $scope.kitties[k]. -->
+					<button ng-click="kitties.deleteKitty(k)">Delete {{k.catName}}</button>
+				</div>
+			</div>
+
+			<div class="right-container">
+				<h1>At their forever homes <3</h1>
+				<div class="dashed" ng-repeat="k in kitties.kittiesList | filter: true"> <!-- Here, we're filtering kitties based on the 'adopted' boolean (looking for 'true'). Only kitties with 'true' present as a value will appear in this column. -->
+					<h2>My name is {{k.catName}}</h2>
+					<p>I am {{k.monthsOld}} months old.</p>
+					<p>I am a {{k.gender}}.</p>
+					<img ng-src={{k.image}}>
+					<p>Adopt?<input type="checkbox" ng-model="k.adopted"></p>
+				</div>
+			</div>
+		</div>
+		
+<!-- At the bottom so it loads in after the page has been loaded, because the page loads top to bottom -->
+    		<!--Sourcing Angular-->		
+		<script type="text/javascript" charset="utf-8" src="js/angular.min.js"></script>
+		<!-- Source in module -->
+		<script type="text/javascript" src="js/main.js"></script>
+		<!-- Source in controller -->
+		<script type="text/javascript" src="js/KittiesController.js"></script>
+
+	</body>
+</html>

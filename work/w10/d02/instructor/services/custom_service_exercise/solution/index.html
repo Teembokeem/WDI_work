@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Angular Template</title>
+  <meta name="description" content="lots of ng">
+
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body ng-app="app">
+  <header ng-controller="NavController as vm">
+    <h1> <i class="glyphicon glyphicon-eye-open"></i> {{ vm.data.newMessage }} </h1>
+  </header>
+
+  <section class="content" ng-controller="MainController as vm">
+    <input type="text" size="40" ng-model="vm.data.newMessage">
+    <p>{{ vm.data.newMessage }}</p>
+    <p><button ng-click="vm.logMessage();" class="btn btn-primary">Log</button></p>
+  </section>
+
+  <hr>
+
+  <footer>
+    <span>Made with <i class="glyphicon glyphicon-star"></i> in DTLA.</span>
+  </footer>
+
+  <!-- App scripts -->
+  <script src="/js/app/app.module.js"></script>
+  <script src="/js/app/message.dataservice.js"></script>
+  <script src="/js/app/layout/nav.controller.js"></script>
+  <script src="/js/app/layout/main.controller.js"></script>
+</body>
+</html>

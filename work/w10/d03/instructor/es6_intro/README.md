@@ -17,6 +17,18 @@ In today's exercise:
 
 For each, you must uncomment the `require('./exercises/filename.js');` and work on the corresponding file.
 
+**You need to make a `.babelrc` file in this file!**
+
+It must contain the following:
+
+```js
+{
+  "presets": ["es2015"]
+}
+```
+
+Now you're ready to go!!
+
 ## String Interpolation
 
 Instead of adding variables together with strings, you can simply use embedded Javascript!

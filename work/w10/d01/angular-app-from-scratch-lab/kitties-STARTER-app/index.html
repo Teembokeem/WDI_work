@@ -24,7 +24,7 @@
         <span> age: {{cat.monthsOld}} </span><br>
         <span>{{cat.adopted ? "Adopted!" : "Not Adopted...yet!"}} </span><br>
         <img ng-src="{{cat.image}}" alt="">
-        <button class="destroy" ng-click="vm.remove(cat)">X</button>
+        <button class="destroy" ng-click="vm.remove($index)">X</button>
 
       </li>
     </ul>

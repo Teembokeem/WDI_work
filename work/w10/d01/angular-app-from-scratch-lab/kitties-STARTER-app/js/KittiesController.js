@@ -66,12 +66,7 @@ angular
       vm.newCat.gender = '';
     }
 
-    function removeCat(cat) {
-      var index = vm.adoptList.findIndex(function(el, index, array) {
-        if (el.catName === cat.catName) {
-          return index
-        }
-      })
+    function removeCat(index) {
       vm.adoptList.splice(index, 1)
     }
 

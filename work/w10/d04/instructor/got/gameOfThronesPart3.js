@@ -26,23 +26,66 @@ var children = lord_eddards_children_and_wards;
 //     has a property `house` that is equal to "Stark".
 console.log("Number 1:");
 
+function isStark(child) {
+  return (child.house === "Stark");
+}
+
+console.log("Should say true:",  isStark(children[0]));
+console.log("Should say false:", isStark(children[1]));
+console.log("Should say ???:",   isStark("Peter Dinklage"));
+console.log();
 
 // 2.  Write a function named `isTrueborn` that takes a single argument `child`,
 //     and returns a boolean (true or false) depending on if that child object
 //     has a property `trueBorn` that is equal to false.
 console.log("Number 2:");
 
+function isTrueborn(child) {
+  return child.trueBorn !== false;
+}
+
+console.log("Should say true:",  isTrueborn(children[0]));
+console.log("Should say false:", isTrueborn(children[7]));
+console.log();
 
 // 3.  Write a function named `trueName` that takes a single argument `child`,
 //     and returns a string that is their 'true name.' A true name is a child's
 //     house, if they are trueborn. Otherwise their 'true name' is "Snow".
 console.log("Number 3:");
 
+function trueName(child) {
+  if (isTrueborn(child)) {
+    return child.house;
+  } else {
+    return "Snow";
+  }
+}
+
+console.log("Should say Stark:",  trueName(children[0]));
+console.log("Should say Snow:", trueName(children[7]));
+console.log();
 
 // 4.  Write a function named `isTrueStark` that takes a single argument
 //     `child`, and returns a boolean (true or false) depending on if that
 //     child object has a **true name** that is equal to "Stark".
 console.log("Number 4:");
+
+function isTrueStark(child) {
+  // return trueName(child) === "Stark" ? true : false;
+
+  // if (trueName(child) === "Stark") {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  return trueName(child) === "Stark";
+}
+
+console.log("Should say true (Robb Stark):",  isTrueStark(children[0]));
+console.log("Should say false (Jon Snow):", isTrueStark(children[7]));
+console.log("Should say false (Jeyne Poole):", isTrueStark(children[3]));
+console.log();
 
 
 // 5.  Write a function named `isFemale` that takes a single argument `child`,
@@ -50,6 +93,13 @@ console.log("Number 4:");
 //     is female (true) or male (false).
 console.log("Number 5:");
 
+function isFemale(child) {
+  return child.sex === "F";
+}
+
+console.log("Should say false (Jon Snow):", isFemale(children[7]));
+console.log("Should say true (Jeyne Poole):", isFemale(children[3]));
+console.log();
 
 /************************************************************************
  * CHAPTER 6: "The man who passes the sentence should swing the sword." *
@@ -60,15 +110,56 @@ console.log("\n---- Chapter 6 ----\n");
 //     enumeration method to add only the male children to the new list.
 console.log("\n", "Number 1:");
 
+var starkBoys = [];
+
+children.forEach(function(child) {
+  if (!isFemale(child)) {
+    starkBoys.push(child);
+  }
+});
+
+console.log(starkBoys);
 
 // 2.  Use the `filter` enumeration method to create a new list of children
 //     called `starkBoys` that includes only the male children (same as above).
 console.log("\n", "Number 2:");
 
+var starkBoys = children.filter(function(child) {
+  return !isFemale(child);
+});
+
+function isMale(child) {
+  return !isFemale(child);
+}
+
+var starkBoys = children.filter(isMale);
+
+console.log(starkBoys);
 
 // 3.  Use the `filter` enumeration method to create a new list of children
 //     called `starkGirls` that includes only the female children.
 console.log("\n", "Number 3:");
+
+var starkGirls = children.filter(isFemale);
+
+console.log(starkGirls);
+
+/*
+ * HOW TO BUILD A FOREACH
+ */
+
+// var pitbull = ["uno", "dos", "tres", "quatro"];
+
+// pitbull.newForEach = function(action) {
+//   for(var i = 0; i < this.length; i++) {
+//     action(this[i]);
+//   }
+// }
+
+// pitbull.philsForEach(console.log);
+// pitbull.philsForEach(function(number) {
+//   console.log(number + "!")
+// });
 
 
 // 4.  Use the `filter` enumeration on the `starkBoys` list to update that list

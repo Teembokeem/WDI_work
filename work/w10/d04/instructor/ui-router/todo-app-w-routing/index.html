@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="todoApp">
+
+<head>
+	<meta charset="utf-8">
+	<title>To Do Or Not To Do</title>
+
+	<link rel="stylesheet" href="/assets/stylesheets/main.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+	<script src="/app.js"></script>
+	<script src="/controllers/todos_controller.js"></script>
+</head>
+
+<body>
+	<div class="wrapper" ng-controller="TodosController as vm">
+
+		<header>
+			<h1>YOU'VE GOT {{ vm.remainingTodos().length }} THING{{ vm.s(vm.remainingTodos(), true) }} TO DO!</h1>
+			<h4>{{ vm.completedTodos().length }} thing{{ vm.s(vm.completedTodos()) }} completed | {{ vm.remainingTodos().length }} thing{{ vm.s(vm.remainingTodos()) }} remaining</h4>
+		</header>
+
+		<main>
+			<!-- begin add new todo -->
+			<form class="add-todo" ng-submit="vm.addTodo()">
+				<input class="text-box" type="text" placeholder="I need to..." ng-model="vm.text">
+				<input type="submit" class="btn btn-add" value="+">
+			</form>
+			<!-- end add new todo -->
+
+			<!-- begin show all todos -->
+			<section class="todo-list">
+				<ul>
+					<li ng-repeat="todo in vm.todoList">
+						<input class="checkbox" type="checkbox" ng-model="todo.complete" id="todo-{{$index}}">
+						<label for="todo-{{$index}}" ng-class="{'complete': todo.complete}">{{ todo.task }}</label>
+						<button class="btn btn-delete" ng-click="vm.deleteTodo(todo)">x</button>
+					</li>
+				</ul>
+			</section>
+			<!-- end show all todos -->
+		</main>
+
+	</div>
+</body>
+
+</html>

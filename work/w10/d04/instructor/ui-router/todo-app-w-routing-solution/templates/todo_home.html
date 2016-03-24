@@ -1,0 +1,17 @@
+<!-- begin add new todo -->
+<form class="add-todo" ng-submit="vm.addTodo()">
+  <input class="text-box" type="text" placeholder="I need to..." ng-model="vm.text">
+  <input type="submit" class="btn btn-add" value="+">
+</form>
+<!-- end add new todo -->
+
+<!-- begin show all todos -->
+<section class="todo-list">
+  <ul>
+    <li ng-repeat="todo in vm.remainingTodos()">
+      <input class="checkbox" type="checkbox" ng-model="todo.complete" id="todo-{{$index}}">
+      <label for="todo-{{$index}}" ng-class="{'complete': todo.complete}">{{ todo.task }}</label>
+    </li>
+  </ul>
+</section>
+<!-- end show all todos -->

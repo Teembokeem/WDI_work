@@ -156,8 +156,8 @@ console.log(starkGirls);
 //   }
 // }
 
-// pitbull.philsForEach(console.log);
-// pitbull.philsForEach(function(number) {
+// pitbull.newForEach(console.log);
+// pitbull.newForEach(function(number) {
 //   console.log(number + "!")
 // });
 

@@ -110,15 +110,56 @@ console.log("\n---- Chapter 6 ----\n");
 //     enumeration method to add only the male children to the new list.
 console.log("\n", "Number 1:");
 
+var starkBoys = [];
+
+children.forEach(function(child) {
+  if (!isFemale(child)) {
+    starkBoys.push(child);
+  }
+});
+
+console.log(starkBoys);
 
 // 2.  Use the `filter` enumeration method to create a new list of children
 //     called `starkBoys` that includes only the male children (same as above).
 console.log("\n", "Number 2:");
 
+var starkBoys = children.filter(function(child) {
+  return !isFemale(child);
+});
+
+function isMale(child) {
+  return !isFemale(child);
+}
+
+var starkBoys = children.filter(isMale);
+
+console.log(starkBoys);
 
 // 3.  Use the `filter` enumeration method to create a new list of children
 //     called `starkGirls` that includes only the female children.
 console.log("\n", "Number 3:");
+
+var starkGirls = children.filter(isFemale);
+
+console.log(starkGirls);
+
+/*
+ * HOW TO BUILD A FOREACH
+ */
+
+// var pitbull = ["uno", "dos", "tres", "quatro"];
+
+// pitbull.newForEach = function(action) {
+//   for(var i = 0; i < this.length; i++) {
+//     action(this[i]);
+//   }
+// }
+
+// pitbull.philsForEach(console.log);
+// pitbull.philsForEach(function(number) {
+//   console.log(number + "!")
+// });
 
 
 // 4.  Use the `filter` enumeration on the `starkBoys` list to update that list

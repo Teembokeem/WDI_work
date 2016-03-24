@@ -1,0 +1,11 @@
+<!-- begin show all todos -->
+<section class="todo-list">
+  <ul>
+    <li ng-repeat="todo in vm.completedTodos()">
+      <input class="checkbox" type="checkbox" ng-model="todo.complete" id="todo-{{$index}}">
+      <label for="todo-{{$index}}" ng-class="{'complete': todo.complete}">{{ todo.task }}</label>
+      <button class="btn btn-delete" ng-click="vm.deleteTodo(todo)">x</button>
+    </li>
+  </ul>
+</section>
+<!-- end show all todos -->

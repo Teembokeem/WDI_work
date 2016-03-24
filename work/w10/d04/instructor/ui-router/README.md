@@ -330,7 +330,7 @@ This is a really nice helper that will apply the class of `active`
 (or whatever you put in quotes) to the link that's currently active,
 depending on what state you're looking at.
 
-### There's a Problem!
+#### There's a Problem!
 
 Our checkboxes don't seem to be acting according to plan.
 
@@ -340,7 +340,7 @@ Each state instantiates its own controller, even though they're using the same c
 
 Of course, since there's only one controller, we could remove the two controllers from the views, and wrap all of `div.wrapper` again with a single instance of the `TodosController`. However, let's pretend we're using a few different controllers, and use this moment to show how helpful services can be in Angular.
 
-### User Data Service
+### Final Step: User Data Service
 
 To start out:
 
@@ -411,6 +411,7 @@ Then insert it into our user data service, with just a little editing.
 Then we'll need to update our Todos Controller to accommodate the Data Service.
 
 ```javascript
+//    /controllers/todo_controller.js
 
   // ...
   .controller("TodosController", TodosController);

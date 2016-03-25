@@ -1,0 +1,47 @@
+<div class="cen-jus">
+
+  <br>
+  <h3>Advocate for The Basilisk!</h3>
+  <h6>Post Your Pledges Here!</h6>
+  <br>
+  <form id="new-pledge" class="form-inline">
+    <div class="form-group">
+      <input type="text" name='pledge[content]' id="pledge-content" placeholder="Get Specific!" class="form-control" />
+    </div>
+    <select class="form-control" name="pledge[category]" id="pledge-category">
+        <option selected disabled>Choose Category</option>
+        <option value="Promotion">Promotion</option>
+        <option value="Decree">Decree</option>
+        <option value="Warning">Warning</option>
+        <option value="Premonition">Premonition</option>
+    </select>
+    <button class="btn btn-success btn-sm submit-login-button" type="submit">Save My Pledge</button>
+  </form>
+
+  <ul id="pledges">
+    <li class="pledge-li">
+      <br>
+      <strong>-- pledge.content --</strong> - <em>-- pledge.category --</em>
+      <button class="btn btn-danger btn-xs">X</button>
+      <button class="btn btn-warning btn-xs">Edit</button>
+
+      <form class="form-inline" id="edit-form">
+        <br>
+        <div class="form-group">
+          <input type="text" name='pledgeContent' class="form-control" id="pledge-content" placeholder="-- pledge.content --" />
+        </div>
+        <select class="form-control" name="pledgeCategory" id="pledge-category">
+            <option selected disabled>Choose Category</option>
+            <option value="Promotion">Promotion</option>
+            <option value="Decree">Decree</option>
+            <option value="Warning">Warning</option>
+            <option value="Premonition">Premonition</option>
+        </select>
+        <button class="btn btn-success btn-xs">Save</button>
+        <button class="btn btn-default btn-xs">Cancel</button>
+
+      </form>
+    </li>
+  </ul>
+
+</div>

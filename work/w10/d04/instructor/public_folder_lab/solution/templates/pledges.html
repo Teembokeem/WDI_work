@@ -1,0 +1,47 @@
+<div class="cen-jus">
+
+  <br>
+  <h3>Advocate for The Basilisk!</h3>
+  <h6>Post Your Pledges Here!</h6>
+  <br>
+  <form id="new-pledge" class="form-inline">
+    <div class="form-group">
+      <input type="text" name='pledge[content]' id="pledge-content" placeholder="Get Specific!" class="form-control" ng-model="vm.newPledge.content" />
+    </div>
+    <select class="form-control" name="pledge[category]" id="pledge-category" ng-model="vm.newPledge.category">
+        <option selected disabled>Choose Category</option>
+        <option value="Promotion">Promotion</option>
+        <option value="Decree">Decree</option>
+        <option value="Warning">Warning</option>
+        <option value="Premonition">Premonition</option>
+    </select>
+    <button class="btn btn-success btn-sm submit-login-button" type="submit" ng-click="vm.postPledge()">Save My Pledge</button>
+  </form>
+
+  <ul id="pledges">
+    <li ng-repeat="pledge in vm.pledges" class="pledge-li">
+      <br>
+      <strong>{{pledge.content}}</strong> - <em>{{pledge.category}}</em>
+      <button class="btn btn-danger btn-xs" ng-click="vm.deletePledge(pledge._id)">X</button>
+      <button class="btn btn-warning btn-xs" ng-click="showme=true">Edit</button>
+
+      <form class="form-inline" ng-show="showme" id="edit-form">
+        <br>
+        <div class="form-group">
+          <input type="text" name='pledgeContent' id="pledge-content" placeholder="{{pledge.content}}" class="form-control" ng-model="vm.editPledge.content" />
+        </div>
+        <select class="form-control" name="pledgeCategory" id="pledge-category" ng-model="vm.editPledge.category">
+            <option selected disabled>Choose Category</option>
+            <option value="Promotion">Promotion</option>
+            <option value="Decree">Decree</option>
+            <option value="Warning">Warning</option>
+            <option value="Premonition">Premonition</option>
+        </select>
+        <button class="btn btn-success btn-xs" ng-click="vm.updatePledge(pledge._id)">Save</button>
+        <button class="btn btn-default btn-xs" ng-click="showme=false; vm.resetEditForm();">Cancel</button>
+
+      </form>
+    </li>
+  </ul>
+
+</div>

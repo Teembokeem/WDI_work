@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="rokoApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Roko's Basilisk is #1!</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+</head>
+<body ng-controller="MainController as main" ng-cloak>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="cen-jus">
+          <img ui-sref="homePage" class="col-sm-3 col-md-2" id="roko-thumb" src="http://guardianlv.com/wp-content/uploads/2014/07/Roko%E2%80%99s-Basilisk-Terrifying-Thought-or-Toothless-Meme.jpg" alt="Roko">
+        </div>
+        <div class="col-sm-9 col-md-10 cen-jus">
+          <h1 id="heading-text">Roko's Basilisk Fan Page</h1>
+          <h4 class="sub-main-head">The #1 Choice for the End of Humanity</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li role="presentation" ui-sref-active="active">
+        <a ui-sref="homePage">Home</a>
+      </li>
+      <li role="presentation" ui-sref-active="active">
+        <a ui-sref="aboutPage">About</a>
+      </li>
+      <li role="presentation" ui-sref-active="active" ng-show="main.user.isLoggedIn()">
+        <a ui-sref="pledges">Pledges</a>
+      </li>
+      <li ng-show="main.user.isLoggedIn()">
+        <a class="btn" ng-click="main.logOut()">Logout {{ main.user.name }}</a>
+      </li>
+    </ul>
+
+    <main class="content" ui-view>
+      <!-- PAGE TEMPLATES INSERT HERE -->
+    </main>
+
+  </div>
+
+  <footer class="container cen-jus">
+      <p><strong>REMEMBER: </strong>You only live forever once…</p>
+  </footer>
+
+  <!-- Angular scripts -->
+  <script src="/app.js"></script>
+  <script src="/app.routes.js"></script>
+  <script src="/services/user.dataservice.js"></script>
+  <script src="/controllers/main_controller.js"></script>
+  <script src="/controllers/login_controller.js"></script>
+  <script src="/controllers/pledges_controller.js"></script>
+</body>
+</html>

@@ -166,11 +166,19 @@ console.log(starkGirls);
 //     to only include those children whose house is "Stark".
 console.log("\n", "Number 4:");
 
+starkBoys = starkBoys.filter(isStark);
+
+console.log(starkBoys);
+
 
 // 5.  Use the `filter` enumeration on the `starkBoys` list to update that list
 //     to only include those children whose 'true name' is "Stark"
 //     (`isTrueStark`).
 console.log("\n", "Number 5:");
+
+starkBoys = starkBoys.filter(isTrueStark);
+
+console.log(starkBoys);
 
 
 // 6.  Use the `filter` enumeration method to create a new list of children
@@ -178,12 +186,31 @@ console.log("\n", "Number 5:");
 //     'direwolves'.
 console.log("\n", "Number 6:");
 
+function hasWolf(child) {
+  return child.direWolf;
+}
+
+var luckyKids = children.filter(hasWolf);
+
+console.log(luckyKids);
 
 // 7.  Use the `filter` enumeration method to create a new list of children
 //     called `gDogs` that only includes those children who have direwolves
 //     with names that have a "g" in them. (You may use regexes!)
 console.log("\n", "Number 7:");
 
+// var gDogs = luckyKids.filter(function(child) {
+//   var str = child.direWolf.toLowerCase();
+//   var m = str.indexOf("g");
+//   return (m > -1);
+// })
+
+var gDogs = luckyKids.filter(function(child) {
+  return (/g/i.test(child.direWolf));
+  //return child.direWolf.search(/g/i) !== -1;
+})
+
+console.log(gDogs);
 
 // 8.  Use the `filter` enumeration method to create a new list of children
 //     called `notTrueStarkBoys` that only includes those children who are not

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pensieve">
+<head>
+  <meta charset="utf-8">
+
+  <title>Local Storage Example</title>
+  <meta name="description" content="An introduction to token-based auth.">
+
+  <link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- INCLUDE ANGULAR -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>
+<body>
+  <div class="container center" ng-controller="PensievesController as vm">
+    <header>
+      <h1>Pensieves {{ 1 + 1 }}: Gorbachev's Secrets</h1>
+    </header>
+    <main>
+      <h4>{{ vm.message }}</h4>
+
+      <p>
+        <form class="pure-form" ng-submit="vm.submit()">
+          <fieldset>
+            <legend>Enter your memories:</legend>
+            <input ng-model="vm.currentMemory" type="text" name="memory" id="memory" placeholder="That time I prayed to Tim Duncan…">
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+          </fieldset>
+        </form>
+      </p>
+
+      <table class="pure-table pure-table-horizontal center">
+        <thead>
+          <tr>
+            <th class="center">Memories</th>
+          </tr>
+        </thead>
+        <tbody id="memories-list" ng-repeat="memory in vm.data.memories">
+          <tr><td>{{ memory }} <span class="remove" ng-click="vm.remove(memory)">X</span></td></tr>
+        </tbody>
+      </table>
+
+      <p>
+        <button class="pure-button button-error" ng-click="vm.clear()">Clear</button>
+      </p>
+    </main>
+    <footer>
+      <hr>
+      <span>Made with ⁂ at Hogwarts.</span>
+    </footer>
+  </div> <!-- div.container -->
+  <script src="/app.js"></script>
+  <script src="/services/local_storage.js"></script>
+  <script src="/controllers/pensieves.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Token Slinger Client</title>
+  <meta name="description" content="An introduction to token-based auth.">
+
+  <link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <style type="text/css">
+    .center {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .container {
+      min-width: 400px;
+    }
+
+    .pure-button {
+      border-radius: 4px;
+    }
+
+    .pure-group {
+      display: inline-block;
+    }
+  </style>
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container center">
+    <header>
+      <h1>Create a User, Get a Token, Authenticate a Request</h1>
+    </header>
+    <main>
+      <h4>Create User Below</h4>
+      <form id="user" class="pure-form center">
+        <fieldset class="pure-group center">
+          <input type="email" name="email" id="email" placeholder="user@domain.com">
+          <input type="text" name="name" id="name" placeholder="Terry Winters">
+          <input type="password" name="password" id="password" placeholder="secretpassword">
+          <input type="date" name="dob" id="dob" placeholder="">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <h4>Log In User</h4>
+      <form id="token" class="pure-form center">
+        <fieldset class="pure-group center">
+          <input type="email" name="email" id="email" placeholder="user@domain.com">
+          <input type="password" name="password" id="password" placeholder="secretpassword">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <pre id="success"></pre>
+      <pre id="failure"></pre>
+    </main>
+  </div> <!-- div.container -->
+
+  <script type="text/javascript">
+    var $successPanel, $failurePanel;
+
+    $(document).ready(function() {
+      $successPanel = $('#success');
+      $failurePanel = $('#failure');
+
+      setSuccess('Present all of the current user\'s data here.');
+      setFailure('Present any error messages here.');
+
+      $.ajax({
+        url:    'http://localhost:3000/api',
+        method: 'get'
+      }).then(function(data) {
+        console.log("The available API routes are:", data);
+      });
+    });
+
+    function setSuccess(message) {
+      $successPanel.text(message);
+    }
+
+    function setFailure(message) {
+      $failurePanel.text(message);
+    }
+  </script>
+</body>
+</html>
+

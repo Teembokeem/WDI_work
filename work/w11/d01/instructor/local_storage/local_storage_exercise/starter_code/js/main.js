@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     if (memory) {
       console.log('Memory submitted:', memory);
+      add2Memory(memory);
       renderMemory(memory);
       $input.val('');
     }
@@ -21,4 +22,9 @@ $(document).ready(function() {
     var $memoryEl = $('<tr>').append($('<td>').text(memory));
     $memoryEl.appendTo($memoriesList);
   }
+
+  function add2Memory() {
+    console.log(arguments);
+  }
 });
+

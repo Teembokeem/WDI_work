@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+
+  <title>Token Slinger Client</title>
+  <meta name="description" content="An introduction to token-based auth.">
+
+  <link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <style type="text/css">
+    .center {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .container {
+      min-width: 400px;
+    }
+
+    .pure-button {
+      border-radius: 4px;
+    }
+
+    .pure-group {
+      display: inline-block;
+    }
+  </style>
+
+  <!-- INCLUDE ANGULAR -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>
+<body ng-controller="MainController as vm">
+  <div class="container center">
+    <header>
+      <h1>Create a User, Get a Token, Authenticate a Request</h1>
+    </header>
+    <main>
+      <h4>Create User Below</h4>
+      <form id="user" class="pure-form center" ng-submit="vm.sendRequest();">
+        <fieldset class="pure-group center">
+          <input type="email" name="email" id="email" placeholder="user@domain.com">
+          <input type="text" name="name" id="name" placeholder="Terry Winters">
+          <input type="password" name="password" id="password" placeholder="secretpassword">
+          <input type="date" name="dob" id="dob" placeholder="">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <h4>Log In User</h4>
+      <form id="token" class="pure-form center">
+        <fieldset class="pure-group center">
+          <input type="email" name="email" id="email" placeholder="user@domain.com">
+          <input type="password" name="password" id="password" placeholder="secretpassword">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <pre id="success">{{ vm.successMessage }}</pre>
+      <pre id="failure">{{ vm.failureMessage }}</pre>
+    </main>
+  </div> <!-- div.container -->
+
+<script type="text/javascript">
+(function() {
+  "use strict";
+
+  angular
+    .module("app", [])
+    .controller("MainController", MainController);
+
+  MainController.$inject = ["$http", "$log"];
+
+  function MainController($http, $log) {
+    var vm = this;
+
+    vm.successMessage = 'Present all of the current user\'s data here.';
+    vm.failureMessage = 'Present any error messages here.';
+    vm.sendRequest    = sendRequest;
+
+    function sendRequest(type) {
+      $http
+        .get('http://localhost:3000/api')
+        .then(
+          function(res) {
+            $log.info("The available API routes are:", res.data);
+            if (res.data) {
+              vm.successMessage = res.data;
+            } else {
+              vm.successMessage = 'Present all of the current user\'s data here.';
+            }
+          },
+          function(err) {
+            if (err.data) {
+              vm.failureMessage = err.data;
+            } else {
+               vm.failureMessage = 'Present any error messages here.';
+            }
+          }
+        );
+    }
+
+  }
+})();
+</script>
+</body>
+</html>
+

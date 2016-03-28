@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Local Storage Example</title>
+  <meta name="description" content="An introduction to token-based auth.">
+
+  <link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container center">
+    <header>
+      <h1>The Pensieve</h1>
+    </header>
+    <main>
+      <h4>Lay down your troubles, friend</h4>
+
+      <p>
+        <form class="pure-form">
+          <fieldset>
+            <legend>Enter your memories:</legend>
+            <input type="text" name="memory" id="memory" placeholder="That time I prayed to Tim Duncan…">
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+          </fieldset>
+        </form>
+      </p>
+
+      <table class="pure-table pure-table-horizontal center">
+        <thead>
+          <tr>
+            <th class="center">Memories</th>
+          </tr>
+        </thead>
+        <tbody id="memories-list">
+          <tr><td>The night my brother said that Christmas wouldn't happen. <a class="remove" href="">x</a></td></tr>
+        </tbody>
+      </table>
+
+      <p>
+        <button class="pure-button button-error">Clear All</button>
+      </p>
+    </main>
+    <footer>
+      <hr>
+      <span>Made with ⁂</span>
+    </footer>
+  </div> <!-- div.container -->
+</body>
+</html>

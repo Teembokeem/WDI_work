@@ -24,7 +24,7 @@ router.post('/users',
 );
 router.get('/users', function(req, res, next) {
   console.log();
-  console.log("Nearly correct request received:".blue, req.method, req.url);
+  console.log("Nearly correct request received:".blue, req.method, req.originalUrl);
   next({code: 404, message: 'Try POST!'});
 })
 
@@ -63,12 +63,12 @@ router.post('/token',
 );
 router.get('/token', function(req, res, next) {
   console.log();
-  console.log("Nearly correct request received:".blue, req.method, req.url);
+  console.log("Nearly correct request received:".blue, req.method, req.originalUrl);
   next({code: 404, message: 'Try POST!'});
 })
 router.use('/tokens', function(req, res, next) {
   console.log();
-  console.log("Nearly correct request received:".blue, req.method, req.url);
+  console.log("Nearly correct request received:".blue, req.method, req.originalUrl);
   next({
     code:    404,
     message: 'Use a singular token, for a singular resource (and POST).'

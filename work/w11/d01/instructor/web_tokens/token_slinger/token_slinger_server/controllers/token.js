@@ -14,8 +14,7 @@ module.exports = {
 };
 
 function create(req, res, next) {
-  console.log();
-  console.log('  >>> Creating token!'.red);
+  console.log('  Creating token!'.yellow);
 
   var token = jwt.sign(
     {
@@ -30,28 +29,28 @@ function create(req, res, next) {
   );
 
   res.json({
-    success: true,
-    message: 'Successfully generated token',
-    token:   token
+    success:    true,
+    message:    'Successfully generated token',
+    token:      token,
+    seeDecoded: 'http://jwt.io/?value=' + token
   });
 }
 
 // **************************** VALIDATIONS ****************************
 
 function checkCredentials(req, res, next) {
-  console.log();
-  console.log('  >>> Begin validating token creation:'.red);
+  console.log('  Begin validating token creation:'.yellow);
 
   if (
     !req.body.email    ||
     !req.body.password
   ) {
     next({
-      code:    422,
+      status:  422,
       message: 'Missing required field: email and/or password'
     });
   } else {
-    console.log("    All fields present…".green);
+    console.log("  All fields present…".green);
     next();
   }
 }
@@ -64,12 +63,12 @@ function checkUserExists(req, res, next) {
     }).then(function(user) {
       if (!user) {
         next({
-          code:    401,
+          status:  401,
           message: 'Authentication failed: user does not exist'
         });
       } else {
         console.log(
-          "    User found and added to req:".green,
+          "  User found and added to req:".green,
           user.email + ",",
           user.name
         );
@@ -84,11 +83,11 @@ function validateCredentials(req, res, next) {
   req.user.verifyPassword(req.body.password, function(err, valid) {
     if (!valid) {
       next({
-        code:    401,
+        status:  401,
         message: 'Authentication failed: credentials incorrect'
       });
     } else {
-      console.log("    Password verified:".green, req.body.password);
+      console.log("  Password verified:".green, req.body.password);
       next();
     }
   });

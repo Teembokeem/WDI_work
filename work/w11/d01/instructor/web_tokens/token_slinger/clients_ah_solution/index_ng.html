@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+
+  <title>Token Slinger Client</title>
+  <meta name="description" content="An introduction to token-based auth.">
+
+  <link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <style type="text/css">
+    .center {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .container {
+      min-width: 400px;
+    }
+
+    .pure-button {
+      border-radius: 4px;
+    }
+
+    .pure-group {
+      display: inline-block;
+    }
+  </style>
+
+  <!-- INCLUDE ANGULAR -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>
+<body ng-controller="MainController as vm">
+  <div class="container center">
+    <header>
+      <h1>Create a User, Get a Token, Authenticate a Request</h1>
+    </header>
+    <main>
+      <h4>Create User Below</h4>
+      <form id="user" class="pure-form center" ng-submit="vm.createUser();">
+        <fieldset class="pure-group center">
+          <input ng-model="vm.user.email" type="email" name="email" id="email" placeholder="user@domain.com">
+          <input ng-model="vm.user.name" type="text" name="name" id="name" placeholder="Terry Winters">
+          <input ng-model="vm.user.password" type="password" name="password" id="password" placeholder="secretpassword">
+          <input ng-model="vm.user.dob" type="date" name="dob" id="dob" placeholder="">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <h4>Log In User</h4>
+      <form id="token" class="pure-form center" ng-submit="vm.loginUser();">
+        <fieldset class="pure-group center">
+          <input ng-model="vm.login.email" type="email" name="email" id="email" placeholder="user@domain.com">
+          <input ng-model="vm.login.password" type="password" name="password" id="password" placeholder="secretpassword">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <pre id="success">{{ vm.successMessage }}</pre>
+      <pre id="failure">{{ vm.failureMessage }}</pre>
+    </main>
+  </div> <!-- div.container -->
+
+<script type="text/javascript">
+(function() {
+  "use strict";
+
+  angular
+    .module("app", [])
+    .controller("MainController", MainController);
+
+  MainController.$inject = ["$http", "$log", "$filter", "$window"];
+
+  function MainController($http, $log, $filter, $window) {
+    var vm = this;
+
+    // Bindings
+    vm.user = {
+      email:    "pj@ga.co",
+      name:     "Philip Hughes",
+      password: "12345",
+      dob:      new Date("1990-01-02")
+    };
+    vm.login = {
+      email:    "pj@ga.co",
+      password: "12345"
+    };
+    vm.successMessage = 'Present all of the current user\'s data here.';
+    vm.failureMessage = 'Present any error messages here.';
+    vm.createUser     = createUser;
+    vm.loginUser      = loginUser;
+
+    // Helpers / functions
+    function createUser() {
+      var newUser = angular.copy(vm.user);
+      newUser.dob = $filter('date')(newUser.dob, 'yyyy-MM-dd');
+
+      $http
+        .post(
+          'http://localhost:3000/api/users',
+          newUser,
+          { headers: { 'Content-Type': 'application/json' } }
+        )
+        .then(
+          function(res) {
+            setSuccess(res.data);
+            vm.user = {};
+          },
+          function(err) { setFailure(err.data); }
+        );
+    }
+
+    function loginUser() {
+      $log.info(vm.login);
+
+      $http
+        .post(
+          'http://localhost:3000/api/token',
+          vm.login,
+          { headers: { 'Content-Type': 'application/json' } }
+        )
+        .then(
+          function(res) {
+            setSuccess(res.data);
+
+            $window.localStorage.setItem('token', res.data.token);
+            vm.login = {};
+
+            sendAuthReq();
+          },
+          function(err) { setFailure(err.data); }
+        );
+    }
+
+    function sendAuthReq() {
+      var token = $window.localStorage.getItem('token');
+
+      $http
+        .get('http://localhost:3000/api/me', {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+          }
+        })
+        .then(
+          function(res) {
+            setSuccess(res.data);
+          },
+          function(err) { setFailure(err.data); }
+        );
+    }
+
+    function setSuccess(message) {
+      vm.successMessage = message;
+      vm.failureMessage = 'Present any error messages here.';
+    }
+
+    function setFailure(message) {
+      vm.failureMessage = message;
+      vm.successMessage = 'Present all of the current user\'s data here.';
+    }
+
+    // Run at setup
+    $http
+      .get('http://localhost:3000/api')
+      .then(
+        function(res) {
+          $log.info("The available API routes are:", res.data);
+        },
+        function(err) { setFailure(err.data); }
+      );
+  }
+
+})();
+</script>
+</body>
+</html>
+

@@ -3,17 +3,33 @@ var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 
 module.exports = {
-  generate:     generate,
+  create:       create,
   authenticate: authenticate
 };
 
-// This function will generate a JWT given a paylod object.
-function generate(payload) {
-  return jwt.sign(
-    payload,
-    process.env.TOKEN_SECRET,
-    { expiresIn: 10000 }
-  );
+// This function will create a JWT and return it to the user in the
+// response. It acts as Express middleware.
+function create(req, res, next) {
+  if (!req.body.email || !req.body.password) {
+    return res.status(422).send('Missing required fields');
+  }
+  User
+    .findOne({email: req.body.email}).exec()
+    .then(function(user) {
+      if (!user || !user.verifyPasswordSync(req.body.password)) {
+        res.sendStatus(403);
+      } else {
+        var token = generate({
+            email: user.email,
+            name:  user.name,
+            use:   'public_api'
+        });
+        res.json({
+          message: 'Successfully generated token',
+          token:   token
+        });
+      }
+    });
 }
 
 // This function will authenticate a given request based on a JWT
@@ -29,6 +45,15 @@ function authenticate(req, res, next) {
       next();
     });
   }
+}
+
+// This function will generate a JWT given a paylod object.
+function generate(payload) {
+  return jwt.sign(
+    payload,
+    process.env.TOKEN_SECRET,
+    { expiresIn: 10000 }
+  );
 }
 
 // This function will validate a token that is on a request, and

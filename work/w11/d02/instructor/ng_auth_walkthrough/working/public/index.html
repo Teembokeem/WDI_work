@@ -18,8 +18,8 @@
       <h1>Welcome to An Auth App</h1>
     </header>
 
-    <main class="content">
-      <p>This is the app's contents.</p>
+    <main class="content" ui-view>
+      <!-- ui-router (aka ui.router) inserts templates here -->
     </main>
   </div> <!-- div.container-fluid -->
 
@@ -31,5 +31,6 @@
   </footer>
 
   <script src="/js/app.module.js"></script>
+  <script src="/js/app.routes.js"></script>
 </body>
 </html>

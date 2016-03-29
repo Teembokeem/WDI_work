@@ -14,8 +14,10 @@
         templateUrl: "/js/welcome.html"
       })
       .state("signin", {
-        url:         "/signin",
-        templateUrl: "/js/signin.html"
+        url:          "/signin",
+        templateUrl:  "/js/signin.html",
+        controller:   "SignInController",
+        controllerAs: "vm"
       })
       .state("profile", {
         url:         "/profile",

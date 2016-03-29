@@ -17,7 +17,7 @@
         url: 'http://jsonplaceholder.typicode.com/users/:userId/todos',
         isArray: true
       }
-    });
+    });`
   }
 
 })();

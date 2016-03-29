@@ -67,7 +67,7 @@ function isTrueStark(child) {
 
 console.log("should be true:", isTrueStark(lord_eddards_children_and_wards[0]))
 console.log("should be false:", isTrueStark(lord_eddards_children_and_wards[1]))
-console.log("should be false:", isTrueStark(lord_eddards_children_and_wards[3]))
+console.log("should be false:", isTrueStark(lord_eddards_children_and_wards[7]))
 
 // 5.  Write a function named `isFemale` that takes a single argument `child`,
 //     and returns a boolean (true or false) depending on if that child object
@@ -119,41 +119,72 @@ console.log(starkGirls)
 //     to only include those children whose house is "Stark".
 console.log("\n", "Number 4:");
 
+starkBoys = starkBoys.filter(function(boy) {
+  return boy.house === "Stark";
+})
 
+console.log(starkBoys)
 // 5.  Use the `filter` enumeration on the `starkBoys` list to update that list
 //     to only include those children whose 'true name' is "Stark"
 //     (`isTrueStark`).
 console.log("\n", "Number 5:");
 
+starkBoys = starkBoys.filter(isTrueStark)
+
+console.log(starkBoys)
 
 // 6.  Use the `filter` enumeration method to create a new list of children
 //     called `luckyKids` that only include those children who have
 //     'direwolves'.
 console.log("\n", "Number 6:");
 
+var luckyKids = lord_eddards_children_and_wards.filter(function(child) {
+  return child.direWolf !== undefined;
+})
+
+console.log(luckyKids)
 
 // 7.  Use the `filter` enumeration method to create a new list of children
 //     called `gDogs` that only includes those children who have direwolves
 //     with names that have a "g" in them. (You may use regexes!)
 console.log("\n", "Number 7:");
 
+var gDogs = luckyKids.filter(function(dawg) {
+  return dawg.direWolf.search(/\bg/i) !== -1
+})
+
+console.log(gDogs)
 
 // 8.  Use the `filter` enumeration method to create a new list of children
 //     called `notTrueStarkBoys` that only includes those children who are not
 //     *boys with the 'true name' of Stark*.
 console.log("\n", "Number 8:");
 
+var notTrueStarkBoys = children.filter(function(boy) {
+  return trueName(boy) !== "Stark"
+})
+
+console.log(notTrueStarkBoys)
 
 // 9.  Use the `filter` enumeration method to create a new list of children
 //     called `anOn` that only includes those children whose names have either
 //     'an' or 'on' in them. (You may use regexes!)
 console.log("\n", "Number 9:");
 
+var anOn = children.filter(function(child) {
+  return child.name.search(/(an|on)/i) !== -1
+})
+
+console.log(anOn)
 
 // 10. Use the `filter` enumeration method to create a new list of children
 //     called `notStarks` that only includes those children whose house is not
 //     "Stark". (You may use regexes!)
 console.log("\n", "Number 10:");
+
+var notStarks = children.filter(function(child) {
+  return (/\bStar/g.test(child.house)) !== -1)
+})
 
 
 // 11. Use the `filter` enumeration method to create a new list of children

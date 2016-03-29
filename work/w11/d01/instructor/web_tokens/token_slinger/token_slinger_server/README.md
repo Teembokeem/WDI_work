@@ -3,14 +3,20 @@
 A very featureless application, the Token Slinger is all about makin' 
 those tokes. Ie, making tokens (for you *squares*).
 
-## Explore
+## Getting Started
 
 Run the application the old-fashioned way: first `mongod` and then…
 
 ```
 $ npm install
+$ npm run seed
 $ nodemon
 ```
+
+Open your browser to [http://localhost:3000](http://localhost:3000) to
+read the API's docs and any helpful material.
+
+## Exploration
 
 Team up with a partner and explore the application. Together you should,
 using Postman:

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Token Slinger Client</title>
+  <meta name="description" content="An introduction to token-based auth.">
+
+  <link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <style type="text/css">
+    .center {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .container {
+      min-width: 400px;
+    }
+
+    .pure-button {
+      border-radius: 4px;
+    }
+
+    .pure-group {
+      display: inline-block;
+    }
+  </style>
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container center">
+    <header>
+      <h1>Create a User, Get a Token, Authenticate a Request</h1>
+    </header>
+    <main>
+      <h4>Create User Below</h4>
+      <form id="user" class="pure-form center">
+        <fieldset class="pure-group center">
+          <input type="email" name="email" class="email" placeholder="user@domain.com">
+          <input type="text" name="name" class="name" placeholder="Terry Winters">
+          <input type="password" name="password" class="password" placeholder="secretpassword">
+          <input type="date" name="dob" class="dob" placeholder="">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <h4>Log In User</h4>
+      <form id="token" class="pure-form center">
+        <fieldset class="pure-group center">
+          <input type="email" name="email" class="email" placeholder="user@domain.com">
+          <input type="password" name="password" class="password" placeholder="secretpassword">
+          <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+      </form>
+
+      <pre id="success"></pre>
+      <pre id="failure"></pre>
+    </main>
+  </div> <!-- div.container -->
+
+  <script type="text/javascript">
+    var $successPanel, $failurePanel, $userForm, $loginForm;
+
+    $(document).ready(function() {
+      $successPanel = $('#success');
+      $failurePanel = $('#failure');
+      $userForm     = $('#user');
+      $loginForm    = $('#token');
+
+      setSuccess('Present all of the current user\'s data here.');
+      setFailure('Present any error messages here.');
+
+      $.ajax({
+        url:    'http://localhost:3000/api',
+        method: 'get'
+      }).then(function(data) {
+        console.log("The available API routes are:", data);
+      });
+
+      $userForm.on('submit', createUser);
+      $loginForm.on('submit', loginUser);
+    });
+
+    function createUser(evt) {
+      evt.preventDefault();
+
+      var user = {
+        email:    $userForm.find(".email").val(),
+        name:     $userForm.find(".name").val(),
+        password: $userForm.find(".password").val(),
+        dob:      $userForm.find(".dob").val(),
+      }
+      console.log('Submitting new user for creation!', user);
+
+      $.ajax({
+        url:         'http://localhost:3000/api/users',
+        method:      'post',
+        contentType: 'application/json',
+        data:        JSON.stringify(user)
+      }).then(
+        function(res) {
+          setSuccess(JSON.stringify(res.data));
+
+          // clear the inputs
+          $userForm.find('input').val('');
+        }, function(err) {
+          setFailure(err.responseText);
+      });
+    }
+
+    function loginUser(evt) {
+      evt.preventDefault();
+
+      var user = {
+        email:    $loginForm.find(".email").val(),
+        password: $loginForm.find(".password").val(),
+      }
+
+      console.log('Logging in user!', user);
+
+      $.ajax({
+        url:         'http://localhost:3000/api/token',
+        method:      'post',
+        contentType: 'application/json',
+        data:        JSON.stringify(user)
+      }).then(
+        function(res) {
+          // setSuccess(JSON.stringify(res));
+
+          // clear the inputs
+          $loginForm.find('input').val('');
+
+          // store the token
+          localStorage.setItem('token', res.token);
+
+          // send the authenticated request!
+          sendAuthReq();
+
+        }, function(err) {
+          setFailure(err.responseText);
+      });
+    }
+
+    function sendAuthReq() {
+      console.log('Sending authorized request.');
+
+      var token = localStorage.getItem('token');
+
+      $.ajax({
+        url:         'http://localhost:3000/api/me',
+        method:      'get',
+        beforeSend : function(xhr) {
+          xhr.setRequestHeader("Authorization", "Bearer " + token);
+        },
+      }).then(
+        function(res) {
+          setSuccess(JSON.stringify(res));
+        }, function(err) {
+          setFailure(err.responseText);
+      });
+    }
+
+    function setSuccess(message) {
+      $successPanel.text(message);
+      $failurePanel.text('Present any error messages here.');
+    }
+
+    function setFailure(message) {
+      $failurePanel.text(message);
+      $successPanel.text('Present all of the current user\'s data here.');
+    }
+  </script>
+</body>
+</html>
+

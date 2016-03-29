@@ -23,17 +23,17 @@ app.set('safe-title', process.env.SAFE_TITLE);
 app.locals.title = app.get('title');
 
 // CORS (allows a separate client, like Postman, to send requests)…
-// app.use(function(req, res, next) {
-//   res.header('Access-Control-Allow-Origin',  '*');
-//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//   res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin',  '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
 
-//   if ('OPTIONS' == req.method) {
-//     res.send(200);
-//   } else {
-//     next();
-//   }
-// });
+  if ('OPTIONS' == req.method) {
+    res.send(200);
+  } else {
+    next();
+  }
+});
 
 // Logging layer.
 app.use(logger('dev'));
@@ -52,6 +52,10 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(debugReq);
 
+// Validate content-type.
+app.use(validateContentType);
+
+// Our routes.
 app.use('/api', routes);
 
 // Catches all 404 routes.
@@ -63,10 +67,9 @@ app.use(function(req, res, next) {
 
 // Error-handling layer.
 app.use(function(err, req, res, next) {
-  // In development, the error handler will print stacktrace.
   err = (app.get('env') === 'development') ? err : {};
-  res.status(err.status || 500);
-  res.json('error', {
+
+  res.status(err.status || 500).json({
     message: err.message,
     error: err
   });
@@ -77,6 +80,17 @@ function debugReq(req, res, next) {
   debug('query:',  req.query);
   debug('body:',   req.body);
   next();
+}
+
+function validateContentType(req, res, next) {
+  var methods = ['PUT', 'PATCH', 'POST'];
+  var type    = 'application/json';
+
+  if (methods.indexOf(req.method) !== -1 && req.get('Content-Type') !== type) {
+    res.status(400).send('Content-Type header must be application/json.');
+  } else {
+    next();
+  }
 }
 
 module.exports = app;

@@ -16,8 +16,8 @@ var env      = require('./config/environment'),
 var app = express();
 
 // Configure the application (and set it's title!).
-app.set('title', env.TITLE);
-app.set('safe-title', env.SAFE_TITLE);
+app.set('title', process.env.TITLE);
+app.set('safe-title', process.env.SAFE_TITLE);
 
 // Create local variables for use thoughout the application.
 app.locals.title = app.get('title');
@@ -43,9 +43,9 @@ app.use(favicon(path.join(__dirname, 'public', 'ga-favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Parse and debug requests.
-app.use(cookieParser('notsosecretnowareyou'));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(session({
-  secret: 'anotherfoolishsecret',
+  secret: process.env.SESSION_SECRET,
   saveUninitialized: true,
   resave: true
 }));

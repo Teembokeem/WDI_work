@@ -58,3 +58,9 @@ footer {
 header {
   text-transform: uppercase;
 }
+
+form {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}

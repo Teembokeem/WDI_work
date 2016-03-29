@@ -11,13 +11,17 @@
     var vm = this;
 
     // BINDINGS
-    vm.toggleSignInForm = toggleSignInForm;
-    vm.toggleValue      = true;
+    vm.signUp = {
+      email:    "pj@ga.co",
+      name:     "Philip Hughes",
+      password: "12345",
+      passwordConfirmation: "12345"
+    };
+    vm.submitSignUp = submitSignUp;
 
     // FUNCTIONS
-    function toggleSignInForm() {
-      $log.info("Every day I'm toggalin");
-      vm.toggleValue = !vm.toggleValue;
+    function submitSignUp() {
+      $log.info(vm.signUp);
     }
 
     $log.info("SignInController loaded!");

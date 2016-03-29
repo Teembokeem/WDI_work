@@ -5,9 +5,9 @@
     .module("app")
     .controller("SignInController", SignInController);
 
-  SignInController.$inject = ["$log"];
+  SignInController.$inject = ["$log", "$http"];
 
-  function SignInController($log) {
+  function SignInController($log, $http) {
     var vm = this;
 
     // BINDINGS
@@ -21,7 +21,18 @@
 
     // FUNCTIONS
     function submitSignUp() {
-      $log.info(vm.signUp);
+      // $log.info(vm.signUp);
+
+      $http
+        .post('/api/users', vm.signUp, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(
+          function(res) { $log.info("Succes:", res); },
+          function(err) { $log.info("Error:", err); }
+        );
     }
 
     $log.info("SignInController loaded!");

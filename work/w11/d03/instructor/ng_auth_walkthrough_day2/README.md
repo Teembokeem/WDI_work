@@ -8,8 +8,8 @@
 - Shared behavior around the **user resource**:
   - creating a user,
   - information about the authenticated user (ie, *current user*),
-    [Ed: with a spirited discussion with Jim about the purpose of `/me`
-    routes]
+    *[Ed: A spirited discussion may be had with Jim about the purpose of 
+    `/me` routes.]*
   - updating an authenticated user's information.
 
 See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
@@ -31,7 +31,7 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
 
 - [ ] AAU, when I try to sign up (create a user) with an email that is 
       taken, I will be alerted about this.
-      - [ ] (Must wireframe first…)
+      - [ ] *Must wireframe first…*
 - [ ] AAU, when I'm authenticated, I see a sign out button in the navbar.
 
 > Here we are going to update the user based on some information from
@@ -72,7 +72,7 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
       I will be alerted.
 - [ ] AAU, when I click on *Forgot my password*, I get a notification to
       change it.
-  - [ ] (Must wireframe first…)
+  - [ ] *Must wireframe first…*
 
 <!-- Links -->
 

@@ -1,18 +1,53 @@
-<h1>S I G N I N!</h1>
+<h1>{{ vm.toggleValue ? "Sign In" : "Sign Up" }}</h1>
 
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<div class="sign-in-form"  novalidate ng-show="vm.toggleValue">
+  <form name="signInForm" ng-submit="vm.generateToken();">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" ng-model="vm.user.email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" ng-model="vm.user.password" name="password" required class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" ng-disabled="signInForm.$invalid" class="btn btn-default">Submit</button>
+  </form>
 
-<p>
-  <strong>If you are not a User, please
-  <a class=""><u>Sign Up</u></a>.</strong>
-</p>
+  <p>
+    <strong>If you are not a User, please
+    <a class="" ng-click="vm.toggleValue = !vm.toggleValue"><u>Sign Up</u></a>.</strong>
+  </p>
+</div> <!-- sign-in-form  -->
+
+<div class="sign-up-form" ng-hide="vm.toggleValue">
+  <form name="signUpForm" ng-submit="vm.createUser();">
+    <div class="form-group">
+      <label for="Email address">Email address</label>
+      <input ng-model="vm.newUser.email" name="email" required type="email" class="form-control" id="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="name">name</label>
+      <input ng-model="vm.newUser.name" name="user" required type="name" class="form-control" id="name" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input ng-model="vm.newUser.password" name="password" required type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="password confirmation">Password Confirmation</label>
+      <span ng-if="vm.newUser.password !== vm.newUser.passwordConfirmation">Your Passwords Need to Match</span>
+      <input ng-model="vm.newUser.passwordConfirmation" name="passwordConfirmation" required type="password" class="form-control" id="password confirmation" placeholder="Password">
+    </div>
+    <button ng-disabled="signUpForm.$invalid" type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+  <p>
+    <strong>If you are already a User, please
+    <a class="" ng-click="vm.toggleValue = !vm.toggleValue"><u>Sign In</u></a>.</strong>
+  </p>
+
+  <p>
+    <strong>If you can't remember your password, please
+    <a class=""><u>request a new one</u></a>.</strong>
+  </p>
+</div> <!-- sign-up-form -->

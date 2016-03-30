@@ -4,7 +4,7 @@
   - authenticate as a user, ie *log in*,
   - unauthenticate, ie *log out*,
   - is authenticated / *is logged in*?
-  - [information about the current token/user](https://github.com/auth0/jwt-decode).
+  - [information about the current token/user][jwt].
 - Shared behavior around the **user resource**:
   - creating a user,
   - information about the authenticated user (ie, *current user*),
@@ -12,7 +12,8 @@
     `/me` routes.]*
   - updating an authenticated user's information.
 
-See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
+*For decoding JWTs, see also: 
+[`angular-jwt`][ng-jwt].*
 
 ## User Stories
 
@@ -36,8 +37,8 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
 - [ ] AAU, when I'm authenticated, I see a sign out button in the navbar.
 
 > Here we are going to update the user based on some information from
-> the server, specifically a certain type of failed request. We will also
-> render conditionally based on our auth status.
+> the server, specifically a certain type of failed request. We will
+> also render conditionally based on our auth status.
 
 ##### Step Three
 
@@ -47,6 +48,12 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
       I will be redirected to the signin page.
 
 > Here we will protect certain states as a whole by authorizing them.
+> In order to authorize them, we need to [*run* a configuration][run]
+> that registers a listener to our state changes, and attach to states
+> [custom data][custom-data] to mark them as authorized.
+
+*For packaging a configuration "run block," see also: 
+[John Papa's rule Y171][y171].*
 
 ##### Step Four
 
@@ -77,4 +84,9 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
 
 <!-- Links -->
 
+[jwt]:          https://github.com/auth0/jwt-decode
+[ng-jwt]:       https://github.com/auth0/angular-jwt
 [interceptors]: https://docs.angularjs.org/api/ng/service/$http#interceptors
+[run]:          https://docs.angularjs.org/guide/module#module-loading-dependencies
+[custom-data]:  https://github.com/angular-ui/ui-router/wiki#attach-custom-data-to-state-objects
+[y171]:         https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#run-blocks

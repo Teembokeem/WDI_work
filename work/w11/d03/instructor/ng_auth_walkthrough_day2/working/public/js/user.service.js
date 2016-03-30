@@ -16,7 +16,7 @@
     return service;
 
     function create(data) {
-      $http({
+      var promise = $http({
         method: 'POST',
         url:    '/api/users',
         data:   data,
@@ -24,13 +24,12 @@
           'Content-Type': 'application/json'
         }
       })
-      .then(
-        function(res) {
-          // authService.logIn(res.config.data);
-          authService.logIn(data);
-        },
-        function(err) { $log.info("Error:", err); }
-      );
+      .then(function(res) {
+        // authService.logIn(res.config.data);
+        authService.logIn(data);
+      });
+
+      return promise;
     }
   }
 

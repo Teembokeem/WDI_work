@@ -28,10 +28,20 @@
     function submitSignUp() {
       userService
         .create(vm.signUp)
-        .then(function() {
-          $state.go('welcome');
-        });
-
+        .then(function(res) {
+          return authService.logIn(vm.signUp);
+        })
+        .then(
+          // on success
+          function(decodedToken) {
+            $log.info('Logged in!', decodedToken);
+            $state.go('welcome');
+          },
+          // on error
+          function(err) {
+            $log.info('Error:', err);
+          }
+        );
     }
 
     function submitLogIn() {

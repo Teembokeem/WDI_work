@@ -5,9 +5,9 @@
     .module("app")
     .controller("SignInController", SignInController);
 
-  SignInController.$inject = ["$log", "$http", "$window"];
+  SignInController.$inject = ["$log", "$http", "tokenService"];
 
-  function SignInController($log, $http, $window) {
+  function SignInController($log, $http, token) {
     var vm = this;
 
     // BINDINGS
@@ -31,7 +31,7 @@
         })
         .then(
           function(res) {
-            $log.info("Succes:", res);
+            $log.info("Success:", res);
             generateToken();
           },
           function(err) { $log.info("Error:", err); }
@@ -47,8 +47,8 @@
         })
         .then(
           function(res) {
-            $log.info("Succes:", res);
-            $window.localStorage.setItem('token', res.data.token);
+            token.store(res.data.token);
+            $log.info("Success:", token.decode());
           },
           function(err) { $log.info("Error:", err); }
         );

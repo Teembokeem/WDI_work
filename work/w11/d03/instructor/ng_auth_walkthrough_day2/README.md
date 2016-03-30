@@ -1,10 +1,12 @@
 ## Refactoring 1
 
-- Shared behavior and data around **auth**entication/authorization:
+- Shared behavior around the **token**: store it, read it, [decode it][jwt], 
+  destroy it.
+- Shared behavior and data around **auth** (authentication/authorization):
   - authenticate as a user, ie *log in*,
   - unauthenticate, ie *log out*,
   - is authenticated / *is logged in*?
-  - [information about the current token/user][jwt].
+  - information about the current user (via the token)?
 - Shared behavior around the **user resource**:
   - creating a user,
   - information about the authenticated user (ie, *current user*),
@@ -12,8 +14,7 @@
     `/me` routes.]*
   - updating an authenticated user's information.
 
-*For decoding JWTs, see also: 
-[`angular-jwt`][ng-jwt].*
+*For decoding JWTs, see also: [`angular-jwt`][ng-jwt].*
 
 ## User Stories
 

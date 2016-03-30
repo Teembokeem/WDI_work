@@ -16,7 +16,7 @@
     return service;
 
     function logIn(data) {
-      $http({
+      var promise = $http({
         method: 'POST',
         url:    '/api/token',
         data:   data,
@@ -25,12 +25,19 @@
         }
       })
       .then(
+        // if the request succeeded, then run this
+        // handler, and pass on the decoded token.
         function(res) {
           token.store(res.data.token);
-          $log.info("Success:", token.decode());
-        },
-        function(err) { $log.info("Error:", err); }
+          return token.decode();
+        }
+        // since there is no error handler, pass
+        // an error on to the next promise, without
+        // calling the above success handler
+        // , function(err) { null; }
       );
+
+      return promise;
     }
   }
 

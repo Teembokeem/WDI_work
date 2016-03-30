@@ -22,19 +22,18 @@ app.set('safe-title', process.env.SAFE_TITLE);
 // Create local variables for use thoughout the application.
 app.locals.title = app.get('title');
 
-// TODO: (PJ) turn on if development
 // CORS (allows a separate client, like Postman, to send requests)…
-// app.use(function(req, res, next) {
-//   res.header('Access-Control-Allow-Origin',  '*');
-//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//   res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin',  '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
 
-//   if ('OPTIONS' == req.method) {
-//     res.send(200);
-//   } else {
-//     next();
-//   }
-// });
+  if ('OPTIONS' == req.method) {
+    res.send(200);
+  } else {
+    next();
+  }
+});
 
 // Logging layer.
 app.use(logger('dev'));

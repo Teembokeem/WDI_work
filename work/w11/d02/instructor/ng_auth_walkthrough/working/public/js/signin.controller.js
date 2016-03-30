@@ -5,9 +5,9 @@
     .module("app")
     .controller("SignInController", SignInController);
 
-  SignInController.$inject = ["$log", "$http"];
+  SignInController.$inject = ["$log", "$http", "$window"];
 
-  function SignInController($log, $http) {
+  function SignInController($log, $http, $window) {
     var vm = this;
 
     // BINDINGS
@@ -30,7 +30,26 @@
           }
         })
         .then(
-          function(res) { $log.info("Succes:", res); },
+          function(res) {
+            $log.info("Succes:", res);
+            generateToken();
+          },
+          function(err) { $log.info("Error:", err); }
+        );
+    }
+
+    function generateToken() {
+      $http
+        .post('/api/token', vm.signUp, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(
+          function(res) {
+            $log.info("Succes:", res);
+            $window.localStorage.setItem('token', res.data.token);
+          },
           function(err) { $log.info("Error:", err); }
         );
     }

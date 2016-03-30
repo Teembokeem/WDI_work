@@ -1,10 +1,12 @@
 ## Refactoring 1
 
-- Shared behavior and data around **auth**entication/authorization:
+- Shared behavior around the **token**: store it, read it, [decode it][jwt], 
+  destroy it.
+- Shared behavior and data around **auth** (authentication/authorization):
   - authenticate as a user, ie *log in*,
   - unauthenticate, ie *log out*,
   - is authenticated / *is logged in*?
-  - [information about the current token/user](https://github.com/auth0/jwt-decode).
+  - information about the current user (via the token)?
 - Shared behavior around the **user resource**:
   - creating a user,
   - information about the authenticated user (ie, *current user*),
@@ -12,20 +14,21 @@
     `/me` routes.]*
   - updating an authenticated user's information.
 
-See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
+*For working with JWTs, see also: [`angular-jwt`][ng-jwt].*
 
 ## User Stories
 
 ##### Step One
 
-- [ ] AAU, after sign in, I am immediately directed to the welcome page.
 - [ ] AAU, when I am already a registered user, I can (sign in) log in 
       w/ an email & password.
+- [ ] AAU, after sign in (sign up or log in), I am immediately directed
+      to the welcome page.
 
-> Here we need to instigate a `ui-router` "state" change programmatically,
+> Here we are going to start re-using some of the auth behavior we've 
+> already written: how will that change how we see our functions?
+> We also need to instigate a `ui-router` "state" change programmatically,
 > ie **not** from a user interacting with a `ui-sref` directive. We also
-> are going to start re-using some of the auth behavior we've already
-> written: how will that change how we see our functions?
 
 ##### Step Two
 
@@ -35,8 +38,8 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
 - [ ] AAU, when I'm authenticated, I see a sign out button in the navbar.
 
 > Here we are going to update the user based on some information from
-> the server, specifically a certain type of failed request. We will also
-> render conditionally based on our auth status.
+> the server, specifically a certain type of failed request. We will
+> also render conditionally based on our auth status.
 
 ##### Step Three
 
@@ -46,6 +49,12 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
       I will be redirected to the signin page.
 
 > Here we will protect certain states as a whole by authorizing them.
+> In order to authorize them, we need to [*run* a configuration][run]
+> that registers a listener to our state changes, and attach to states
+> [custom data][custom-data] to mark them as authorized.
+
+*For packaging a configuration "run block," in this case, we will break 
+the "one component per file" rule!*
 
 ##### Step Four
 
@@ -76,4 +85,9 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
 
 <!-- Links -->
 
+[jwt]:          https://github.com/auth0/jwt-decode
+[ng-jwt]:       https://github.com/auth0/angular-jwt
 [interceptors]: https://docs.angularjs.org/api/ng/service/$http#interceptors
+[run]:          https://docs.angularjs.org/guide/module#module-loading-dependencies
+[custom-data]:  https://github.com/angular-ui/ui-router/wiki#attach-custom-data-to-state-objects
+[y171]:         https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#run-blocks

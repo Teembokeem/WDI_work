@@ -23,10 +23,13 @@ to start respecting ${this.name}!`;
 // ||||||||| CHANGE TO ES6 |||||||||||
 // |||||||||||||||||||||||||||||||||||
 
-// Extend the Human class. Overwrite health and roboHate with a new value of 4
-// and a method that speaks to the Andriod struggle, respectively. Add a method
-// freakOut that returns a string that represents the Android's anger with his
-// or her lifespan.
+// Extend the Human class.
+
+// Overwrite health and roboHate with a new value of 4 and a method that
+// speaks to the Andriod struggle, respectively.
+
+// Add a method freakOut that returns a string that represents the
+// Android's anger with his or her lifespan.
 
 class Android {
 

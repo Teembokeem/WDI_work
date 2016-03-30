@@ -21,7 +21,7 @@ require('babel-core/register');
 
 // 2. ANDROIDS - EXTENDING A CLASS
 
-// require('./exercises/2_android_extend');
+require('./solution/2_android_extend');
 
 // 3. THE TYRELL CORPORATION - STATIC, GET, AND SET
 

@@ -55,7 +55,9 @@ add:
 config.middleware.use Rack::Cors do
   allow do
     origins '*'
-    resource '*', :headers => :any, :methods => [:get, :put, :post, :delete, :options]
+    resource '*',
+      :headers => :any,
+      :methods => [:get, :put, :post, :delete, :options]
   end
 end
 ```

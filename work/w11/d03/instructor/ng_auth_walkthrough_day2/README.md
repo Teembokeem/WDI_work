@@ -14,7 +14,7 @@
     `/me` routes.]*
   - updating an authenticated user's information.
 
-*For decoding JWTs, see also: [`angular-jwt`][ng-jwt].*
+*For working with JWTs, see also: [`angular-jwt`][ng-jwt].*
 
 ## User Stories
 

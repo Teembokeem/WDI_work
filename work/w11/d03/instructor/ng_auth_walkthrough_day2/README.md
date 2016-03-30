@@ -18,14 +18,15 @@ See also: [`angular-jwt`](https://github.com/auth0/angular-jwt).
 
 ##### Step One
 
-- [ ] AAU, after sign in, I am immediately directed to the welcome page.
 - [ ] AAU, when I am already a registered user, I can (sign in) log in 
       w/ an email & password.
+- [ ] AAU, after sign in (sign up or log in), I am immediately directed
+      to the welcome page.
 
-> Here we need to instigate a `ui-router` "state" change programmatically,
+> Here we are going to start re-using some of the auth behavior we've 
+> already written: how will that change how we see our functions?
+> We also need to instigate a `ui-router` "state" change programmatically,
 > ie **not** from a user interacting with a `ui-sref` directive. We also
-> are going to start re-using some of the auth behavior we've already
-> written: how will that change how we see our functions?
 
 ##### Step Two
 

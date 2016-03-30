@@ -5,9 +5,9 @@
     .module('app')
     .controller('SignInController', SignInController);
 
-  SignInController.$inject = ['$log', '$http', 'authService'];
+  SignInController.$inject = ['$log', '$http', 'authService', 'userService', '$state'];
 
-  function SignInController($log, $http, auth) {
+  function SignInController($log, $http, authService, userService, $state) {
     //VARS
     var vm = this;
     vm.toggleValue = true;
@@ -16,26 +16,24 @@
 
     //BINDINGS
     vm.initiateUser = initiateUser;
-    vm.logIn = function() {
-      auth.logIn(null, UserTemplate(vm.user.email, null, vm.user.password, null))
-    }
+    vm.logIn = logIn;
 
     //FUNCTIONS
     function initiateUser() {
-      $log.debug("creating user...")
-      var newUser = UserTemplate(vm.newUser.email, vm.newUser.name, vm.newUser.password, vm.newUser.passwordConfirmation)
-      $log.debug("here he is!", newUser)
-      $http({
-        method: 'POST',
-        url: 'http://localhost:3000/api/users',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        data: newUser
+      userService
+      .create(UserTemplate(vm.newUser.email, vm.newUser.name, vm.newUser.password, vm.newUser.passwordConfirmation))
+      .then(function(decodedToken) {
+        $state.go('Welcome')
+      }, function(err) {
+        $log.debug(err)
       })
-      .then(function(res) {
-        $log.debug(res.data)
-        auth.logIn(newUser);
+    }
+
+    function logIn() {
+      authService
+      .logIn(UserTemplate(vm.user.email, null, vm.user.password, null))
+      .then(function(decodedToken) {
+        $state.go('Welcome')
       }, function(err) {
         $log.debug(err)
       })

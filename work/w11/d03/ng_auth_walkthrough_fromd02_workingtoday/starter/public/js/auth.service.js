@@ -17,7 +17,7 @@
     return service;
 
     function logIn(user, newUser) {
-      $http({
+      var promise = $http({
         method: 'POST',
         url: 'http://localhost:3000/api/token',
         headers: {
@@ -28,13 +28,13 @@
       .then(function(res) {
         $log.debug(res.data)
         token.store(res.data.token)
-        $log.info("success", token.decode());
+        // $log.info("success", token.decode());
         // token.destroy();
         // $log.info("destroy", token.retrieve());
-
-      }, function(err) {
-        $log.debug(err)
+        return token.decode();
       })
+
+      return promise;
     }
 
 

@@ -7,24 +7,27 @@
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 
+  <!-- If yo umust use outside libs that arent angular-specific, include them before angular -->
+  <script src="/js/jwt-decode.2.0.1.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <header>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-right">
         <div class="container">
-          <a ui-sref="welcome" class="navbar-brand">Home</a>
-          <button ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+          <button ui-sref="Signin" type="button" class="btn btn-default navbar-btn navbar-right">Signin</button>
+          <button ui-sref="Welcome" type="button" class="btn btn-default navbar-btn navbar-left">Home</button>
         </div>
       </nav>
     </header>
 
+
     <main class="content" ui-view>
-      <!-- ui-router (aka ui.router) inserts templates here -->
+      <p>This is the app's contents.</p>
     </main>
   </div> <!-- div.container-fluid -->
 
@@ -37,6 +40,7 @@
 
   <script src="/js/app.module.js"></script>
   <script src="/js/app.routes.js"></script>
+  <script src="/js/token.service.js"></script>
   <script src="/js/signin.controller.js"></script>
 </body>
 </html>

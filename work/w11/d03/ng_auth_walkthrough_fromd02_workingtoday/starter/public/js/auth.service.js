@@ -1,0 +1,43 @@
+(function() {
+  'use strict'
+
+  angular
+    .module('app')
+    .factory('authService', authService);
+
+  authService.$inject = ['$log', '$http', 'tokenService'];
+
+  function authService($log, $http, token) {
+    $log.info("Authentication Services initiated..");
+
+    var service = {
+      logIn: logIn
+    };
+
+    return service;
+
+    function logIn(user, newUser) {
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/api/token',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        data: user || newUser
+      })
+      .then(function(res) {
+        $log.debug(res.data)
+        token.store(res.data.token)
+        $log.info("success", token.decode());
+        // token.destroy();
+        // $log.info("destroy", token.retrieve());
+
+      }, function(err) {
+        $log.debug(err)
+      })
+    }
+
+
+  }
+
+})();

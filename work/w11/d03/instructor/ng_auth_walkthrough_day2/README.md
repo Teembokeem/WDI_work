@@ -52,8 +52,8 @@
 > that registers a listener to our state changes, and attach to states
 > [custom data][custom-data] to mark them as authorized.
 
-*For packaging a configuration "run block," see also: 
-[John Papa's rule Y171][y171].*
+*For packaging a configuration "run block," in this case, we will break 
+the "one component per file" rule!*
 
 ##### Step Four
 

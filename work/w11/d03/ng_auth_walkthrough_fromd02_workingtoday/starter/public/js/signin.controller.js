@@ -26,6 +26,7 @@
         $state.go('Welcome')
       }, function(err) {
         $log.debug(err)
+        vm.conflict = true;
       })
     }
 
@@ -36,6 +37,7 @@
         $state.go('Welcome')
       }, function(err) {
         $log.debug(err)
+        if (err.status === 409) vm.conflict = true;
       })
     }
 

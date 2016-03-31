@@ -64,3 +64,8 @@ form {
   max-width: 600px;
   margin: 0 auto;
 }
+
+#email.redBorder,
+#exampleInputEmail1.redBorder {
+  border: 3px solid red;
+}

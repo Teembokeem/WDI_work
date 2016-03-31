@@ -11,7 +11,8 @@
     $log.info("Authentication Services initiated..");
 
     var service = {
-      logIn: logIn
+      logIn: logIn,
+      isLoggedIn: isLoggedIn
     };
 
     return service;
@@ -37,6 +38,9 @@
       return promise;
     }
 
+    function isLoggedIn() {
+      return (token.retrieve() != null)
+    }
 
   }
 

@@ -15,11 +15,12 @@
 
 </head>
 <body>
-  <div class="container">
+  <div class="container" ng-controller="NavBarController as vm">
     <header>
       <nav class="navbar navbar-default navbar-right">
         <div class="container">
-          <button ui-sref="Signin" type="button" class="btn btn-default navbar-btn navbar-right">Signin</button>
+          <button ng-hide="vm.auth.isLoggedIn()" type="button" class="btn btn-default navbar-btn navbar-right">Sign Out</button>
+          <button ng-show="vm.auth.isLoggedIn()" ui-sref="Signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign In</button>
           <button ui-sref="Welcome" type="button" class="btn btn-default navbar-btn navbar-left">Home</button>
         </div>
       </nav>
@@ -44,5 +45,6 @@
   <script src="/js/auth.service.js"></script>
   <script src="/js/user.service.js"></script>
   <script src="/js/signin.controller.js"></script>
+  <script src="/js/navbar.controller.js"></script>
 </body>
 </html>

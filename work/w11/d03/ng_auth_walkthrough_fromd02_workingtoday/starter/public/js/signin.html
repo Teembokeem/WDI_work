@@ -4,7 +4,8 @@
   <form name="signInForm" ng-submit="vm.logIn();">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" ng-model="vm.user.email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Email">
+      <input type="email" ng-class="{redBorder: vm.conflict}" ng-model="vm.user.email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Email">
+      <span ng-show="vm.conflict">Credentials Incorrect</span>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
@@ -23,7 +24,8 @@
   <form name="signUpForm" ng-submit="vm.initiateUser();">
     <div class="form-group">
       <label for="Email address">Email address</label>
-      <input ng-model="vm.newUser.email" name="email" required type="email" class="form-control" id="email" placeholder="Email">
+      <input ng-model="vm.newUser.email" ng-class="{redBorder: vm.conflict}" name="email" required type="email" class="form-control" id="email" placeholder="Email">
+      <span ng-show="vm.conflict">Email taken</span>
     </div>
     <div class="form-group">
       <label for="name">name</label>
@@ -38,7 +40,7 @@
       <span ng-if="vm.newUser.password !== vm.newUser.passwordConfirmation">Your Passwords Need to Match</span>
       <input ng-model="vm.newUser.passwordConfirmation" name="passwordConfirmation" required type="password" class="form-control" id="password confirmation" placeholder="Password">
     </div>
-    <button ng-disabled="signUpForm.$invalid" type="submit" class="btn btn-default">Submit</button>
+    <button ng-disabled="signUpForm.$invalid || vm.newUser.password !== vm.newUser.passwordConfirmation" type="submit" class="btn btn-default">Submit</button>
   </form>
 
   <p>

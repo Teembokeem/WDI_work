@@ -5,9 +5,9 @@
     .module("app")
     .controller("SignInController", SignInController);
 
-  SignInController.$inject = ["$log", "$http", "tokenService"];
+  SignInController.$inject = ["$log", "authService", "userService", "$state"];
 
-  function SignInController($log, $http, token) {
+  function SignInController($log, authService, userService, $state) {
     var vm = this;
 
     // BINDINGS
@@ -18,39 +18,47 @@
       passwordConfirmation: "12345"
     };
     vm.submitSignUp = submitSignUp;
+    vm.logIn = {
+      email:    "pj@ga.co",
+      password: "12345"
+    };
+    vm.submitLogIn = submitLogIn;
+    vm.conflict = false;
 
     // FUNCTIONS
     function submitSignUp() {
-      // $log.info(vm.signUp);
-
-      $http
-        .post('/api/users', vm.signUp, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
+      userService
+        .create(vm.signUp)
+        .then(function(res) {
+          return authService.logIn(vm.signUp);
         })
         .then(
-          function(res) {
-            $log.info("Success:", res);
-            generateToken();
+          // on success
+          function(decodedToken) {
+            $log.info('Logged in!', decodedToken);
+            $state.go('welcome');
           },
-          function(err) { $log.info("Error:", err); }
+          // on error
+          function(err) {
+            if (err.status === 409) vm.conflict = true;
+            $log.info('Error Claire-r:', err);
+          }
         );
     }
 
-    function generateToken() {
-      $http
-        .post('/api/token', vm.signUp, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
+    function submitLogIn() {
+      authService
+        .logIn(vm.logIn)
         .then(
-          function(res) {
-            token.store(res.data.token);
-            $log.info("Success:", token.decode());
+          // on success
+          function(decodedToken) {
+            $log.info('Logged in!', decodedToken);
+            $state.go('welcome');
           },
-          function(err) { $log.info("Error:", err); }
+          // on error
+          function(err) {
+            $log.info('Error:', err);
+          }
         );
     }
 

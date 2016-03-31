@@ -36,6 +36,9 @@
       taken, I will be alerted about this.
       - [ ] *Must wireframe first…*
 - [ ] AAU, when I'm authenticated, I see a sign out button in the navbar.
+- [ ] AAU, when I am logged in and click on the "Sign out" button, I 
+      log out of the application.
+- [ ] AAU, when I log out I am redirected back to the Welcome page.
 
 > Here we are going to update the user based on some information from
 > the server, specifically a certain type of failed request. We will

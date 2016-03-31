@@ -217,17 +217,39 @@ console.log(gDogs);
 //     *boys with the 'true name' of Stark*.
 console.log("\n", "Number 8:");
 
+var notTrueStarkBoys = children.filter(function(child) {
+                                  return !isTrueStark(child);
+                                }).filter(isMale);
+
+console.log(notTrueStarkBoys);
 
 // 9.  Use the `filter` enumeration method to create a new list of children
 //     called `anOn` that only includes those children whose names have either
 //     'an' or 'on' in them. (You may use regexes!)
 console.log("\n", "Number 9:");
 
+// var anOn = children.filter(function(child) {
+//   var str = child.name.toLowerCase();
+//   var an = str.indexOf('an');
+//   var on = str.indexOf('on');
+//   return (an > -1 || on > -1);
+// })
+
+var anOn = children.filter(child => {
+  return /[ao]n/i.test(child.name);
+})
+
+
+console.log(anOn);
 
 // 10. Use the `filter` enumeration method to create a new list of children
 //     called `notStarks` that only includes those children whose house is not
 //     "Stark". (You may use regexes!)
 console.log("\n", "Number 10:");
+
+var notStarks = children.filter(child => !/stark/i.test(child.house))
+
+console.log(notStarks);
 
 
 // 11. Use the `filter` enumeration method to create a new list of children
@@ -235,8 +257,27 @@ console.log("\n", "Number 10:");
 //     not "Stark", as well as Arya.
 console.log("\n", "Number 11:");
 
+function notTrueStark(child) {
+  return !isTrueStark(child);
+}
+
+var dontFitIn = children.filter(function(child) {
+  return notTrueStark(child) || /arya/i.test(child.name);
+})
+
+console.log(dontFitIn);
 
 // 12. Use any means you can to take the list of children, and create a new
 //     list that only includes direwolf names.
 console.log("\n", "Number 12:");
+
+var direWolves = children.map(function(child) {
+  if (child.direWolf) return child.direWolf;
+}).filter(child => child !== undefined);
+
+console.log(direWolves);
+
+
+
+
 

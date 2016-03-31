@@ -7,6 +7,9 @@
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 
+  <!-- If you must use outside libs that aren't Angular-specific, include them BEFORE Angular. -->
+  <script src="/js/jwt-decode.2.0.1.js"></script>
+
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
@@ -14,11 +17,12 @@
 </head>
 <body>
   <div class="container-fluid">
-    <header>
+    <header ng-controller="NavbarController as vm">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <a ui-sref="welcome" class="navbar-brand">Home</a>
-          <button ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+          <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+          <button ng-show="vm.authService.isLoggedIn()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
         </div>
       </nav>
     </header>
@@ -37,6 +41,10 @@
 
   <script src="/js/app.module.js"></script>
   <script src="/js/app.routes.js"></script>
+  <script src="/js/token.service.js"></script>
+  <script src="/js/auth.service.js"></script>
+  <script src="/js/user.service.js"></script>
   <script src="/js/signin.controller.js"></script>
+  <script src="/js/navbar.controller.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@
 
 ---
 
-Today we'll be closing out 2015 by learning about ES2015 classes with one of the most classist societies I know of, ***2019 Los Angeles***!
+Today we'll be learning about ES2015 classes with one of the most classist societies I know of, ***2019 Los Angeles***!
 
 #### From Constructors to Classes
 
@@ -76,7 +76,7 @@ class Eye {
 
 class Camera extends Eye {
   roboTears() {
-    console.log(`My ${this.color} lens cannot cry.`);
+    console.log(`I can't say ${super.roboTears()}. My ${this.color} lens cannot cry.`);
   }
 }
 ```
@@ -96,14 +96,14 @@ class Eye {
 }
 
 class Camera extends Eye {
-  constructor(color, size, brand, temp) {
-    super(color, size, temp);
+  constructor(color, size, brand) {
+    super(color, size);
     this.temp = 50;
     this.brand = brand;
   }
   roboTears() {
     super.roboTears;
-  	console.log(`My ${this.color} lens cannot cry.`);
+  	console.log(`I can't say ${super.roboTears()}. My ${this.color} lens cannot cry.`);
   }
 }
 ```

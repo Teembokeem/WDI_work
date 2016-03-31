@@ -1,10 +1,12 @@
 ## Refactoring 1
 
-- Shared behavior and data around **auth**entication/authorization:
+- Shared behavior around the **token**: store it, read it, [decode it][jwt], 
+  destroy it.
+- Shared behavior and data around **auth** (authentication/authorization):
   - authenticate as a user, ie *log in*,
   - unauthenticate, ie *log out*,
   - is authenticated / *is logged in*?
-  - [information about the current token/user][jwt].
+  - information about the current user (via the token)?
 - Shared behavior around the **user resource**:
   - creating a user,
   - information about the authenticated user (ie, *current user*),
@@ -12,8 +14,7 @@
     `/me` routes.]*
   - updating an authenticated user's information.
 
-*For decoding JWTs, see also: 
-[`angular-jwt`][ng-jwt].*
+*For working with JWTs, see also: [`angular-jwt`][ng-jwt].*
 
 ## User Stories
 
@@ -35,6 +36,9 @@
       taken, I will be alerted about this.
       - [ ] *Must wireframe first…*
 - [ ] AAU, when I'm authenticated, I see a sign out button in the navbar.
+- [ ] AAU, when I am logged in and click on the "Sign out" button, I 
+      log out of the application.
+- [ ] AAU, when I log out I am redirected back to the Welcome page.
 
 > Here we are going to update the user based on some information from
 > the server, specifically a certain type of failed request. We will

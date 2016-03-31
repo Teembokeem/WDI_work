@@ -11,9 +11,14 @@
     $log.info("auth service loaded!");
 
     var service = {
-      logIn: logIn
+      logIn:      logIn,
+      isLoggedIn: isLoggedIn
     };
     return service;
+
+    function isLoggedIn() {
+      return (token.retrieve() != null);
+    }
 
     function logIn(data) {
       var promise = $http({

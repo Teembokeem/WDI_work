@@ -152,3 +152,7 @@ If we look at `UsersController`, we see three methods– `create`, `token`, and
 
 You can interact with these methods using Postman (or Angular!) exactly how you
 interacted with Token Slinger yesterday– at this point, I encourage you to!
+
+##### References
+
+[rack-cors gem](https://github.com/cyu/rack-cors)

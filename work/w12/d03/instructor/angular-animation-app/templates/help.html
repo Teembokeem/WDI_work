@@ -1,0 +1,65 @@
+
+<div class="jumbotron text-center"><h1>Basic AngularJS Animations</h1></div>
+<br>
+<h2>AngularJS Animation Basics</h2>
+<p>Animations in AngularJS are completely based on CSS classes and animations baked into CSS3.</p>
+<p>There are two ways an animation can be triggered in Angular:</p>
+<ol>
+  <li><strong>CSS: </strong>If we define animations in our CSS, Angular will automatically add the necessary classes to trigger the animations on elements with directives such as <code>ng-hide ng-show ng-repeat ng-include ng-switch ng-if form ng-view/ui-view</code>.</p>
+  <li><strong>JS: </strong>the ngAnimation module contains a <em>$animate</em> service that provides power and flexiblilty and is designed to be used in controllers and custom directives</li>
+</ol>
+<p>There are two types of CSS3 animations: transition &amp; keyframe animations.  Keyframes are usually best for more advanced animations.</p>
+<p>In general, CSS3 animations control the speed of changes made to CSS property values instead of them changing instantly. </p>
+<p>We're going to learn how to do some basic animations by examining the code in this application. If you'd like to use more advanced animations in your applications, here are some links to get you started:</p>
+<ul>
+  <li><a href="https://docs.angularjs.org/guide/animations" target="_blank">Angular Animation Guide</a></li>
+  <li><a href="https://docs.angularjs.org/api/ngAnimate" target="_blank">ngAnimate API Docs</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">CSS Animation Docs on MDN</a></li>
+  <li><a href="http://www.yearofmoo.com/2013/08/remastered-animation-in-angularjs-1-2.html" target="_blank">Year of Moo (Blog), authored by the primary developer of Angular's animations.</a></li>
+  <li><a href="http://dfsq.github.io/ngView-animation-effects/app/#/page/1" target="_blank">Great demo of animating route changes.</a></li>
+  <li><a href="https://www.youtube.com/watch?v=dL4c75CX_pg" target="_blank">One of the best videos demonstrating advanced animations.</a></li>
+</ul>
+
+<h2>Setup the App</h2>
+<ol>
+  <li>
+    <h5>Install the <em>ngAnimate</em> Module</h5>
+    <p>The <em>ngAnimate</em> module script must be loaded into index.html after Angular's main script:</p>
+    <pre>
+      <code>
+      &lt;head&gt;
+        ...
+        &lt;script src="https://code.angularjs.org/1.5.3/angular.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://code.angularjs.org/1.5.3/angular-animate.min.js"&gt;&lt;/script&gt;
+        ...
+      &lt;/head&gt;
+      </code>
+    </pre>
+    <p>Be sure the version numbers are the same for the two Angular scripts.</p>
+  </li>
+  <li>
+    <h5>Include the <em>ngAnimate</em> Module as a Dependency</h5>
+    <p>The <em>ngAnimate</em> module needs to be included inside the array when defining your app's main module:</p>
+    <pre>
+      <code>
+        ...
+        angular.module('app', ['ui.router', 'ngAnimate']);
+        ...
+      </code>
+    </pre>
+  </li>
+  <li>
+    <h5>Create an <code>animations.css</code>:</h5>
+    <p>Since Angular's animations use several CSS3 classes, it would be a good idea to store that CSS in a separate file.</p>
+    <p>Create it, call it what you want, and be sure to load it into <em>index.html</em>.  Something like this:</p>
+    <pre>
+      <code>
+        &lt;head&gt;
+          ...
+          &lt;link rel="stylesheet" href="css/animation.css"&gt;
+          ...
+        &lt;/head&gt;
+      </code>
+    </pre>
+  </li>
+</ol>

@@ -26,7 +26,7 @@
 
 
 
-A Frame Tale is a story within a story; a nested tale, if you will. Some famous examples include *The Sandman*, *One Thousand and One Nights*, *The Princess Bride*, and *The Cantebury Tales*. 
+A Frame Tale is a story within a story; a nested tale, if you will. Some famous examples include *The Sandman*, *One Thousand and One Nights*, *The Princess Bride*, and *The Cantebury Tales*.
 
 Today we'll be considering Scope and Context using *Cloud Atlas*, an extremely nested frame tale (six stories in all), as a guide to understanding Context.
 
@@ -43,9 +43,9 @@ Another way to think about it is:
 - Context is exactly where we are, and refers to `this`
 - Scope is where we are, as well as all variables that are availabe in enclosing functions/global
 
-**Remember**: 
+**Remember**:
 
-1. Local variables exist only within the function body of which they are defined and will have a different scope for every call of that function. 
+1. Local variables exist only within the function body of which they are defined and will have a different scope for every call of that function.
 2. Any defined global variable, meaning any variable declared outside of a function body will live throughout runtime and can be accessed and altered in any scope.
 
 ##  `this` Wandering Soul
@@ -60,7 +60,7 @@ For instance, when a method on an object:
 
 ``` javascript
 var goodSoul = {
-    frobisher: function() {
+    frobisher: function(){
         return this === goodSoul;    
     }
 };
@@ -102,11 +102,14 @@ We can also set context when we call a function. There are three main methods to
 2. `Function.prototype.apply()`
 3. `Function.prototype.bind()`
 
-`Function.prototype.apply()` and `Function.prototype.call()` work extremely similarly. 
+`Function.prototype.apply()` and `Function.prototype.call()` work extremely similarly.
 
-In both cases, the first parameter is the object to which you want the context bound. Additionally, in non-strict mode code, `null` and `undefined` will be replaced with the global object, and primitive values will be boxed (made into an instance of the corresponding parent constructor object).
+In both cases, the first parameter is the object to which you want the context
+bound. Additionally, in non-strict mode code, `null` and `undefined` will be
+replaced with the global object, and [primitive values will be boxed](http://stackoverflow.com/questions/6793228/does-a-matter-whether-a-value-is-primitive-or-boxed#6793362)
+(made into an instance of the corresponding parent constructor object).
 
-For `Function.prototype.apply()`, the second argument is an array. 
+For `Function.prototype.apply()`, the second argument is an array.
 
 In the case of `Function.prototype.call()`, the second argument is an undetermined amount of arguments.
 
@@ -118,7 +121,7 @@ function sameSoul(soulC, soulD){
 var firstTwo = {soulA: "Adam Ewing", soulB: "Robert Frobisher"};
 
 // The first parameter is the object to use as
-// 'this', subsequent parameters are passed as 
+// 'this', subsequent parameters are passed as
 // arguments in the function call
 sameSoul.call(firstTwo, "Sonmi-351", "Zachry"); // "Adam Ewing is Robert Frobisher is Sonmi-351 is Zachry!"
 
@@ -153,7 +156,15 @@ var badSouls = sameSoul.bind(noGood);
 badSouls("Nurse Noakes", "Vyvyan Ayrs"); // "Old Georgie is Henry Goose is Nurse Noakes is Vyvyan Ayrs!"
 ```
 
+Rarely is `Function.prototype.bind()` absolutely essential - there are usually
+ways around it; however, proper use in large projects can greatly clean up code,
+and lead to optimized, functional programming. Additionally, using `.bind()`
+correctly will show your skill as a JS developer.
 
+As you work on larger projects, you will see the need for such a method more and
+more, as it can assist in metaprogramming (code that writes code) and high-level
+development. Make sure you play around with this method a bit as it can often be
+used in interview code challenges, as well.
 
 ## Conclusion
 
@@ -170,3 +181,7 @@ Context and Scope are two enormously important aspects of javascript, and unders
 [Understanding Scope and Context in JavaScript](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
 
 [JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
+
+[Boxing Primitive Values](http://stackoverflow.com/questions/6793228/does-a-matter-whether-a-value-is-primitive-or-boxed#6793362)
+
+[How do you judge a JS programmer in 5 questions?](https://www.quora.com/How-do-you-judge-a-JavaScript-programmer-by-only-5-questions)

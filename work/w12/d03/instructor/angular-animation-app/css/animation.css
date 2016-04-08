@@ -1,0 +1,67 @@
+/*Animate funds*/
+
+.label-success {
+  /*transition: all 0.6s linear;*/
+  width: 55px;
+}
+/*.label-success.ng-hide {
+  width: 0;
+}*/
+
+
+/*Animate route changes*/
+
+[ui-view].ng-enter {
+  transition: all 1s ease;
+  opacity: 0;
+}
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+/*Animate the ng-repeat*/
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes shrink {
+  from {
+    height: 111px;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes grow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 111px;
+  }
+}
+.panel.ng-enter {
+  animation: 0.8s appear;
+}
+.panel.ng-leave {
+  animation: 0.8s disappear;
+}
+.panel.ng-move {
+  animation: 0.8s shrink;
+}
+.panel.ng-move-active {
+  animation: 0.8s grow;
+}

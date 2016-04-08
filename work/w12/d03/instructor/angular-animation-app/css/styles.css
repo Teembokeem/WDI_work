@@ -1,0 +1,17 @@
+div.sort {
+  margin: 20px 0;
+}
+div.sort span {
+  display: inline-block;
+  width: 50px;
+  cursor: pointer;
+  color: orange;
+}
+.label-success {
+  display: inline-block;
+  padding: .2em 0 .3em;
+}
+
+.label-success + span {
+  margin-left: 20px;
+}

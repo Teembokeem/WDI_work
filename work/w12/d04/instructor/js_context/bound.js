@@ -84,3 +84,66 @@ function Cavendish() {
 var sonmi = new Cavendish();
 console.log(sonmi.ordeal); // logs "ghastly"
 
+
+// ||||||||||||||||||||||||||||
+// Binding Context Functionally
+// ||||||||||||||||||||||||||||
+
+
+var tiredSoul = "Adam Ewing";
+var futureSelf = "Zachry";
+
+var sonmiContext = function(sensedConnection) {
+  var tiredSoul = "Sonmi-351";
+
+  console.log(tiredSoul, this.tiredSoul, sensedConnection);
+}
+
+var cavendishData = {
+  tiredSoul: "Timothy Cavendish",
+  sensedConnection: "Luisa Rey"
+};
+
+sonmiContext.call(window, "Timothy Cavendish");
+
+sonmiContext.call(cavendishData, "Zachry");
+
+sonmiContext.apply(cavendishData, ["Zachry"]);
+
+sonmiContext.apply();
+
+// .BIND!
+
+var wanderinSoul = "Zachry";
+
+var lemniscate = {
+  wanderinSoul: "Adam Ewing",
+  getWanderer: function() {
+    return this.wanderinSoul;
+  }
+}
+
+console.log(lemniscate.getWanderer());
+
+var endingSoul = lemniscate.getWanderer;
+
+console.log(endingSoul());
+
+var beginningSoul = endingSoul.bind(lemniscate);
+console.log(beginningSoul());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -104,3 +104,15 @@ There are a lot of [programming books](https://github.com/vhf/free-programming-b
 
 1. *AngularJS: Up and Running* by Shyam Seshadri & Brad Green
 2. [AngularJS Style Guide](https://github.com/johnpapa/angular-styleguide) by John Papa
+
+
+
+## Interview Stories
+
+I collected some candid stories about post-graduation interviews. These were just a randomly collection of responses and I literally copied and pasted the responses from Slack.
+
+No editing. Just real life interview stories.
+
+Here's a link to the [Interview Stories](https://gist.github.com/EARnagram/d36c9d6d168880159d94450d5216fc49) secret gist. 
+
+As you continue on your own interview path, please feel free to comment on this gist to help future graduates!
